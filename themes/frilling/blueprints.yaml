@@ -1,0 +1,35 @@
+name: frilling
+version: 0.1.1
+description: "F-Rilling.com custom grav theme"
+icon: empire
+author:
+  name: Felix Rilling
+  email: contact@f-rilling.com
+  url: http://f-rilling.com
+homepage:
+demo:
+keywords:
+bugs:
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    default_lang:
+      type: text
+      size: x-small
+      label: Default lang
+      default: 'en'
+      validate:
+        type: text
+
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool

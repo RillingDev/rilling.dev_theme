@@ -1,0 +1,26 @@
+body {
+    background: @gray-lightest;
+    background: repeating-linear-gradient( 45deg, darken(@gray-lightest,5%) 0, darken(@gray-lightest,5%) 5%, @gray-lightest 0, @gray-lightest 50% ) ~"0 / 10px 10px";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    ::selection {
+        background: @brand-primary-lighter;
+    }
+}
+main {
+    margin: 30px 0;
+}
+.unstyle-list {
+    list-style: none;
+}
+.center-text {
+    text-align: center;
+}
+.version {
+    color: @gray-light;
+    margin: 0 6px;
+    font-size: 12px;
+}
+.icon {
+    margin: 0 5px;
+}

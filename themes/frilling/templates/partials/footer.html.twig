@@ -1,0 +1,40 @@
+{% block footer %}
+    <footer >
+        <div class="container ">
+            <div class="row">
+                <div class="col-xs-4 col-sm-8 col-md-9">
+                  <ul >
+                    {% for page in pages.children.visible %}
+                        {% set current_page = (page.active or page.activeChild)
+                            ? 'active'
+                            : '' %}
+                        <li class="{{ current_page }}">
+                            <a href="{{ page.url }}">
+                                {{ page.menu }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    {% for mitem in site.menu %}
+                        <li>
+                            <a href="{{ mitem.url }}">
+                                {{ mitem.text }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+
+                <div class="col-xs-8 col-sm-4 col-md-3">
+                    <ul class="unstyle-list">
+                        <li>
+                            <a href="mailto:contact@f-rilling.com" title="Contact Felix Rilling" alt="Contact E-Mail">contact@f-rilling.com</a>
+                        </li>
+                        <li>
+                            <a href="http://f-rilling.com/about" title="About Felix Rilling">&copy;2016 Felix Rilling</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

@@ -1,0 +1,39 @@
+nav.navbar {
+    .navbar-header{
+      .navbar-toggle{
+        &,&.collapsed{
+          .transition();
+          background-color: transparent;
+        }
+        &:not(.collapsed){
+            transform: rotate(90deg);
+        }
+      }
+    }
+    .navbar-collapse {
+        ul.nav {
+            li {
+                font-family: @font-family-sans-serif;
+                  &:first-child {
+                      display: none;
+                  }
+                a {
+                    i.fa {
+                        margin-right: 5px;
+                    }
+                    .screen-md-max({
+                    padding-top: 18px;
+                    padding-bottom: 19px;
+                    });
+                }
+            }
+            .screen-md-max({
+              margin-top: 0;
+              margin-bottom: 0;
+            });
+        }
+        .screen-md-max({
+          border-top: 1px solid @gray;
+        });
+    }
+}

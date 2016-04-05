@@ -1,0 +1,14 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <main>
+        <div class="error center-text">
+            <h1>Error
+                {{ page.header.http_response_code }}</h1>
+            <p>
+                {{ page.content }}
+                <a href="/" class="btn btn-primary">Go Back</a>
+            </p>
+        </div>
+    </main>
+{% endblock %}

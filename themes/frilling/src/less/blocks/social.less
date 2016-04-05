@@ -1,0 +1,30 @@
+.social {
+    width: 70%;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 20px auto 30px;
+    text-align: center;
+    .btn-group {
+        .btn {
+            margin: 5px 0;
+            padding: 10px 0;
+            &:nth-child(2) {
+                background-color: @gray-lighter;
+                color: @gray-dark;
+                &:active,
+                &:focus,
+                &:hover {
+                    background-color: @gray-lightest;
+                }
+            }
+            &:nth-child(3) {
+                background-color: @gray-dark;
+                &:active,
+                &:focus,
+                &:hover {
+                    background-color: @gray;
+                }
+            }
+        }
+    }
+}

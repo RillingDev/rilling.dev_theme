@@ -1,0 +1,26 @@
+footer {
+    background-color: @gray-dark;
+    width: 100%;
+    padding: 10px 0;
+    ul {
+        list-style: disc;
+        color: @gray-lighter;
+          padding: 0;
+        .screen-md-max({
+          padding-left: 20px;
+        });
+        li {
+            a {
+                color: @gray-lighter;
+                &:hover {
+                    color: @gray-lightest;
+                }
+            }
+        }
+    }
+    div:nth-child(2) ul{
+    position: absolute;
+    bottom: -74px;
+    height: 100%;
+    }
+}
