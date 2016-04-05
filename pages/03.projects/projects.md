@@ -7,6 +7,9 @@ meta:
     description: 'A lot of the pojects I created over the years are listened on this site. Tools, Experiments and games can be found here.'
     tags: 'web, design, webdesign, projects, project, html, css, js, tool, game, games'
 content:
+    order:
+        dir: desc
+        by: date
     categorys:
         -
             id: 1

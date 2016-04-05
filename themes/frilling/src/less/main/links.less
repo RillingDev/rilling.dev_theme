@@ -1,5 +1,5 @@
-a{
-  .transition();
+a {
+    .transition();
 }
 .btn {
     background-color: @brand-primary;
@@ -12,5 +12,17 @@ a{
     }
     i {
         margin-right: 5px;
+    }
+}
+.tag {
+    background-color: @brand-primary;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: @white;
+    &:active,
+    &:focus,
+    &:hover {
+        color: @white;
+        background-color: @brand-primary-light;
     }
 }

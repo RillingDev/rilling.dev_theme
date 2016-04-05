@@ -1,6 +1,6 @@
 ---
 title: 'Shims n'' Fills'
-subline: 'Javascript Cross-Browser Compatibility'
+subtitle: 'Javascript Cross-Browser Compatibility'
 published: true
 taxonomy:
     category:
