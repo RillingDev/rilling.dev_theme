@@ -1,32 +1,32 @@
-{% set title = header.title  ~ " | " ~ site.title|e('html') %}
+{% set title = header.title ~ " | " ~ site.title | e('html') %}
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
     {% block head %}
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="index,follow" />
+        <meta name="robots" content="index,follow"/>
         <title>{{title}}</title>
-        <meta name="description" content="{{header.meta.description}}" />
-        <meta name="keywords" content="{{header.meta.tags}}" />
-        <meta name="author" content="Felix Rilling" />
+        <meta name="description" content="{{header.meta.description}}"/>
+        <meta name="keywords" content="{{header.meta.tags}}"/>
+        <meta name="author" content="Felix Rilling"/>
 
         {% block socialmeta %}
 
-          <!--Open Graph for Facebook-->
-          <meta property="og:title" content="{{title}}" />
-          <meta property="og:url" content="{{ page.url(true, true) }}" />
-          <meta property="og:description" content="{{header.meta.description}}" />
-          <meta property="og:type" content="website" />
-          <meta property="og:image" content="{{ url('theme://images/apple-touch-icon-180x180.png', true) }}" />
-          <meta property="og:site_name" content="F-Rilling.com" />
+            <!--Open Graph for Facebook-->
+            <meta property="og:title" content="{{title}}"/>
+            <meta property="og:url" content="{{ page.url(true, true) }}"/>
+            <meta property="og:description" content="{{header.meta.description}}"/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:image" content="{{ url('theme://images/apple-touch-icon-180x180.png', true) }}"/>
+            <meta property="og:site_name" content="F-Rilling.com"/>
 
-          <!--Card Data for Twitter-->
-          <meta name="twitter:card" content="summary">
-          <meta name="twitter:title" content="{{title}}">
-          <meta name="twitter:url" content="{{ page.url(true, true) }}">
-          <meta name="twitter:description" content="{{header.meta.description}}">
-          <meta name="twitter:image" content="{{ url('theme://images/apple-touch-icon-180x180.png', true) }}" />
+            <!--Card Data for Twitter-->
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:title" content="{{title}}">
+            <meta name="twitter:url" content="{{ page.url(true, true) }}">
+            <meta name="twitter:description" content="{{header.meta.description}}">
+            <meta name="twitter:image" content="{{ url('theme://images/apple-touch-icon-180x180.png', true) }}"/>
         {% endblock %}
 
         {% block favicons %}
@@ -51,12 +51,20 @@
             <meta name="msapplication-TileImage" content="{{ url('theme://images/mstile-144x144.png', true) }}">
             <meta name="theme-color" content="#333333">
         {% endblock %}
-<link rel="canonical" href="{{ page.url(true, true) }}"/>
+        <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
         <!--Styles-->
         {% block stylesheets %}
             {% do
-                assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', 104) %}
+                assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', 105) %}
+
+            {% if header.include %}
+                {% for css in header.include.css %}
+                    {% do
+                        assets.addCss(css, 104) %}
+                {% endfor %}
+            {% endif %}
+
             {% do
                 assets.addCss('theme://css/bootstrap.css', 103) %}
             {% do

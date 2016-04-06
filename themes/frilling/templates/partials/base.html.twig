@@ -14,15 +14,13 @@
 
             <div class="container">
                 {% block content %}
-                <header>
-                    {% block content_header %}{% endblock %}
-                </header>
+                    <header>
+                        {% block content_header %}{% endblock %}
+                    </header>
 
-                <main>
-                    {% block content_main %}
-
-                    {% endblock %}
-                </main>
+                    <main>
+                        {% block content_main %}{% endblock %}
+                    </main>
                 {% endblock %}
             </div>
 
@@ -32,11 +30,26 @@
 
             {% block javascript %}
                 {% do
-                    assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js', 100) %}
+                    assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js', 102) %}
+                {% if page.header.include %}
+                    {% for js in page.header.include.js %}
+                    js
+                        {% do
+                            assets.addJs(js, 101) %}
+                    {% endfor %}
+                {% endif %}
+
                 {% do
                     assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js', 100) %}
+
             {% endblock %}
             {{ assets.js() }}
+
+            <script>
+                if (typeof hljs !== "undefined") {
+                    hljs.initHighlightingOnLoad();
+                }
+            </script>
         </body>
     {% endblock %}
 </html>
