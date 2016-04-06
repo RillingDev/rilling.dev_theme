@@ -2346,6 +2346,41 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+       -o-transition: opacity .15s linear;
+          transition: opacity .15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+tr.collapse.in {
+  display: table-row;
+}
+tbody.collapse.in {
+  display: table-row-group;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+       -o-transition-duration: .35s;
+          transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+       -o-transition-property: height, visibility;
+          transition-property: height, visibility;
+}
 .nav {
   padding-left: 0;
   margin-bottom: 0;
@@ -3099,10 +3134,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   margin-left: -1px;
   line-height: 1.42857143;
-  color: #85d75a;
+  color: #fefefe;
   text-decoration: none;
-  background-color: #fefefe;
-  border: 1px solid #dfdfdf;
+  background-color: #85d75a;
+  border: 1px solid transparent;
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {
@@ -3120,9 +3155,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #a3e183;
-  background-color: #dfdfdf;
-  border-color: #dfdfdf;
+  color: #fefefe;
+  background-color: #a3e183;
+  border-color: transparent;
 }
 .pagination > .active > a,
 .pagination > .active > span,
@@ -3133,8 +3168,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   z-index: 3;
   color: #fefefe;
   cursor: default;
-  background-color: #85d75a;
-  border-color: #85d75a;
+  background-color: #a3e183;
+  border-color: transparent;
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,
@@ -3142,10 +3177,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .disabled > a,
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
-  color: #696969;
+  color: #fefefe;
   cursor: not-allowed;
-  background-color: #fefefe;
-  border-color: #dfdfdf;
+  background-color: #696969;
+  border-color: transparent;
 }
 .pagination-lg > li > a,
 .pagination-lg > li > span {

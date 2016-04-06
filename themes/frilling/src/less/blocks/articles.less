@@ -1,11 +1,18 @@
 article {
     background-color: @white;
-    margin-bottom: 30px;
+    margin: 20px 0 30px;
     padding: 20px;
     .article-header {
+        padding-bottom: 20px;
         .article-title {
             margin-top: 0;
             margin-bottom: 8px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .article-date {
+            color: @gray-light;
         }
         .article-tags {
             float: right;
