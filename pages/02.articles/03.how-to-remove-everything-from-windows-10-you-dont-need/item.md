@@ -33,7 +33,7 @@ Windows PowerShell 2.0 which should already be installed on your system
 After you opened the PowerShell 2.0, paste the following:
 
 
-```Powershell
+<pre><code class="powershell">
 get-appxpackage -Name *WindowsCamera* | Remove-AppxPackage
 get-appxpackage -Name *ZuneMusic* | Remove-AppxPackage
 get-appxpackage -Name *WindowsMaps* | Remove-AppxPackage
@@ -52,7 +52,7 @@ get-appxpackage -Name *SkypeApp* | Remove-AppxPackage
 get-appxpackage -Name *MicrosoftOfficeHub* | Remove-AppxPackage
 get-appxpackage -Name *windowscommunicationsapps* | Remove-AppxPackage
 get-appxpackage -Name *Microsoft.People* | Remove-AppxPackage
-```
+</code></pre>
 
 If you want to keep one of those Apps just remove the line before
 pasting into the PowerShell.
@@ -77,3 +77,8 @@ modifies Windows files. I used the software for quite a while now and
 never had issues, so I’m pretty sure its safe.
 
   [Windows Tweaker 4]: http://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10
+  
+Once downloaded, run the .exe and go to "Security&Privacy". In the first tab, under "Windows", you can disable OneDrive (if you dont plan to use it you can also disable "Windows Store" too). In the "Privacy" tab you can disable Cortana and everything else that might try to spy on you, I disabled everything listened there and havent't had isssues with it.
+
+
+If you have any questions or suggestions you can send me an [e-mail](mailto:contact@f-rilling.com)

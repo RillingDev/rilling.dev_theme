@@ -57,14 +57,6 @@
         {% block stylesheets %}
             {% do
                 assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', 105) %}
-
-            {% if header.include %}
-                {% for css in header.include.css %}
-                    {% do
-                        assets.addCss(css, 104) %}
-                {% endfor %}
-            {% endif %}
-
             {% do
                 assets.addCss('theme://css/bootstrap.css', 103) %}
             {% do

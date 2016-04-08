@@ -31,12 +31,10 @@
             {% block javascript %}
                 {% do
                     assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js', 102) %}
-                {% if page.header.include %}
-                    {% for js in page.header.include.js %}
-                    js
-                        {% do
-                            assets.addJs(js, 101) %}
-                    {% endfor %}
+
+                {% if page.header.taxonomy %}
+                {% do
+                    assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js', 100) %}
                 {% endif %}
 
                 {% do
@@ -46,8 +44,15 @@
             {{ assets.js() }}
 
             <script>
-                if (typeof hljs !== "undefined") {
-                    hljs.initHighlightingOnLoad();
+              //Highlight Code Snippets
+              var codeBlocks=document.getElementsByTagName("pre");
+                if (codeBlocks.length>0) {
+                  	[].forEach.call(codeBlocks,function(elem,index){
+                      hljs.highlightBlock(
+                        elem,
+                        elem.getElementsByTagName("code")[0].className.replace("language-","")
+                      );
+                    });
                 }
             </script>
         </body>
