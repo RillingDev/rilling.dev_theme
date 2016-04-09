@@ -95,9 +95,8 @@
                 {% do
                     assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js', 100) %}
             {% endif %}
-
             {% do
-                assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js', 100) %}
+                assets.addJs('theme://js/bootstrap.min.js', 100) %}
         {{ assets.js() }}
 
         {% if page.header.taxonomy or collection %}

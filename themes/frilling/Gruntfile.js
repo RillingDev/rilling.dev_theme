@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         ]
       },
       bootstrap: {
-        files: ["src/less/bootstrap.less","src/less/variables.less"],
+        files: ["src/less/bootstrap.less","src/less/variables.less","src/js/Bootstrap_Gruntfile.less"],
         tasks: [
           "bootstrap",
           "build"
@@ -105,7 +105,8 @@ module.exports = function(grunt) {
         //Copy bootstrap files, use grunt dist in the Bootstrap dir to build
         files: [{
           "bower_components/bootstrap/less/variables.less": ["src/less/variables.less"],
-          "bower_components/bootstrap/less/bootstrap.less": ["src/less/bootstrap.less"]
+          "bower_components/bootstrap/less/bootstrap.less": ["src/less/bootstrap.less"],
+          "bower_components/bootstrap/Gruntfile.js": ["src/js/Bootstrap_Gruntfile.js"]
         }]
       },
       bootstrap_end: {
@@ -113,7 +114,9 @@ module.exports = function(grunt) {
         files: [{
           "css/bootstrap.css": ["bower_components/bootstrap/dist/css/bootstrap.css"],
           "css/bootstrap.css.map": ["bower_components/bootstrap/dist/css/bootstrap.css.map"],
-          "css/bootstrap.min.css": ["bower_components/bootstrap/dist/css/bootstrap.min.css"]
+          "css/bootstrap.min.css": ["bower_components/bootstrap/dist/css/bootstrap.min.css"],
+          "js/bootstrap.js": ["bower_components/bootstrap/dist/js/bootstrap.js"],
+          "js/bootstrap.min.js": ["bower_components/bootstrap/dist/js/bootstrap.min.js"]
         }]
       },
       /*fontawesome: {
