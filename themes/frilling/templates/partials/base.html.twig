@@ -1,61 +1,115 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set title = header.title ~ " | " ~ site.title | e('html') %}
+{% if page.header.taxonomy %}
+    {% set description = page.summary | striptags | truncate(300) %}
+    {% set keywords = page.header.taxonomy.tag | join(', ') %}
+{% else %}
+    {% set description = header.meta.description %}
+    {% set keywords = header.meta.tags %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}" prefix="og: http://ogp.me/ns#">
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index,follow"/>
+        <title>{{title}}</title>
+        <meta name="description" content="{{description}}"/>
+        <meta name="keywords" content="{{keywords}}"/>
+        <meta name="author" content="Felix Rilling"/>
 
-    {% block document_head %}
-        {% include 'partials/head.html.twig' %}
-    {% endblock %}
+        <!--Open Graph for Facebook-->
+        <meta property="og:title" content="{{title}}"/>
+        <meta property="og:url" content="{{ page.url(true, true) }}"/>
+        <meta property="og:description" content="{{description}}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ url('theme://images/apple-touch-icon-180x180.png', true) }}"/>
+        <meta property="og:site_name" content="F-Rilling.com"/>
 
-    {% block document_body %}
-        <body id="top" class="{{ page.header.body_classes }}">
-            {% block body_navigation %}
-                {% include 'partials/navigation.html.twig' %}
+        <!--Card Data for Twitter-->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="{{title}}">
+        <meta name="twitter:url" content="{{ page.url(true, true) }}">
+        <meta name="twitter:description" content="{{description}}">
+        <meta name="twitter:image" content="{{ url('theme://images/apple-touch-icon-180x180.png', true) }}"/>
+
+        <!--Favicons-->
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ url('theme://images/apple-touch-icon-57x57.png', true) }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ url('theme://images/apple-touch-icon-60x60.png', true) }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ url('theme://images/apple-touch-icon-72x72.png', true) }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ url('theme://images/apple-touch-icon-76x76.png', true) }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ url('theme://images/apple-touch-icon-114x114.png', true) }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ url('theme://images/apple-touch-icon-120x120.png', true) }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ url('theme://images/apple-touch-icon-144x144.png', true) }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ url('theme://images/apple-touch-icon-152x152.png', true) }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://images/apple-touch-icon-180x180.png', true) }}">
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-32x32.png', true) }}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-194x194.png', true) }}" sizes="194x194">
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-96x96.png', true) }}" sizes="96x96">
+        <link rel="icon" type="image/png" href="{{ url('theme://images/android-chrome-192x192.png', true) }}" sizes="192x192">
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-16x16.png', true) }}" sizes="16x16">
+        <link rel="manifest" href="{{ url('theme://images/manifest.json', true) }}">
+        <link rel="mask-icon" href="{{ url('theme://images/safari-pinned-tab.svg', true) }}" color="#333333">
+        <meta name="msapplication-TileColor" content="#95da60">
+        <meta name="msapplication-TileImage" content="{{ url('theme://images/mstile-144x144.png', true) }}">
+        <meta name="theme-color" content="#333333">
+
+        <link rel="canonical" href="{{ page.url(true, true) }}"/>
+
+        <!--Styles-->
+        {% do
+            assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', 105) %}
+        {% do
+            assets.addCss('theme://css/bootstrap.css', 103) %}
+        {% do
+            assets.addCss('theme://css/main.css', 101) %}
+        {{ assets.css() }}
+    </head>
+    <body id="top">
+        {% block body_navigation %}
+            {% include 'partials/navigation.html.twig' %}
+        {% endblock %}
+
+        <div class="container">
+            {% block content %}
+                <header>
+                    {% block content_header %}{% endblock %}
+                </header>
+
+                <main>
+                    {% block content_main %}{% endblock %}
+                </main>
             {% endblock %}
+        </div>
 
-            <div class="container">
-                {% block content %}
-                    <header>
-                        {% block content_header %}{% endblock %}
-                    </header>
+        {% block body_footer %}
+            {% include 'partials/footer.html.twig' %}
+        {% endblock %}
 
-                    <main>
-                        {% block content_main %}{% endblock %}
-                    </main>
-                {% endblock %}
-            </div>
+            {% do
+                assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js', 102) %}
 
-            {% block body_footer %}
-                {% include 'partials/footer.html.twig' %}
-            {% endblock %}
-
-            {% block javascript %}
-                {% do
-                    assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js', 102) %}
-
-                {% if page.header.taxonomy or collection %}
+            {% if page.header.taxonomy or collection %}
                 {% do
                     assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js', 100) %}
-                {% endif %}
+            {% endif %}
 
-                {% do
-                    assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js', 100) %}
+            {% do
+                assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js', 100) %}
+        {{ assets.js() }}
 
-            {% endblock %}
-            {{ assets.js() }}
-              {% if page.header.taxonomy or collection %}
+        {% if page.header.taxonomy or collection %}
             <script>
-              //Highlight Code Snippets
-              var codeBlocks=document.getElementsByTagName("pre");
-                if (codeBlocks.length>0) {
-                  	[].forEach.call(codeBlocks,function(elem,index){
-                      hljs.highlightBlock(
-                        elem,
-                        elem.getElementsByTagName("code")[0].className.replace("language-","")
-                      );
+                //Highlight Code Snippets
+                var codeBlocks = document.getElementsByTagName("pre");
+                if (codeBlocks.length > 0) {
+                    [].forEach.call(codeBlocks, function(elem, index) {
+                        hljs.highlightBlock(elem, elem.getElementsByTagName("code")[0].className.replace("language-", ""));
                     });
                 }
             </script>
-            {% endif %}
-        </body>
-    {% endblock %}
+        {% endif %}
+    </body>
 </html>

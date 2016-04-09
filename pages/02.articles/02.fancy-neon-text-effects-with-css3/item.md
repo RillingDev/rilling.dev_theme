@@ -1,13 +1,16 @@
 ---
 title: 'Fancy Neon Text Effects with CSS3'
 published: true
+summary:
+    enabled: '1'
+    format: short
 taxonomy:
-    category:
-        - CSS
     tag:
         - CSS
         - Transition
         - Text
+    category:
+        - CSS
 content:
     pagination: true
 ---
@@ -16,25 +19,8 @@ Did you ever want to create fancy neon effects? No? Well...to bad I'll explain h
 
 [Live Example](http://f-rilling.com/projects/NeonText/)
 
-This is the basic HTML we will use. Nothing fancy to see here.
 
-```html
-<html>
-	<head>
-
-	</head>
- 	<body>
-
-		<div id="container">
-		# Neon Text
-    	</div>
-
-  	</body>
- </html>
-```
-Now we're getting to the cool stuff: CSS!
-
-The most important part here is the "text-shadow" - We won't use it for an actual shadow but for the glow effect of the text. Each line in the value represents one of the radiuses of the glow (i.e. The first line creates the glow with a 10px radius). In most cases we want the inner shadows to be a brighter version of the color or even white, while the outter ones have the neon-color.
+The most important is the "text-shadow" - We won't use it for an actual shadow but for the glow effect of the text. Each line in the value represents one of the radiuses of the glow (i.e. The first line creates the glow with a 10px radius). In most cases we want the inner shadows to be a brighter version of the color or even white, while the outter ones have the neon-color.
 
 ```css
 body{
