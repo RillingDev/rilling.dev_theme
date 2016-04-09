@@ -1,5 +1,5 @@
-<article class="list-item">
-    <div class="article article-preview">
+<article>
+    <div>
         <div class="article-header row">
             <div class="col-sm-12 col-md-8">
                 {% if truncate %}
@@ -63,7 +63,7 @@
                 {% if not page.isLast %}
                     <li>
                         <a href="{{ page.prevSibling.url }}" aria-label="Previous">
-                            <i class="fa fa-arrow-left"></i>
+                            <i class="fa fa-angle-left"></i>
                             <span>Prev Post</span>
                         </a>
                     </li>
@@ -72,7 +72,7 @@
                     <li>
                         <a href="{{ page.nextSibling.url }}" aria-label="Next">
                             <span>Next Post</span>
-                            <i class="fa fa-arrow-right"></i>
+                            <i class="fa fa-angle-right"></i>
                         </a>
                     </li>
                 {% endif %}
