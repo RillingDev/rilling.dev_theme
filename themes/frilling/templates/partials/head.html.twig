@@ -1,9 +1,9 @@
 {% set title = header.title ~ " | " ~ site.title | e('html') %}
-{% if page.header.taxonomy %}
-  {% set desc = page.content|truncate(550) %}
+{% if  page.header.taxonomy %}
+  {% set description = page.summary | striptags | truncate(300) %}
   {% set keywords = page.header.taxonomy.tag |join(', ') %}
 {% else %}
-  {% set desc = header.meta.description %}
+  {% set description = header.meta.description %}
   {% set keywords = header.meta.tags %}
 {% endif %}
 
