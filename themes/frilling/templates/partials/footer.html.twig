@@ -9,14 +9,14 @@
                             ? 'active'
                             : '' %}
                         <li class="{{ current_page }}">
-                            <a href="{{ page.url }}">
+                            <a href="{{ page.url }}" title="Go to   {{ page.menu }}">
                                 {{ page.menu }}
                             </a>
                         </li>
                     {% endfor %}
                     {% for mitem in site.menu %}
                         <li>
-                            <a href="{{ mitem.url }}">
+                            <a href="{{ mitem.url }}" title="Go to {{ page.menu }}">
                                 {{ mitem.text }}
                             </a>
                         </li>

@@ -2,10 +2,9 @@
 
     <h3>{{'PLUGIN_COMMENTS.ADD_COMMENT'|t}}</h3>
 
-    <form
-        name="{{ grav.config.plugins.comments.form.name }}"
-        action="{{ grav.config.plugins.comments.form.action ?  base_url ~ grav.config.plugins.comments.form.action : page.url }}"
-        method="{{ grav.config.plugins.comments.form.method|upper|default('POST') }}">
+    <form name="{{ grav.config.plugins.comments.form.name }}"
+          action="{{ grav.config.plugins.comments.form.action ?  base_url ~ grav.config.plugins.comments.form.action : page.url }}"
+          method="{{ grav.config.plugins.comments.form.method|upper|default('POST') }}">
 
         {% for field in grav.config.plugins.comments.form.fields %}
             {% set value = form.value(field.name) %}
@@ -18,9 +17,9 @@
         {% endfor %}
 
         <div class="buttons">
-            {% for button in grav.config.plugins.comments.form.buttons %}
-                <button class="button" type="{{ button.type|default('submit') }}">{{ button.value|t|default('Submit') }}</button>
-            {% endfor %}
+        {% for button in grav.config.plugins.comments.form.buttons %}
+            <button class="button" type="{{ button.type|default('submit') }}">{{ button.value|t|default('Submit') }}</button>
+        {% endfor %}
         </div>
 
         {{ nonce_field('form', 'form-nonce') }}
@@ -28,22 +27,19 @@
 
     <div class="alert">{{ form.message }}</div>
 
-    {% if grav.twig.comments | length %}
+    {% if grav.twig.comments|length %}
 
         <h3>{{'PLUGIN_COMMENTS.COMMENTS'|t}}</h3>
 
         <table>
-            {% for comment in grav.twig.comments | array_reverse %}
-                <tr>
-                    <td>
-                        {{comment.text}}
-                        <br/>
-                        {{'PLUGIN_COMMENTS.WRITTEN_ON'|t}}
-                        {{comment.date|e}}
-                        {{'PLUGIN_COMMENTS.BY'|t}}
-                        {{comment.author}}
-                    </td>
-                </tr>
+            {% for comment in grav.twig.comments|array_reverse %}
+            <tr>
+                <td>
+                    {{comment.text}}
+                    <br />
+                    {{'PLUGIN_COMMENTS.WRITTEN_ON'|t}} {{comment.date|e}} {{'PLUGIN_COMMENTS.BY'|t}} {{comment.author}}
+                </td>
+            </tr>
             {% endfor %}
         </table>
     {% endif %}
