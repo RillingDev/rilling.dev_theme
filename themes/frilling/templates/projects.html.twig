@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block content_main %}
-    {% for category in header.content.categorys %}
+    {% for category in header.data.categorys %}
         <h2>
             <i class="fa fa-{{category.icon}}"></i>{{category.name}}:</h2>
         <ul>
-            {% for project in header.content.projects %}
+            {% for project in header.data.projects | sort_by_key("date") | reverse %}
                 {% if project.category == category.id %}
                     <li class="">
-                        <a href="{{ url(project.file) }}" class="">
+                        <a href="{{ url(project.file) }}" title="Go to Project {{project.name}}">
                             {{project.name}}
                         </a>
                         {% if project.download %}
