@@ -6,16 +6,14 @@
     {% endblock %}
 
     {% block content_main %}
-        <div class="content-wrapper">
-            <div>
-                {% for child in collection %}
-                    {% include 'partials/blog_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
-                {% endfor %}
-            </div>
-            {% if config.plugins.pagination.enabled and collection.params.pagination %}
-                {% include 'partials/pagination.html.twig' with {'base_url': page.url, 'pagination': collection.params.pagination} %}
-            {% endif %}
-        </div>
+
+        {% for child in collection %}
+            {% include 'partials/blog_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
+        {% endfor %}
+
+        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' with {'base_url': page.url, 'pagination': collection.params.pagination} %}
+        {% endif %}
 
     {% endblock %}
 

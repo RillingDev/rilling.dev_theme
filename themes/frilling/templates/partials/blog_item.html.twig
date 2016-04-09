@@ -1,81 +1,85 @@
-<article>
-    <div>
-        <div class="article-header row">
-            <div class="col-sm-12 col-md-8">
-                {% if truncate %}
-                    <h2 class="article-title">
-                        <a href="{{ page.url }}">{{ page.title }}</a>
-                    </h2>
-                {% else %}
-                    <h1 class="article-title">
-                        <a href="{{ page.url }}">{{ page.title }}</a>
-                    </h1>
-                {% endif %}
-                <p class="article-date">
-                    <span>{{ page.date|date("d") }}</span>
-                    <span>{{ page.date|date("M") }},</span>
-                    <span>{{ page.date|date("Y") }}</span>
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="article-tags ">
-                    {% if page.taxonomy.tag %}
-                        {% for tag in page.taxonomy.tag %}
-                            <a class="tag" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
+{% if not truncate %}
+    <main>
+    {% endif %}
+    <article>
+        <div>
+            <div class="article-header row">
+                <div class="col-sm-12 col-md-8">
+                    {% if truncate %}
+                        <h2 class="article-title">
+                            <a href="{{ page.url }}">{{ page.title }}</a>
+                        </h2>
+                    {% else %}
+                        <h1 class="article-title">
+                            <a href="{{ page.url }}">{{ page.title }}</a>
+                        </h1>
                     {% endif %}
+                    <p class="article-date">
+                        <span>{{ page.date|date("d") }}</span>
+                        <span>{{ page.date|date("M") }},</span>
+                        <span>{{ page.date|date("Y") }}</span>
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="article-tags ">
+                        {% if page.taxonomy.tag %}
+                            {% for tag in page.taxonomy.tag %}
+                                <a class="tag" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="article-content">
+            <div class="article-content">
 
-            {% if page.header.continue_link is sameas(false) %}
-                {{ page.content }}
-                {% if not truncate %}
-                    {% set show_prev_next = true %}
-                {% endif %}
-            {% elseif truncate and page.summary != page.content %}
-                {{ page.summary }}
-                <p>
-                    <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title }}">Continue Reading...</a>
-                </p>
-            {% elseif truncate %}
-                {% if page.summary != page.content %}
-                    {{ page.content|truncate(550) }}
+                {% if page.header.continue_link is sameas(false) %}
+                    {{ page.content }}
+                    {% if not truncate %}
+                        {% set show_prev_next = true %}
+                    {% endif %}
+                {% elseif truncate and page.summary != page.content %}
+                    {{ page.summary }}
+                    <p>
+                        <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title }}">Continue Reading...</a>
+                    </p>
+                {% elseif truncate %}
+                    {% if page.summary != page.content %}
+                        {{ page.content|truncate(550) }}
+                    {% else %}
+                        {{ page.content }}
+                    {% endif %}
+                    <p>
+                        <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title }}">Continue Reading...</a>
+                    </p>
                 {% else %}
                     {{ page.content }}
+                    {% set show_prev_next = true %}
                 {% endif %}
-                <p>
-                    <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title }}">Continue Reading...</a>
-                </p>
-            {% else %}
-                {{ page.content }}
-                {% set show_prev_next = true %}
-            {% endif %}
 
-        </div>
-        {% include 'partials/comments.html.twig' with {'page': page} %}
-    </article>
-    {% if not truncate %}
-        <nav>
-            <ul class="pagination">
-                {% if not page.isLast %}
-                    <li>
-                        <a href="{{ page.prevSibling.url }}" aria-label="Previous">
-                            <i class="fa fa-angle-left"></i>
-                            <span>Prev Post</span>
-                        </a>
-                    </li>
-                {% endif %}
-                {% if not page.isFirst %}
-                    <li>
-                        <a href="{{ page.nextSibling.url }}" aria-label="Next">
-                            <span>Next Post</span>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                {% endif %}
-            </ul>
-        </nav>
+            </div>
+            {% include 'partials/comments.html.twig' with {'page': page} %}
+        </article>
+        {% if not truncate %}
+            <nav>
+                <ul class="pagination">
+                    {% if not page.isLast %}
+                        <li>
+                            <a href="{{ page.prevSibling.url }}" aria-label="Previous">
+                                <i class="fa fa-angle-left"></i>
+                                <span>Prev Post</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if not page.isFirst %}
+                        <li>
+                            <a href="{{ page.nextSibling.url }}" aria-label="Next">
+                                <span>Next Post</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </main>
     {% endif %}

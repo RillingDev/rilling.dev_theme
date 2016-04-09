@@ -1,6 +1,14 @@
-nav.navbar {
+nav{
+&.navbar {
     .navbar-header{
       .navbar-toggle{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      .icon-bar{
+        border-radius: 0;
+        width: 24px;
+        height: 4px;
+        }
         &,&.collapsed{
           .transition();
           background-color: transparent;
@@ -36,4 +44,16 @@ nav.navbar {
           border-top: 1px solid @gray;
         });
     }
+  }
+  .pagination {
+  	text-align: center;
+     li {
+    	display: inline-block;
+    	border: 1px solid #eee;
+    }
+     a,
+     span {
+    	padding: 8px 15px;
+    }
+  }
 }
