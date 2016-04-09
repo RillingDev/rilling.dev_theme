@@ -42,7 +42,7 @@
 
             {% endblock %}
             {{ assets.js() }}
-
+              {% if page.header.taxonomy %}
             <script>
               //Highlight Code Snippets
               var codeBlocks=document.getElementsByTagName("pre");
@@ -55,6 +55,7 @@
                     });
                 }
             </script>
+            {% endif %}
         </body>
     {% endblock %}
 </html>

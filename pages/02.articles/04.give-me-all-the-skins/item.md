@@ -1,5 +1,5 @@
 ---
-title: Give-me-ALL-the-skins!
+title: 'Give me ALL the skins!'
 published: true
 taxonomy:
     category:
@@ -10,13 +10,7 @@ taxonomy:
         - API
         - Riot
 content:
-    items: '@self.children'
-    limit: 5
     pagination: true
-    url_taxonomy_filters: true
-    order:
-        dir: desc
-        by: date
 ---
 
 If you used the [Riot Games API](https://developer.riotgames.com/api/methods "Riot Games API") for creating a [League of Legends](http://euw.leagueoflegends.com/ "League of Legends") app before, you may have noticed that its not really possible to directly get the JSON information for all the available skins. When I created my [Mystery Gift Opening Simulator](http://f-rilling.com/projects/MysteryGiftOpener/ "Mystery Gift Opening Simulator") for [League of Legends](http://euw.leagueoflegends.com/ "League of Legends"), I ran into the same problem - and wrote some JavaScript/jQuery that allows to get JSON with information about all the available skins.

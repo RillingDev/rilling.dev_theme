@@ -9,13 +9,7 @@ taxonomy:
         - jQuery
         - Library
 content:
-    items: '@self.children'
-    limit: 5
     pagination: true
-    url_taxonomy_filters: true
-    order:
-        dir: desc
-        by: date
 ---
 
 When I first started coding Javascript, I quickly found myself using jQuery because it simplifies a lot of basic tasks ranging from DOM manipulation to animation (which it does [rather bad](https://css-tricks.com/myth-busting-css-animations-vs-javascript/) by the way)

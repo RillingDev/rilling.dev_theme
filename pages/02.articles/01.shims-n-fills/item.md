@@ -9,13 +9,7 @@ taxonomy:
         - Shims
         - Polyfill
 content:
-    items: '@self.children'
-    limit: 5
     pagination: true
-    url_taxonomy_filters: true
-    order:
-        dir: desc
-        by: date
 ---
 
 Most of the time when speaking of “Cross-Browser Compatibility” we think about styling and visuals, but its more than that: Simmiliar to styles, every browser/engine and version of said supports different JS standards - but what can you do when one doesnt support something you need? No need to fear, you can prevent that! Lets start by looking how JS features are versionized
@@ -36,9 +30,13 @@ Now we can check if the browser has the features we need - but what if he doesn�
 
 Two words you’ll read a lot when talking about Cross-Browser Compatibility are “Shim” and “Polyfill” - what are those?
 
-[**Shim**] A Shim is a small code library with the purpose to change or add functionality in an application so that there can be a normalized behavior.
+[**Shim**]
 
-[**Polyfill**] Polyfills are simmiliar to Shims but with the difference that they add functionality that should already exist. Polyfills is a Web-development exclusive term.
+A Shim is a small code library with the purpose to change or add functionality in an application so that there can be a normalized behavior.
+
+[**Polyfill**]
+
+Polyfills are simmiliar to Shims but with the difference that they add functionality that should already exist. Polyfills is a Web-development exclusive term.
 
 Most Shims/Polyfills are dedicated to fill one job like a shim that adds ES6 support or a polyfill that allows the use of canvas in legacy browsers
 

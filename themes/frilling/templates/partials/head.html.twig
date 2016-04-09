@@ -1,4 +1,11 @@
 {% set title = header.title ~ " | " ~ site.title | e('html') %}
+{% if page.header.taxonomy %}
+  {% set desc = page.content|truncate(550) %}
+  {% set keywords = page.header.taxonomy.tag |join(', ') %}
+{% else %}
+  {% set desc = header.meta.description %}
+  {% set keywords = header.meta.tags %}
+{% endif %}
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
     {% block head %}
@@ -7,8 +14,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index,follow"/>
         <title>{{title}}</title>
-        <meta name="description" content="{{header.meta.description}}"/>
-        <meta name="keywords" content="{{header.meta.tags}}"/>
+        <meta name="description" content="{{description}}"/>
+        <meta name="keywords" content="{{keywords}}"/>
         <meta name="author" content="Felix Rilling"/>
 
         {% block socialmeta %}
@@ -16,7 +23,7 @@
             <!--Open Graph for Facebook-->
             <meta property="og:title" content="{{title}}"/>
             <meta property="og:url" content="{{ page.url(true, true) }}"/>
-            <meta property="og:description" content="{{header.meta.description}}"/>
+            <meta property="og:description" content="{{description}}"/>
             <meta property="og:type" content="website"/>
             <meta property="og:image" content="{{ url('theme://images/apple-touch-icon-180x180.png', true) }}"/>
             <meta property="og:site_name" content="F-Rilling.com"/>
@@ -25,7 +32,7 @@
             <meta name="twitter:card" content="summary">
             <meta name="twitter:title" content="{{title}}">
             <meta name="twitter:url" content="{{ page.url(true, true) }}">
-            <meta name="twitter:description" content="{{header.meta.description}}">
+            <meta name="twitter:description" content="{{description}}">
             <meta name="twitter:image" content="{{ url('theme://images/apple-touch-icon-180x180.png', true) }}"/>
         {% endblock %}
 
