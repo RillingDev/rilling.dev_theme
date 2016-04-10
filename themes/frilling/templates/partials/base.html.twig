@@ -68,58 +68,56 @@
         {{ assets.css() }}
     </head>
     <body id="top">
-      <!-- Google Tag Manager -->
-      <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TGKXDD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-      </noscript>
-      <script>
-        (function(f, e, l, i, x) {
-          f[i] = f[l] || [];
-          f[i].push({
-            "gtm.start": new Date().getTime(),
-            event: "gtm.js"
-          });
-          var ri = e.getElementsByTagName(l)[0],
-            ll = e.createElement(l),
-            ing = i != "dataLayer" ? "&l=" + i : "";
-          ll.async = true;
-          ll.src =
-            "//www.googletagmanager.com/gtm.js?id=" + x + ing;
-          ri.parentNode.insertBefore(j, ri);
-        })(window, document, "script", "dataLayer", "GTM-TGKXDD");
-      </script>
-      <!-- End Google Tag Manager -->
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TGKXDD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>
+            (function(f, e, l, i, x) {
+                f[i] = f[l] || [];
+                f[i].push({"gtm.start": new Date().getTime(), event: "gtm.js"});
+                var ri = e.getElementsByTagName(l)[0],
+                    ll = e.createElement(l),
+                    ing = i != "dataLayer"
+                        ? "&l=" + i
+                        : "";
+                ll.async = true;
+                ll.src = "//www.googletagmanager.com/gtm.js?id=" + x + ing;
+                ri.parentNode.insertBefore(ll, ri);
+            })(window, document, "script", "dataLayer", "GTM-TGKXDD");
+        </script>
+        <!-- End Google Tag Manager -->
         {% block body_navigation %}
             {% include 'partials/navigation.html.twig' %}
         {% endblock %}
 
         {% block content_wrapper %}
-        <div class="container">
-            {% block content %}
-                <header>
-                    {% block content_header %}{% endblock %}
-                </header>
+            <div class="container">
+                {% block content %}
+                    <header>
+                        {% block content_header %}{% endblock %}
+                    </header>
 
-                <main>
-                    {% block content_main %}{% endblock %}
-                </main>
-            {% endblock %}
-        </div>
+                    <main>
+                        {% block content_main %}{% endblock %}
+                    </main>
+                {% endblock %}
+            </div>
         {% endblock %}
 
         {% block body_footer %}
             {% include 'partials/footer.html.twig' %}
         {% endblock %}
 
-            {% do
-                assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js', 102) %}
+        {% do
+            assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js', 102) %}
 
-            {% if page.header.taxonomy or collection %}
-                {% do
-                    assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js', 100) %}
-            {% endif %}
+        {% if page.header.taxonomy or collection %}
             {% do
-                assets.addJs('theme://js/bootstrap.min.js', 100) %}
+                assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js', 100) %}
+        {% endif %}
+        {% do
+            assets.addJs('theme://js/bootstrap.min.js', 100) %}
         {{ assets.js() }}
 
         {% if page.header.taxonomy or collection %}
