@@ -109,26 +109,32 @@
             {% include 'partials/footer.html.twig' %}
         {% endblock %}
 
-        {% do
-            assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js', 102) %}
-
         {% if page.header.taxonomy or collection %}
             {% do
                 assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js', 100) %}
         {% endif %}
-        {% do
-            assets.addJs('theme://js/bootstrap.min.js', 100) %}
+
         {{ assets.js() }}
 
+        <script>
+            //Mobile Nav
+            var a = document.getElementById("navbarMobile"),
+                b = a.classList,
+                c = document.getElementById("navbarHeader").classList,
+                d = "collapsed";
+            a.addEventListener("click", function() {
+                b.contains(d)
+                    ? (b.remove(d), c.add("open"))
+                    : (b.add(d), c.remove("open"))
+            });
+        </script>
         {% if page.header.taxonomy or collection %}
             <script>
                 //Highlight Code Snippets
                 var codeBlocks = document.getElementsByTagName("pre");
-                if (codeBlocks.length > 0) {
-                    [].forEach.call(codeBlocks, function(elem, index) {
-                        hljs.highlightBlock(elem, elem.getElementsByTagName("code")[0].className.replace("language-", ""));
-                    });
-                }
+                codeBlocks.length > 0 && [].forEach.call(codeBlocks, function(a, b) {
+                    hljs.highlightBlock(a, a.getElementsByTagName("code")[0].className.replace("language-", ""))
+                });
             </script>
         {% endif %}
     </body>
