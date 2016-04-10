@@ -72,6 +72,7 @@
             {% include 'partials/navigation.html.twig' %}
         {% endblock %}
 
+        {% block content_wrapper %}
         <div class="container">
             {% block content %}
                 <header>
@@ -83,6 +84,7 @@
                 </main>
             {% endblock %}
         </div>
+        {% endblock %}
 
         {% block body_footer %}
             {% include 'partials/footer.html.twig' %}

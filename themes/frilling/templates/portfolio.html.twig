@@ -1,28 +1,30 @@
 {% extends 'partials/base.html.twig' %}
+{% block content %}{% endblock %}
+{% block content_wrapper %}
+    <main class="portfolio">
+        {% for category in header.data.categories %}
+            <section class="category" style="background-image:url('{{ url('theme://img/images/' ~ category.img) }}');">
+                <h2>
+                    {{category.name}}
+                </h2>
+                <div class="items">
+                    {% for project in header.data.projects | sort_by_key("id") %}
 
-{% block content_header %}
-{% endblock %}
-
-{% block content_main %}
-    {% for category in header.data.categories %}
-        <h2>
-            <i class="fa fa-{{category.icon}}"></i>{{category.name}}:</h2>
-        <ul>
-            {% for project in header.data.projects | sort_by_key("id") | reverse %}
-                {% if project.category == category.id %}
-                    <li>
-                        <a href="{{ url(project.file) }}" title="Go to Project {{project.name}}">
-                            {{project.name}}
-                        </a>
-                        <span class="version" class="">
-                            &lt;{{project.version}}&gt;
-                        </span>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    {% endfor %}
-
+                        {% if project.category == category.id %}
+                            <div class="item row">
+                                <div class="col-xs-12 col-md-3">
+                                    <img src="{{ url('theme://img/thumbs/' ~ project.img) }}" class="full-width" alt="Thumbnail of {{project.name}}" title="Thumbnail of {{project.name}}">
+                                </div>
+                                <div class="col-xs-12 col-md-9">
+                                    <h3>{{project.name}}</h3>
+                                    <p>{{project.description}}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </section>
+        {% endfor %}
     {% include 'modular/social.html.twig' %}
-
+    </main>
 {% endblock %}
