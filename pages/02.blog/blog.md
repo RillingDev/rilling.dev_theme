@@ -1,5 +1,5 @@
 ---
-title: Articles
+title: Blog
 published: true
 visible: true
 content:
@@ -16,4 +16,3 @@ meta:
     tags: 'web, design, webdesign, article, articles, html, css, js, angularjs, jQuery, node, nodejs, npm'
 ---
 
-Articles:

@@ -1,38 +1,38 @@
 nav{
 &.navbar {
     margin-bottom: 30px;
+    overflow: hidden;
     .navbar-header{
-    margin-right: -20px;
-    margin-left: -20px;
+      margin-right: -20px;
+      margin-left: -20px;
       .navbar-brand{
-        padding-left: 20px;
+        padding-left: 15px;
       }
       .navbar-toggle{
-      margin-right: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      .icon-bar{
-        border-radius: 0;
-        width: 24px;
-        height: 4px;
-        }
-        &,&.collapsed{
-          .transition();
-          background-color: transparent;
-        }
-        &:not(.collapsed){
-            transform: rotate(90deg);
-        }
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .icon-bar{
+          border-radius: 0;
+          width: 24px;
+          height: 4px;
+          }
+          &,
+          &.collapsed{
+            .transition();
+            background-color: transparent;
+          }
+          &:not(.collapsed){
+              transform: rotate(90deg);
+          }
       }
     }
     .navbar-collapse {
         ul.nav {
             li {
                 font-family: @font-family-sans-serif;
-                  &:first-child {
-                      display: none;
-                  }
                 a {
+                    padding-left: 20px;
                     i.fa {
                         margin-right: 5px;
                     }
