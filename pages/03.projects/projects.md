@@ -5,9 +5,9 @@ visible: true
 icon: code
 meta:
     description: 'A lot of the pojects I created over the years are listened on this site. Tools, Experiments and games can be found here.'
-    tags: 'web, design, webdesign, projects, project, html, css, js, tool, game, games'
+    tags: 'web, design ,webdesign ,webdev, web development, html, css, javascript, js, php, mysql'
 data:
-    categorys:
+    categories:
         -
             id: 1
             name: Applications
