@@ -16,7 +16,7 @@
                             {{project.name}}
                         </a>
                         {% if project.download %}
-                            <a href="{{project.download}}" class="icon" title="Download {{project.name}}">
+                            <a href="{{url("user/data/files/f-rilling_" ~ project.name ~ ".7z")}}" class="icon" title="Download {{project.name}}">
                                 <i class="fa fa-download"></i>
                             </a>
                         {% endif %}
