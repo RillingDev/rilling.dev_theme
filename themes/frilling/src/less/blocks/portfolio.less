@@ -32,14 +32,17 @@
             padding-bottom: 35px;
             .item {
                 margin-bottom: 35px;
+                .screen-md-min({
+                height: 206px;
+                });
                 > div {
+                height: 100%;
                 position: relative;
                     .text-box {
                         background-color: @gray-lightest;
                         height: 100%;
                         padding: 0 20px;
                         float: right;
-                        .arrow(15px, @gray-lightest, left, 50%, 0, @gray);
                         .screen-md-min({
                           min-width: 300px;
                           width:95%;
@@ -50,6 +53,25 @@
                         border: 3px solid @gray-lightest;
                     }
                 }
+                &:nth-child(~"2n+1"){
+                  > div{
+                    float: right;
+                    .text-box{
+                          .arrow(15px, @gray-lightest, right, 50%, 0, @gray);
+                          float: left;
+                    }
+                    img{
+                        float: right;
+                    }
+                  }
+                }
+                &:nth-child(2n+2){
+                > div{
+                  .text-box{
+                        .arrow(15px, @gray-lightest, left, 50%, 0, @gray);
+                  }
+                }
+              }
             }
         }
     }
