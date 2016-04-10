@@ -10,16 +10,20 @@ data:
     categorys:
         -
             id: 1
-            name: Applications
-            icon: rocket
+            name: Websites
+            img: bg1.jpg
         -
             id: 2
-            name: Experiments
-            icon: flask
+            name: Libraries
+            icon: bg2.jpg
         -
             id: 3
-            name: Games
-            icon: gamepad
+            name: 'Small Sites'
+            icon: bg3.jpg
+        -
+            id: 4
+            name: Interfaces
+            icon: bg4.jpg
     projects:
         -
             name: 2DGame
