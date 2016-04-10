@@ -1,6 +1,7 @@
+themes/frilling/bower_components/
+themes/frilling/node_modules/
+themes/antimatter/
 accounts/
 plugins/
 config/
-themes/antimatter/
-themes/frilling/node_modules/
-themes/frilling/bower_components/
+pages/

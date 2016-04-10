@@ -1,6 +1,7 @@
 ---
 title: 'Give me ALL the skins!'
 published: true
+date: '04-01-2015 15:14'
 taxonomy:
     category:
         - Javascript
