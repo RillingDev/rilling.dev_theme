@@ -68,6 +68,27 @@
         {{ assets.css() }}
     </head>
     <body id="top">
+      <!-- Google Tag Manager -->
+      <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TGKXDD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      </noscript>
+      <script>
+        (function(f, e, l, i, x) {
+          f[i] = f[l] || [];
+          f[i].push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js"
+          });
+          var ri = e.getElementsByTagName(l)[0],
+            ll = e.createElement(l),
+            ing = i != "dataLayer" ? "&l=" + i : "";
+          ll.async = true;
+          ll.src =
+            "//www.googletagmanager.com/gtm.js?id=" + x + ing;
+          ri.parentNode.insertBefore(j, ri);
+        })(window, document, "script", "dataLayer", "GTM-TGKXDD");
+      </script>
+      <!-- End Google Tag Manager -->
         {% block body_navigation %}
             {% include 'partials/navigation.html.twig' %}
         {% endblock %}
