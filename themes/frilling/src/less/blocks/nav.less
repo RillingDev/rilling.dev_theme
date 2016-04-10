@@ -1,12 +1,16 @@
 nav{
 &.navbar {
-    margin-bottom: 30px;
+    border: 0;
+    margin-bottom: 0;
     overflow: hidden;
     .navbar-header{
       margin-right: -20px;
       margin-left: -20px;
       .navbar-brand{
-        padding-left: 15px;
+        padding-left: 20px;
+        .screen-md-max({
+          padding-left: 15px;
+        });
       }
       .navbar-toggle{
         margin-right: 10px;
