@@ -12,7 +12,7 @@
             {% for project in header.data.projects | sort_by_key("date") | reverse %}
                 {% if project.category == category.id %}
                     <li >
-                        <a href="{{ "projects.f-rilling.com/" ~ project.file }}" title="Go to Project {{project.name}}">
+                        <a href="http://projects.f-rilling.com/{{ project.file }}" title="Go to Project {{project.name}}">
                             {{project.name}}
                         </a>
                         {% if project.download %}
