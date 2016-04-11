@@ -26,7 +26,8 @@ module.exports = function(grunt) {
       styles: {
         files: ["src/less/main.less", "src/less/main/*.less", "src/less/blocks/*.less"],
         tasks: [
-          "less:dist"
+          "less:dist",
+          "cssmin"
         ]
       },
       bootstrap: {
@@ -65,7 +66,8 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'css/main.min.css': ['css/main.css']
+          'css/main.min.css': ['css/main.css'],
+          'css/compiled.min.css': ['css/bootstrap.css','css/main.css']
         }
       }
     },

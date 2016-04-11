@@ -9,7 +9,7 @@
 {% endif %}
 
 <!DOCTYPE html>
-<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}" prefix="og: http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns#">
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,9 +64,7 @@
         {% do
             assets.addCss('https://fonts.googleapis.com/css?family=Lato:400,300,700|Source+Code+Pro:400,500', 104) %}
         {% do
-            assets.addCss('theme://css/bootstrap.css', 103) %}
-        {% do
-            assets.addCss('theme://css/main.css', 101) %}
+            assets.addCss('theme://css/compiled.min.css', 103) %}
         {{ assets.css() }}
     </head>
     <body id="top">
@@ -89,9 +87,7 @@
             })(window, document, "script", "dataLayer", "GTM-TGKXDD");
         </script>
         <!-- End Google Tag Manager -->
-        {% block body_navigation %}
-            {% include 'partials/navigation.html.twig' %}
-        {% endblock %}
+        {% include 'partials/navigation.html.twig' %}
 
         {% block content_wrapper %}
             <div class="container">
@@ -107,9 +103,7 @@
             </div>
         {% endblock %}
 
-        {% block body_footer %}
-            {% include 'partials/footer.html.twig' %}
-        {% endblock %}
+        {% include 'partials/footer.html.twig' %}
 
         {% if page.header.taxonomy or collection %}
             {% do
