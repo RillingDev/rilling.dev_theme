@@ -1,0 +1,16 @@
+title: F-Rilling.com
+author:
+  name: 'Felix Rilling'
+  email: contact@f-rilling.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Articles on webdesign and coding as well as a huge amount of web related projects, ranging from useful everyday tools to inovative games as well as experimental showoffs of new code features'
+summary:
+  enabled: true
+  format: short
+  size: 500
+  delimiter: '==='
+blog:
+  route: /blog
