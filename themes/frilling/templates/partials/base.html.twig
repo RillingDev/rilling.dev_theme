@@ -87,8 +87,9 @@
             })(window, document, "script", "dataLayer", "GTM-TGKXDD");
         </script>
         <!-- End Google Tag Manager -->
-        {% include 'partials/navigation.html.twig' %}
-
+        {% block body_nav %}
+          {% include 'partials/navigation.html.twig' %}
+        {% endblock %}
         {% block content_wrapper %}
             <div class="container">
                 {% block content %}
@@ -102,9 +103,9 @@
                 {% endblock %}
             </div>
         {% endblock %}
-
-        {% include 'partials/footer.html.twig' %}
-
+        {% block body_footer %}
+          {% include 'partials/footer.html.twig' %}
+        {% endblock %}
         {% if page.header.taxonomy or collection %}
             {% do
                 assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js', 100) %}
