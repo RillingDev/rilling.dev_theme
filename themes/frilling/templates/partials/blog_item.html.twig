@@ -14,7 +14,7 @@
                             <a href="{{ page.url }}">{{ page.title }}</a>
                         </h1>
                     {% endif %}
-                    <p class="article-date">
+                    <p class="date">
                         <span>{{ page.date|date("d") }}</span>
                         <span>{{ page.date|date("M") }},</span>
                         <span>{{ page.date|date("Y") }}</span>
@@ -59,26 +59,5 @@
 
             </div>
         </article>
-        {% if not truncate %}
-            <nav>
-                <ul class="pagination">
-                    {% if not page.isLast %}
-                        <li>
-                            <a href="{{ page.prevSibling.url }}" aria-label="Previous">
-                                <i class="fa fa-angle-left"></i>
-                                <span>Prev Post</span>
-                            </a>
-                        </li>
-                    {% endif %}
-                    {% if not page.isFirst %}
-                        <li>
-                            <a href="{{ page.nextSibling.url }}" aria-label="Next">
-                                <span>Next Post</span>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </nav>
-        </main>
-    {% endif %}
+
+      </main>
