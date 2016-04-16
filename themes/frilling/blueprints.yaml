@@ -6,8 +6,8 @@ author:
   name: Felix Rilling
   email: contact@f-rilling.com
   url: http://f-rilling.com
-homepage:
-demo:
+homepage: http://f-rilling.com
+demo: http://f-rilling.com
 keywords:
 bugs:
 license: MIT
@@ -22,14 +22,3 @@ form:
       default: 'en'
       validate:
         type: text
-
-    dropdown.enabled:
-        type: toggle
-        label: Dropdown in navbar
-        highlight: 1
-        default: 1
-        options:
-          1: Enabled
-          0: Disabled
-        validate:
-          type: bool
