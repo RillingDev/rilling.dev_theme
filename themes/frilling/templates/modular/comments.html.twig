@@ -49,12 +49,14 @@
                     <div class="form-group col-xs-12  col-sm-12 col-md-12 col-lg-12" data-grav-field="textarea" data-grav-disabled="false" data-grav-default="null">
                         <label for="commentText" class="control-label">Comment*:</label>
                         <textarea name="text" id="commentText" class="form-control" rows="6" placeholder="Enter your comment"></textarea>
-                        <button class="btn bnt-primary form-group" type="submit">Submit</button>
-                    </div>
-                {% else %}
-                    {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
-                {% endif %}
-            {% endfor %}
+
+                    {% else %}
+                        {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
+
+                    {% endif %}
+                {% endfor %}
+                <button class="btn bnt-primary form-group" type="submit">Submit</button>
+            </div>
         </div>
 
         {{ nonce_field('form', 'form-nonce') }}
