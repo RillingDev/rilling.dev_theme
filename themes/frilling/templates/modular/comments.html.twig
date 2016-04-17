@@ -16,7 +16,7 @@
                         <p>
                             {{comment.text}}
                         </p>
-                    </td>
+
                 </div>
             {% endfor %}
         </div>
@@ -37,18 +37,18 @@
                 {% if loop.index == 1 %}
                     <div class="form-group  col-xs-12  col-sm-12 col-md-6 col-lg-6" data-grav-field="text" data-grav-disabled="false" data-grav-default="null">
                         <label for="commentName" class="control-label">Name*:</label>
-                        <input name="name" id="commentName" class="form-control" type="text" placeholder="Enter your name">
+                        <input name="name" id="commentName" class="form-control" type="text" placeholder="Enter your name" inputmode="latin-name">
                     </div>
                 {% elseif loop.index == 2 %}
 
                     <div class="form-group  col-xs-12  col-sm-12 col-md-6 col-lg-6" data-grav-field="email" data-grav-disabled="false" data-grav-default="null">
                         <label for="commentEmail" class="control-label ">Email(Won't be displayed)*:</label>
-                        <input name="email" id="commentEmail" class="form-control " type="mail" placeholder="Enter your email">
+                        <input name="email" id="commentEmail" class="form-control " type="email" placeholder="Enter your email" inputmode="email">
                     </div>
                 {% elseif loop.index == 3 %}
                     <div class="form-group col-xs-12  col-sm-12 col-md-12 col-lg-12" data-grav-field="textarea" data-grav-disabled="false" data-grav-default="null">
                         <label for="commentText" class="control-label">Comment*:</label>
-                        <textarea name="text" id="commentText" class="form-control" rows="6" placeholder="Enter your comment"></textarea>
+                        <textarea name="text" id="commentText" class="form-control" rows="6" placeholder="Enter your comment" inputmode="latin-text"></textarea>
 
                     {% else %}
                         {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}

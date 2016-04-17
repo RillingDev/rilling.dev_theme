@@ -1,16 +1,19 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% set title = header.title ~ " | " ~ site.title | e('html') %}
-{% if page.header.taxonomy %}
-    {% set description = page.summary | striptags | truncate(300) %}
-    {% set keywords = page.header.taxonomy.tag | join(', ') %}
+{% if header.title == 'Blog' %}
+{% set title = "F-Rilling.com" | e('html') %}
 {% else %}
-    {% set description = header.meta.description %}
-    {% set keywords = header.meta.tags %}
+{% set title = header.title ~ " | " ~ site.title | e('html') %}
 {% endif %}
-
+{% if page.header.taxonomy %}
+{% set description = page.summary | striptags | truncate(300) | e('html') %}
+{% set keywords = page.header.taxonomy.tag | join(', ') | e('html') %}
+{% else %}
+{% set description = header.meta.description | truncate(300) | e('html') %}
+{% set keywords = header.meta.tags | e('html') %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
-    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
+    <head prefix="og:http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -134,5 +137,5 @@
                 });
             </script>
         {% endif %}
-    </body>
+</body>
 </html>
