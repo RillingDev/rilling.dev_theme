@@ -1,7 +1,7 @@
 {
   "name": "f-rilling",
   "description": "f-rilling Grav Theme",
-  "version": "0.2.1",
+  "version": "1.0.1",
   "license": "MIT",
   "repository": "https://github.com/TheBinaryBee/f-rilling.com",
   "devDependencies": {

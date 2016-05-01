@@ -1,9 +1,9 @@
 {
   "name": "f-rilling Grav Theme",
-  "version": "0.2.1",
+  "version": "1.0.1",
   "dependencies": {
     "bootstrap": "v3.3.6",
-    "font-awesome": "fontawesome#^4.5.0"
+    "font-awesome": "fontawesome#^4.6.1"
   },
   "overrides": {
     "bootstrap": {

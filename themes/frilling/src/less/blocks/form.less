@@ -2,10 +2,16 @@ form {
     label {
         font-family: @font-family-sans-serif;
     }
-    .vertical{
-      margin-top: 20px;
+    .vertical {
+        margin-top: 20px;
     }
     .btn {
         margin-top: 20px;
+    }
+    .form-control {
+        &:focus {
+            box-shadow: none;
+            outline-color: @brand-primary;
+        }
     }
 }

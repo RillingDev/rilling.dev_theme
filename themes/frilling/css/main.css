@@ -385,6 +385,11 @@ form .btn {
     margin-top: 20px
 }
 
+form .form-control:focus {
+    box-shadow: none;
+    outline-color: #80C759
+}
+
 .comments {
     margin-top: 60px;
     margin-bottom: 40px
