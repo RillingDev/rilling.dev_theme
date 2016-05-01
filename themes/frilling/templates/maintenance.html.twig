@@ -3,7 +3,9 @@
 {% block content %}
     <main>
         <div class="error center-text">
-            <h1>Under Maintance <i class="fa fa-cogs" aria-hidden="true"></i></h1>
+            <h1>{{ page.title }}
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+            </h1>
             <p>
                 {{ page.content }}
                 <a href="/" class="btn btn-primary">Go Back</a>
