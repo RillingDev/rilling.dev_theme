@@ -63,7 +63,7 @@
 
         <!--Styles-->
         {% do
-            assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css', 105) %}
+            assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', 105) %}
         {% do
             assets.addCss('https://fonts.googleapis.com/css?family=Lato:400,300,700|Source+Code+Pro:400,500', 104) %}
         {% do
@@ -111,7 +111,7 @@
         {% endblock %}
         {% if page.header.taxonomy or collection %}
             {% do
-                assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js', 100) %}
+                assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js', 100) %}
         {% endif %}
 
         {{ assets.js() }}

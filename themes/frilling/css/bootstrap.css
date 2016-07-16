@@ -712,17 +712,17 @@ pre code {
 }
 @media (min-width: 768px) {
   .container {
-    width: 760px;
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 980px;
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1180px;
+    width: 1200px;
   }
 }
 .container-fluid {

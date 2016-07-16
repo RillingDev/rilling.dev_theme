@@ -14,12 +14,12 @@
                     {% for project in header.data.projects | sort_by_key("id") %}
                         {% if project.category == category.id %}
                             <div class="item row">
-                                <div class="col-xs-12 col-md-4">
+                                <div class="col-xs-12 col-md-3">
                                     <a href="{{project.url}}" title="Go to {{project.name}}" target="_blank">
                                         <img src="{{ url('theme://img/thumbs/' ~ project.img) }}" class="full-width" alt="Thumbnail of {{project.name}}" title="Thumbnail of {{project.name}}">
                                     </a>
                                 </div>
-                                <div class="col-xs-12 col-md-8 ">
+                                <div class="col-xs-12 col-md-9 ">
                                     <div class="text-box">
                                         <h3>
                                             <a href="{{project.url}}" title="Go to {{project.name}}" target="_blank">{{project.name}}</a>

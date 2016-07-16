@@ -162,19 +162,8 @@ nav.navbar {
     overflow: hidden
 }
 
-nav.navbar .navbar-header {
-    margin-right: -20px;
-    margin-left: -20px
-}
-
 nav.navbar .navbar-header .navbar-brand {
     padding-left: 20px
-}
-
-@media only screen and (max-width:992px) {
-    nav.navbar .navbar-header .navbar-brand {
-        padding-left: 15px
-    }
 }
 
 nav.navbar .navbar-header .navbar-toggle {
@@ -333,44 +322,43 @@ pre {
     padding: 20px
 }
 
-pre code .hljs {
+.hljs {
     display: block;
     overflow-x: auto;
-    padding: .5em;
-    background: #515151;
+    background: #333;
     color: #FEFEFE
 }
 
-pre code .hljs-selector-id,pre code .hljs-selector-tag,pre code .hljs-title {
-    color: #F4D06F
-}
-
-pre code .hljs-literal,pre code .hljs-name,pre code .hljs-number,pre code .hljs-string {
+.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol {
     color: #5CC8FF
 }
 
-pre code .hljs-built_in,pre code .hljs-builtin-name,pre code .hljs-keyword,pre code .hljs-section,pre code .hljs-selector-class,pre code .hljs-tag,pre code .hljs-template-tag,pre code .hljs-template-variable,pre code .hljs-type,pre code .hljs-variable {
+.hljs-deletion,.hljs-keyword,.hljs-selector-tag {
     color: #80C759
 }
 
-pre code .hljs-bullet,pre code .hljs-deletion,pre code .hljs-link,pre code .hljs-subst,pre code .hljs-symbol {
+.hljs-link,.hljs-template-variable,.hljs-variable {
+    color: #F4D06F
+}
+
+.hljs-comment,.hljs-quote {
+    color: #696969
+}
+
+.hljs-meta {
+    color: #F4D06F
+}
+
+.hljs-addition,.hljs-attribute,.hljs-string {
+    color: #80C759
+}
+
+.hljs-section,.hljs-title,.hljs-type {
+    color: #80C759
+}
+
+.hljs-name,.hljs-selector-class,.hljs-selector-id {
     color: #F06449
-}
-
-pre code .hljs-attribute {
-    color: #F5F5F5
-}
-
-pre code .hljs-addition,pre code .hljs-comment,pre code .hljs-meta,pre code .hljs-quote {
-    color: #C4C4C4
-}
-
-pre code .hljs-emphasis {
-    font-style: italic
-}
-
-pre code .hljs-strong {
-    font-weight: 700
 }
 
 form label {
@@ -388,6 +376,10 @@ form .btn {
 form .form-control:focus {
     box-shadow: none;
     outline-color: #80C759
+}
+
+.form-label {
+    margin-top: 12px
 }
 
 .comments {
@@ -515,7 +507,11 @@ form .form-control:focus {
 
 @media only screen and (max-width:992px) {
     .portfolio section .items .item>div .text-box {
-        width: 100%
+        width: 100%;
+        max-width: 306px;
+        float: none;
+        margin: 0 auto 20px auto;
+        padding: 2px 20px
     }
 }
 
