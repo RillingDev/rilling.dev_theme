@@ -132,7 +132,7 @@
             <script>
                 //Highlight Code Snippets
                 var codeBlocks = document.getElementsByTagName("pre");
-                codeBlocks.length > 0 && [].forEach.call(codeBlocks, function(a, b) {
+                codeBlocks.length > 0 && [].forEach.call(codeBlocks, function(a) {
                     hljs.highlightBlock(a, a.getElementsByTagName("code")[0].className.replace("language-", ""))
                 });
             </script>
