@@ -1,58 +1,48 @@
 pre {
     margin: 10px auto 20px;
     padding: 20px;
+    overflow-x: auto;
+    border: 0;
 }
-
 .hljs {
     display: block;
     overflow-x: auto;
-    background: @gray-dark;
-    color: @white;
 }
-
-.hljs-number,
+.hljs-bullet,
 .hljs-literal,
-.hljs-symbol,
-.hljs-bullet {
-  color: @brand-info;
+.hljs-number,
+.hljs-symbol {
+    color: @brand-info;
 }
-
+.hljs-deletion,
 .hljs-keyword,
-.hljs-selector-tag,
-.hljs-deletion {
-  color:  @brand-primary;
+.hljs-selector-tag {
+    color: @brand-primary;
 }
-
-.hljs-variable,
+.hljs-link,
 .hljs-template-variable,
-.hljs-link {
-  color: @brand-warning;
+.hljs-variable {
+    color: @brand-warning;
 }
-
 .hljs-comment,
 .hljs-quote {
-  color: @gray-light;
+    color: @gray-light;
 }
-
-.hljs-string,
-.hljs-meta {
-  color:  @brand-warning;
+.hljs-meta,
+.hljs-string {
+    color: @brand-warning;
 }
-
-
-.hljs-attribute,
-.hljs-addition {
-  color: @brand-primary;
+.hljs-addition,
+.hljs-attribute {
+    color: @brand-primary;
 }
-
 .hljs-section,
 .hljs-title,
 .hljs-type {
-  color: @brand-primary;
+    color: @brand-primary;
 }
-
 .hljs-name,
-.hljs-selector-id,
-.hljs-selector-class {
-  color: @brand-info;
+.hljs-selector-class,
+.hljs-selector-id {
+    color: @brand-info;
 }
