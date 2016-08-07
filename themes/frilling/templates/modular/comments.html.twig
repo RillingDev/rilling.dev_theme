@@ -1,63 +1,6 @@
 <section class="comments">
-    {% if grav.twig.comments | length %}
-        <h2>Comments</h2>
-
-        <div class="commentsList">
-            {% for comment in grav.twig.comments | array_reverse %}
-                <div class="comment">
-                    <h4>
-                        {{comment.author}}
-                    </h4>
-                    <p class="date">
-                        {{comment.date|e}}
-                    </p>
-                    <p>
-                        {{comment.text}}
-                    </p>
-
-                </div>
-            {% endfor %}
-        </div>
-    {% endif %}
-    <h4>Leave a comment</h4>
-    <div class="alert">{{ form.message }}</div>
-    <form
-        name="{{ grav.config.plugins.comments.form.name }}"
-        action="{{ grav.config.plugins.comments.form.action ?  base_url ~ grav.config.plugins.comments.form.action : page.url }}"
-        method="{{ grav.config.plugins.comments.form.method|upper|default('POST') }}">
-        <div class="row">
-            {% for field in grav.config.plugins.comments.form.fields %}
-
-                {% set value = form.value(field.name) %}
-                {% if field.evaluateDefault %}
-                    {% set value = evaluate(field.evaluateDefault) %}
-                {% endif %}
-                {% if loop.index == 1 %}
-                    <div class="form-group  col-xs-12  col-md-6" data-grav-field="text" data-grav-disabled="false" data-grav-default="null">
-                        <label for="commentName" class="control-label">Name*:</label>
-                        <input name="name" id="commentName" class="form-control" type="text" placeholder="Enter your name" inputmode="latin-name">
-                    </div>
-                {% elseif loop.index == 2 %}
-
-                    <div class="form-group  col-xs-12   col-md-6 " data-grav-field="email" data-grav-disabled="false" data-grav-default="null">
-                        <label for="commentEmail" class="control-label ">Email*:</label>
-                        <input name="email" id="commentEmail" class="form-control " type="email" placeholder="Enter your email" inputmode="email">
-                    </div>
-                {% elseif loop.index == 3 %}
-                    <div class="form-group col-xs-12" data-grav-field="textarea" data-grav-disabled="false" data-grav-default="null">
-                        <label for="commentText" class="control-label">Comment*:</label>
-                        <textarea name="text" id="commentText" class="form-control" rows="6" placeholder="Enter your comment" inputmode="latin-text"></textarea>
-
-                    {% else %}
-                        {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
-
-                    {% endif %}
-                {% endfor %}
-                <button class="btn bnt-primary form-group" type="submit">Submit</button>
-            </div>
-        </div>
-
-        {{ nonce_field('form', 'form-nonce') }}
-    </form>
-
+    <p>Comments? Suggestions? Feedback?</p>
+    <p>Message me at
+        <a href="mailto:contact@f-rilling.com?Subject=Comment: {{page.title|escape}}">contact@f-rilling.com</a>
+    </p>
 </section>

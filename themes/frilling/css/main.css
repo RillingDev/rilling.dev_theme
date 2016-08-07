@@ -388,28 +388,6 @@ form .form-control:focus {
     margin-top: 12px
 }
 
-.comments {
-    margin-top: 60px;
-    margin-bottom: 40px
-}
-
-.comments .comment {
-    background-color: #FEFEFE;
-    padding: 10px 20px;
-    margin-bottom: 20px
-}
-
-.comments .alert {
-    color: #696969;
-    margin: 20px 0;
-    background-color: #FEFEFE;
-    padding: 10px
-}
-
-.comments .alert:empty {
-    display: none
-}
-
 .social {
     width: 70%;
     min-width: 300px;

@@ -32,58 +32,24 @@
             padding-bottom: 25px;
             .item {
                 margin-bottom: 50px;
-                .screen-md-min({
-                height: 206px;
-                });
+                .screen-md-min({ height: 206px; });
                 > div {
-                height: 100%;
-                position: relative;
+                    height: 100%;
+                    position: relative;
                     .text-box {
                         background-color: @gray-lightest;
                         height: 100%;
                         padding: 0 20px;
                         float: right;
-                        .screen-md-min({
-                          min-width: 300px;
-                          width:95%;
-                        });
-                        .screen-md-max({
-                          width:100%;
-                          max-width: 306px;
-                          float: none;
-                          margin: 0 auto 20px auto;
-                          padding: 2px 20px;
-                        });
+                        .screen-md-min({ min-width: 300px; width:95%; });
+                        .screen-md-max({ width:100%; max-width: 306px; float: none; margin: 0 auto 20px auto; padding: 2px 20px; });
                     }
                     img {
                         border: 3px solid @gray-lightest;
-                        .screen-md-max({
-                          margin: 0 auto 10px auto;
-                          display: block;
-                        });
+                        .screen-md-max({ margin: 0 auto 10px auto; display: block; });
                     }
                 }
-                .screen-md-min({
-                  &:nth-child(2n+1){
-                    > div{
-                      float: right;
-                      .text-box{
-                            .arrow(15px, @gray-lightest, right, 50%, 0, @gray);
-                            float: left;
-                      }
-                      img{
-                          float: right;
-                      }
-                    }
-                  }
-                  &:nth-child(2n+2){
-                  > div{
-                    .text-box{
-                          .arrow(15px, @gray-lightest, left, 50%, 0, @gray);
-                    }
-                  }
-                }
-              });
+                .screen-md-min({ &:nth-child(2n+1){ > div{ float: right; .text-box{ .arrow(15px, @gray-lightest, right, 50%, 0, @gray); float: left; } img{ float: right; } } } &:nth-child(2n+2){ > div{ .text-box{ .arrow(15px, @gray-lightest, left, 50%, 0, @gray); } } } });
             }
         }
     }
