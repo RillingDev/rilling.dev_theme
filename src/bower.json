@@ -17,18 +17,15 @@
   ],
   "dependencies": {
     "bootstrap": "^v4.0.0",
-    "font-awesome": "^4.6.3"
+    "jquery": "v3.0.0",
+    "font-awesome": "^4.6.3",
+    "tether": "^1.3.7"
   },
   "devDependencies": {},
   "overrides": {
-    "tether": {
-      "main": [
-        "doNotIncludePleaseThanks"
-      ]
-    },
     "bootstrap": {
       "main": [
-        "handledByGulpTask"
+        "dist/js/bootstrap.js"
       ],
       "dependencies": {}
     },

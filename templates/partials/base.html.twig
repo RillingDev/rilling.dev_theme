@@ -13,38 +13,15 @@
             <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}"/>
             <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
-            {% block stylesheets %}
+            {% block css %}
                 {% do
-                    assets.addCss('theme://css/pure-0.5.0/grids-min.css', 103) %}
+                    assets.addCss('theme://css/lib/bootstrap.css', 103) %}
                 {% do
-                    assets.addCss('theme://css-compiled/nucleus.css', 102) %}
+                    assets.addCss('theme://css/lib/font-awesome.css', 102) %}
                 {% do
-                    assets.addCss('theme://css-compiled/template.css', 101) %}
-
-                {% if browser.getBrowser == 'msie' and browser.getVersion == 10 %}
-                    {% do
-                        assets.addCss('theme://css/nucleus-ie10.css') %}
-                {% endif %}
-                {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
-                    {% do
-                        assets.addCss('theme://css/nucleus-ie9.css') %}
-                    {% do
-                        assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
-                {% endif %}
+                    assets.addCss('theme://css/app.css', 101) %}
             {% endblock %}
             {{ assets.css() }}
-
-            {% block javascripts %}
-                {% do
-                    assets.addJs('jquery', 101) %}
-                {% do
-                    assets.addJs('theme://js/modernizr.custom.71422.js', 100) %}
-                {% do
-                    assets.addJs('theme://js/antimatter.js') %}
-                {% do
-                    assets.addJs('theme://js/slidebars.min.js') %}
-            {% endblock %}
-            {{ assets.js() }}
 
         {% endblock head %}
     </head>
@@ -103,15 +80,17 @@
                 {% include 'partials/navigation.html.twig' %}
             </div>
         </div>
-        {% block bottom %}
-            {{ assets.js('bottom') }}
-            <script>
-                $(function() {
-                    $(document).ready(function() {
-                        $.slidebars({hideControlClasses: true, scrollLock: true});
-                    });
-                });
-            </script>
+
+        {% block js %}
+            {% do
+                assets.addJs('theme://js/lib/jquery.js', 203) %}
+            {% do
+                assets.addJs('theme://js/lib/tether.js', 201) %}
+            {% do
+                assets.addJs('theme://js/lib/bootstrap.js', 200) %}
+            {% do
+                assets.addJs('theme://js/app.js', 100) %}
         {% endblock %}
+        {{ assets.js() }}
     </body>
 </html>
