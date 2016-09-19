@@ -1,8 +1,3 @@
-.container {
-    margin-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-.category {
-    margin-bottom: 20px;
+body {
+    background: repeating-linear-gradient( 45deg, $gray-lighter 0, $gray-lighter 5%, $gray-lightest 0, $gray-lightest 50% ) 0 / 10px 10px;
 }

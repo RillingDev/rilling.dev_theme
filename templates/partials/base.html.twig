@@ -1,29 +1,78 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% if header.title == "Blog" %}
+    {% set title = "F-Rilling.com" | e("html") %}
+{% else %}
+    {% set title = header.title ~ " | " ~ site.title | e("html") %}
+{% endif %}
+{% if page.header.taxonomy %}
+    {% set description = page.summary | striptags | truncate(300) %}
+    {% set keywords = page.header.taxonomy.tag | join(", ") %}
+{% else %}
+    {% set description = header.meta.description | truncate(300) %}
+    {% set keywords = header.meta.tags %}
+{% endif %}
 <!DOCTYPE html>
-<html lang="{{ grav.language.getLanguage ?: 'en' }}">
-    <head>
-        {% block head %}
-            <meta charset="utf-8"/>
-            <title>
-                {% if header.title %}{{ header.title|e('html') }}
-                    |
-                {% endif %}{{ site.title|e('html') }}</title>
-            {% include 'partials/metadata.html.twig' %}
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-            <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}"/>
-            <link rel="canonical" href="{{ page.url(true, true) }}"/>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+    <head prefix="og:http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index,follow"/>
+        <title>{{title}}</title>
+        <meta name="description" content="{{description}}"/>
+        <meta name="keywords" content="{{keywords}}"/>
+        <meta name="author" content="Felix Rilling"/>
 
-            {% block css %}
-                {% do
-                    assets.addCss('theme://css/lib/bootstrap.css', 103) %}
-                {% do
-                    assets.addCss('theme://css/lib/font-awesome.css', 102) %}
-                {% do
-                    assets.addCss('theme://css/app.css', 101) %}
-            {% endblock %}
-            {{ assets.css() }}
+        <!--Open Graph for Facebook-->
+        <meta property="og:title" content="{{title}}"/>
+        <meta property="og:url" content="{{ page.url(true, true) }}"/>
+        <meta property="og:description" content="{{description}}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ url('theme://img/icons/apple-touch-icon-180x180.png', true) }}"/>
+        <meta property="og:site_name" content="F-Rilling.com"/>
 
-        {% endblock head %}
+        <!--Card Data for Twitter-->
+        <meta name="twitter:card" content="{{description}}">
+        <meta name="twitter:title" content="{{title}}">
+        <meta name="twitter:url" content="{{ page.url(true, true) }}">
+        <meta name="twitter:description" content="{{description}}">
+        <meta name="twitter:image" content="{{ url('theme://img/icons/apple-touch-icon-180x180.png', true) }}"/>
+
+        <!--Favicons-->
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ url('theme://img/icons/apple-touch-icon-57x57.png', true) }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ url('theme://img/icons/apple-touch-icon-60x60.png', true) }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ url('theme://img/icons/apple-touch-icon-72x72.png', true) }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ url('theme://img/icons/apple-touch-icon-76x76.png', true) }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ url('theme://img/icons/apple-touch-icon-114x114.png', true) }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ url('theme://img/icons/apple-touch-icon-120x120.png', true) }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ url('theme://img/icons/apple-touch-icon-144x144.png', true) }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ url('theme://img/icons/apple-touch-icon-152x152.png', true) }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://img/icons/apple-touch-icon-180x180.png', true) }}">
+        <link rel="icon" type="image/png" href="{{ url('theme://img/icons/favicon-32x32.png', true) }}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{{ url('theme://img/icons/favicon-194x194.png', true) }}" sizes="194x194">
+        <link rel="icon" type="image/png" href="{{ url('theme://img/icons/favicon-96x96.png', true) }}" sizes="96x96">
+        <link rel="icon" type="image/png" href="{{ url('theme://img/icons/android-chrome-192x192.png', true) }}" sizes="192x192">
+        <link rel="icon" type="image/png" href="{{ url('theme://img/icons/favicon-16x16.png', true) }}" sizes="16x16">
+        <link rel="manifest" href="{{ url('theme://img/icons/manifest.json', true) }}">
+        <link rel="mask-icon" href="{{ url('theme://img/icons/safari-pinned-tab.svg', true) }}" color="#333333">
+        <meta name="msapplication-TileColor" content="#95da60">
+        <meta name="msapplication-TileImage" content="{{ url('theme://img/icons/mstile-144x144.png', true) }}">
+        <meta name="theme-color" content="#333333">
+
+        <link rel="canonical" href="{{ page.url(true, true) }}"/>
+
+        {% block css %}
+            {% do
+                assets.addCss("https://fonts.googleapis.com/css?family=Arvo:400,700|Lato|Source+Code+Pro", 104) %}
+            {% do
+                assets.addCss("theme://css/lib/bootstrap.css", 103) %}
+            {% do
+                assets.addCss("theme://css/lib/font-awesome.css", 102) %}
+            {% do
+                assets.addCss("theme://css/app.css", 101) %}
+        {% endblock %}
+        {{ assets.css() }}
+
     </head>
     <body id="top" class="{{ page.header.body_classes }}">
         <div id="sb-site">
@@ -31,16 +80,16 @@
                 <header id="header">
                     <div id="logo">
                         <h3>
-                            <a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a>
+                            <a href="{{ base_url == " " ? " /" : base_url }}">{{ config.site.title }}</a>
                         </h3>
                     </div>
                     <div id="navbar">
                         {% block header_extra %}{% endblock %}
                         {% if config.plugins.langswitcher.enabled %}
-                            {% include 'partials/langswitcher.html.twig' %}
+                            {% include "partials/langswitcher.html.twig" %}
                         {% endif %}
                         {% block header_navigation %}
-                            {% include 'partials/navigation.html.twig' %}
+                            {% include "partials/navigation.html.twig" %}
                         {% endblock %}
                         <span class="panel-activation sb-toggle-left navbar-left menu-btn fa fa-bars"></span>
                     </div>
@@ -77,19 +126,19 @@
         </div>
         <div class="sb-slidebar sb-left sb-width-thin">
             <div id="panel">
-                {% include 'partials/navigation.html.twig' %}
+                {% include "partials/navigation.html.twig" %}
             </div>
         </div>
 
         {% block js %}
             {% do
-                assets.addJs('theme://js/lib/jquery.js', 203) %}
+                assets.addJs("theme://js/lib/jquery.js", 203) %}
             {% do
-                assets.addJs('theme://js/lib/tether.js', 201) %}
+                assets.addJs("theme://js/lib/tether.js", 201) %}
             {% do
-                assets.addJs('theme://js/lib/bootstrap.js', 200) %}
+                assets.addJs("theme://js/lib/bootstrap.js", 200) %}
             {% do
-                assets.addJs('theme://js/app.js', 100) %}
+                assets.addJs("theme://js/app.js", 100) %}
         {% endblock %}
         {{ assets.js() }}
     </body>
