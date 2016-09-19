@@ -1,0 +1,46 @@
+{
+  "name": "frilling",
+  "description": "Grav theme",
+  "main": "main.js",
+  "version": "v3.0.0",
+  "authors": [
+    "FelixRilling"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/FelixRilling/bae-todo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^v4.0.0",
+    "font-awesome": "^4.6.3"
+  },
+  "devDependencies": {},
+  "overrides": {
+    "tether": {
+      "main": [
+        "doNotIncludePleaseThanks"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "handledByGulpTask"
+      ],
+      "dependencies": {}
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/*"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixRilling/frilling.com.git"
+  }
+}

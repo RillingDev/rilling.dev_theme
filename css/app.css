@@ -1,0 +1,87 @@
+.container {
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.25em;
+    margin-top: 20px;
+}
+
+.category-new .form-group {
+    margin: 0;
+}
+
+input {
+    border: 1px solid #d5d5d5;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #d5d5d5;
+    border-bottom: 0;
+}
+
+.list .list-item {
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #d5d5d5;
+    overflow: hidden;
+}
+
+.list .list-item > div {
+    line-height: 50px;
+    float: left;
+}
+
+.list .list-item .item-content {
+    width: calc(100% - 100px);
+}
+
+.list .list-item .item-content .item-text {
+    width: 100%;
+    border: 0;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+.list .list-item .item-content .item-text:active, .list .list-item .item-content .item-text:focus, .list .list-item .item-content .item-text:hover {
+    color: #828282;
+    outline: none;
+}
+
+.list .list-item .item-actions {
+    width: 100px;
+}
+
+.list .list-item .item-actions .item-delete,
+      .list .list-item .item-actions .item-move {
+    float: right;
+    padding: 0 7px;
+}
+
+.list .list-item .item-actions .item-delete .fa,
+        .list .list-item .item-actions .item-move .fa {
+    color: #d5d5d5;
+    cursor: pointer;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+.list .list-item .item-actions .item-delete .fa:active, .list .list-item .item-actions .item-delete .fa:focus, .list .list-item .item-actions .item-delete .fa:hover,
+          .list .list-item .item-actions .item-move .fa:active,
+          .list .list-item .item-actions .item-move .fa:focus,
+          .list .list-item .item-actions .item-move .fa:hover {
+    color: #828282;
+    text-decoration: none;
+}
