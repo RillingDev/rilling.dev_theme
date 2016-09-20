@@ -1,0 +1,5 @@
+a {
+    @include hover-focus-active {
+         @include transition(color);
+    };
+}

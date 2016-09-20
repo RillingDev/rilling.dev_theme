@@ -1,15 +1,15 @@
 {% embed 'partials/base.html.twig' %}
 
     {% set collection = page.collection() %}
-    {% block content_header %}
-        <h1>Blog:</h1>
+    {% block presenter %}
+        <h1>Blog</h1>
     {% endblock %}
 
-    {% block content_main %}
+    {% block content %}
 
         {% for child in collection %}
             {% if child.published %}
-            {% include 'partials/blog_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
+                {% include 'partials/blog_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
             {% endif %}
         {% endfor %}
 

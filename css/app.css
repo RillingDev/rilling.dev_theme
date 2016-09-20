@@ -1,9 +1,122 @@
 body {
-    background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #f5f5f5 0, #f5f5f5 50%) 0/10px 10px;
+    background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #f2f2f2 0, #f2f2f2 50%) 0/10px 10px;
+}
+
+address {
+    margin: 0;
 }
 
 h1,
 h2,
 h3 {
     font-family: "Arvo", serif;
+}
+
+a:active, a:focus, a:hover {
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+header .navbar-wrapper {
+    margin-bottom: 69px;
+}
+
+header .navbar-wrapper .navbar {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #83d356;
+}
+
+header .navbar-wrapper .navbar .navbar-brand,
+    header .navbar-wrapper .navbar .navbar-toggler {
+    color: #f2f2f2;
+}
+
+header .navbar-wrapper .navbar .navbar-brand:active, header .navbar-wrapper .navbar .navbar-brand:focus, header .navbar-wrapper .navbar .navbar-brand:hover,
+      header .navbar-wrapper .navbar .navbar-toggler:active,
+      header .navbar-wrapper .navbar .navbar-toggler:focus,
+      header .navbar-wrapper .navbar .navbar-toggler:hover {
+    color: #fefefe;
+}
+
+header .navbar-wrapper .navbar .navbar-toggler {
+    padding: 0.6rem;
+}
+
+@media (max-width: 600px) {
+    header .navbar-wrapper .navbar .navbar-nav {
+        clear: both;
+    }
+}
+
+header .navbar-wrapper .navbar .navbar-nav .nav-item {
+    font-size: 17px;
+    line-height: 30px;
+}
+
+header .navbar-wrapper .navbar .navbar-nav .nav-item.active .nav-link {
+    color: #fefefe;
+}
+
+header .navbar-wrapper .navbar .navbar-nav .nav-item.active .nav-link:before {
+    content: "|";
+    position: relative;
+    left: -8px;
+    top: -1px;
+    width: 0;
+    display: block;
+    float: left;
+}
+
+header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link {
+    color: #f2f2f2;
+}
+
+header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:active, header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:focus, header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #fefefe;
+}
+
+@media (min-width: 600px) {
+    header .navbar-wrapper .navbar .navbar-nav .nav-item + .nav-item {
+        margin-left: 1.85rem;
+    }
+}
+
+footer {
+    background-color: #3d3d3d;
+    padding: 20px 0;
+}
+
+footer .footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer .footer-wrapper .footer-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer .footer-wrapper .footer-list.footer-list-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+footer .footer-wrapper .footer-list li a {
+    color: #f2f2f2;
+}
+
+footer .footer-wrapper .footer-list li a:active, footer .footer-wrapper .footer-list li a:focus, footer .footer-wrapper .footer-list li a:hover {
+    color: #fefefe;
+}
+
+article {
+    margin-top: 30px;
+    margin-bottom: 60px;
 }

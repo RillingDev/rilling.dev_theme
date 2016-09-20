@@ -1,9 +1,17 @@
 @import "_variables";
 
+@import "mixins/screen";
 @import "mixins/hover-focus-active";
 @import "mixins/transition";
 
 @import "main/_general";
 @import "main/_typo";
+@import "main/_links";
+@import "main/_forms";
+
+@import "blocks/_header";
+@import "blocks/_footer";
+@import "blocks/_lists";
+@import "blocks/_article";
 
 @import "pages/_home";

@@ -1,53 +1,40 @@
+{% set pagination = pagination | default(page.collection.params.pagination) %}
+{% set base_url = base_url | default(page.url) %}
+
 {% if pagination | length > 1 %}
-    <nav>
+    <nav aria-label="Page navigation">
         <ul class="pagination">
             {% if pagination.hasPrev %}
                 {% set url = (base_url ~ pagination.params ~ pagination.prevUrl) | replace({'//': '/'}) %}
-                <li>
-                    <a rel="prev" href="{{ url }}">
-                        <i class="fa fa-angle-left"></i>
+                <!--<li class="page-item">
+                    <a class="page-link" rel="prev" href="{{ url }}">
+                        <i class="fa fa-chevron-left"></i>
                     </a>
-                </li>
-            {% else %}
-                <li class="disabled">
-                    <span>
-                        <i class="fa fa-angle-left"></i>
-                    </span>
-                </li>
+                </li>-->
             {% endif %}
 
             {% for paginate in pagination %}
 
                 {% if paginate.isCurrent %}
-                    <li class="active">
-                        <span>{{ paginate.number }}</span>
-                    </li>
+                    <li class="page-item">
+                        <span class="page-link">{{ paginate.number }}</span>
+                    </li class="page-item">
                 {% elseif paginate.isInDelta %}
                     {% set url = (base_url ~ pagination.params ~ paginate.url) | replace({'//': '/'}) %}
-                    <li>
-                        <a href="{{ url }}">{{ paginate.number }}</a>
-                    </li>
-                {% elseif paginate.isDeltaBorder %}
-                    <li class="gap">
-                        <span>&hellip;</span>
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url }}">{{ paginate.number }}</a>
                     </li>
                 {% endif %}
 
             {% endfor %}
             {% if pagination.hasNext %}
                 {% set url = (base_url ~ pagination.params ~ pagination.nextUrl) | replace({'//': '/'}) %}
-                <li>
-                    <a rel="next" href="{{ url }}">
-                        <i class="fa fa-angle-right"></i>
-                      </a>
-                </li>
-                {% else %}
-                    <li class="disabled">
-                        <span>
-                            <i class="fa fa-angle-right"></i>
-                        </span>
-                    </li>
-                {% endif %}
-            </ul>
-        </nav>
-    {% endif %}
+                <!--<li class="page-item">
+                    <a class="page-link" rel="next" href="{{ url }}">
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                </li>-->
+            {% endif %}
+        </ul>
+    </nav>
+{% endif %}
