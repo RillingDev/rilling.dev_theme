@@ -1,3 +1,9 @@
 body {
     background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #f5f5f5 0, #f5f5f5 50%) 0/10px 10px;
 }
+
+h1,
+h2,
+h3 {
+    font-family: "Arvo", serif;
+}

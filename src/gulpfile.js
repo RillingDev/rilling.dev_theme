@@ -6,12 +6,12 @@ const tasks = require("gulp-task-loader")("tasks");
 
 gulp.task("watch", function() {
     gulp.watch("./bower.json", ["bower"]);
-    gulp.watch("./src/img/*.*", ["favicon"]);
-    gulp.watch(["./src/scss/bootstrap.scss", "./src/scss/_variables.scss"], ["bootstrap", "css"]);
+    gulp.watch("./img/*.*", ["favicon"]);
+    gulp.watch(["./scss/bootstrap.scss", "./scss/_variables.scss"], ["bootstrap", "css"]);
 
-    gulp.watch("./src/scss/**/*.scss", ["css"]);
-    gulp.watch("./src/**/*.pug", ["html"]);
-    gulp.watch("./src/js/**/*.js", ["js"]);
+    gulp.watch("./scss/**/*.scss", ["css"]);
+    gulp.watch("./**/*.pug", ["html"]);
+    gulp.watch("./js/**/*.js", ["js"]);
 });
 
 

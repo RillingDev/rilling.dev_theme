@@ -1,0 +1,39 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content_header %}
+    <h1>Projects:</h1>
+{% endblock %}
+
+{% block content_main %}
+    {% for category in header.data.categories %}
+        <h2>
+            <i class="fa fa-{{category.icon}}"></i>{{category.name}}:</h2>
+        <ul>
+            {% for project in header.data.projects | sort_by_key("date") | reverse %}
+                {% if project.category == category.id %}
+                    <li >
+                        <a href="{{url("projects/" ~ project.file ~ "/") }}" title="Go to Project {{project.name}}">
+                            {{project.name}}
+                        </a>
+                        {% if project.download %}
+                            <a href="{{url("user/data/files/f-rilling_" ~ project.file ~ ".7z")}}" class="icon" title="Download {{project.name}}">
+                                <i class="fa fa-download"></i>
+                            </a>
+                        {% endif %}
+                        {% if project.article %}
+                            <a href="{{url("blog/" ~ project.article)}}" class="icon" title="Article for {{project.name}}">
+                                <i class="fa fa-file-text-o"></i>
+                            </a>
+                        {% endif %}
+                        <span class="version">
+                            &lt;{{project.version}}&gt;
+                        </span>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+    {% include 'modular/social.html.twig' %}
+
+{% endblock %}

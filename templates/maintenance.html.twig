@@ -3,12 +3,13 @@
 {% block content %}
     <main>
         <div class="error center-text">
-            <h1>Error
-                {{ page.header.http_response_code }}</h1>
+            <h1>Maintenance
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+            </h1>
             <p>
-                {{ page.content }}
-                <a href="/" class="btn btn-primary">Go Back</a>
+                I'm currently tweaking some stuff.
             </p>
+            <a href="/" class="btn btn-primary">Go Back</a>
         </div>
     </main>
 {% endblock %}

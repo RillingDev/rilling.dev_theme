@@ -1,12 +1,12 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% if header.title == "Blog" %}
-    {% set title = "F-Rilling.com" | e("html") %}
+{% if header.title == 'Blog' %}
+    {% set title = "F-Rilling.com" | e('html') %}
 {% else %}
-    {% set title = header.title ~ " | " ~ site.title | e("html") %}
+    {% set title = header.title ~ " | " ~ site.title | e('html') %}
 {% endif %}
 {% if page.header.taxonomy %}
     {% set description = page.summary | striptags | truncate(300) %}
-    {% set keywords = page.header.taxonomy.tag | join(", ") %}
+    {% set keywords = page.header.taxonomy.tag | join(', ') %}
 {% else %}
     {% set description = header.meta.description | truncate(300) %}
     {% set keywords = header.meta.tags %}
@@ -32,7 +32,7 @@
         <meta property="og:site_name" content="F-Rilling.com"/>
 
         <!--Card Data for Twitter-->
-        <meta name="twitter:card" content="{{description}}">
+        <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="{{title}}">
         <meta name="twitter:url" content="{{ page.url(true, true) }}">
         <meta name="twitter:description" content="{{description}}">
@@ -61,85 +61,90 @@
 
         <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
-        {% block css %}
-            {% do
-                assets.addCss("https://fonts.googleapis.com/css?family=Arvo:400,700|Lato|Source+Code+Pro", 104) %}
-            {% do
-                assets.addCss("theme://css/lib/bootstrap.css", 103) %}
-            {% do
-                assets.addCss("theme://css/lib/font-awesome.css", 102) %}
-            {% do
-                assets.addCss("theme://css/app.css", 101) %}
-        {% endblock %}
+        <!--Styles-->
+        {% do
+            assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', 105) %}
+        {% do
+            assets.addCss('https://fonts.googleapis.com/css?family=Lato:400,300,700|Source+Code+Pro:400,500', 104) %}
+        {% do
+            assets.addCss('theme://css/compiled.min.css', 103) %}
         {{ assets.css() }}
-
     </head>
-    <body id="top" class="{{ page.header.body_classes }}">
-        <div id="sb-site">
-            {% block header %}
-                <header id="header">
-                    <div id="logo">
-                        <h3>
-                            <a href="{{ base_url == " " ? " /" : base_url }}">{{ config.site.title }}</a>
-                        </h3>
-                    </div>
-                    <div id="navbar">
-                        {% block header_extra %}{% endblock %}
-                        {% if config.plugins.langswitcher.enabled %}
-                            {% include "partials/langswitcher.html.twig" %}
-                        {% endif %}
-                        {% block header_navigation %}
-                            {% include "partials/navigation.html.twig" %}
-                        {% endblock %}
-                        <span class="panel-activation sb-toggle-left navbar-left menu-btn fa fa-bars"></span>
-                    </div>
-                </header>
-            {% endblock %}
-
-            {% block showcase %}{% endblock %}
-
-            {% block body %}
-                <section id="body" class="{{ class }}">
-                    {% block content %}{% endblock %}
-                </section>
-            {% endblock %}
-
-            {% block footer %}
-                <footer id="footer">
-                    <div class="totop">
-                        <span>
-                            <a href="#" id="toTop">
-                                <i class="fa fa-arrow-up"></i>
-                            </a>
-                        </span>
-                    </div>
-                    <p>
-                        <a href="http://getgrav.org">Grav</a>
-                        was
-                        <i class="fa fa-code"></i>
-                        with
-                        <i class="fa fa-heart"></i>
-                        by
-                        <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
-                </footer>
-            {% endblock %}
-        </div>
-        <div class="sb-slidebar sb-left sb-width-thin">
-            <div id="panel">
-                {% include "partials/navigation.html.twig" %}
-            </div>
-        </div>
-
-        {% block js %}
-            {% do
-                assets.addJs("theme://js/lib/jquery.js", 203) %}
-            {% do
-                assets.addJs("theme://js/lib/tether.js", 201) %}
-            {% do
-                assets.addJs("theme://js/lib/bootstrap.js", 200) %}
-            {% do
-                assets.addJs("theme://js/app.js", 100) %}
+    <body id="top">
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TGKXDD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>
+            (function(f, e, l, i, x) {
+                f[i] = f[l] || [];
+                f[i].push({"gtm.start": new Date().getTime(), event: "gtm.js"});
+                var ri = e.getElementsByTagName(l)[0],
+                    ll = e.createElement(l),
+                    ing = i != "dataLayer"
+                        ? "&l=" + i
+                        : "";
+                ll.async = true;
+                ll.src = "//www.googletagmanager.com/gtm.js?id=" + x + ing;
+                ri.parentNode.insertBefore(ll, ri);
+            })(window, document, "script", "dataLayer", "GTM-TGKXDD");
+        </script>
+        <!-- End Google Tag Manager -->
+        {% block body_nav %}
+            {% include 'partials/navigation.html.twig' %}
         {% endblock %}
+        {% block content_wrapper %}
+            <div class="container">
+                {% block content %}
+                    <header>
+                        {% block content_header %}{% endblock %}
+                    </header>
+
+                    <main>
+                        {% block content_main %}{% endblock %}
+                    </main>
+                {% endblock %}
+            </div>
+        {% endblock %}
+        {% block body_footer %}
+            {% include 'partials/footer.html.twig' %}
+        {% endblock %}
+        {% if page.header.taxonomy or collection %}
+            {% do
+                assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js', 100) %}
+        {% endif %}
+
         {{ assets.js() }}
+
+        <script>
+            //Mobile Nav
+            var a = document.getElementById("navbarMobile"),
+                b = a.classList,
+                c = document.getElementById("navbarHeader").classList,
+                d = "collapsed";
+            a.addEventListener("click", function() {
+                b.contains(d)
+                    ? (b.remove(d), c.add("open"))
+                    : (b.add(d), c.remove("open"))
+            });
+        </script>
+        {% if page.header.taxonomy or collection %}
+            <script>
+                //Highlight Code Snippets
+                eachNode(document.getElementsByTagName("pre"), function(e) {
+                    hljs.highlightBlock(e, e.getElementsByTagName("code")[0].className.replace("language-", ""))
+                });
+                eachNode(document.getElementsByTagName("table"), function(e) {
+                    e.classList.add("table");
+                    e.classList.add("table-bordered");
+                    e.classList.add("table-hover");
+                    e.outerHTML = "<div class='table-responsive'>" + e.outerHTML + "</div>";
+                });
+
+                function eachNode(node, fn) {
+                    return [].forEach.call(node, fn);
+                }
+            </script>
+        {% endif %}
     </body>
 </html>
