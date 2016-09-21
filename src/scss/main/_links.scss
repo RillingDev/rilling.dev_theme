@@ -1,5 +1,21 @@
 a {
     @include hover-focus-active {
-         @include transition(color);
+         @include transition(#{"color, background-color"});
     };
+
+    &.btn-primary {
+        @include hover-focus-active {
+            color: $white;
+        };
+    }
+
+    &.tag {
+        padding: 5px;
+        background-color: $brand-primary;
+        color: $gray-lightest;
+        @include hover-focus-active {
+            color: $white;
+            background-color: $brand-primary-dark;
+        };
+    }
 }

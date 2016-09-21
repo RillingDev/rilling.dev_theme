@@ -1,11 +1,10 @@
 header {
     .navbar-wrapper {
-        margin-bottom: 62px;
+        margin-bottom: 60px;
 
         .navbar {
-            padding-left: 0;
-            padding-right: 0;
             background-color: $brand-primary;
+            padding: 0;
 
             .navbar-brand,
             .navbar-toggler {
@@ -16,7 +15,7 @@ header {
             }
 
             .navbar-toggler {
-                padding: 0.6rem;
+                padding: 14px 0 14px 14px;
             }
 
             .navbar-nav {
@@ -26,35 +25,35 @@ header {
 
                 .nav-item {
                     font-size: 17px;
-                    line-height: 30px;
+                    margin-left: 0;
+                    position: relative;
 
                     &.active {
                         .nav-link {
                             color: $white;
-
-                            &:before {
-                                content: "|";
-                                position: relative;
-                                left: -8px;
-                                top: -1px;
-                                width: 0;
-                                display: block;
-                                float: left;
-                            }
+                            background-color: $brand-primary-dark;
                         }
                     }
 
                     .nav-link {
                         color: $gray-lightest;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        @include screen(max,sm) {
+                            margin-left: -1rem;
+                            margin-right: -1rem;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                        }
+                        @include screen(min,sm) {
+                            margin: 0;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                        }
                         @include hover-focus-active {
                             color: $white;
+                            background-color: $brand-primary-dark;
                         };
-                    }
-
-                    & + .nav-item {
-                        @include screen(min,sm) {
-                            margin-left: 1.85rem;
-                        }
                     }
                 }
             }
