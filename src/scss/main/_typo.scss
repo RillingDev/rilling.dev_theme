@@ -5,6 +5,7 @@ h1 {
         margin-top: 20px;
         padding-left: 10vw;
         padding-right: 10vw;
+        margin-top: 0;
         @include screen(min,md) {
             font-size: 3em;
         }

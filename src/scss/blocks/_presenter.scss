@@ -3,13 +3,23 @@
     width: 100%;
 
     .presenter-content {
-        padding: 10% 0;
+        padding: 10% 0 5%;
 
         .presenter-icon {
             text-align: center;
             color: $white;
-            font-size: 5em;
+            font-size: 4em;
+            margin-bottom: 20px;
             width: 100%;
+        }
+
+        .presenter-date {
+            text-align: center;
+            color: $white;
+        }
+
+        .presenter-tags {
+            text-align: center;
         }
     }
 }

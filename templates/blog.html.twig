@@ -2,7 +2,7 @@
 
     {% set collection = page.collection() %}
     {% block presenter %}
-        {% include 'partials/presenter.html.twig' with {'icon': "file-text-o", 'title': "Blog"} %}
+        {% include 'partials/presenter.html.twig' with {'page': page} %}
     {% endblock %}
 
     {% block content %}

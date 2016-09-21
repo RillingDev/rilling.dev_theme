@@ -51,6 +51,7 @@ $white:                     #fcfcfc !default;
 
 $brand-primary:             #83d356 !default;
 $brand-primary-dark:        #67c333 !default;
+$brand-primary-darker:      #448d1b !default;
 $brand-secondary:           #EAEFBD !default;
 $brand-success:             $gray !default;
 $brand-info:                $brand-secondary !default;
@@ -767,13 +768,13 @@ $figure-caption-font-size: 90% !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:          .75rem !default;
-$breadcrumb-padding-x:          1rem !default;
-$breadcrumb-item-padding:       .5rem !default;
+$breadcrumb-padding-y:          0.5rem !default;
+$breadcrumb-padding-x:          0 !default;
+$breadcrumb-item-padding:       .25rem !default;
 
 $breadcrumb-bg:                 none !default;
 $breadcrumb-divider-color:      $gray !default;
-$breadcrumb-active-color:       $gray !default;
+$breadcrumb-active-color:       $white !default;
 $breadcrumb-divider:            "/" !default;
 
 

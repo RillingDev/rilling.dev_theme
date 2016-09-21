@@ -1,4 +1,13 @@
 .breadcrumb {
-    padding: 24px 0;
     margin-bottom: 0;
+    text-align: center;
+
+    .breadcrumb-item {
+        float: none;
+        display: inline-block;
+
+        a {
+            color: $gray;
+        }
+    }
 }

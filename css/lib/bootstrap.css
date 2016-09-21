@@ -4298,7 +4298,7 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb {
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 0;
     margin-bottom: 1rem;
     list-style: none;
     background-color: none;
@@ -4316,8 +4316,8 @@ input[type="button"].btn-block {
 
 .breadcrumb-item + .breadcrumb-item::before {
     display: inline-block;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     color: #555555;
     content: "/";
 }
@@ -4331,7 +4331,7 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb-item.active {
-    color: #555555;
+    color: #fcfcfc;
 }
 
 .pagination {

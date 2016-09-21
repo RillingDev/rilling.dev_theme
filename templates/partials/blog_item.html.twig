@@ -1,29 +1,25 @@
-<article class="article {{ full ? "article-full" : " "}}">
-
-    <div class="article-header">
-        <div>
-            <h2 class="article-title">
-                <a href="{{ page.url }}">{{ page.title }}</a>
-            </h2>
-        </div>
-        <div>
-            <div class="article-tags ">
-                {% if page.taxonomy.tag %}
-                    {% for tag in page.taxonomy.tag %}
-                        <a class="tag" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-                    {% endfor %}
-                {% endif %}
+<article class="article {{ full ? " article-full" : " "}}">
+    {% if not full %}
+        <div class="article-header">
+            <div>
+                <h2 class="article-title">
+                    <a href="{{ page.url }}">{{ page.title }}</a>
+                </h2>
+            </div>
+            <div>
+                <div class="article-tags ">
+                    {% if page.taxonomy.tag %}
+                        {% include 'modular/tags.html.twig' with {'tags': page.taxonomy.tag} %}
+                    {% endif %}
+                </div>
+            </div>
+            <div>
+                <p class="article-date">
+                    {% include 'modular/date.html.twig' with {'date': page.date} %}
+                </p>
             </div>
         </div>
-        <div>
-            <p class="date">
-                <span>{{ page.date|date("d") }}</span>
-                <span>{{ page.date|date("M") }},</span>
-                <span>{{ page.date|date("Y") }}</span>
-            </p>
-        </div>
-    </div>
-
+    {% endif %}
     <div class="article-content">
 
         {% if page.header.continue_link is sameas(false) %}

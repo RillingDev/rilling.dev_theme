@@ -12,6 +12,7 @@ h1.presenter-title {
     margin-top: 20px;
     padding-left: 10vw;
     padding-right: 10vw;
+    margin-top: 0;
 }
 
 @media (min-width: 800px) {
@@ -53,6 +54,10 @@ a.tag {
     display: inline;
     background-color: #83d356;
     color: #f8f8f8;
+}
+
+a.tag.tag-gray {
+    background-color: #555555;
 }
 
 a.tag:active, a.tag:focus, a.tag:hover {
@@ -132,14 +137,24 @@ a.tag:active, a.tag:focus, a.tag:hover {
 }
 
 .presenter .presenter-content {
-    padding: 10% 0;
+    padding: 10% 0 5%;
 }
 
 .presenter .presenter-content .presenter-icon {
     text-align: center;
     color: #fcfcfc;
-    font-size: 5em;
+    font-size: 4em;
+    margin-bottom: 20px;
     width: 100%;
+}
+
+.presenter .presenter-content .presenter-date {
+    text-align: center;
+    color: #fcfcfc;
+}
+
+.presenter .presenter-content .presenter-tags {
+    text-align: center;
 }
 
 footer {
@@ -193,6 +208,7 @@ p + ul {
 
 .article.article-full {
     margin-top: 0;
+    padding-top: 30px;
 }
 
 .article .article-header .article-tags {
@@ -204,8 +220,17 @@ p + ul {
 }
 
 .breadcrumb {
-    padding: 24px 0;
     margin-bottom: 0;
+    text-align: center;
+}
+
+.breadcrumb .breadcrumb-item {
+    float: none;
+    display: inline-block;
+}
+
+.breadcrumb .breadcrumb-item a {
+    color: #555555;
 }
 
 .comments {
