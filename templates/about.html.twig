@@ -1,9 +1,12 @@
 {% extends 'partials/base.html.twig' %}
-{% block content_header %}
 
+{% block presenter %}
+    {% include 'partials/presenter.html.twig' with {'page': page} %}
 {% endblock %}
-{% block content_main %}
-    {{ page.content }}
+
+{% block main %}
+    <div class="section">
+        {{ page.content }}
+    </div>
     {% include 'modular/social.html.twig' %}
-    {{header.data.name}}
 {% endblock %}

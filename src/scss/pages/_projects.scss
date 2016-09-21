@@ -1,19 +1,15 @@
-.projects {
-    margin: 30px 0;
+.project {
+    margin-bottom: 35px;
 
-    .project {
-        margin-bottom: 35px;
-
-        .project-headline {
-            .fa {
-                margin-right: 8px;
-            }
+    .project-headline {
+        .fa {
+            margin-right: 8px;
         }
+    }
 
-        ul li {
-            .fa {
-                margin-left: 6px;
-            }
+    ul li {
+        .fa {
+            margin-left: 6px;
         }
     }
 }

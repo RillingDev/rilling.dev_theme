@@ -11,6 +11,10 @@ body {
     text-align: center;
 }
 
+.section {
+    margin: 30px 0;
+}
+
 h1.presenter-title {
     text-align: center;
     color: #fcfcfc;
@@ -379,18 +383,14 @@ pre {
     padding: 6px 15px;
 }
 
-.projects {
-    margin: 30px 0;
-}
-
-.projects .project {
+.project {
     margin-bottom: 35px;
 }
 
-.projects .project .project-headline .fa {
+.project .project-headline .fa {
     margin-right: 8px;
 }
 
-.projects .project ul li .fa {
+.project ul li .fa {
     margin-left: 6px;
 }
