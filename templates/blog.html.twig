@@ -5,18 +5,18 @@
         {% include 'partials/presenter.html.twig' with {'page': page} %}
     {% endblock %}
 
-    {% block content %}
-
+    {% block main %}
         {% for child in collection %}
             {% if child.published %}
-                {% include 'partials/blog_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
+                <article class="article" itemscope itemtype="http://schema.org/TechArticle">
+                    {% include 'partials/blog_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
+                </article>
             {% endif %}
         {% endfor %}
 
         {% if config.plugins.pagination.enabled and collection.params.pagination %}
             {% include 'modular/pagination.html.twig' with {'base_url': page.url, 'pagination': collection.params.pagination} %}
         {% endif %}
-
     {% endblock %}
 
 {% endembed %}

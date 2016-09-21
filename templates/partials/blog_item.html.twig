@@ -1,50 +1,48 @@
-<article class="article {{ full ? " article-full" : " "}}">
-    {% if not full %}
-        <div class="article-header">
-            <div>
-                <h2 class="article-title">
-                    <a href="{{ page.url }}">{{ page.title }}</a>
-                </h2>
-            </div>
-            <div>
-                <div class="article-tags ">
-                    {% if page.taxonomy.tag %}
-                        {% include 'modular/tags.html.twig' with {'tags': page.taxonomy.tag} %}
-                    {% endif %}
-                </div>
-            </div>
-            <div>
-                <p class="article-date">
-                    {% include 'modular/date.html.twig' with {'date': page.date} %}
-                </p>
+{% if not full %}
+    <div class="article-header">
+        <div>
+            <h2 class="article-title" itemprop="name">
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </h2>
+        </div>
+        <div>
+            <div class="article-tags " itemprop="keywords">
+                {% if page.taxonomy.tag %}
+                    {% include 'modular/tags.html.twig' with {'tags': page.taxonomy.tag} %}
+                {% endif %}
             </div>
         </div>
-    {% endif %}
-    <div class="article-content">
+        <div>
+            <p class="article-date" itemprop="datePublished">
+                {% include 'modular/date.html.twig' with {'date': page.date} %}
+            </p>
+        </div>
+    </div>
+{% endif %}
+<div class="article-content" itemprop="articleBody">
 
-        {% if page.header.continue_link is sameas(false) %}
-            {{ page.content }}
-            {% if not truncate %}
-                {% set show_prev_next = true %}
-            {% endif %}
-        {% elseif truncate and page.summary != page.content %}
-            {{ page.summary }}
-            <p>
-                <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title }}">Continue Reading...</a>
-            </p>
-        {% elseif truncate %}
-            {% if page.summary != page.content %}
-                {{ page.content|truncate(550) }}
-            {% else %}
-                {{ page.content }}
-            {% endif %}
-            <p>
-                <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title }}">Continue Reading...</a>
-            </p>
-        {% else %}
-            {{ page.content }}
+    {% if page.header.continue_link is sameas(false) %}
+        {{ page.content }}
+        {% if not truncate %}
             {% set show_prev_next = true %}
         {% endif %}
+    {% elseif truncate and page.summary != page.content %}
+        {{ page.summary }}
+        <p>
+            <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title }}">Continue Reading...</a>
+        </p>
+    {% elseif truncate %}
+        {% if page.summary != page.content %}
+            {{ page.content|truncate(550) }}
+        {% else %}
+            {{ page.content }}
+        {% endif %}
+        <p>
+            <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title }}">Continue Reading...</a>
+        </p>
+    {% else %}
+        {{ page.content }}
+        {% set show_prev_next = true %}
+    {% endif %}
 
-    </div>
-</article>
+</div>

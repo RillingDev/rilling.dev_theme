@@ -12,7 +12,7 @@
     {% set keywords = header.meta.tags %}
 {% endif %}
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage">
     <head prefix="og:http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,7 +46,7 @@
         <link rel="mask-icon" href="{{ url('theme://img/safari-pinned-tab.svg', true) }}" color="#83d356">
         <link rel="shortcut icon" href="{{ url('theme://img/favicon.ico', true) }}">
         <meta name="msapplication-config" content="{{ url('theme://img/browserconfig.xml', true) }}">
-        <meta name="theme-color" content="#333333">
+        <meta name="theme-color" content="#83d356">
 
         <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
@@ -56,7 +56,7 @@
             {% do
                 assets.addCss("theme://css/lib/bootstrap.css", 103) %}
             {% do
-                assets.addCss("theme://css/lib/font-awesome.css", 102) %}
+                assets.addCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css", 102) %}
             {% do
                 assets.addCss("theme://css/app.css", 101) %}
         {% endblock %}
@@ -81,9 +81,9 @@
             </header>
         {% endblock %}
 
-        {% block body %}
-            <main class="container">
-                {% block content %}{% endblock %}
+        {% block content %}
+            <main itemprop="mainContentOfPage" class="container">
+                {% block main %}{% endblock %}
             </main>
         {% endblock %}
 
