@@ -1,5 +1,5 @@
-article {
-    margin-bottom: 20px;
+.article {
+    margin: 20px 0;
     background-color: $white;
     padding: 15px;
     //width: calc(100vw - 2rem);
@@ -7,11 +7,19 @@ article {
         padding: 20px;
     }
 
-    h2 {
+    &.article-full {
         margin-top: 0;
     }
 
-    .article-tags {
-        margin: 10px 0;
+    .article-header {
+        .article-tags {
+            margin: 10px 0;
+        }
+    }
+
+    .article-content {
+        h2 {
+            margin-top: 0;
+        }
     }
 }

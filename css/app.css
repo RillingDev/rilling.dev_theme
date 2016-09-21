@@ -6,6 +6,26 @@ address {
     margin: 0;
 }
 
+h1.presenter-title {
+    text-align: center;
+    color: #fcfcfc;
+    margin-top: 20px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+@media (min-width: 800px) {
+    h1.presenter-title {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1000px) {
+    h1.presenter-title {
+        font-size: 3.25em;
+    }
+}
+
 article h2 {
     margin-top: 32px;
 }
@@ -40,74 +60,86 @@ a.tag:active, a.tag:focus, a.tag:hover {
     background-color: #67c333;
 }
 
-header .navbar-wrapper {
-    margin-bottom: 60px;
+.navbar-wrapper {
+    margin-bottom: 49px;
 }
 
-header .navbar-wrapper .navbar {
+.navbar-wrapper .navbar {
     background-color: #83d356;
     padding: 0;
 }
 
-header .navbar-wrapper .navbar .navbar-brand,
-    header .navbar-wrapper .navbar .navbar-toggler {
+.navbar-wrapper .navbar .navbar-brand,
+    .navbar-wrapper .navbar .navbar-toggler {
     color: #f8f8f8;
 }
 
-header .navbar-wrapper .navbar .navbar-brand:active, header .navbar-wrapper .navbar .navbar-brand:focus, header .navbar-wrapper .navbar .navbar-brand:hover,
-      header .navbar-wrapper .navbar .navbar-toggler:active,
-      header .navbar-wrapper .navbar .navbar-toggler:focus,
-      header .navbar-wrapper .navbar .navbar-toggler:hover {
+.navbar-wrapper .navbar .navbar-brand:active, .navbar-wrapper .navbar .navbar-brand:focus, .navbar-wrapper .navbar .navbar-brand:hover,
+      .navbar-wrapper .navbar .navbar-toggler:active,
+      .navbar-wrapper .navbar .navbar-toggler:focus,
+      .navbar-wrapper .navbar .navbar-toggler:hover {
     color: #fcfcfc;
 }
 
-header .navbar-wrapper .navbar .navbar-toggler {
+.navbar-wrapper .navbar .navbar-toggler {
     padding: 14px 0 14px 14px;
 }
 
-@media (max-width: 600px) {
-    header .navbar-wrapper .navbar .navbar-nav {
-        clear: both;
+.navbar-wrapper .navbar .navbar-nav {
+    clear: both;
+}
+
+@media (min-width: 600px) {
+    .navbar-wrapper .navbar .navbar-nav {
+        clear: none;
     }
 }
 
-header .navbar-wrapper .navbar .navbar-nav .nav-item {
+.navbar-wrapper .navbar .navbar-nav .nav-item {
     font-size: 17px;
     margin-left: 0;
     position: relative;
 }
 
-header .navbar-wrapper .navbar .navbar-nav .nav-item.active .nav-link {
+.navbar-wrapper .navbar .navbar-nav .nav-item.active .nav-link {
     color: #fcfcfc;
     background-color: #67c333;
 }
 
-header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link {
+.navbar-wrapper .navbar .navbar-nav .nav-item .nav-link {
     color: #f8f8f8;
-    padding-top: 11px;
-    padding-bottom: 11px;
-}
-
-@media (max-width: 600px) {
-    header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+    padding: 11px 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
 @media (min-width: 600px) {
-    header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link {
+    .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link {
         margin: 0;
         padding-left: 1rem;
         padding-right: 1rem;
     }
 }
 
-header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:active, header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:focus, header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:hover {
+.navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:active, .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:focus, .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:hover {
     color: #fcfcfc;
     background-color: #67c333;
+}
+
+.presenter {
+    background-color: #83d356;
+    width: 100%;
+}
+
+.presenter .presenter-content {
+    padding: 10% 0;
+}
+
+.presenter .presenter-content .presenter-icon {
+    text-align: center;
+    color: #fcfcfc;
+    font-size: 5em;
+    width: 100%;
 }
 
 footer {
@@ -147,24 +179,28 @@ p + ul {
     margin-top: -1rem;
 }
 
-article {
-    margin-bottom: 20px;
+.article {
+    margin: 20px 0;
     background-color: #fcfcfc;
     padding: 15px;
 }
 
 @media (min-width: 800px) {
-    article {
+    .article {
         padding: 20px;
     }
 }
 
-article h2 {
+.article.article-full {
     margin-top: 0;
 }
 
-article .article-tags {
+.article .article-header .article-tags {
     margin: 10px 0;
+}
+
+.article .article-content h2 {
+    margin-top: 0;
 }
 
 .breadcrumb {

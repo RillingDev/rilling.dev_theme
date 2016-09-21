@@ -1,0 +1,15 @@
+.presenter {
+    background-color: $brand-primary;
+    width: 100%;
+
+    .presenter-content {
+        padding: 10% 0;
+
+        .presenter-icon {
+            text-align: center;
+            color: $white;
+            font-size: 5em;
+            width: 100%;
+        }
+    }
+}

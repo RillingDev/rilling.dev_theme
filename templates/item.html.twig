@@ -1,4 +1,7 @@
 {% embed 'partials/base.html.twig' %}
+    {% block presenter %}
+        {% include 'partials/presenter.html.twig' with {'icon': "file-text-o", 'title': page.title} %}
+    {% endblock %}
 
     {% block content %}
 

@@ -1,0 +1,56 @@
+.navbar-wrapper {
+    margin-bottom: 49px;
+
+    .navbar {
+        background-color: $brand-primary;
+        padding: 0;
+
+        .navbar-brand,
+        .navbar-toggler {
+            color: $gray-lightest;
+            @include hover-focus-active {
+                color: $white;
+            }
+        }
+
+        .navbar-toggler {
+            padding: 14px 0 14px 14px;
+        }
+
+        .navbar-nav {
+            clear: both;
+            @include screen(min,sm) {
+                clear: none;
+            }
+
+            .nav-item {
+                font-size: 17px;
+                margin-left: 0;
+                position: relative;
+
+                &.active {
+                    .nav-link {
+                        color: $white;
+                        background-color: $brand-primary-dark;
+                    }
+                }
+
+                .nav-link {
+                    color: $gray-lightest;
+                    padding: 11px 1rem;
+                    margin-left: -1rem;
+                    margin-right: -1rem;
+                    @include screen(min,sm) {
+                        margin: 0;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                    }
+                    @include hover-focus-active {
+                        color: $white;
+                        background-color: $brand-primary-dark;
+                    }
+                }
+            }
+        }
+    }
+}
