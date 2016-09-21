@@ -1,7 +1,11 @@
 {% extends 'partials/base.html.twig' %}
-{% block content %}{% endblock %}
-{% block content_wrapper %}
-    <main class="portfolio">
+
+{% block presenter %}
+    {% include 'partials/presenter.html.twig' with {'page': page} %}
+{% endblock %}
+
+{% block main %}
+    <div class="portfolio">
         {% for category in header.data.categories %}
             <section class="category" style="background-image:url('{{ url('theme://img/images/' ~ category.img) }}');">
                 <div class="arrow-wrapper">
@@ -34,5 +38,5 @@
             </section>
         {% endfor %}
         {% include 'modular/social.html.twig' %}
-    </main>
+    </div>
 {% endblock %}
