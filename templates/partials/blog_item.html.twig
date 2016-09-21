@@ -1,22 +1,11 @@
 <article>
-    <div class="article-header row">
-        <div class="col-sm-12 col-md-8">
-            {% if truncate %}
-                <h2 class="article-title">
-                    <a href="{{ page.url }}">{{ page.title }}</a>
-                </h2>
-            {% else %}
-                <h1 class="article-title">
-                    <a href="{{ page.url }}">{{ page.title }}</a>
-                </h1>
-            {% endif %}
-            <p class="date">
-                <span>{{ page.date|date("d") }}</span>
-                <span>{{ page.date|date("M") }},</span>
-                <span>{{ page.date|date("Y") }}</span>
-            </p>
+    <div class="article-header">
+        <div>
+            <h2 class="article-title">
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </h2>
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div>
             <div class="article-tags ">
                 {% if page.taxonomy.tag %}
                     {% for tag in page.taxonomy.tag %}
@@ -24,6 +13,13 @@
                     {% endfor %}
                 {% endif %}
             </div>
+        </div>
+        <div>
+            <p class="date">
+                <span>{{ page.date|date("d") }}</span>
+                <span>{{ page.date|date("M") }},</span>
+                <span>{{ page.date|date("Y") }}</span>
+            </p>
         </div>
     </div>
 

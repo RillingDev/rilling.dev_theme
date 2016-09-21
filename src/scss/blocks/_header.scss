@@ -11,7 +11,7 @@ header {
                 color: $gray-lightest;
                 @include hover-focus-active {
                     color: $white;
-                };
+                }
             }
 
             .navbar-toggler {
@@ -37,8 +37,8 @@ header {
 
                     .nav-link {
                         color: $gray-lightest;
-                        padding-top: 10px;
-                        padding-bottom: 10px;
+                        padding-top: 11px;
+                        padding-bottom: 11px;
                         @include screen(max,sm) {
                             margin-left: -1rem;
                             margin-right: -1rem;
@@ -53,7 +53,7 @@ header {
                         @include hover-focus-active {
                             color: $white;
                             background-color: $brand-primary-dark;
-                        };
+                        }
                     }
                 }
             }

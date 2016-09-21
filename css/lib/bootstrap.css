@@ -389,8 +389,8 @@ table {
 }
 
 caption {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: #c5c5c5;
     text-align: left;
     caption-side: bottom;
@@ -1854,7 +1854,7 @@ pre code {
 
 .table th,
   .table td {
-    padding: 1rem;
+    padding: 10px;
     vertical-align: top;
     border-top: 1px solid #c5c5c5;
 }

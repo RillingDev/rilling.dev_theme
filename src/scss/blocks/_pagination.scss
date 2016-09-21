@@ -5,5 +5,9 @@
     .page-item {
         margin-left: 2px;
         margin-right: 2px;
+
+        .page-link {
+            padding: 6px 15px;
+        }
     }
 }

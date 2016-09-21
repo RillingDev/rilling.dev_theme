@@ -10,7 +10,8 @@ a {
     }
 
     &.tag {
-        padding: 5px;
+        padding: 5px 10px;
+        display: inline;
         background-color: $brand-primary;
         color: $gray-lightest;
         @include hover-focus-active {

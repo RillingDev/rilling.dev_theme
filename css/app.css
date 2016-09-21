@@ -10,6 +10,10 @@ article h2 {
     margin-top: 32px;
 }
 
+article h2.article-title {
+    margin: 0;
+}
+
 article h3 {
     margin-top: 24px;
 }
@@ -25,7 +29,8 @@ a.btn-primary:active, a.btn-primary:focus, a.btn-primary:hover {
 }
 
 a.tag {
-    padding: 5px;
+    padding: 5px 10px;
+    display: inline;
     background-color: #83d356;
     color: #f8f8f8;
 }
@@ -79,8 +84,8 @@ header .navbar-wrapper .navbar .navbar-nav .nav-item.active .nav-link {
 
 header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link {
     color: #f8f8f8;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-bottom: 11px;
 }
 
 @media (max-width: 600px) {
@@ -159,7 +164,7 @@ article h2 {
 }
 
 article .article-tags {
-    float: right;
+    margin: 10px 0;
 }
 
 .breadcrumb {
@@ -184,4 +189,8 @@ article .article-tags {
 .pagination .page-item {
     margin-left: 2px;
     margin-right: 2px;
+}
+
+.pagination .page-item .page-link {
+    padding: 6px 15px;
 }
