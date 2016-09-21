@@ -16,5 +16,25 @@
         }, false);
     }
 
+    function initArticle() {
+        function eachNode(node, fn) {
+            return [].forEach.call(node, fn);
+        }
+
+        //Highlight Code Snippets
+        eachNode($("pre", true), function (e) {
+            hljs.highlightBlock(e, $("code").className.replace("language-", ""));
+        });
+
+        //Adjust Table classes
+        eachNode($("table", true), function (e) {
+            e.classList.add("table");
+            e.classList.add("table-bordered");
+            e.classList.add("table-hover");
+            e.outerHTML = "<div class='table-responsive'>" + e.outerHTML + "</div>";
+        });
+    }
+
     initNav();
+    initArticle();
 })();

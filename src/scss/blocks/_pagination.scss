@@ -1,0 +1,9 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    .page-item {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}

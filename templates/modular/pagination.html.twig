@@ -16,7 +16,7 @@
             {% for paginate in pagination %}
 
                 {% if paginate.isCurrent %}
-                    <li class="page-item">
+                    <li class="page-item active">
                         <span class="page-link">{{ paginate.number }}</span>
                     </li class="page-item">
                 {% elseif paginate.isInDelta %}

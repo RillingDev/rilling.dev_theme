@@ -43,11 +43,11 @@
 // Grayscale and brand colors for use across Bootstrap.
 
 $gray-dark:                 #3d3d3d !default;
-$gray:                      #4b4b4b !default;
+$gray:                      #555555 !default;
 $gray-light:                #c5c5c5 !default;
 $gray-lighter:              #e0e0e0 !default;
-$gray-lightest:             #f2f2f2 !default;
-$white:                     #fefefe !default;
+$gray-lightest:             #f5f5f5 !default;
+$white:                     #fcfcfc !default;
 
 $brand-primary:             #83d356 !default;
 $brand-primary-dark:        #67c333 !default;
@@ -108,7 +108,7 @@ $border-width: 0px !default;
 // Settings for the `<body>` element.
 
 $body-bg:    $gray-lighter !default;
-$body-color: $gray-dark !default;
+$body-color: $gray !default;
 
 
 // Links
@@ -174,9 +174,9 @@ $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 $font-size-xs:   .75rem !default;
 
-$line-height-base: 1.5 !default;
+$line-height-base: 1.6 !default;
 
-$font-size-h1: 2.5rem !default;
+$font-size-h1: 2.35rem !default;
 $font-size-h2: 2rem !default;
 $font-size-h3: 1.75rem !default;
 $font-size-h4: 1.5rem !default;
@@ -193,8 +193,8 @@ $display2-weight: 300 !default;
 $display3-weight: 300 !default;
 $display4-weight: 300 !default;
 
-$headings-margin-bottom: ($spacer / 2) !default;
-$headings-font-family:   inherit !default;
+$headings-margin-bottom: .5rem !default;
+$headings-font-family:   $font-family-serif !default;
 $headings-font-weight:   500 !default;
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
@@ -251,13 +251,13 @@ $caret-width-lg:         $caret-width !default;
 $table-cell-padding:            1rem !default;
 $table-sm-cell-padding:         .3rem !default;
 
-$table-bg:                      $gray-lightest !default;
+$table-bg:                      transparent !default;
 $table-bg-accent:               rgba(0,0,0,.05) !default;
 $table-bg-hover:                rgba(0,0,0,.075) !default;
 $table-bg-active:               $table-bg-hover !default;
 
-$table-border-width:            $border-width !default;
-$table-border-color:            $gray-lighter !default;
+$table-border-width:            1px !default;
+$table-border-color:            $gray-light !default;
 
 
 // Buttons
@@ -771,9 +771,9 @@ $breadcrumb-padding-y:          .75rem !default;
 $breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
-$breadcrumb-bg:                 $gray-lighter !default;
-$breadcrumb-divider-color:      $gray-light !default;
-$breadcrumb-active-color:       $gray-light !default;
+$breadcrumb-bg:                 none !default;
+$breadcrumb-divider-color:      $gray !default;
+$breadcrumb-active-color:       $gray !default;
 $breadcrumb-divider:            "/" !default;
 
 

@@ -1,15 +1,17 @@
 body {
-    background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #f2f2f2 0, #f2f2f2 50%) 0/10px 10px;
+    background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #f5f5f5 0, #f5f5f5 50%) 0/10px 10px;
 }
 
 address {
     margin: 0;
 }
 
-h1,
-h2,
-h3 {
-    font-family: "Arvo", serif;
+article h2 {
+    margin-top: 32px;
+}
+
+article h3 {
+    margin-top: 24px;
 }
 
 a:active, a:focus, a:hover {
@@ -19,7 +21,7 @@ a:active, a:focus, a:hover {
 }
 
 header .navbar-wrapper {
-    margin-bottom: 69px;
+    margin-bottom: 62px;
 }
 
 header .navbar-wrapper .navbar {
@@ -30,14 +32,14 @@ header .navbar-wrapper .navbar {
 
 header .navbar-wrapper .navbar .navbar-brand,
     header .navbar-wrapper .navbar .navbar-toggler {
-    color: #f2f2f2;
+    color: #f5f5f5;
 }
 
 header .navbar-wrapper .navbar .navbar-brand:active, header .navbar-wrapper .navbar .navbar-brand:focus, header .navbar-wrapper .navbar .navbar-brand:hover,
       header .navbar-wrapper .navbar .navbar-toggler:active,
       header .navbar-wrapper .navbar .navbar-toggler:focus,
       header .navbar-wrapper .navbar .navbar-toggler:hover {
-    color: #fefefe;
+    color: #fcfcfc;
 }
 
 header .navbar-wrapper .navbar .navbar-toggler {
@@ -56,7 +58,7 @@ header .navbar-wrapper .navbar .navbar-nav .nav-item {
 }
 
 header .navbar-wrapper .navbar .navbar-nav .nav-item.active .nav-link {
-    color: #fefefe;
+    color: #fcfcfc;
 }
 
 header .navbar-wrapper .navbar .navbar-nav .nav-item.active .nav-link:before {
@@ -70,11 +72,11 @@ header .navbar-wrapper .navbar .navbar-nav .nav-item.active .nav-link:before {
 }
 
 header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link {
-    color: #f2f2f2;
+    color: #f5f5f5;
 }
 
 header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:active, header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:focus, header .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:hover {
-    color: #fefefe;
+    color: #fcfcfc;
 }
 
 @media (min-width: 600px) {
@@ -109,14 +111,53 @@ footer .footer-wrapper .footer-list.footer-list-bottom {
 }
 
 footer .footer-wrapper .footer-list li a {
-    color: #f2f2f2;
+    color: #f5f5f5;
 }
 
 footer .footer-wrapper .footer-list li a:active, footer .footer-wrapper .footer-list li a:focus, footer .footer-wrapper .footer-list li a:hover {
-    color: #fefefe;
+    color: #fcfcfc;
+}
+
+p + ul {
+    margin-top: -1rem;
 }
 
 article {
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+    background-color: #fcfcfc;
+    padding: 15px;
+}
+
+@media (min-width: 800px) {
+    article {
+        padding: 20px;
+    }
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+.breadcrumb {
+    padding: 24px 0;
+    margin-bottom: 0;
+}
+
+.comments {
+    margin-bottom: 20px;
+}
+
+.comments p {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination .page-item {
+    margin-left: 2px;
+    margin-right: 2px;
 }
