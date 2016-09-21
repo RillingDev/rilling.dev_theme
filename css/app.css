@@ -28,7 +28,7 @@ h1.presenter-title {
 }
 
 article h2 {
-    margin-top: 32px;
+    margin-top: 38px;
 }
 
 article h2.article-title {
@@ -36,7 +36,7 @@ article h2.article-title {
 }
 
 article h3 {
-    margin-top: 24px;
+    margin-top: 32px;
 }
 
 a:active, a:focus, a:hover {

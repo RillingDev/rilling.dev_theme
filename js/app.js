@@ -2,14 +2,14 @@
 
 (function () {
     function $(query, multi) {
-        const _document = document;
+        var _document = document;
 
         return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
     }
 
     function initNav() {
-        const $toggle = $(".navbar-toggler");
-        const $nav = $(".navbar-toggleable-xs");
+        var $toggle = $(".navbar-toggler");
+        var $nav = $(".navbar-toggleable-xs");
 
         $toggle.addEventListener("click", () => {
             $nav.classList.toggle("in");
@@ -17,8 +17,8 @@
     }
 
     function initArticle() {
-        const $pre = $("pre", true);
-        const $tables = ("table", true);
+        var $pre = $("pre", true);
+        var $tables = $("table", true);
 
         function eachNode(node, fn) {
             return [].forEach.call(node, fn);
@@ -26,11 +26,10 @@
 
         //Highlight Code Snippets
         eachNode($pre, function ($e) {
-            const $code = $e.querySelector("code");
-            const lang = $code.className.replace("language-", "");
+            var $code = $e.querySelector("code");
+            var lang = $code.className.replace("language-", "");
             $e.className = lang;
 
-            //console.log(lang);
             hljs.highlightBlock($e);
         });
 
