@@ -2,7 +2,6 @@
     margin: 20px 0;
     background-color: $white;
     padding: 15px;
-    //width: calc(100vw - 2rem);
     @include screen(min, md) {
         padding: 20px;
     }

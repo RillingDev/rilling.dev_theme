@@ -42,7 +42,7 @@
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 #3d3d3d !default;
+$gray-dark:                 #3a3a3a !default;
 $gray:                      #555555 !default;
 $gray-light:                #c5c5c5 !default;
 $gray-lighter:              #e0e0e0 !default;
@@ -52,11 +52,10 @@ $white:                     #fcfcfc !default;
 $brand-primary:             #83d356 !default;
 $brand-primary-dark:        #67c333 !default;
 $brand-primary-darker:      #448d1b !default;
-$brand-secondary:           #EAEFBD !default;
-$brand-success:             $gray !default;
-$brand-info:                $brand-secondary !default;
-$brand-warning:             $brand-primary !default;
-$brand-danger:              $brand-secondary !default;
+$brand-success:             $brand-primary !default;
+$brand-info:                #9bc7e9 !default;
+$brand-warning:             #f2e359 !default;
+$brand-danger:              #EB5E55 !default;
 $brand-inverse:             $gray-dark !default;
 
 
@@ -773,8 +772,8 @@ $breadcrumb-padding-x:          0 !default;
 $breadcrumb-item-padding:       .25rem !default;
 
 $breadcrumb-bg:                 none !default;
-$breadcrumb-divider-color:      $gray !default;
-$breadcrumb-active-color:       $white !default;
+$breadcrumb-divider-color:      $white !default;
+$breadcrumb-active-color:       $gray !default;
 $breadcrumb-divider:            "/" !default;
 
 
@@ -821,11 +820,11 @@ $close-text-shadow:           0 1px 0 $white !default;
 $code-font-size:              90% !default;
 $code-padding-x:              .4rem !default;
 $code-padding-y:              .2rem !default;
-$code-color:                  #bd4147 !default;
-$code-bg:                     #f7f7f9 !default;
+$code-color:                  $white !default;
+$code-bg:                     $gray-dark !default;
 
 $kbd-color:                   $white !default;
-$kbd-bg:                      #333 !default;
+$kbd-bg:                      $gray-dark !default;
 
 $pre-bg:                      #f7f7f9 !default;
 $pre-color:                   $gray-dark !default;

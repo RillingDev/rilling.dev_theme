@@ -1,0 +1,70 @@
+pre {
+    background-color: $gray-dark;
+    color: $white;
+    padding: 15px;
+    display: block;
+    overflow-x: auto;
+    @include screen(min, md) {
+        padding: 20px;
+    }
+}
+
+.hljs-attr,
+.hljs-attribute {
+    color: $white;
+}
+
+.hljs-comment {
+    color: $gray-light;
+}
+
+.hljs-subst,
+.hljs-template-tag {
+    color: $gray-lighter;
+}
+
+.hljs-keyword,
+.hljs-name,
+.hljs-section,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-selector-tag,
+.hljs-tag .hljs-keyword,
+.hljs-type {
+    color: $brand-primary;
+}
+
+.hljs-addition,
+.hljs-meta,
+.hljs-quote {
+    color: $brand-primary-dark;
+}
+
+.hljs-number,
+.hljs-template-variable,
+.hljs-variable {
+    color: $brand-info;
+}
+
+.hljs-literal,
+.hljs-title {
+    color: $brand-warning;
+}
+
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-bullet,
+.hljs-deletion,
+.hljs-link,
+.hljs-string,
+.hljs-symbol {
+    color: $brand-danger;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}

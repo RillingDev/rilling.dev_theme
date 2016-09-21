@@ -105,12 +105,10 @@
         {% endblock %}
 
         {% block js %}
-            {# do
-                assets.addJs("theme://js/lib/jquery.js", 203) #}
-            {# do
-                assets.addJs("theme://js/lib/tether.js", 201) #}
-            {# do
-                assets.addJs("theme://js/lib/bootstrap.js", 200) #}
+            {% if page.template == "item" %}
+                {% do
+                    assets.addJs("http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js", 200) %}
+            {% endif %}
             {% do
                 assets.addJs("theme://js/app.js", 100) %}
         {% endblock %}

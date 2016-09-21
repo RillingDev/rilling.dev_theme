@@ -158,7 +158,7 @@ a.tag:active, a.tag:focus, a.tag:hover {
 }
 
 footer {
-    background-color: #3d3d3d;
+    background-color: #3a3a3a;
     padding: 20px 0;
 }
 
@@ -190,10 +190,6 @@ footer .footer-wrapper .footer-list li a:active, footer .footer-wrapper .footer-
     color: #fcfcfc;
 }
 
-p + ul {
-    margin-top: -1rem;
-}
-
 .article {
     margin: 20px 0;
     background-color: #fcfcfc;
@@ -219,6 +215,84 @@ p + ul {
     margin-top: 0;
 }
 
+p + ul {
+    margin-top: -1rem;
+}
+
+pre {
+    background-color: #3a3a3a;
+    color: #fcfcfc;
+    padding: 15px;
+    display: block;
+    overflow-x: auto;
+}
+
+@media (min-width: 800px) {
+    pre {
+        padding: 20px;
+    }
+}
+
+.hljs-attr,
+.hljs-attribute {
+    color: #fcfcfc;
+}
+
+.hljs-comment {
+    color: #c5c5c5;
+}
+
+.hljs-subst,
+.hljs-template-tag {
+    color: #e0e0e0;
+}
+
+.hljs-keyword,
+.hljs-name,
+.hljs-section,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-selector-tag,
+.hljs-tag .hljs-keyword,
+.hljs-type {
+    color: #83d356;
+}
+
+.hljs-addition,
+.hljs-meta,
+.hljs-quote {
+    color: #67c333;
+}
+
+.hljs-number,
+.hljs-template-variable,
+.hljs-variable {
+    color: #9bc7e9;
+}
+
+.hljs-literal,
+.hljs-title {
+    color: #f2e359;
+}
+
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-bullet,
+.hljs-deletion,
+.hljs-link,
+.hljs-string,
+.hljs-symbol {
+    color: #EB5E55;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
+
 .breadcrumb {
     margin-bottom: 0;
     text-align: center;
@@ -230,7 +304,7 @@ p + ul {
 }
 
 .breadcrumb .breadcrumb-item a {
-    color: #555555;
+    color: #fcfcfc;
 }
 
 .comments {
