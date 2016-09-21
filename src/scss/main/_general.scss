@@ -2,6 +2,11 @@ body {
     background: repeating-linear-gradient( 45deg, $gray-lighter 0, $gray-lighter 5%, $gray-lightest 0, $gray-lightest 50% ) 0 / 10px 10px;
 }
 
-address {
-    margin: 0;
+.social {
+    max-width: 400px;
+    margin: 20px auto;
+
+    > address {
+        text-align: center;
+    }
 }

@@ -5,6 +5,39 @@ a {
 
     &.btn-primary {
         @include hover-focus-active {
+            background-color: $link-hover-color;
+        };
+
+        &.btn-primary--lg {
+            width: 100%;
+        }
+
+        &.btn-primary-codepen,
+        &.btn-primary-github {
+            margin-top: 10px;
+            width: 100%;
+            @include screen(min,sm) {
+                width: 50%;
+            };
+        }
+
+        &.btn-primary-github {
+            background-color: $gray-light;
+            @include hover-focus-active {
+                background-color: lighten($gray-light,10%);
+            };
+            @include screen(min,sm) {
+                float: left;
+            };
+        }
+
+        &.btn-primary-codepen {
+            background-color: $gray-dark;
+            @include hover-focus-active {
+                background-color: lighten( $gray-dark,10%);
+            };
+        }
+        @include hover-focus-active {
             color: $white;
         };
     }
@@ -20,7 +53,7 @@ a {
         }
         @include hover-focus-active {
             color: $white;
-            background-color: $brand-primary-dark;
+            background-color: $link-hover-color;
         };
     }
 }

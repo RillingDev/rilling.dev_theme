@@ -1,39 +1,48 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block content_header %}
-    <h1>Projects:</h1>
+{% set collection = page.collection() %}
+{% block presenter %}
+    {% include 'partials/presenter.html.twig' with {'page': page} %}
 {% endblock %}
 
-{% block content_main %}
-    {% for category in header.data.categories %}
-        <h2>
-            <i class="fa fa-{{category.icon}}"></i>{{category.name}}:</h2>
-        <ul>
-            {% for project in header.data.projects | sort_by_key("date") | reverse %}
-                {% if project.category == category.id %}
-                    <li >
-                        <a href="{{url("projects/" ~ project.file ~ "/") }}" title="Go to Project {{project.name}}">
-                            {{project.name}}
-                        </a>
-                        {% if project.download %}
-                            <a href="{{url("user/data/files/f-rilling_" ~ project.file ~ ".7z")}}" class="icon" title="Download {{project.name}}">
-                                <i class="fa fa-download"></i>
-                            </a>
-                        {% endif %}
-                        {% if project.article %}
-                            <a href="{{url("blog/" ~ project.article)}}" class="icon" title="Article for {{project.name}}">
-                                <i class="fa fa-file-text-o"></i>
-                            </a>
-                        {% endif %}
-                        <span class="version">
-                            &lt;{{project.version}}&gt;
-                        </span>
-                    </li>
-                {% endif %}
+{% block main %}
+    <div class="projects">
+        <div class="row">
+            {% for category in header.data.categories %}
+                <div class="col-xs-12 col-md-6 col-xl-3">
+                    <div class="project">
+                        <h3 class="project-headline">
+                            <i class="fa fa-{{category.icon}}"></i>{{category.name}}:
+                        </h3>
+                        <ul>
+                            {% for project in header.data.projects | sort_by_key("date") | reverse %}
+                                {% if project.category == category.id %}
+                                    <li >
+                                        <a href="{{url(" projects/" ~ project.file ~ " /") }}" title="Go to Project {{project.name}}">
+                                            {{project.name}}
+                                        </a>
+                                        {% if project.download %}
+                                            <a href="{{url(" user/data/files/f-rilling_" ~ project.file ~ " .7z")}}" class="icon" title="Download {{project.name}}">
+                                                <i class="fa fa-download"></i>
+                                            </a>
+                                        {% endif %}
+                                        {% if project.article %}
+                                            <a href="{{url(" blog/" ~ project.article)}}" class="icon" title="Article for {{project.name}}">
+                                                <i class="fa fa-file-text-o"></i>
+                                            </a>
+                                        {% endif %}
+                                        <!--<span class="version">
+                                            &lt;{{project.version}}&gt;
+                                        </span>-->
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
             {% endfor %}
-        </ul>
-    {% endfor %}
-
+        </div>
+    </div>
     {% include 'modular/social.html.twig' %}
 
 {% endblock %}

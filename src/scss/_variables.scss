@@ -44,7 +44,7 @@
 
 $gray-dark:                 #3a3a3a !default;
 $gray:                      #555555 !default;
-$gray-light:                #c5c5c5 !default;
+$gray-light:                #999999 !default;
 $gray-lighter:              #e0e0e0 !default;
 $gray-lightest:             #f8f8f8 !default;
 $white:                     #fcfcfc !default;
@@ -117,7 +117,7 @@ $body-color: $gray !default;
 
 $link-color:            $brand-primary !default;
 $link-decoration:       none !default;
-$link-hover-color:      $brand-primary-dark !default;
+$link-hover-color:      lighten($brand-primary,10%) !default;
 $link-hover-decoration: underline !default;
 
 
@@ -130,8 +130,8 @@ $grid-breakpoints: (
   xs: 0,
   sm: 600px,
   md: 800px,
-  lg: 1000px,
-  xl: 1200px
+  lg: 1100px,
+  xl: 1300px
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
@@ -144,7 +144,7 @@ $container-max-widths: (
   sm: 100%,
   md: 100%,
   lg: 100%,
-  xl: 1200px
+  xl: 1300px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -767,11 +767,11 @@ $figure-caption-font-size: 90% !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:          0.5rem !default;
+$breadcrumb-padding-y:          0 !default;
 $breadcrumb-padding-x:          0 !default;
 $breadcrumb-item-padding:       .25rem !default;
 
-$breadcrumb-bg:                 none !default;
+$breadcrumb-bg:                 $brand-primary !default;
 $breadcrumb-divider-color:      $white !default;
 $breadcrumb-active-color:       $gray !default;
 $breadcrumb-divider:            "/" !default;

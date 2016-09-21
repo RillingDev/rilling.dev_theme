@@ -2,8 +2,13 @@ body {
     background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #f8f8f8 0, #f8f8f8 50%) 0/10px 10px;
 }
 
-address {
-    margin: 0;
+.social {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.social > address {
+    text-align: center;
 }
 
 h1.presenter-title {
@@ -21,7 +26,7 @@ h1.presenter-title {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
     h1.presenter-title {
         font-size: 3.25em;
     }
@@ -46,6 +51,47 @@ a:active, a:focus, a:hover {
 }
 
 a.btn-primary:active, a.btn-primary:focus, a.btn-primary:hover {
+    background-color: #a1de7e;
+}
+
+a.btn-primary.btn-primary--lg {
+    width: 100%;
+}
+
+a.btn-primary.btn-primary-codepen, a.btn-primary.btn-primary-github {
+    margin-top: 10px;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    a.btn-primary.btn-primary-codepen, a.btn-primary.btn-primary-github {
+        width: 50%;
+    }
+}
+
+a.btn-primary.btn-primary-github {
+    background-color: #999999;
+}
+
+a.btn-primary.btn-primary-github:active, a.btn-primary.btn-primary-github:focus, a.btn-primary.btn-primary-github:hover {
+    background-color: #b3b3b3;
+}
+
+@media (min-width: 600px) {
+    a.btn-primary.btn-primary-github {
+        float: left;
+    }
+}
+
+a.btn-primary.btn-primary-codepen {
+    background-color: #3a3a3a;
+}
+
+a.btn-primary.btn-primary-codepen:active, a.btn-primary.btn-primary-codepen:focus, a.btn-primary.btn-primary-codepen:hover {
+    background-color: #545454;
+}
+
+a.btn-primary:active, a.btn-primary:focus, a.btn-primary:hover {
     color: #fcfcfc;
 }
 
@@ -62,7 +108,7 @@ a.tag.tag-gray {
 
 a.tag:active, a.tag:focus, a.tag:hover {
     color: #fcfcfc;
-    background-color: #67c333;
+    background-color: #a1de7e;
 }
 
 .navbar-wrapper {
@@ -239,7 +285,7 @@ pre {
 }
 
 .hljs-comment {
-    color: #c5c5c5;
+    color: #999999;
 }
 
 .hljs-subst,
@@ -296,11 +342,14 @@ pre {
 .breadcrumb {
     margin-bottom: 0;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .breadcrumb .breadcrumb-item {
     float: none;
     display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .breadcrumb .breadcrumb-item a {
@@ -328,4 +377,20 @@ pre {
 
 .pagination .page-item .page-link {
     padding: 6px 15px;
+}
+
+.projects {
+    margin: 30px 0;
+}
+
+.projects .project {
+    margin-bottom: 35px;
+}
+
+.projects .project .project-headline .fa {
+    margin-right: 8px;
+}
+
+.projects .project ul li .fa {
+    margin-left: 6px;
 }
