@@ -5,11 +5,11 @@
     </address>
 
     {% if header.title == 'Portfolio' %}
-        <a href="{{url(" about")}}" target="_blank" title="About Felix Rilling" class="btn btn-primary col-xs-12">
+        <a href="{{url('about')}}" target="_blank" title="About Felix Rilling" class="btn btn-primary col-xs-12">
             <i class="fa fa-rocket"></i>
             About Me</a>
     {% else %}
-        <a href="{{url(" portfolio")}}" target="_blank" title="Felix Rilling Portfolio" class="btn btn-primary btn-primary--lg">
+        <a href="{{url('portfolio')}}" target="_blank" title="Felix Rilling Portfolio" class="btn btn-primary btn-primary--lg">
             <i class="fa fa-diamond"></i>
             My Portfolio</a>
     {% endif %}

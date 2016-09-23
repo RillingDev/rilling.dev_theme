@@ -458,6 +458,7 @@ pre {
 }
 
 .portfolio .portfolio-category .portfolio-items .portfolio-item .portfolio-img {
+    overflow: hidden;
     width: 100%;
     border: 3px solid #f8f8f8;
 }

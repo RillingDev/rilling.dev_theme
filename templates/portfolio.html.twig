@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-    <section class="section portfolio" itemprop="mainContentOfPage">
+    <div class="section portfolio" itemprop="mainContentOfPage">
         {% for category in header.data.categories %}
             <div class="portfolio-category" style="background-image:url('{{ url('theme://img/images/' ~ category.img) }}');">
                 <div class="arrow-wrapper">
@@ -19,7 +19,7 @@
                                 <div class="portfolio-item">
                                     <div class="portfolio-img">
                                         <a href="{{project.url}}" title="Go to {{project.name}}" target="_blank">
-                                            <img src="{{ url('theme://img/thumbs/' ~ project.img) }}" class="full-width" alt="Thumbnail of {{project.name}}" title="Thumbnail of {{project.name}}">
+                                            <img src="{{ url('theme://img/thumbs/' ~ project.img) }}" class="full-width" alt="Thumbnail of {{project.name}}" title="Thumbnail of {{project.name}}" width="300" height="200">
                                         </a>
                                     </div>
                                     <div class="portfolio-text">
@@ -35,7 +35,7 @@
                 </div>
             </div>
         {% endfor %}
-    </section>
+    </div>
     <div class="container">
         {% include 'modular/social.html.twig' %}
     </div>

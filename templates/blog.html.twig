@@ -7,7 +7,7 @@
 
     {% block main %}
         <div class="container">
-            <section class="section section-margin" itemprop="mainContentOfPage">
+            <div class="section section-margin" itemprop="mainContentOfPage">
                 {% for child in collection %}
                     {% if child.published %}
                         <article class="article" itemscope itemtype="http://schema.org/TechArticle">
@@ -15,7 +15,7 @@
                         </article>
                     {% endif %}
                 {% endfor %}
-            </section>
+            </div>
 
             {% if config.plugins.pagination.enabled and collection.params.pagination %}
                 {% include 'modular/pagination.html.twig' with {'base_url': page.url, 'pagination': collection.params.pagination} %}

@@ -6,11 +6,11 @@
 
     {% block main %}
         <div class="container">
-            <section class="section" itemprop="mainContentOfPage">
+            <div class="section" itemprop="mainContentOfPage">
                 <article class="article article-full" itemscope itemtype="http://schema.org/TechArticle">
                     {% include 'partials/blog_item.html.twig' with {'blog': page.parent, 'truncate': false, 'full': true} %}
                 </article>
-            </section>
+            </div>
             {% include 'modular/comments.html.twig' with {'page': page} %}
         </div>
     {% endblock %}
