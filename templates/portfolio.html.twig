@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-    <div class="portfolio">
+    <div class="section portfolio" itemprop="specialty">
         {% for category in header.data.categories %}
             <section class="category" style="background-image:url('{{ url('theme://img/images/' ~ category.img) }}');">
                 <div class="arrow-wrapper">

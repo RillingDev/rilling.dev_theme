@@ -5,8 +5,11 @@
 {% endblock %}
 
 {% block main %}
-    <div class="section">
-        {{ page.content }}
+    <div class="container">
+        <div class="section" itemprop="specialty">
+            {{ page.content }}
+            <!--<canvas class="graph" id="graphSkills" width="400" height="400"></canvas>-->
+        </div>
     </div>
     {% include 'modular/social.html.twig' %}
 {% endblock %}

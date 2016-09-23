@@ -12,7 +12,7 @@ body {
 }
 
 .section {
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 h1.presenter-title {
@@ -393,4 +393,65 @@ pre {
 
 .project ul li .fa {
     margin-left: 6px;
+}
+
+.portfolio {
+    margin-top: 0;
+}
+
+.portfolio section {
+    background-size: cover;
+}
+
+.portfolio section .arrow-wrapper {
+    width: 100%;
+    height: 15px;
+    background-color: #f8f8f8;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.portfolio section .arrow-wrapper h2 {
+    color: #3a3a3a;
+    text-align: center;
+    font-family: "Arvo", serif;
+    margin: 0;
+    line-height: 80px;
+    position: relative;
+}
+
+.portfolio section .arrow-wrapper .arrow {
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 150px solid #f8f8f8;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.portfolio section .items {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.portfolio section .items .item {
+    margin-bottom: 50px;
+}
+
+.portfolio section .items .item > div {
+    height: 100%;
+    position: relative;
+}
+
+.portfolio section .items .item > div .text-box {
+    background-color: #f8f8f8;
+    height: 100%;
+    padding: 0 20px;
+    float: right;
+}
+
+.portfolio section .items .item > div img {
+    border: 3px solid #f8f8f8;
 }

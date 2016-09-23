@@ -1,4 +1,5 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{# Set Metadata#}
 {% if header.title == "Blog" %}
     {% set title = "F-Rilling.com" | e("html") %}
 {% else %}
@@ -11,9 +12,28 @@
     {% set description = header.meta.description | truncate(300) %}
     {% set keywords = header.meta.tags %}
 {% endif %}
+{# Schema Data#}
+{% if page.template == "projects" or page.template == "portfolio" %}
+    {% set schemaType = "CollectionPage" %}
+{% elseif page.template == "about" %}
+    {% set schemaType = "AboutPage"%}
+{% else %}
+    {% set schemaType = "WebPage" %}
+{% endif %}
+{# OpenGraph Data#}
+{% if page.template == "item" %}
+    {% set ogType = "article" %}
+    {% set ogUrl = "article:http://ogp.me/ns/article#"%}
+{% elseif page.template == "about" %}
+    {% set ogType = "profile" %}
+    {% set ogUrl = "profile:http://ogp.me/ns/profile#"%}
+{% else %}
+    {% set ogType = "website" %}
+    {% set ogUrl = ""%}
+{% endif %}
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage">
-    <head prefix="og:http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
+<html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/{{schemaType}}">
+    <head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb# {{ogUrl}}">
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,10 +47,17 @@
         <meta property="og:title" content="{{title}}"/>
         <meta property="og:url" content="{{ page.url(true, true) }}"/>
         <meta property="og:description" content="{{description}}"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="{{ url('theme://img/icons/apple-touch-icon-180x180.png', true) }}"/>
+        <meta property="og:type" content="{{ogType}}"/>
+        <meta property="og:image" content="{{ url('theme://img/android-chrome-192x192.png', true) }}"/>
         <meta property="og:site_name" content="F-Rilling.com"/>
-
+        {% if ogType == "article"%}
+            <meta property="og:article:tag" content="{{page.taxonomy.tag|join (" ,")}}"/>
+            <meta property="og:article:author" content="Felix Rilling"/>
+            <meta property="og:article:published_time" content="{{page.date|date('d')}}.{{page.date|date('m')}}.{{page.date|date('Y')}}"/>
+        {% elseif ogType == "profile" %}
+            <meta property="og:profile:first_name" content="Felix"/>
+            <meta property="og:profile:last_name" content="Rilling"/>
+        {% endif %}
         <!--Card Data for Twitter-->
         <meta name="twitter:card" content="{{description}}">
         <meta name="twitter:title" content="{{title}}">
@@ -82,7 +109,7 @@
         {% endblock %}
 
         {% block content %}
-            <main itemprop="mainContentOfPage" class="container">
+            <main itemprop="mainContentOfPage">
                 {% block main %}{% endblock %}
             </main>
         {% endblock %}
@@ -96,11 +123,18 @@
         {% block js %}
             {% if page.template == "item" %}
                 {% do
-                    assets.addJs("http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js", 200) %}
+                    assets.addJs("http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js", 201) %}
+            {% endif %}
+            {% if page.template == "about" %}
+                {# do
+                    assets.addJs("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.0/Chart.min.js", 200) #}
             {% endif %}
             {% do
                 assets.addJs("theme://js/app.js", 100) %}
         {% endblock %}
         {{ assets.js() }}
+        <script>
+            frilling.init("{{page.template}}");
+        </script>
     </body>
 </html>

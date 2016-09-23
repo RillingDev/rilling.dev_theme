@@ -5,10 +5,12 @@
     {% endblock %}
 
     {% block main %}
-        <article class="article article-full" itemscope itemtype="http://schema.org/TechArticle">
-            {% include 'partials/blog_item.html.twig' with {'blog': page.parent, 'truncate': false, 'full': true} %}
+        <div class="container">
+            <article class="article article-full" itemscope itemtype="http://schema.org/TechArticle">
+                {% include 'partials/blog_item.html.twig' with {'blog': page.parent, 'truncate': false, 'full': true} %}
+            </article>
             {% include 'modular/comments.html.twig' with {'page': page} %}
-        </article>
+        </div>
     {% endblock %}
 
 {% endembed %}
