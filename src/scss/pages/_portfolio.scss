@@ -1,24 +1,11 @@
 .portfolio {
-    margin-top: 0;
-
-    section {
+    .portfolio-category {
         background-size: cover;
 
         .arrow-wrapper {
-            width: 100%;
             height: 15px;
             background-color: $gray-lightest;
-            position: relative;
             margin-bottom: 150px;
-
-            h2 {
-                color: $gray-dark;
-                text-align: center;
-                font-family: $font-family-serif;
-                margin: 0;
-                line-height: 80px;
-                position: relative;
-            }
 
             .arrow {
                 width: 0;
@@ -32,26 +19,69 @@
             }
         }
 
-        .items {
-            padding-top: 25px;
-            padding-bottom: 25px;
+        .portfolio-items {
+            padding-top: 20px;
+            padding-bottom: 20px;
 
-            .item {
-                margin-bottom: 50px;
+            .portfolio-item {
+                margin-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
 
-                > div {
+                .portfolio-img,
+                .portfolio-text {
+                    min-height: 200px;
+                }
+
+                .portfolio-text {
+                    width: 100%;
+                    background-color: $gray-lightest;
                     height: 100%;
-                    position: relative;
+                    padding: 20px;
+                }
 
-                    .text-box {
-                        background-color: $gray-lightest;
-                        height: 100%;
-                        padding: 0 20px;
-                        float: right;
+                .portfolio-img {
+                    width: 100%;
+                    border: 3px solid $gray-lightest;
+                }
+            }
+            @include screen(min,md) {
+                .portfolio-item {
+                    max-width: 100%;
+
+                    .portfolio-text {
+                        width: calc(100% - 330px);
                     }
 
-                    img {
-                        border: 3px solid $gray-lightest;
+                    .portfolio-img {
+                        width: 300px;
+                        max-height: 200px;
+                    }
+                }
+            }
+        }
+        //Row dir
+        @include screen(min,md) {
+            &:nth-child(2n+1) {
+                .portfolio-items .portfolio-item {
+                    flex-direction: row;
+
+                    &:nth-child(2n+2) {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+
+            &:nth-child(2n+2) {
+                .portfolio-items .portfolio-item {
+                    flex-direction: row-reverse;
+
+                    &:nth-child(2n+2) {
+                        flex-direction: row;
                     }
                 }
             }

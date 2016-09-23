@@ -7,7 +7,7 @@
 
 {% block main %}
     <div class="container">
-        <div class="section" itemprop="specialty">
+        <section class="section section-margin" itemprop="mainContentOfPage">
             <div class="row">
                 {% for category in header.data.categories %}
                     <div class="col-xs-12 col-md-6 col-xl-3">
@@ -32,9 +32,6 @@
                                                     <i class="fa fa-file-text-o"></i>
                                                 </a>
                                             {% endif %}
-                                            <!--<span class="version">
-                                            &lt;{{project.version}}&gt;
-                                        </span>-->
                                         </li>
                                     {% endif %}
                                 {% endfor %}
@@ -43,8 +40,7 @@
                     </div>
                 {% endfor %}
             </div>
-        </div>
+        </section>
+        {% include 'modular/social.html.twig' %}
     </div>
-    {% include 'modular/social.html.twig' %}
-
 {% endblock %}

@@ -1,5 +1,5 @@
 .article {
-    margin: 20px 0;
+    margin-bottom: 30px;
     background-color: $white;
     padding: 15px;
     @include screen(min, md) {
@@ -7,19 +7,12 @@
     }
 
     &.article-full {
-        margin-top: 0;
         padding-top: 30px;
     }
 
     .article-header {
         .article-tags {
             margin: 10px 0;
-        }
-    }
-
-    .article-content {
-        h2 {
-            margin-top: 0;
         }
     }
 }

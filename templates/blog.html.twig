@@ -7,13 +7,15 @@
 
     {% block main %}
         <div class="container">
-            {% for child in collection %}
-                {% if child.published %}
-                    <article class="article" itemscope itemtype="http://schema.org/TechArticle">
-                        {% include 'partials/blog_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
-                    </article>
-                {% endif %}
-            {% endfor %}
+            <section class="section section-margin" itemprop="mainContentOfPage">
+                {% for child in collection %}
+                    {% if child.published %}
+                        <article class="article" itemscope itemtype="http://schema.org/TechArticle">
+                            {% include 'partials/blog_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
+                        </article>
+                    {% endif %}
+                {% endfor %}
+            </section>
 
             {% if config.plugins.pagination.enabled and collection.params.pagination %}
                 {% include 'modular/pagination.html.twig' with {'base_url': page.url, 'pagination': collection.params.pagination} %}

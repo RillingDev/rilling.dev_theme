@@ -5,38 +5,38 @@
 {% endblock %}
 
 {% block main %}
-    <div class="section portfolio" itemprop="specialty">
+    <section class="section portfolio" itemprop="mainContentOfPage">
         {% for category in header.data.categories %}
-            <section class="category" style="background-image:url('{{ url('theme://img/images/' ~ category.img) }}');">
+            <div class="portfolio-category" style="background-image:url('{{ url('theme://img/images/' ~ category.img) }}');">
                 <div class="arrow-wrapper">
                     <div class="arrow"></div>
-                    <h2>
-                        {{category.name}}
-                    </h2>
+                    <h2>{{category.name}}</h2>
                 </div>
-                <div class="items container">
-                    {% for project in header.data.projects | sort_by_key("id") %}
-                        {% if project.category == category.id %}
-                            <div class="item row">
-                                <div class="col-xs-12 col-md-3">
-                                    <a href="{{project.url}}" title="Go to {{project.name}}" target="_blank">
-                                        <img src="{{ url('theme://img/thumbs/' ~ project.img) }}" class="full-width" alt="Thumbnail of {{project.name}}" title="Thumbnail of {{project.name}}">
-                                    </a>
-                                </div>
-                                <div class="col-xs-12 col-md-9 ">
-                                    <div class="text-box">
-                                        <h3>
-                                            <a href="{{project.url}}" title="Go to {{project.name}}" target="_blank">{{project.name}}</a>
-                                        </h3>
+                <div class="container">
+                    <div class="portfolio-items">
+                        {% for project in header.data.projects | sort_by_key("id") %}
+                            {% if project.category == category.id %}
+                                <div class="portfolio-item">
+                                    <div class="portfolio-img">
+                                        <a href="{{project.url}}" title="Go to {{project.name}}" target="_blank">
+                                            <img src="{{ url('theme://img/thumbs/' ~ project.img) }}" class="full-width" alt="Thumbnail of {{project.name}}" title="Thumbnail of {{project.name}}">
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-text">
+                                        <a href="{{project.url}}" title="Go to {{project.name}}" target="_blank">
+                                            <h3>{{project.name}}</h3>
+                                        </a>
                                         <p>{{project.description}}</p>
                                     </div>
                                 </div>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
                 </div>
-            </section>
+            </div>
         {% endfor %}
+    </section>
+    <div class="container">
         {% include 'modular/social.html.twig' %}
     </div>
 {% endblock %}

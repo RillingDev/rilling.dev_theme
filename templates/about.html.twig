@@ -6,10 +6,10 @@
 
 {% block main %}
     <div class="container">
-        <div class="section" itemprop="specialty">
-            {{ page.content }}
+        <section class="section section-margin" itemprop="mainContentOfPage">
+            {{page.content}}
             <!--<canvas class="graph" id="graphSkills" width="400" height="400"></canvas>-->
-        </div>
+        </section>
+        {% include 'modular/social.html.twig' %}
     </div>
-    {% include 'modular/social.html.twig' %}
 {% endblock %}

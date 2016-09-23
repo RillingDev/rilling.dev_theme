@@ -15,7 +15,7 @@ h1 {
     }
 }
 
-article {
+.article {
     h2 {
         margin-top: 38px;
 
@@ -26,5 +26,18 @@ article {
 
     h3 {
         margin-top: 32px;
+    }
+}
+
+.portfolio {
+    h2 {
+        text-align: center;
+        line-height: 80px;
+        position: relative;
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
     }
 }

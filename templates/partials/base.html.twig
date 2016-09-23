@@ -48,7 +48,7 @@
         <meta property="og:url" content="{{ page.url(true, true) }}"/>
         <meta property="og:description" content="{{description}}"/>
         <meta property="og:type" content="{{ogType}}"/>
-        <meta property="og:image" content="{{ url('theme://img/android-chrome-192x192.png', true) }}"/>
+        <meta property="og:image" content="{{ url('theme://img/icons/icons/android-chrome-192x192.png', true) }}"/>
         <meta property="og:site_name" content="F-Rilling.com"/>
         {% if ogType == "article"%}
             <meta property="og:article:tag" content="{{page.taxonomy.tag|join (" ,")}}"/>
@@ -63,16 +63,16 @@
         <meta name="twitter:title" content="{{title}}">
         <meta name="twitter:url" content="{{ page.url(true, true) }}">
         <meta name="twitter:description" content="{{description}}">
-        <meta name="twitter:image" content="{{ url('theme://img/icons/apple-touch-icon-180x180.png', true) }}"/>
+        <meta name="twitter:image" content="{{ url('theme://img/icons/icons/apple-touch-icon-180x180.png', true) }}"/>
 
         <!--Favicons-->
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://img/apple-touch-icon.png', true) }}">
-        <link rel="icon" type="image/png" href="{{ url('theme://img/favicon-32x32.png', true) }}" sizes="32x32">
-        <link rel="icon" type="image/png" href="{{ url('theme://img/favicon-16x16.png', true) }}" sizes="16x16">
-        <link rel="manifest" href="{{ url('theme://img/manifest.json', true) }}">
-        <link rel="mask-icon" href="{{ url('theme://img/safari-pinned-tab.svg', true) }}" color="#83d356">
-        <link rel="shortcut icon" href="{{ url('theme://img/favicon.ico', true) }}">
-        <meta name="msapplication-config" content="{{ url('theme://img/browserconfig.xml', true) }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://img/icons/apple-touch-icon.png', true) }}">
+        <link rel="icon" type="image/png" href="{{ url('theme://img/icons/favicon-32x32.png', true) }}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{{ url('theme://img/icons/favicon-16x16.png', true) }}" sizes="16x16">
+        <link rel="manifest" href="{{ url('theme://img/icons/manifest.json', true) }}">
+        <link rel="mask-icon" href="{{ url('theme://img/icons/safari-pinned-tab.svg', true) }}" color="#83d356">
+        <link rel="shortcut icon" href="{{ url('theme://img/icons/favicon.ico', true) }}">
+        <meta name="msapplication-config" content="{{ url('theme://img/icons/browserconfig.xml', true) }}">
         <meta name="theme-color" content="#83d356">
 
         <link rel="canonical" href="{{ page.url(true, true) }}"/>
@@ -109,7 +109,7 @@
         {% endblock %}
 
         {% block content %}
-            <main itemprop="mainContentOfPage">
+            <main>
                 {% block main %}{% endblock %}
             </main>
         {% endblock %}
