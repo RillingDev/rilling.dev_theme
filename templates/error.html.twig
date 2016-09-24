@@ -1,15 +1,13 @@
 {% extends 'partials/base.html.twig' %}
-{% block body_nav %}{% endblock %}
-{% block content %}
-    <main>
-        <div class="error center-text">
-            <h1>Error
-                {{ page.header.http_response_code }}</h1>
-            <p>
-                {{ page.content }}
-                <a href="/" class="btn btn-primary">Go Back</a>
-            </p>
+
+{% block main %}
+    <div class="container">
+        <div class="section section-margin" itemprop="mainContentOfPage">
+            <div class="error">
+                <h1>Error 404</h1>
+                <p>This page doesn't exist.</p>
+                <a href="{{url('./')}}" class="btn btn-primary">Go Back</a>
+            </div>
         </div>
-    </main>
+    </div>
 {% endblock %}
-{% block body_footer %}{% endblock %}

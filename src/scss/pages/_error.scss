@@ -1,0 +1,17 @@
+.error {
+    padding: 20px;
+    background-color: $gray-lightest;
+    max-width: 300px;
+    margin: 80px auto;
+
+    h1,
+    p {
+        text-align: center;
+    }
+
+    .btn-primary {
+        display: block;
+        max-width: 160px;
+        margin: auto;
+    }
+}

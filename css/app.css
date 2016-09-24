@@ -495,3 +495,21 @@ pre {
         flex-direction: row;
     }
 }
+
+.error {
+    padding: 20px;
+    background-color: #f8f8f8;
+    max-width: 300px;
+    margin: 80px auto;
+}
+
+.error h1,
+  .error p {
+    text-align: center;
+}
+
+.error .btn-primary {
+    display: block;
+    max-width: 160px;
+    margin: auto;
+}

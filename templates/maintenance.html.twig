@@ -1,16 +1,12 @@
 {% extends 'partials/base.html.twig' %}
-{% block body_nav %}{% endblock %}
-{% block content %}
-    <main>
-        <div class="error center-text">
-            <h1>Maintenance
-                <i class="fa fa-cogs" aria-hidden="true"></i>
-            </h1>
-            <p>
-                I'm currently tweaking some stuff.
-            </p>
-            <a href="/" class="btn btn-primary">Go Back</a>
+
+{% block main %}
+    <div class="container">
+        <div class="section section-margin" itemprop="mainContentOfPage">
+            <div class="error">
+                <h1>Maintenance</h1>
+                <p>The site should be back soon.</p>
+            </div>
         </div>
-    </main>
+    </div>
 {% endblock %}
-{% block body_footer %}{% endblock %}

@@ -13,9 +13,9 @@
                         {% set current_page = (page.active or page.activeChild)
                             ? 'active'
                             : '' %}
-                        <li class="nav-item {{ current_page }}">
-                            <a class="nav-link" href="{{ page.url }}" title="Go to {{ page.menu }}">
-                                {{ page.menu }}
+                        <li class="nav-item {{current_page}}">
+                            <a class="nav-link" href="{{page.url~'/'}}" title="Go to {{page.menu}}">
+                                {{page.menu}}
                             </a>
                         </li>
                     {% endfor %}

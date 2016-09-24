@@ -1,15 +1,6 @@
-name: Frilling
-version: 2.0.0
-description: "Frilling is the default theme included with **Grav**"
-icon: empire
-author:
-  name: Team Grav
-  email: devs@getgrav.org
-  url: http://getgrav.org
-homepage: https://github.com/getgrav/grav-theme-Frilling
-demo: http://demo.getgrav.org/blog-skeleton
-keywords: Frilling, theme, core, modern, fast, responsive, html5, css3
-bugs: https://github.com/getgrav/grav-theme-Frilling/issues
+name: Frilling2
+version: 3.0.0
+description: "Frilling custom theme"
 license: MIT
 
 form:
