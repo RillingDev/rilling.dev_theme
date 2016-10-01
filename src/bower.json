@@ -1,8 +1,8 @@
 {
-  "name": "frilling",
+  "name": "frilling2",
   "description": "Grav theme",
   "main": "main.js",
-  "version": "v3.0.0",
+  "version": "v3.1.0",
   "authors": [
     "FelixRilling"
   ],
