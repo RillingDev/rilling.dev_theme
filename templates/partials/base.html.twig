@@ -39,16 +39,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index,follow"/>
         <title>{{title}}</title>
-        <meta name="description" content="{{description}}"/>
+        <meta name="description" content="{{description|slice(0,160)}}"/>
         <meta name="keywords" content="{{keywords}}"/>
         <meta name="author" content="Felix Rilling"/>
 
         <!--Open Graph for Facebook-->
         <meta property="og:title" content="{{title}}"/>
         <meta property="og:url" content="{{ page.url(true, true) }}"/>
-        <meta property="og:description" content="{{description}}"/>
+        <meta property="og:description" content="{{description|slice(0,300)}}"/>
         <meta property="og:type" content="{{ogType}}"/>
-        <meta property="og:image" content="{{ url('theme://img/icons/icons/android-chrome-192x192.png', true) }}"/>
+        <meta property="og:image" content="{{ url('theme://img/icons/android-chrome-192x192.png', true) }}"/>
         <meta property="og:site_name" content="F-Rilling.com"/>
         {% if ogType == "article"%}
             <meta property="og:article:tag" content="{{page.taxonomy.tag|join (" ,")}}"/>
@@ -58,12 +58,14 @@
             <meta property="og:profile:first_name" content="Felix"/>
             <meta property="og:profile:last_name" content="Rilling"/>
         {% endif %}
+        
         <!--Card Data for Twitter-->
-        <meta name="twitter:card" content="{{description}}">
-        <meta name="twitter:title" content="{{title}}">
+        <meta name="twitter:card" content="summary">
         <meta name="twitter:url" content="{{ page.url(true, true) }}">
-        <meta name="twitter:description" content="{{description}}">
-        <meta name="twitter:image" content="{{ url('theme://img/icons/icons/apple-touch-icon-180x180.png', true) }}"/>
+        <meta name="twitter:title" content="{{title}}">
+        <meta name="twitter:description" content="{{description|slice(0,200)}}">
+        <meta name="twitter:image" content="{{ url('theme://img/icons/android-chrome-192x192.png', true) }}"/>
+        <meta name="twitter:creator" content="@FelixRilling">
 
         <!--Favicons-->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://img/icons/apple-touch-icon.png', true) }}">
