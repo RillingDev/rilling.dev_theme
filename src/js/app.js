@@ -1,35 +1,45 @@
 "use strict";
-var frilling = (function() {
+const frilling = (function() {
+    const _window = window;
+    const _document = _window.document;
+
+    /**
+     * jQuery like selector
+     * @param  {String} query String query
+     * @param  {Boolean} multi If the select will match multiple elements
+     * @return {NodeList}       NodeList of selcted elements
+     */
+    function $(query, multi) {
+        return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
+    }
+
+    /**
+     * Iterate over NodeList
+     * @param  {NodeList}   node NodeList of elements
+     * @param  {Function} fn   Function to run
+     */
+    function eachNode(node, fn) {
+        return [].forEach.call(node, fn);
+    }
+
     function init(pageType) {
-        var _window = window;
-        var _document = _window.document;
-
-        function $(query, multi) {
-
-            return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
-        }
-
-        function eachNode(node, fn) {
-            return [].forEach.call(node, fn);
-        }
-
-        function initNav() {
-            var $toggle = $(".navbar-toggler");
-            var $nav = $(".navbar-toggleable-xs");
+        const initNav = function() {
+            const $toggle = $(".navbar-toggler");
+            const $nav = $(".navbar-toggleable-xs");
 
             $toggle.addEventListener("click", () => {
                 $nav.classList.toggle("in");
             }, false);
-        }
+        };
 
-        function initArticle() {
-            var $pre = $("pre", true);
-            var $tables = $("table", true);
+        const initArticle = function() {
+            const $pre = $("pre", true);
+            const $tables = $("table", true);
 
             //Highlight Code Snippets
             eachNode($pre, function($e) {
-                var $code = $e.querySelector("code");
-                var lang = $code.className.replace("language-", "");
+                const $code = $e.querySelector("code");
+                const lang = $code.className.replace("language-", "");
                 $e.className = lang;
 
                 hljs.highlightBlock($e);
@@ -42,44 +52,19 @@ var frilling = (function() {
                 e.classList.add("table-hover");
                 e.outerHTML = '<div class="table-responsive">' + e.outerHTML + '</div>';
             });
-        }
+        };
 
-        function initAbout() {
-            /*var ctx = $("#graphSkills");
-            var options = {
-                responsive: false,
-                scale: {
+        /*function initAbout() {
 
-                }
-            };
-            var data = {
-                labels: ["Webdesign", "Frontend", "Webapp", "Backend", "Native Apps"],
-                datasets: [{
-                    label: "Skills",
-                    backgroundColor: "#83d356",
-                    borderColor: "#83d356",
-                    pointBackgroundColor: "#83d356",
-                    pointBorderColor: "#67c333",
-                    pointHoverBackgroundColor: "#67c333",
-                    pointHoverBorderColor: "#67c333",
-                    data: [40, 70, 80, 60, 20]
-                }]
-            };
-            var myChart = new Chart(ctx, {
-                type: "horizontalBar",
-                data: data,
-                options: options
-            });
-            */
-        }
+        }*/
 
         initNav();
         if (pageType === "item") {
             initArticle();
         }
-        if (pageType === "about") {
+        /*if (pageType === "about") {
             initAbout();
-        }
+        }*/
     }
 
     return {
