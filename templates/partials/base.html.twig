@@ -58,7 +58,7 @@
             <meta property="og:profile:first_name" content="Felix"/>
             <meta property="og:profile:last_name" content="Rilling"/>
         {% endif %}
-        
+
         <!--Card Data for Twitter-->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:url" content="{{ page.url(true, true) }}">
@@ -79,6 +79,8 @@
 
         <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
+        {% include "partials/analytics_head.html.twig"%}
+
         {% block css %}
             {% do
                 assets.addCss("https://fonts.googleapis.com/css?family=Arvo:400,700|Lato|Source+Code+Pro", 104) %}
@@ -93,6 +95,8 @@
 
     </head>
     <body id="top">
+        {% include "partials/analytics_body.html.twig"%}
+        
         {% block header %}
             <header>
                 {% block navigation %}
