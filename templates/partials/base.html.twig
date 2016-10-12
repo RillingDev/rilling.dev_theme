@@ -50,13 +50,14 @@
         <meta property="og:type" content="{{ogType}}"/>
         <meta property="og:image" content="{{ url('theme://img/icons/android-chrome-192x192.png', true) }}"/>
         <meta property="og:site_name" content="F-Rilling.com"/>
+
         {% if ogType == "article"%}
-            <meta property="og:article:tag" content="{{page.taxonomy.tag|join (" ,")}}"/>
-            <meta property="og:article:author" content="Felix Rilling"/>
-            <meta property="og:article:published_time" content="{{page.date|date('d')}}.{{page.date|date('m')}}.{{page.date|date('Y')}}"/>
+        <meta property="og:article:tag" content="{{page.taxonomy.tag|join (" ,")}}"/>
+        <meta property="og:article:author" content="Felix Rilling"/>
+        <meta property="og:article:published_time" content="{{page.date|date('d')}}.{{page.date|date('m')}}.{{page.date|date('Y')}}"/>
         {% elseif ogType == "profile" %}
-            <meta property="og:profile:first_name" content="Felix"/>
-            <meta property="og:profile:last_name" content="Rilling"/>
+        <meta property="og:profile:first_name" content="Felix"/>
+        <meta property="og:profile:last_name" content="Rilling"/>
         {% endif %}
 
         <!--Card Data for Twitter-->
@@ -96,7 +97,7 @@
     </head>
     <body id="top">
         {% include "partials/analytics_body.html.twig"%}
-        
+
         {% block header %}
             <header>
                 {% block navigation %}

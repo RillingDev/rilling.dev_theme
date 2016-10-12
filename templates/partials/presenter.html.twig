@@ -2,7 +2,7 @@
     {% if page.header.icon %}
         <i class="presenter-icon fa fa-{{page.header.icon}}" aria-hidden="true"></i>
     {% endif %}
-    <h1 class="presenter-title" itemprop="name">{{page.title}}</h1>
+    <h1 class="presenter-title" itemprop="name">{{page.title |e}}</h1>
 
     {% if page.template == "item" %}
         {% if page.date %}
@@ -12,7 +12,7 @@
         {% endif %}
         {% if page.taxonomy.tag %}
             <p class="presenter-tags" itemprop="keywords">
-                {% include 'modular/tags.html.twig' with {'tags': page.taxonomy.tag, 'gray':true} %}
+                {% include 'modular/tags.html.twig' with {'tags': page.taxonomy.tag, 'gray': true} %}
             </p>
         {% endif %}
     {% endif %}

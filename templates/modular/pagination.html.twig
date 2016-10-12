@@ -4,15 +4,6 @@
 {% if pagination | length > 1 %}
     <nav aria-label="Page navigation">
         <ul class="pagination">
-            {% if pagination.hasPrev %}
-                {% set url = (base_url ~ pagination.params ~ pagination.prevUrl) | replace({'//': '/'}) %}
-                <!--<li class="page-item">
-                    <a class="page-link" rel="prev" href="{{ url }}">
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
-                </li>-->
-            {% endif %}
-
             {% for paginate in pagination %}
 
                 {% if paginate.isCurrent %}
@@ -22,19 +13,11 @@
                 {% elseif paginate.isInDelta %}
                     {% set url = (base_url ~ pagination.params ~ paginate.url) | replace({'//': '/'}) %}
                     <li class="page-item">
-                        <a class="page-link" href="{{ url }}">{{ paginate.number }}</a>
+                        <a class="page-link" title="Go to page {{ paginate.number }}" href="{{ url }}">{{ paginate.number }}</a>
                     </li>
                 {% endif %}
 
             {% endfor %}
-            {% if pagination.hasNext %}
-                {% set url = (base_url ~ pagination.params ~ pagination.nextUrl) | replace({'//': '/'}) %}
-                <!--<li class="page-item">
-                    <a class="page-link" rel="next" href="{{ url }}">
-                        <i class="fa fa-chevron-right"></i>
-                    </a>
-                </li>-->
-            {% endif %}
         </ul>
     </nav>
 {% endif %}
