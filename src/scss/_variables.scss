@@ -51,7 +51,6 @@ $white:                     #fcfcfc !default;
 
 $brand-primary:             #83d356 !default;
 $brand-primary-dark:        #67c333 !default;
-$brand-primary-darker:      #448d1b !default;
 $brand-success:             $brand-primary !default;
 $brand-info:                #9bc7e9 !default;
 $brand-warning:             #fff174 !default;
@@ -63,7 +62,7 @@ $brand-inverse:             $gray-dark !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-flex:               true !default;
+$enable-flex:               false !default;
 $enable-rounded:            false !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
@@ -195,7 +194,7 @@ $display4-weight: 300 !default;
 
 $headings-margin-bottom: .5rem !default;
 $headings-font-family:   $font-family-serif !default;
-$headings-font-weight:   500 !default;
+$headings-font-weight:   400 !default;
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
 
