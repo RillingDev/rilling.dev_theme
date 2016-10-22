@@ -51,7 +51,7 @@
         <meta property="og:image" content="{{ url('theme://img/icons/android-chrome-256x256.png', true) }}"/>
         <meta property="og:site_name" content="F-Rilling.com"/>
         {% if ogType == "article"%}
-            <meta property="og:article:tag" content="{{page.taxonomy.tag|join (" ,")|e}}"/>
+            <meta property="og:article:tag" content="{{page.taxonomy.tag|join (', ')|e}}"/>
             <meta property="og:article:author" content="Felix Rilling"/>
             <meta property="og:article:published_time" content="{{page.date|date('d')}}.{{page.date|date('m')}}.{{page.date|date('Y')}}"/>
         {% elseif ogType == "profile" %}
@@ -82,13 +82,13 @@
         {% include "partials/analytics_head.html.twig"%}
 
         {% block css %}
-            {% do
+            {% do 
                 assets.addCss("https://fonts.googleapis.com/css?family=Arvo|Lato|Source+Code+Pro", 104) %}
-            {% do
+            {% do 
                 assets.addCss("theme://css/lib/bootstrap.css", 103) %}
-            {% do
+            {% do 
                 assets.addCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css", 102) %}
-            {% do
+            {% do 
                 assets.addCss("theme://css/app.css", 101) %}
         {% endblock %}
         {{ assets.css() }}
@@ -128,13 +128,13 @@
 
         {% block js %}
             {% if page.template == "item" %}
-                {% do
+                {% do 
                     assets.addJs("http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js", 201) %}
             {# elseif page.template == "about" #}
                 {# do
                     assets.addJs("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.0/Chart.min.js", 200) #}
             {% endif %}
-            {% do
+            {% do 
                 assets.addJs("theme://js/app.js", 100) %}
         {% endblock %}
         {{ assets.js() }}

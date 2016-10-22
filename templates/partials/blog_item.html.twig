@@ -1,7 +1,7 @@
 <div class="article-header {{full ? " hiddenSchema" : " "}}">
     <div>
         <h2 class="article-title" itemprop="name">
-            <a href="{{ page.url }}" title="Read {{ page.title }}">{{ page.title }}</a>
+            <a href="{{ page.url }}" title="Read {{ page.title |e}}">{{ page.title |e}}</a>
         </h2>
     </div>
     <div>
@@ -23,7 +23,7 @@
     {% else %}
         {{ page.summary }}
         <p>
-            <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title }}">Continue Reading...</a>
+            <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title |e}}">Continue Reading...</a>
         </p>
     {% endif %}
 </div>
