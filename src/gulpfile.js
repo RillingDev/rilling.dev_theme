@@ -5,7 +5,6 @@ const tasks = require("gulp-task-loader")("tasks");
 
 
 gulp.task("watch", function() {
-    gulp.watch("./bower.json", ["bower"]);
     gulp.watch("./img/*.*", ["favicon"]);
     gulp.watch(["./scss/bootstrap.scss", "./scss/_variables.scss"], ["bootstrap", "css"]);
 
@@ -17,5 +16,5 @@ gulp.task("watch", function() {
 
 gulp.task("dev", ["connect", "watch"]);
 gulp.task("build", [ "css", "js"]);
-gulp.task("dist", ["sync", "bower", "bootstrap", "favicon", "build"]);
+gulp.task("dist", ["sync", "bootstrap", "favicon", "build"]);
 gulp.task("default", ["dist"]);
