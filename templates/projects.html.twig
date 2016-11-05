@@ -16,7 +16,7 @@
                                 <i class="fa fa-{{category.icon}}"></i>{{category.name}}:
                             </h3>
                             <ul>
-                                {% for project in header.data.projects | sort_by_key("date") | reverse %}
+                                {% for project in header.data.projects | sort_by_key("name") %}
                                     {% if project.category == category.id %}
                                         <li >
                                             <a href="{{project.external ? project.link : url('projects/' ~ project.link ~ '/') }}" title="Go to Project {{project.name}}">
