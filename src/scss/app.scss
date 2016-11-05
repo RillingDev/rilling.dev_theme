@@ -1,24 +1,25 @@
-@import "_variables";
+//FOO
+@import "variables";
 
 @import "mixins/screen";
 @import "mixins/hover-focus-active";
 @import "mixins/transition";
 
-@import "main/_general";
-@import "main/_typo";
-@import "main/_links";
-@import "main/_forms";
+@import "main/general";
+@import "main/typo";
+@import "main/links";
+@import "main/forms";
 
-@import "blocks/_navbar";
-@import "blocks/_presenter";
-@import "blocks/_footer";
-@import "blocks/_article";
-@import "blocks/_lists";
-@import "blocks/_code";
-@import "blocks/_breadcrumb";
-@import "blocks/_comments";
-@import "blocks/_pagination";
+@import "blocks/navbar";
+@import "blocks/presenter";
+@import "blocks/footer";
+@import "blocks/article";
+@import "blocks/lists";
+@import "blocks/code";
+@import "blocks/breadcrumb";
+@import "blocks/comments";
+@import "blocks/pagination";
 
-@import "pages/_projects";
-@import "pages/_portfolio";
-@import "pages/_error";
+@import "pages/projects";
+@import "pages/portfolio";
+@import "pages/error";

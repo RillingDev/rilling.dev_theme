@@ -1,3 +1,8 @@
+ol,
+ul {
+    list-style-type: square;
+}
+
 p + ul {
     margin-top: -1rem;
 }

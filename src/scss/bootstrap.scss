@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
+ * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -17,7 +17,7 @@
 // Core CSS
 @import "reboot";
 @import "type";
-//@import "images";
+@import "images";
 @import "code";
 @import "grid";
 @import "tables";
@@ -25,7 +25,7 @@
 @import "buttons";
 
 // Components
-@import "animation";
+//@import "animation";
 //@import "dropdown";
 //@import "button-group";
 //@import "input-group";
