@@ -1,5 +1,5 @@
 .navbar-wrapper {
-    margin-bottom: 49px;
+    margin-bottom: 45px;
 
     .navbar {
         background-color: $brand-primary;
@@ -14,13 +14,16 @@
         }
 
         .navbar-toggler {
-            padding: 14px 0 14px 14px;
+            padding: 10px 0 10px 10px;
+            float: right;
+            width: 45px;
         }
 
         .navbar-nav {
             clear: both;
             @include screen(min,sm) {
                 clear: none;
+                float: right;
             }
 
             .nav-item {
