@@ -46,8 +46,8 @@ $gray-dark:                 #3a3a3a !default;
 $gray:                      #555555 !default;
 $gray-light:                #999999 !default;
 $gray-lighter:              #e0e0e0 !default;
-$gray-lightest:             #f8f8f8 !default;
-$white:                     #fcfcfc !default;
+$gray-lightest:             #fbfbfb !default;
+$white:                     #fefefe !default;
 
 $brand-primary:             #83d356 !default;
 $brand-primary-dark:        #68a844 !default;
@@ -662,15 +662,15 @@ $popover-arrow-outer-color:           fade-in($popover-border-color, .05) !defau
 
 // Tags
 
-$tag-default-bg:            $gray-light !default;
-$tag-primary-bg:            $brand-primary !default;
+$tag-default-bg:            $brand-primary-dark !default;
+$tag-primary-bg:            $brand-primary-dark !default;
 $tag-success-bg:            $brand-success !default;
 $tag-info-bg:               $brand-info !default;
 $tag-warning-bg:            $brand-warning !default;
 $tag-danger-bg:             $brand-danger !default;
 
-$tag-color:                 #fff !default;
-$tag-link-hover-color:      #fff !default;
+$tag-color:                 $gray-lightest !default;
+$tag-link-hover-color:      $gray-lightest !default;
 $tag-font-size:             75% !default;
 $tag-font-weight:           bold !default;
 $tag-padding-x:             .4em !default;

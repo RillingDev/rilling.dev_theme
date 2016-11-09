@@ -2,10 +2,38 @@ h1 {
     &.presenter-title {
         text-align: center;
         color: $white;
-        padding-left: 10vw;
-        padding-right: 10vw;
         margin: 0;
-        font-size: 10vw;
+        font-size: 3em;
+
+        &.presenter-title-short {
+            font-size: 4.5em;
+            @include screen(min,md) {
+                font-size: 6em;
+            }
+            @include screen(min,lg) {
+                font-size: 7em;
+            }
+        }
+
+        &.presenter-title-medium {
+            font-size: 3em;
+            @include screen(min,md) {
+                font-size: 4em;
+            }
+            @include screen(min,lg) {
+                font-size: 5em;
+            }
+        }
+
+        &.presenter-title-long {
+            font-size: 1.75em;
+            @include screen(min,md) {
+                font-size: 2.25em;
+            }
+            @include screen(min,lg) {
+                font-size: 3em;
+            }
+        }
     }
 }
 

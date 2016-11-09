@@ -10,6 +10,10 @@ a {
         background-color: $link-hover-color;
     };
 
+    &.btn-primary-margin {
+        margin-top: 20px;
+    }
+
     &.btn-primary--lg {
         width: 100%;
     }
@@ -46,19 +50,4 @@ a {
     .fa {
         margin-right: 4px;
     }
-}
-
-.tag {
-    padding: 5px 10px;
-    display: inline;
-    background-color: $brand-primary;
-    color: $gray-lightest;
-
-    &.tag-gray {
-        background-color: $gray;
-    }
-    @include hover-focus-active {
-        color: $white;
-        background-color: $link-hover-color;
-    };
 }

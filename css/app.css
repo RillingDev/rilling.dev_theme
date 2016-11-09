@@ -1,5 +1,5 @@
 body {
-  background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #f8f8f8 0, #f8f8f8 50%) 0/10px 10px; }
+  background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #fbfbfb 0, #fbfbfb 50%) 0/10px 10px; }
 
 .social {
   max-width: 400px;
@@ -18,11 +18,33 @@ body {
 
 h1.presenter-title {
   text-align: center;
-  color: #fcfcfc;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  color: #fefefe;
   margin: 0;
-  font-size: 10vw; }
+  font-size: 3em; }
+  h1.presenter-title.presenter-title-short {
+    font-size: 4.5em; }
+    @media (min-width: 800px) {
+      h1.presenter-title.presenter-title-short {
+        font-size: 6em; } }
+    @media (min-width: 1100px) {
+      h1.presenter-title.presenter-title-short {
+        font-size: 7em; } }
+  h1.presenter-title.presenter-title-medium {
+    font-size: 3em; }
+    @media (min-width: 800px) {
+      h1.presenter-title.presenter-title-medium {
+        font-size: 4em; } }
+    @media (min-width: 1100px) {
+      h1.presenter-title.presenter-title-medium {
+        font-size: 5em; } }
+  h1.presenter-title.presenter-title-long {
+    font-size: 1.75em; }
+    @media (min-width: 800px) {
+      h1.presenter-title.presenter-title-long {
+        font-size: 2.25em; } }
+    @media (min-width: 1100px) {
+      h1.presenter-title.presenter-title-long {
+        font-size: 3em; } }
 
 .article h2 {
   margin-top: 38px; }
@@ -50,6 +72,8 @@ a:active, a:focus, a:hover {
   border: 0; }
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
     background-color: #a1de7e; }
+  .btn-primary.btn-primary-margin {
+    margin-top: 20px; }
   .btn-primary.btn-primary--lg {
     width: 100%; }
   .btn-primary.btn-primary-codepen, .btn-primary.btn-primary-github {
@@ -70,20 +94,9 @@ a:active, a:focus, a:hover {
     .btn-primary.btn-primary-codepen:active, .btn-primary.btn-primary-codepen:focus, .btn-primary.btn-primary-codepen:hover {
       background-color: #545454; }
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-    color: #fcfcfc; }
+    color: #fefefe; }
   .btn-primary .fa {
     margin-right: 4px; }
-
-.tag {
-  padding: 5px 10px;
-  display: inline;
-  background-color: #83d356;
-  color: #f8f8f8; }
-  .tag.tag-gray {
-    background-color: #555555; }
-  .tag:active, .tag:focus, .tag:hover {
-    color: #fcfcfc;
-    background-color: #a1de7e; }
 
 .navbar-wrapper {
   margin-bottom: 45px; }
@@ -92,12 +105,12 @@ a:active, a:focus, a:hover {
     padding: 0; }
     .navbar-wrapper .navbar .navbar-brand,
     .navbar-wrapper .navbar .navbar-toggler {
-      color: #f8f8f8; }
+      color: #fbfbfb; }
       .navbar-wrapper .navbar .navbar-brand:active, .navbar-wrapper .navbar .navbar-brand:focus, .navbar-wrapper .navbar .navbar-brand:hover,
       .navbar-wrapper .navbar .navbar-toggler:active,
       .navbar-wrapper .navbar .navbar-toggler:focus,
       .navbar-wrapper .navbar .navbar-toggler:hover {
-        color: #fcfcfc; }
+        color: #fefefe; }
     .navbar-wrapper .navbar .navbar-toggler {
       padding: 10px 0 10px 10px;
       float: right;
@@ -113,10 +126,10 @@ a:active, a:focus, a:hover {
         margin-left: 0;
         position: relative; }
         .navbar-wrapper .navbar .navbar-nav .nav-item.active .nav-link {
-          color: #fcfcfc;
+          color: #fefefe;
           background-color: #68a844; }
         .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link {
-          color: #f8f8f8;
+          color: #fbfbfb;
           padding: 11px 1rem;
           margin-left: -1rem;
           margin-right: -1rem; }
@@ -126,29 +139,35 @@ a:active, a:focus, a:hover {
               padding-left: 1rem;
               padding-right: 1rem; } }
           .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:active, .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:focus, .navbar-wrapper .navbar .navbar-nav .nav-item .nav-link:hover {
-            color: #fcfcfc;
+            color: #fefefe;
             background-color: #68a844; }
 
 .presenter {
   background-color: #83d356;
   width: 100%;
-  min-height: 300px;
+  min-height: 250px;
   height: 50vh;
   position: relative;
   overflow: hidden; }
-  .presenter .presenter-content .presenter-icon,
-  .presenter .presenter-content .presenter-title {
+  .presenter .presenter-content,
+  .presenter .presenter-icon {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
-  .presenter .presenter-content .presenter-icon {
+  .presenter .presenter-icon {
     color: #68a844;
-    font-size: 35vw;
+    font-size: calc(200px +  15vw);
     opacity: 0.5; }
-  .presenter .presenter-content .presenter-date {
+  .presenter .presenter-content .presenter-meta {
     text-align: center;
-    color: #fcfcfc; }
+    color: #fefefe;
+    margin: 0.5rem 0; }
+    .presenter .presenter-content .presenter-meta > span {
+      padding-left: 5px;
+      padding-right: 5px; }
+      .presenter .presenter-content .presenter-meta > span a {
+        color: #fefefe; }
   .presenter .presenter-content .presenter-tags {
     text-align: center; }
 
@@ -171,13 +190,13 @@ footer {
         bottom: 0;
         right: 0; }
       footer .footer-wrapper .footer-list li a {
-        color: #f8f8f8; }
+        color: #fbfbfb; }
         footer .footer-wrapper .footer-list li a:active, footer .footer-wrapper .footer-list li a:focus, footer .footer-wrapper .footer-list li a:hover {
-          color: #fcfcfc; }
+          color: #fefefe; }
 
 .article {
   margin-bottom: 30px;
-  background-color: #fcfcfc;
+  background-color: #fefefe;
   padding: 15px; }
   @media (min-width: 800px) {
     .article {
@@ -196,7 +215,7 @@ p + ul {
 
 pre {
   background-color: #3a3a3a;
-  color: #fcfcfc;
+  color: #fefefe;
   padding: 15px;
   display: block;
   overflow-x: auto; }
@@ -206,7 +225,7 @@ pre {
 
 .hljs-attr,
 .hljs-attribute {
-  color: #fcfcfc; }
+  color: #fefefe; }
 
 .hljs-comment {
   color: #999999; }
@@ -254,18 +273,23 @@ pre {
 .hljs-strong {
   font-weight: bold; }
 
-.breadcrumb {
-  margin-bottom: 0;
-  text-align: center;
-  padding-bottom: 10px; }
-  .breadcrumb .breadcrumb-item {
-    float: none;
-    display: inline-block;
-    padding-left: 2px;
-    padding-right: 2px; }
-    .breadcrumb .breadcrumb-item a {
-      color: #fcfcfc; }
+/*.breadcrumb {
+    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: transparent;
 
+    .breadcrumb-item {
+        float: none;
+        display: inline-block;
+        padding-left: 2px;
+        padding-right: 2px;
+
+        a {
+            color: $white;
+        }
+    }
+}*/
 .comments {
   margin-bottom: 20px; }
   .comments p {
@@ -281,6 +305,18 @@ pre {
     .pagination .page-item .page-link {
       padding: 6px 15px; }
 
+.tag {
+  padding: 5px 10px;
+  display: inline;
+  background-color: #83d356;
+  border: 0; }
+  .tag.tag-dark {
+    background-color: #68a844; }
+  .tag:active, .tag:focus, .tag:hover {
+    border: 0;
+    color: #fefefe;
+    background-color: #a1de7e; }
+
 .project {
   margin-bottom: 35px; }
   .project .project-headline .fa {
@@ -292,14 +328,14 @@ pre {
   background-size: cover; }
   .portfolio .portfolio-category .arrow-wrapper {
     height: 15px;
-    background-color: #f8f8f8;
+    background-color: #fbfbfb;
     margin-bottom: 150px; }
     .portfolio .portfolio-category .arrow-wrapper .arrow {
       width: 0;
       height: 0;
       border-left: 150px solid transparent;
       border-right: 150px solid transparent;
-      border-top: 150px solid #f8f8f8;
+      border-top: 150px solid #fbfbfb;
       position: absolute;
       left: 50%;
       transform: translateX(-50%); }
@@ -319,13 +355,13 @@ pre {
         min-height: 200px; }
       .portfolio .portfolio-category .portfolio-items .portfolio-item .portfolio-text {
         width: 100%;
-        background-color: #f8f8f8;
+        background-color: #fbfbfb;
         height: 100%;
         padding: 20px; }
       .portfolio .portfolio-category .portfolio-items .portfolio-item .portfolio-img {
         overflow: hidden;
         width: 100%;
-        border: 3px solid #f8f8f8; }
+        border: 3px solid #fbfbfb; }
     @media (min-width: 800px) {
       .portfolio .portfolio-category .portfolio-items .portfolio-item {
         max-width: 100%; }
@@ -346,7 +382,7 @@ pre {
 
 .error {
   padding: 20px;
-  background-color: #f8f8f8;
+  background-color: #fbfbfb;
   max-width: 300px;
   margin: 80px auto; }
   .error h1,

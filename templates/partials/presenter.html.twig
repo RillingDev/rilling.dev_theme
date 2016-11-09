@@ -1,19 +1,44 @@
-<div class="presenter-content">
-    {% if page.header.icon %}
-        <i class="presenter-icon fa fa-{{page.header.icon}}" aria-hidden="true"></i>
-    {% endif %}
-    <h1 class="presenter-title" itemprop="name">{{page.title |e}}</h1>
+{% if page.title|length < 10 %}
+    {% set titleLength = "short" %}
+{% elseif page.title|length < 25 %}
+    {% set titleLength = "medium" %}
+{% else %}
+    {% set titleLength = "long" %}
+{% endif %}
+<div class="presenter">
+    <div class="container">
 
-    {% if page.template == "item" %}
-        {% if page.date %}
-            <p class="presenter-date" itemprop="datePublished">
-                {% include 'modular/date.html.twig' with {'date': page.date} %}
-            </p>
+        {% if page.header.icon %}
+            <i class="presenter-icon fa fa-{{page.header.icon}}" aria-hidden="true"></i>
         {% endif %}
-        {% if page.taxonomy.tag %}
-            <p class="presenter-tags" itemprop="keywords">
-                {% include 'modular/tags.html.twig' with {'tags': page.taxonomy.tag, 'gray': true} %}
-            </p>
-        {% endif %}
-    {% endif %}
+
+        <div class="presenter-content">
+            {% if page.header.icon %}{% endif %}
+            <h1 class="presenter-title presenter-title-{{titleLength}}" itemprop="name">{{page.title |e}}</h1>
+
+            {% if page.template == "item" %}
+                {% if page.date %}
+                    <p class="presenter-meta" itemprop="datePublished">
+                        <span itemprop="datePublished">
+                            {% include 'modular/date.html.twig' with {'date': page.date} %}
+                        </span>
+                        |
+                        <span itemprop="author">
+                            <a href="{{url('/about/')}}">Felix Rilling</a>
+                        </span>
+                    </p>
+                {% endif %}
+                {% if page.taxonomy.tag %}
+                    <p class="presenter-tags" itemprop="keywords">
+                        {% include 'modular/tags.html.twig' with {'tags': page.taxonomy.tag, 'dark': true} %}
+                    </p>
+                {% endif %}
+            {% endif %}
+
+            {# if config.plugins.breadcrumbs.enabled #}
+            {# include 'partials/breadcrumbs.html.twig' #}
+            {# endif #}
+        </div>
+
+    </div>
 </div>

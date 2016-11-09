@@ -1,31 +1,41 @@
 .presenter {
     background-color: $brand-primary;
     width: 100%;
-    min-height: 300px;
+    min-height: 250px;
     height: 50vh;
     position: relative;
     overflow: hidden;
 
+    .presenter-content,
+    .presenter-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .presenter-icon {
+        color: $brand-primary-dark;
+        font-size: calc(200px +  15vw);
+        opacity: 0.5;
+    }
+
     .presenter-content {
-        .presenter-icon,
-        .presenter-title {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .presenter-icon {
-            color: $brand-primary-dark;
-            font-size: 35vw;
-            opacity: 0.5;
-        }
-
         .presenter-title {}
 
-        .presenter-date {
+        .presenter-meta {
             text-align: center;
             color: $white;
+            margin: 0.5rem 0;
+
+            > span {
+                padding-left: 5px;
+                padding-right: 5px;
+
+                a {
+                    color: $white;
+                }
+            }
         }
 
         .presenter-tags {

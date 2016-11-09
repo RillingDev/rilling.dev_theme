@@ -12,8 +12,14 @@
         </div>
     </div>
     <div>
-        <p class="article-date" itemprop="datePublished">
+        <p class="article-meta" >
+          <span itemprop="datePublished">
             {% include 'modular/date.html.twig' with {'date': page.date} %}
+          </span>
+          |
+          <span>
+            Felix Rilling
+          </span>
         </p>
     </div>
 </div>
@@ -21,9 +27,7 @@
     {% if full %}
         {{ page.content }}
     {% else %}
-        {{ page.summary }}
-        <p>
-            <a class="btn btn-primary" href="{{ page.url }}" title="Read {{ page.title |e}}">Continue Reading...</a>
-        </p>
+        {{ page.summary |raw}}
+        <a class="btn btn-primary btn-primary-margin" href="{{ page.url }}" title="Read {{ page.title |e}}">Continue Reading</a>
     {% endif %}
 </div>

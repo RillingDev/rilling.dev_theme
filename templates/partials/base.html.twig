@@ -103,15 +103,7 @@
                 {% block navigation %}
                     {% include "partials/navigation.html.twig" %}
                 {% endblock %}
-                <div class="presenter">
-                    <div class="container">
-                        {% block presenter %}{% endblock %}
-                        {% if config.plugins.breadcrumbs.enabled %}
-                            {% include 'partials/breadcrumbs.html.twig' %}
-                        {% endif %}
-                    </div>
-                </div>
-
+                {% block presenter %}{% endblock %}
             </header>
         {% endblock %}
 
