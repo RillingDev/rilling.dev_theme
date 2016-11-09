@@ -1,17 +1,27 @@
 .presenter {
     background-color: $brand-primary;
     width: 100%;
+    min-height: 300px;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
 
     .presenter-content {
-        padding: 10% 0 5%;
+        .presenter-icon,
+        .presenter-title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
 
         .presenter-icon {
-            text-align: center;
-            color: $white;
-            font-size: 4em;
-            margin-bottom: 20px;
-            width: 100%;
+            color: $brand-primary-dark;
+            font-size: 35vw;
+            opacity: 0.5;
         }
+
+        .presenter-title {}
 
         .presenter-date {
             text-align: center;

@@ -79,8 +79,6 @@
 
         <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
-        {% include "partials/analytics_head.html.twig"%}
-
         {% block css %}
             {% do
                 assets.addCss("https://fonts.googleapis.com/css?family=Arvo|Lato|Source+Code+Pro", 104) %}
@@ -92,6 +90,9 @@
                 assets.addCss("theme://css/app.css", 101) %}
         {% endblock %}
         {{ assets.css() }}
+
+        {% include "partials/analytics_head.html.twig"%}
+        {% block head_jsonld %}{% endblock %}
 
     </head>
     <body id="top">
