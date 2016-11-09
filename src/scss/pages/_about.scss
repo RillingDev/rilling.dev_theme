@@ -1,11 +1,16 @@
 .about {
-    .about-section {
-        margin-bottom: 52px;
+
+    .about-main {
+        margin-bottom: 40px;
     }
 
     .about-skills {
+        margin-bottom: 0;
+
         .skill-section {
-            margin-bottom: 42px;
+            &:not(:last-child) {
+                margin-bottom: 42px;
+            }
 
             .skill {
                 min-width: 175px;
@@ -27,9 +32,20 @@
     }
 
     .about-experience {
+        margin-bottom: 56px;
+
         ul {
             padding: 0;
-            margin-top: 42px;
+            margin: 36px auto 0;
+            text-align: center;
+            list-style: none;
+        }
+    }
+
+    .about-main,
+    .about-skills {
+        @include screen(min,md) {
+            margin-bottom: 52px;
         }
     }
 }
