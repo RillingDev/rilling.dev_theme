@@ -12,14 +12,14 @@
         </div>
     </div>
     <div>
-        <p class="article-meta" >
-          <span itemprop="datePublished">
-            {% include 'modular/date.html.twig' with {'date': page.date} %}
-          </span>
-          |
-          <span>
-            Felix Rilling
-          </span>
+        <p class="article-meta">
+            <span itemprop="datePublished">
+                {% include 'modular/date.html.twig' with {'date': page.date} %}
+            </span>
+            |
+            <span itemprop="author">
+                <a href="{{url('about/')}}">Felix Rilling</a>
+            </span>
         </p>
     </div>
 </div>

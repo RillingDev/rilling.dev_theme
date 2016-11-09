@@ -73,7 +73,7 @@ a:active, a:focus, a:hover {
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
     background-color: #a1de7e; }
   .btn-primary.btn-primary-margin {
-    margin-top: 20px; }
+    margin-top: 10px; }
   .btn-primary.btn-primary--lg {
     width: 100%; }
   .btn-primary.btn-primary-codepen, .btn-primary.btn-primary-github {
@@ -303,13 +303,15 @@ pre {
     margin-left: 2px;
     margin-right: 2px; }
     .pagination .page-item .page-link {
+      border: 0;
       padding: 6px 15px; }
 
 .tag {
   padding: 5px 10px;
   display: inline;
   background-color: #83d356;
-  border: 0; }
+  border: 0;
+  font-weight: normal; }
   .tag.tag-dark {
     background-color: #68a844; }
   .tag:active, .tag:focus, .tag:hover {

@@ -13,7 +13,6 @@
         {% endif %}
 
         <div class="presenter-content">
-            {% if page.header.icon %}{% endif %}
             <h1 class="presenter-title presenter-title-{{titleLength}}" itemprop="name">{{page.title |e}}</h1>
 
             {% if page.template == "item" %}
@@ -24,7 +23,7 @@
                         </span>
                         |
                         <span itemprop="author">
-                            <a href="{{url('/about/')}}">Felix Rilling</a>
+                            <a href="{{url('about/')}}">Felix Rilling</a>
                         </span>
                     </p>
                 {% endif %}
