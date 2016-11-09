@@ -122,10 +122,8 @@
         {% block js %}
             {% if page.template == "item" %}
                 {% do
-                    assets.addJs("http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js", 201) %}
-            {# elseif page.template == "about" #}
-                {# do
-                    assets.addJs("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.0/Chart.min.js", 200) #}
+                    assets.addJs("http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js", 201) %}
+
             {% endif %}
             {% do
                 assets.addJs("theme://js/app.js", 100) %}

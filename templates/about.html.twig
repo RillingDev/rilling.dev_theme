@@ -5,11 +5,122 @@
 {% endblock %}
 
 {% block main %}
-    <div class="container">
-        <div class="section section-margin" itemprop="mainContentOfPage">
-            <h2>Felix Rilling</h2>
-            <h3>Web Developer</h3>
-            {{page.content}}
+    <div class="container container--sm">
+        <div class="section section-margin about" itemprop="mainContentOfPage">
+            <div class="about-main">
+                <h2>Felix Rilling</h2>
+                <hr class="hr hr--sm">
+                <h3>Web Developer</h3>
+                {{page.content}}
+            </div>
+            <div class="about-skills">
+                <h2>Skills</h2>
+                <hr class="hr hr--sm">
+                <div class="skill-section">
+                    <h3>Languages</h3>
+                    <div class="flex-row">
+
+                        <div class="skill">
+                            <h4>HTML</h4>
+                            <hr class="hr hr--sm">
+                            <ul>
+                                <li>HTML5</li>
+                                <li>Accessible Markup</li>
+                                <li>Microdata</li>
+                                <li>Template Construction</li>
+                                <li>Jade/Pug</li>
+                                <li>Haml</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill">
+                            <h4>CSS</h4>
+                            <hr class="hr hr--sm">
+                            <ul>
+                                <li>CSS3</li>
+                                <li>Responsive Design</li>
+                                <li>Bootstrap</li>
+                                <li>Animations</li>
+                                <li>SCSS</li>
+                                <li>LESS</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill">
+                            <h4>JS</h4>
+                            <hr class="hr hr--sm">
+                            <ul>
+                                <li>ES5/ES6</li>
+                                <li>TypeScript</li>
+                                <li>NodeJS</li>
+                                <li>AngularJS</li>
+                                <li>VueJS</li>
+                                <li>Jasmine</li>
+                                <li>jQuery</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill">
+                            <h4>PHP</h4>
+                            <hr class="hr hr--sm">
+                            <ul>
+                                <li>PHP5/PHP7</li>
+                                <li>MySQLi</li>
+                                <li>Twig</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill">
+                            <h4>CMS</h4>
+                            <hr class="hr hr--sm">
+                            <ul>
+                                <li>Wordpress</li>
+                                <li>Typo3</li>
+                                <li>Grav</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="skill-section">
+                    <h3>Tools</h3>
+                    <div class="flex-row">
+
+                        <div class="skill">
+                            <h4>Dev</h4>
+                            <hr class="hr hr--sm">
+                            <ul>
+                                <li>Git</li>
+                                <li>Npm/Yarn</li>
+                                <li>Gulp/Grunt</li>
+                                <li>Browserify/Rollup</li>
+                                <li>Photoshop</li>
+                                <li>Illustrator</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill">
+                            <h4>OS</h4>
+                            <hr class="hr hr--sm">
+                            <ul>
+                                <li>Windows</li>
+                                <li>OS X</li>
+                                <li>Ubuntu/Debian</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill">
+                            <h4>Misc</h4>
+                            <hr class="hr hr--sm">
+                            <ul>
+                                <li>Coffee</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
         {% include 'modular/social.html.twig' %}
     </div>

@@ -2,6 +2,10 @@ body {
     background: repeating-linear-gradient( 45deg, $gray-lighter 0, $gray-lighter 5%, $gray-lightest 0, $gray-lightest 50% ) 0 / 10px 10px;
 }
 
+.container--sm {
+    max-width: 600px;
+}
+
 .social {
     max-width: 400px;
     margin: 20px auto;
@@ -21,4 +25,25 @@ body {
 
 .full-width {
     width: 100%;
+}
+
+.hr {
+    border-color: $gray-light;
+    border-style: solid;
+    border-width: 1px 0;
+    margin-top: 0.333rem;
+    margin-bottom: 0.333rem;
+
+    &.hr--sm {
+        width: 22px;
+    }
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
 }

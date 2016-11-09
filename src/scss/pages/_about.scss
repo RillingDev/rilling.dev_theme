@@ -1,0 +1,25 @@
+.about {
+    .about-main {
+        margin-bottom: 48px;
+    }
+
+    .about-skills {
+        .skill-section {
+            margin-bottom: 48px;
+
+            .skill {
+                min-width: 175px;
+                width: 33.333%;
+                margin: 16px 0;
+                padding-left: 8px;
+                padding-right: 8px;
+
+                ul {
+                    text-align: center;
+                    padding: 0;
+                    list-style: none;
+                }
+            }
+        }
+    }
+}

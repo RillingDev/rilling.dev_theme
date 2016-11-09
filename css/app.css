@@ -1,6 +1,9 @@
 body {
   background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #fbfbfb 0, #fbfbfb 50%) 0/10px 10px; }
 
+.container--sm {
+  max-width: 600px; }
+
 .social {
   max-width: 400px;
   margin: 20px auto; }
@@ -15,6 +18,23 @@ body {
 
 .full-width {
   width: 100%; }
+
+.hr {
+  border-color: #999999;
+  border-style: solid;
+  border-width: 1px 0;
+  margin-top: 0.333rem;
+  margin-bottom: 0.333rem; }
+  .hr.hr--sm {
+    width: 22px; }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start; }
 
 h1.presenter-title {
   text-align: center;
@@ -53,6 +73,21 @@ h1.presenter-title {
 
 .article h3 {
   margin-top: 32px; }
+
+.about h2,
+.about h3,
+.about h4 {
+  text-align: center; }
+
+.about h2 {
+  font-size: 2.75rem; }
+
+.about h3 {
+  font-size: 1.75rem;
+  margin-bottom: 20px; }
+
+.about h4 {
+  font-size: 1.375rem; }
 
 .portfolio h2 {
   text-align: center;
@@ -157,7 +192,7 @@ a:active, a:focus, a:hover {
     transform: translate(-50%, -50%); }
   .presenter .presenter-icon {
     color: #68a844;
-    font-size: calc(200px +  15vw);
+    font-size: calc(225px +  10vw);
     opacity: 0.5; }
   .presenter .presenter-content .presenter-meta {
     text-align: center;
@@ -320,11 +355,31 @@ pre {
     background-color: #a1de7e; }
 
 .project {
-  margin-bottom: 35px; }
+  min-width: 280px;
+  width: 25%;
+  margin-bottom: 32px;
+  padding-left: 8px;
+  padding-right: 8px; }
   .project .project-headline .fa {
     margin-right: 8px; }
   .project ul li .fa {
     margin-left: 6px; }
+
+.about .about-main {
+  margin-bottom: 48px; }
+
+.about .about-skills .skill-section {
+  margin-bottom: 48px; }
+  .about .about-skills .skill-section .skill {
+    min-width: 175px;
+    width: 33.333%;
+    margin: 16px 0;
+    padding-left: 8px;
+    padding-right: 8px; }
+    .about .about-skills .skill-section .skill ul {
+      text-align: center;
+      padding: 0;
+      list-style: none; }
 
 .portfolio .portfolio-category {
   background-size: cover; }
