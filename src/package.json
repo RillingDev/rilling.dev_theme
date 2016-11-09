@@ -4,7 +4,6 @@
     "description": "Grav theme",
     "main": "main.js",
     "scripts": {
-        "postinstall": "bower install && cd ./bower_components/bootstrap && npm install && cd ../../ "
     },
     "repository": {
         "type": "git",

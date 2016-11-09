@@ -40,7 +40,10 @@ h1.presenter-title {
   text-align: center;
   color: #fefefe;
   margin: 0;
-  font-size: 3em; }
+  font-size: 3em;
+  transition-property: font-size;
+  transition-duration: 0.2s;
+  transition-timing-function: ease; }
   h1.presenter-title.presenter-title-short {
     font-size: 4.5em; }
     @media (min-width: 800px) {
@@ -185,31 +188,39 @@ a:active, a:focus, a:hover {
 .presenter {
   background-color: #83d356;
   width: 100%;
-  min-height: 250px;
-  height: 50vh;
+  min-height: 50vh;
+  height: 100%;
   position: relative;
-  overflow: hidden; }
-  .presenter .presenter-content,
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 16px; }
   .presenter .presenter-icon {
+    color: #68a844;
+    font-size: calc(200px + 10vw);
+    opacity: 0.5;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
-  .presenter .presenter-icon {
-    color: #68a844;
-    font-size: calc(225px +  10vw);
-    opacity: 0.5; }
-  .presenter .presenter-content .presenter-meta {
-    text-align: center;
-    color: #fefefe;
-    margin: 0.5rem 0; }
-    .presenter .presenter-content .presenter-meta > span {
-      padding-left: 5px;
-      padding-right: 5px; }
-      .presenter .presenter-content .presenter-meta > span a {
-        color: #fefefe; }
-  .presenter .presenter-content .presenter-tags {
-    text-align: center; }
+  .presenter .presenter-content {
+    width: 100%;
+    max-width: 600px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative; }
+    .presenter .presenter-content .presenter-meta {
+      text-align: center;
+      color: #fefefe;
+      margin: 0.5rem 0; }
+      .presenter .presenter-content .presenter-meta > span {
+        padding-left: 5px;
+        padding-right: 5px; }
+        .presenter .presenter-content .presenter-meta > span a {
+          color: #fefefe; }
+    .presenter .presenter-content .presenter-tags {
+      text-align: center; }
 
 footer {
   background-color: #3a3a3a;

@@ -1,27 +1,31 @@
 .presenter {
     background-color: $brand-primary;
     width: 100%;
-    min-height: 250px;
-    height: 50vh;
+    min-height: 50vh;
+    height: 100%;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 16px;
 
-    .presenter-content,
     .presenter-icon {
+        color: $brand-primary-dark;
+        font-size: calc(200px + 10vw);
+        opacity: 0.5;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
     }
 
-    .presenter-icon {
-        color: $brand-primary-dark;
-        font-size: calc(225px +  10vw);
-        opacity: 0.5;
-    }
-
     .presenter-content {
-        .presenter-title {}
+        width: 100%;
+        max-width: 600px;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
 
         .presenter-meta {
             text-align: center;
