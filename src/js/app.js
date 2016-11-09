@@ -1,7 +1,5 @@
 "use strict";
 const frilling = (function() {
-    const _window = window;
-    const _document = _window.document;
 
     /**
      * jQuery like selector
@@ -10,7 +8,7 @@ const frilling = (function() {
      * @return {NodeList}       NodeList of selcted elements
      */
     const $ = function(query, multi) {
-        return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
+        return multi ? document.querySelectorAll(query) : document.querySelector(query);
     };
 
     /**
