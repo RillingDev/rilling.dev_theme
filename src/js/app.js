@@ -25,6 +25,7 @@ const frilling = (function() {
         const $nav = $(".navbar-toggleable-xs");
 
         $toggle.addEventListener("click", () => {
+            $toggle.classList.toggle("in");
             $nav.classList.toggle("in");
         }, false);
     };
@@ -34,20 +35,18 @@ const frilling = (function() {
         const $tables = $("table", true);
 
         //Highlight Code Snippets
-        eachNode($pre, function($e) {
+        eachNode($pre, $e => {
             const $code = $e.querySelector("code");
             const lang = $code.className.replace("language-", "");
-            $e.className = lang;
 
+            $e.className = lang;
             hljs.highlightBlock($e);
         });
 
         //Adjust Table classes
-        eachNode($tables, function(e) {
-            e.classList.add("table");
-            e.classList.add("table-bordered");
-            e.classList.add("table-hover");
-            e.outerHTML = '<div class="table-responsive">' + e.outerHTML + '</div>';
+        eachNode($tables, $e => {
+            e.classList.add("table", "table-bordered", "table-hover");
+            e.outerHTML = '<div class="table-responsive">' + $e.outerHTML + '</div>';
         });
     };
 

@@ -5,8 +5,7 @@
         background-color: $brand-primary;
         padding: 0;
 
-        .navbar-brand,
-        .navbar-toggler {
+        .navbar-brand {
             color: $gray-lightest;
             @include hover-focus-active {
                 color: $white;
@@ -14,9 +13,46 @@
         }
 
         .navbar-toggler {
-            padding: 10px 0 10px 10px;
+            padding: 0;
+            border: 0;
+            margin: 10px 0;
             float: right;
-            width: 45px;
+            width: 28px;
+            height: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .menu-bar {
+                width: 28px;
+                height: 4px;
+                opacity: 1;
+                background-color: $white;
+                @include transition(#{"opacity, transform"});
+            }
+
+            &.in {
+                .menu-bar {
+                    &:nth-child(1){
+                        transform: translateY(9px) rotate(45deg);
+                    }
+                    &:nth-child(2){
+                        opacity: 0;
+                        transform: translateX(28px);
+                    }
+                    &:nth-child(3){
+                        transform: translateY(-9px) rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+        .collapse {
+            display: none;
+
+            &.in {
+                display: block;
+            }
         }
 
         .navbar-nav {

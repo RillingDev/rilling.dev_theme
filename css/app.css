@@ -146,18 +146,39 @@ a:active, a:focus, a:hover {
   .navbar-wrapper .navbar {
     background-color: #83d356;
     padding: 0; }
-    .navbar-wrapper .navbar .navbar-brand,
-    .navbar-wrapper .navbar .navbar-toggler {
+    .navbar-wrapper .navbar .navbar-brand {
       color: #fbfbfb; }
-      .navbar-wrapper .navbar .navbar-brand:active, .navbar-wrapper .navbar .navbar-brand:focus, .navbar-wrapper .navbar .navbar-brand:hover,
-      .navbar-wrapper .navbar .navbar-toggler:active,
-      .navbar-wrapper .navbar .navbar-toggler:focus,
-      .navbar-wrapper .navbar .navbar-toggler:hover {
+      .navbar-wrapper .navbar .navbar-brand:active, .navbar-wrapper .navbar .navbar-brand:focus, .navbar-wrapper .navbar .navbar-brand:hover {
         color: #fefefe; }
     .navbar-wrapper .navbar .navbar-toggler {
-      padding: 10px 0 10px 10px;
+      padding: 0;
+      border: 0;
+      margin: 10px 0;
       float: right;
-      width: 45px; }
+      width: 28px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .navbar-wrapper .navbar .navbar-toggler .menu-bar {
+        width: 28px;
+        height: 4px;
+        opacity: 1;
+        background-color: #fefefe;
+        transition-property: opacity, transform;
+        transition-duration: 0.2s;
+        transition-timing-function: ease; }
+      .navbar-wrapper .navbar .navbar-toggler.in .menu-bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg); }
+      .navbar-wrapper .navbar .navbar-toggler.in .menu-bar:nth-child(2) {
+        opacity: 0;
+        transform: translateX(28px); }
+      .navbar-wrapper .navbar .navbar-toggler.in .menu-bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg); }
+    .navbar-wrapper .navbar .collapse {
+      display: none; }
+      .navbar-wrapper .navbar .collapse.in {
+        display: block; }
     .navbar-wrapper .navbar .navbar-nav {
       clear: both; }
       @media (min-width: 600px) {
@@ -196,6 +217,9 @@ a:active, a:focus, a:hover {
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 16px; }
+  .presenter.presenter--lg {
+    align-items: center;
+    padding-bottom: 0; }
   .presenter .presenter-icon {
     color: #68a844;
     font-size: calc(200px + 10vw);

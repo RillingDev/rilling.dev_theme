@@ -10,6 +10,11 @@
     justify-content: center;
     padding-bottom: 16px;
 
+    &.presenter--lg {
+        align-items: center;
+        padding-bottom: 0;
+    }
+
     .presenter-icon {
         color: $brand-primary-dark;
         font-size: calc(200px + 10vw);
