@@ -1,18 +1,4 @@
-name: Frilling2
+name: Frilling3
 version: 3.0.0
-description: "Frilling custom theme"
+description: "F-Rilling custom theme"
 license: MIT
-
-form:
-  validation: loose
-  fields:
-    dropdown.enabled:
-        type: toggle
-        label: Dropdown in navbar
-        highlight: 1
-        default: 1
-        options:
-          1: PLUGIN_ADMIN.ENABLED
-          0: PLUGIN_ADMIN.DISABLED
-        validate:
-          type: bool
