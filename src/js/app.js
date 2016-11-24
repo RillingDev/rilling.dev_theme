@@ -45,8 +45,8 @@ const frilling = (function() {
 
         //Adjust Table classes
         eachNode($tables, $e => {
-            e.classList.add("table", "table-bordered", "table-hover");
-            e.outerHTML = '<div class="table-responsive">' + $e.outerHTML + '</div>';
+            $e.classList.add("table", "table-bordered", "table-hover");
+            $e.outerHTML = '<div class="table-responsive">' + $e.outerHTML + '</div>';
         });
     };
 
