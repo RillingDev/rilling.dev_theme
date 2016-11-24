@@ -122,8 +122,7 @@
         {% block js %}
             {% if page.template == "item" %}
                 {% do
-                    assets.addJs("http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js", 201) %}
-
+                    assets.addJs("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js", 201) %}
             {% endif %}
             {% do
                 assets.addJs("theme://js/app.js", 100) %}
