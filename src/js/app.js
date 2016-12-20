@@ -40,7 +40,7 @@ const frilling = (function() {
             const lang = $code.className.replace("language-", "");
 
             $e.className = lang;
-            hljs.highlightBlock($e);
+            window.hljs.highlightBlock($e);
         });
 
         //Adjust Table classes
