@@ -2,7 +2,7 @@ body {
   background: repeating-linear-gradient(45deg, #e0e0e0 0, #e0e0e0 5%, #fbfbfb 0, #fbfbfb 50%) 0/10px 10px; }
 
 .container--sm {
-  max-width: 600px; }
+  max-width: 660px; }
 
 .social {
   max-width: 400px;
@@ -424,7 +424,7 @@ pre {
     padding-right: 8px; }
     @media (min-width: 600px) {
       .about .about-skills .skill-section .skill {
-        margin-bottom: 8px; } }
+        margin-bottom: 16px; } }
     .about .about-skills .skill-section .skill ul {
       text-align: center;
       padding: 0;
