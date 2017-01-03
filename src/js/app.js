@@ -1,5 +1,6 @@
 "use strict";
-const frilling = (function() {
+
+const frilling = (function () {
 
     /**
      * jQuery like selector
@@ -7,7 +8,7 @@ const frilling = (function() {
      * @param  {Boolean} multi If the select will match multiple elements
      * @return {NodeList}       NodeList of selcted elements
      */
-    const $ = function(query, multi) {
+    const $ = function (query, multi) {
         return multi ? document.querySelectorAll(query) : document.querySelector(query);
     };
 
@@ -16,11 +17,11 @@ const frilling = (function() {
      * @param  {NodeList}   node NodeList of elements
      * @param  {Function} fn   Function to run
      */
-    const eachNode = function(node, fn) {
+    const eachNode = function (node, fn) {
         return [].forEach.call(node, fn);
     };
 
-    const initNav = function() {
+    const initNav = function () {
         const $toggle = $(".navbar-toggler");
         const $nav = $(".navbar-toggleable-xs");
 
@@ -30,7 +31,7 @@ const frilling = (function() {
         }, false);
     };
 
-    const initArticle = function() {
+    const initArticle = function () {
         const $pre = $("pre", true);
         const $tables = $("table", true);
 
@@ -50,7 +51,7 @@ const frilling = (function() {
         });
     };
 
-    const init = function(pageType) {
+    const init = function (pageType) {
         initNav();
         if (pageType === "item") {
             initArticle();
