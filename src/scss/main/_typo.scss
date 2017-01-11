@@ -4,35 +4,31 @@ h1 {
         color: $white;
         margin: 0;
         font-size: 3em;
-
         @include transition(font-size);
-
         &.presenter-title-short {
             font-size: 3.5em;
-            @include screen(min,md) {
+            @include screen(min, md) {
                 font-size: 6em;
             }
-            @include screen(min,lg) {
+            @include screen(min, lg) {
                 font-size: 7em;
             }
         }
-
         &.presenter-title-medium {
             font-size: 3em;
-            @include screen(min,md) {
+            @include screen(min, md) {
                 font-size: 4em;
             }
-            @include screen(min,lg) {
+            @include screen(min, lg) {
                 font-size: 5em;
             }
         }
-
         &.presenter-title-long {
             font-size: 1.75em;
-            @include screen(min,md) {
+            @include screen(min, md) {
                 font-size: 2.25em;
             }
-            @include screen(min,lg) {
+            @include screen(min, lg) {
                 font-size: 3em;
             }
         }
@@ -49,12 +45,10 @@ h4 {
 .article {
     h2 {
         margin-top: 38px;
-
         &.article-title {
             margin: 0;
         }
     }
-
     h3 {
         margin-top: 32px;
     }
@@ -66,17 +60,14 @@ h4 {
     h4 {
         text-align: center;
     }
-
     h2 {
         font-size: 2.75rem;
         margin-bottom: 0;
     }
-
     h3 {
         font-size: 1.75rem;
         margin-bottom: 26px;
     }
-
     h4 {
         font-size: 1.375rem;
     }
@@ -89,7 +80,6 @@ h4 {
         position: relative;
         font-size: 1.6rem;
     }
-
     h3 {
         font-size: 1.4rem;
     }

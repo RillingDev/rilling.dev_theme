@@ -1,5 +1,5 @@
 body {
-    background: repeating-linear-gradient( 45deg, $gray-lighter 0, $gray-lighter 5%, $gray-lightest 0, $gray-lightest 50% ) 0 / 10px 10px;
+    background: repeating-linear-gradient( 45deg, $gray-lighter 0, $gray-lighter 5%, $gray-lightest 0, $gray-lightest 50%) 0 / 10px 10px;
 }
 
 .container--sm {
@@ -9,8 +9,7 @@ body {
 .social {
     max-width: 400px;
     margin: 20px auto;
-
-    > address {
+    >address {
         text-align: center;
     }
 }
@@ -33,7 +32,6 @@ body {
     border-width: 1px 0;
     margin-top: 0.333rem;
     margin-bottom: 0.333rem;
-
     &.hr--sm {
         width: 22px;
     }

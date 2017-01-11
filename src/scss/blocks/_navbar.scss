@@ -1,19 +1,16 @@
 .navbar-wrapper {
     margin-bottom: 48px;
-
     .navbar {
         background-color: $brand-primary;
         padding: 0;
-
         .navbar-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             align-content: center;
-            @include screen(min,md) {
+            @include screen(min, md) {
                 display: inherit;
             }
-
             .navbar-brand {
                 color: $gray-lightest;
                 padding-top: 6px;
@@ -22,7 +19,6 @@
                     color: $white;
                 }
             }
-
             .navbar-toggler {
                 padding: 0;
                 border: 0;
@@ -31,7 +27,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-
                 .menu-bar {
                     width: 24px;
                     height: 2px;
@@ -39,18 +34,15 @@
                     background-color: $white;
                     @include transition(#{"opacity, transform"});
                 }
-
                 &.in {
                     .menu-bar {
                         &:nth-child(1) {
                             transform: translateY(9px) rotate(45deg);
                         }
-
                         &:nth-child(2) {
                             opacity: 0;
                             transform: translateX(24px);
                         }
-
                         &:nth-child(3) {
                             transform: translateY(-9px) rotate(-45deg);
                         }
@@ -58,38 +50,32 @@
                 }
             }
         }
-
         .collapse {
             display: none;
-
             &.in {
                 display: block;
             }
         }
-
         .navbar-nav {
             clear: both;
-            @include screen(min,sm) {
+            @include screen(min, sm) {
                 clear: none;
                 float: right;
             }
-
             .nav-item {
                 margin-left: 0;
-
                 &.active {
                     .nav-link {
                         color: $white;
                         background-color: $brand-primary-dark;
                     }
                 }
-
                 .nav-link {
                     color: $gray-lightest;
                     padding: 10px 1rem;
                     margin-left: -1rem;
                     margin-right: -1rem;
-                    @include screen(min,sm) {
+                    @include screen(min, sm) {
                         margin: 0;
                         padding-left: 1rem;
                         padding-right: 1rem;

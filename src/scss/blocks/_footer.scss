@@ -2,25 +2,21 @@ footer {
     background-color: $gray-dark;
     padding: 18px 0 16px;
     margin-top: 10px;
-
     .footer-wrapper {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
         position: relative;
-
         .footer-list {
             padding: 0;
             margin: 0;
             list-style: none;
-
             &.footer-list-bottom {
                 position: absolute;
                 bottom: 0;
                 right: 0;
             }
-
             li {
                 a {
                     color: $gray-lightest;

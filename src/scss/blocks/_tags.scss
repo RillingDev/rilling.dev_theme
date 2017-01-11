@@ -4,7 +4,6 @@
     background-color: $brand-primary;
     border: 0;
     font-weight: normal;
-
     &.tag-dark {
         background-color: $brand-primary-dark;
     }
@@ -12,5 +11,5 @@
         border: 0;
         color: $white;
         background-color: $link-hover-color;
-    };
+    }
 }
