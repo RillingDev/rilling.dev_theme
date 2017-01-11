@@ -21,6 +21,22 @@ const frilling = (function () {
         return [].forEach.call(node, fn);
     };
 
+    const cookiePolicy = function () {
+        const cookieString = "cookiepolicy=true";
+
+        if (document.cookie.indexOf(cookieString) === -1) {
+            const $cookienotice = $(".cookienotice");;
+            const $cookienoticeAccept = $("#cookienoticeAccept");
+
+            $cookienotice.style.display = "block";
+
+            $cookienoticeAccept.addEventListener("click", () => {
+                document.cookie = cookieString;
+                $cookienotice.style.display = "none";
+            }, false);
+        }
+    };
+
     const initNav = function () {
         const $toggle = $(".navbar-toggler");
         const $nav = $(".navbar-toggleable-xs");
@@ -53,6 +69,7 @@ const frilling = (function () {
 
     const init = function (pageType) {
         initNav();
+        cookiePolicy();
         if (pageType === "item") {
             initArticle();
         }

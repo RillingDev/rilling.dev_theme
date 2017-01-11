@@ -1,0 +1,19 @@
+{% embed 'partials/base.html.twig' %}
+
+    {% set collection = page.collection() %}
+    {% block presenter %}
+        {% include 'partials/presenter.html.twig' with {'page': page} %}
+    {% endblock %}
+
+    {% block main %}
+        <div class="container">
+            <div class="section" itemprop="mainContentOfPage">
+                <article class="article article-full">
+                    {{page.content}}
+                </article>
+            </div>
+            {% include 'modular/social.html.twig' %}
+        </div>
+    {% endblock %}
+
+{% endembed %}
