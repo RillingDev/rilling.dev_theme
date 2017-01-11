@@ -92,7 +92,8 @@ h4 .fa {
     margin: 0; }
 
 .article h3 {
-  margin-top: 32px; }
+  margin-top: 32px;
+  font-size: 1.6rem; }
 
 .about h2,
 .about h3,
