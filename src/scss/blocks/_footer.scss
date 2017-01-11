@@ -12,11 +12,6 @@ footer {
             padding: 0;
             margin: 0;
             list-style: none;
-            &.footer-list-bottom {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
             li {
                 a {
                     color: $gray-lightest;

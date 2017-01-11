@@ -1,36 +1,46 @@
 h1 {
     &.presenter-title {
         text-align: center;
+        max-width: 650px;
         color: $white;
         margin: 0;
         font-size: 3em;
         @include transition(font-size);
-        &.presenter-title-short {
+    }
+    &.presenter-title-short {
+        font-size: 2.75em;
+        @include screen(min, sm) {
             font-size: 3.5em;
-            @include screen(min, md) {
-                font-size: 6em;
-            }
-            @include screen(min, lg) {
-                font-size: 7em;
-            }
         }
-        &.presenter-title-medium {
+        @include screen(min, md) {
+            font-size: 5.75em;
+        }
+        @include screen(min, lg) {
+            font-size: 6.25em;
+        }
+    }
+    &.presenter-title-medium {
+        font-size: 2.5em;
+        @include screen(min, sm) {
             font-size: 3em;
-            @include screen(min, md) {
-                font-size: 4em;
-            }
-            @include screen(min, lg) {
-                font-size: 5em;
-            }
         }
-        &.presenter-title-long {
+        @include screen(min, md) {
+            font-size: 4em;
+        }
+        @include screen(min, lg) {
+            font-size: 5em;
+        }
+    }
+    &.presenter-title-long {
+        font-size: 1.5em;
+        @include screen(min, sm) {
             font-size: 1.75em;
-            @include screen(min, md) {
-                font-size: 2.25em;
-            }
-            @include screen(min, lg) {
-                font-size: 3em;
-            }
+        }
+        @include screen(min, md) {
+            font-size: 2.25em;
+        }
+        @include screen(min, lg) {
+            font-size: 3em;
         }
     }
 }
