@@ -25,7 +25,7 @@ const frilling = (function () {
         const cookieString = "cookiepolicy=true";
 
         if (document.cookie.indexOf(cookieString) === -1) {
-            const $cookienotice = $(".cookienotice");;
+            const $cookienotice = $(".cookienotice");
             const $cookienoticeAccept = $("#cookienoticeAccept");
 
             $cookienotice.style.display = "block";
