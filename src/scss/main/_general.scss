@@ -2,11 +2,11 @@ body {
     background: repeating-linear-gradient( 45deg, $gray-lighter 0, $gray-lighter 5%, $gray-lightest 0, $gray-lightest 50%) 0 / 10px 10px;
 }
 
-.container{
-        width: 100%;
-    max-width: 100%;
+.container {
+    width: 100%;
     padding-left: $grid-gutter-width-base/2;
     padding-right: $grid-gutter-width-base/2;
+    max-width: 1300px;
 }
 
 .container--sm {
