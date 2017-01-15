@@ -5,7 +5,9 @@ body {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 1300px; }
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto; }
 
 .container--sm {
   max-width: 660px; }
