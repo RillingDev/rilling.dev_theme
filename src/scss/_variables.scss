@@ -68,8 +68,8 @@ $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
 $enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
-$enable-print-styles:       true !default;
+$enable-grid-classes:       false !default;
+$enable-print-styles:       false !default;
 
 
 // Spacing
@@ -152,7 +152,7 @@ $container-max-widths: (
 //
 // Set the number of columns and specify the width of the gutters.
 
-$grid-columns:               1 !default;
+$grid-columns:               0 !default;
 $grid-gutter-width-base:     30px !default;
 $grid-gutter-widths: (
   xs: $grid-gutter-width-base,

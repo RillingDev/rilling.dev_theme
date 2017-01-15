@@ -22,7 +22,7 @@ const frilling = (function () {
     };
 
     const cookiePolicy = function () {
-        const cookieString = "cookiepolicy=true";
+        const cookieString = "cookiepolicyAccepted=true;";
 
         if (document.cookie.indexOf(cookieString) === -1) {
             const $cookienotice = $(".cookienotice");
@@ -31,7 +31,7 @@ const frilling = (function () {
             $cookienotice.style.display = "block";
 
             $cookienoticeAccept.addEventListener("click", () => {
-                document.cookie = cookieString;
+                document.cookie = cookieString + " expires=Fri, 31 Dec 9999 23:59:59 GMT";
                 $cookienotice.style.display = "none";
             }, false);
         }
