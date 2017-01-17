@@ -4,20 +4,20 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="{{url('.', true) }}" title="Go to Home">F-Rilling.com</a>
 
-                <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#toggleNavbar" aria-controls="toggleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-toggler hidden-sm-up" href="javascript:;" role="button" title="Expand mobile menu">
                     <span class="menu-bar"></span>
                     <span class="menu-bar"></span>
                     <span class="menu-bar"></span>
-                </button>
+                </a>
             </div>
-            <div class="collapse navbar-toggleable-xs" id="toggleNavbar">
-                <ul class="nav navbar-nav pull-sm-right">
+            <div class="collapse navbar-toggleable-xs" id="toggleNavbar" role="navigation" aria-hidden="false"/>
+                <ul class="nav navbar-nav pull-sm-right" role="menubar">
                     {% for page in pages.children.visible %}
                         {% set current_page = (page.active or page.activeChild)
                             ? 'active'
                             : '' %}
-                        <li class="nav-item {{current_page}}">
-                            <a class="nav-link" href="{{page.url}}" title="Go to {{page.menu}}">
+                        <li class="nav-item {{current_page}}" role="presentation">
+                            <a class="nav-link" href="{{page.url}}" title="Go to {{page.menu}}" role="menuitem">
                                 {{page.menu}}
                             </a>
                         </li>

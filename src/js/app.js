@@ -1,6 +1,9 @@
 "use strict";
 
 const frilling = (function () {
+    const _window = window;
+    const _document = document;
+    const screenWidthSm = 606;
 
     /**
      * jQuery like selector
@@ -9,7 +12,7 @@ const frilling = (function () {
      * @return {NodeList}       NodeList of selcted elements
      */
     const $ = function (query, multi) {
-        return multi ? document.querySelectorAll(query) : document.querySelector(query);
+        return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
     };
 
     /**
@@ -21,32 +24,57 @@ const frilling = (function () {
         return [].forEach.call(node, fn);
     };
 
-    const cookiePolicy = function () {
-        const cookieString = "cookiepolicyAccepted=true;";
+    /**
+     * Check if the cookie policy has been accepted and displays the notification if not.
+     */
+    const initCookiepolicy = function () {
+        const cookieString = "cookies=true";
 
-        if (document.cookie.indexOf(cookieString) === -1) {
+        if (_document.cookie.indexOf(cookieString) === -1) {
             const $cookienotice = $(".cookienotice");
             const $cookienoticeAccept = $("#cookienoticeAccept");
 
             $cookienotice.style.display = "block";
 
             $cookienoticeAccept.addEventListener("click", () => {
-                document.cookie = cookieString + " expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                _document.cookie = cookieString + ";expires=Fri, 31 Dec 9999 23:59:59 GMT";
                 $cookienotice.style.display = "none";
             }, false);
         }
     };
 
+    /**
+     * Binds the navigation event handler
+     */
     const initNav = function () {
         const $toggle = $(".navbar-toggler");
         const $nav = $(".navbar-toggleable-xs");
+        let isNavOpen = false;
 
+        //Expand menu
         $toggle.addEventListener("click", () => {
+            isNavOpen = !isNavOpen;
             $toggle.classList.toggle("in");
             $nav.classList.toggle("in");
+
+            console.log(isNavOpen);
+
+            if (isNavOpen) {
+                $nav.setAttribute("aria-hidden", "false");
+            } else {
+                $nav.setAttribute("aria-hidden", "true");
+            }
         }, false);
+
+        //Toggle aria-hidden on mobile
+        if (_window.innerWidth <= screenWidthSm) {
+            $nav.setAttribute("aria-hidden", "true");
+        }
     };
 
+    /**
+     * Inits article-specific html changes
+     */
     const initArticle = function () {
         const $pre = $("pre", true);
         const $tables = $("table", true);
@@ -57,7 +85,7 @@ const frilling = (function () {
             const lang = $code.className.replace("language-", "");
 
             $e.className = lang;
-            window.hljs.highlightBlock($e);
+            _window.hljs.highlightBlock($e);
         });
 
         //Adjust Table classes
@@ -67,9 +95,13 @@ const frilling = (function () {
         });
     };
 
+    /**
+     * Master function to init all functions
+     */
     const init = function (pageType) {
         initNav();
-        cookiePolicy();
+        initCookiepolicy();
+
         if (pageType === "item") {
             initArticle();
         }
