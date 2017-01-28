@@ -86,7 +86,7 @@ const frilling = (function () {
         //Highlight Code Snippets
         eachNode($pre, $e => {
             const $code = $e.querySelector("code");
-            const lang = $code.className.replace("language-", "");
+            const lang = $code.className;
 
             $e.className = lang;
             _window.hljs.highlightBlock($e);

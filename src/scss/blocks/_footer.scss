@@ -8,16 +8,16 @@ footer {
         align-items: flex-start;
         justify-content: space-between;
         position: relative;
-        .footer-list {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            li {
-                a {
-                    color: $gray-lightest;
-                    @include hover-focus-active {
-                        color: $white;
-                    }
+    }
+    .footer-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            a {
+                color: $gray-lightest;
+                @include hover-focus-active {
+                    color: $white;
                 }
             }
         }

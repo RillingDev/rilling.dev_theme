@@ -1,29 +1,20 @@
-<div class="navbar-wrapper">
-    <nav class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="{{url('.', true) }}" title="Go to Home">F-Rilling.com</a>
-
-                <a class="navbar-toggler hidden-sm-up" href="javascript:;" role="button" title="Expand mobile menu">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </a>
-            </div>
-            <div class="collapse navbar-toggleable-xs" id="toggleNavbar" role="navigation" aria-hidden="false"/>
-                <ul class="nav navbar-nav pull-sm-right" role="menubar">
-                    {% for page in pages.children.visible %}
-                        {% set current_page = (page.active or page.activeChild)
-                            ? 'active'
-                            : '' %}
-                        <li class="nav-item {{current_page}}" role="presentation">
-                            <a class="nav-link" href="{{page.url}}" title="Go to {{page.menu}}" role="menuitem">
-                                {{page.menu}}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+<nav class="navbar navbar-light navbar-toggleable-sm fixed-top">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" id="navbarToggle" title="Expand mobile menu"  aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{url('.', true) }}" title="Go to Home">F-Rilling.com</a>
+        <div class="collapse navbar-collapse" id="navbarMenu" role="navigation">
+            <ul class="navbar-nav" role="menubar">
+                {% for page in pages.children.visible %}
+                    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                <li class="nav-item {{current_page}}" role="menuitem">
+                    <a class="nav-link" href="{{page.url}}" title="Go to {{page.menu}}">{{page.menu}}{% if current_page %}<span class="sr-only">(current)</span>{% endif %}</a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
-    </nav>
-</div>
+    </div>
+</nav>

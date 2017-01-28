@@ -1,9 +1,7 @@
 pre {
-    background-color: $gray-dark;
-    color: $white;
     padding: 15px;
-    display: block;
-    overflow-x: auto;
+    color:$white;
+    background-color:$gray-dark;
     @include screen(min, md) {
         padding: 20px;
     }

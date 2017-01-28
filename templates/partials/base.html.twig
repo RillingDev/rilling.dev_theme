@@ -81,8 +81,6 @@
 
         {% block css %}
             {% do
-                assets.addCss("theme://css/lib/normalize.css", 105) %}
-            {% do
                 assets.addCss("https://fonts.googleapis.com/css?family=Arvo|Lato|Source+Code+Pro", 104) %}
             {% do
                 assets.addCss("theme://css/lib/bootstrap.css", 103) %}
@@ -93,13 +91,10 @@
         {% endblock %}
         {{ assets.css() }}
 
-        {% include "partials/analytics_head.html.twig"%}
-        {% block head_jsonld %}{% endblock %}
-
+        {% include "partials/analytics.html.twig"%}
     </head>
     <body id="top">
         {% include "partials/browsehappy.html.twig"%}
-        {% include "partials/analytics_body.html.twig"%}
 
         {% block header %}
             <header>
@@ -135,8 +130,6 @@
                 assets.addJs("theme://js/app.js", 100) %}
         {% endblock %}
         {{ assets.js() }}
-        <script>
-            frilling.init("{{page.template}}");
-        </script>
+        <script>frilling.init("{{page.template}}");</script>
     </body>
 </html>
