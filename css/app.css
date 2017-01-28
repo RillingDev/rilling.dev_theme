@@ -374,13 +374,11 @@ pre {
   padding: 5px 10px;
   display: inline;
   background-color: #83d356;
-  border: 0;
-  font-weight: normal; }
+  font-weight: normal;
+  font-size: 80%; }
   .badge.badge-dark {
     background-color: #68a844; }
   .badge:active, .badge:focus, .badge:hover {
-    border: 0;
-    color: #fff;
     background-color: #9bdb76; }
 
 .cookienotice {

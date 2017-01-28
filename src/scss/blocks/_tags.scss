@@ -2,14 +2,12 @@
     padding: 5px 10px;
     display: inline;
     background-color: $brand-primary;
-    border: 0;
     font-weight: normal;
+    font-size: 80%;
     &.badge-dark {
         background-color: $brand-primary-dark;
     }
     @include hover-focus-active {
-        border: 0;
-        color: $white;
         background-color: $link-hover-color;
     }
 }
