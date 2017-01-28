@@ -366,9 +366,9 @@ pre {
   .pagination .page-item {
     margin-left: 2px;
     margin-right: 2px; }
-    .pagination .page-item .page-link {
-      border: 0;
-      padding: 6px 15px; }
+  .pagination .page-link {
+    border: 0;
+    padding: 11px 15px; }
 
 .badge {
   padding: 5px 10px;
