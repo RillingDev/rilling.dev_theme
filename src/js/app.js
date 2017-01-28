@@ -47,28 +47,32 @@ const frilling = (function () {
      * Binds the navigation event handler
      */
     const initNav = function () {
-        const $toggle = $(".navbar-toggler");
-        const $nav = $(".navbar-toggleable-xs");
+        const $toggle = $("#navbarToggle");
+        const $nav = $("#navbarMenu");
+        const setAriaHidden = function (val) {
+            const ariaHidden = "aria-hidden";
+
+            $toggle.setAttribute(ariaHidden, val);
+            $nav.setAttribute(ariaHidden, val);
+        };
         let isNavOpen = false;
 
         //Expand menu
         $toggle.addEventListener("click", () => {
             isNavOpen = !isNavOpen;
-            $toggle.classList.toggle("in");
-            $nav.classList.toggle("in");
-
-            console.log(isNavOpen);
+            $toggle.classList.toggle("collapsed");
+            $nav.classList.toggle("show");
 
             if (isNavOpen) {
-                $nav.setAttribute("aria-hidden", "false");
+                setAriaHidden(false);
             } else {
-                $nav.setAttribute("aria-hidden", "true");
+                setAriaHidden(true);
             }
         }, false);
 
         //Toggle aria-hidden on mobile
         if (_window.innerWidth <= screenWidthSm) {
-            $nav.setAttribute("aria-hidden", "true");
+            setAriaHidden(true);
         }
     };
 
