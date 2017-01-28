@@ -1,90 +1,66 @@
-.navbar-wrapper {
-    margin-bottom: 48px;
-    .navbar {
-        background-color: $brand-primary;
+.navbar {
+    background-color: $brand-primary;
+    padding-top: 0;
+    padding-bottom: 0;
+    .navbar-brand {
+        color: $gray-lightest;
+        @include hover-focus-active {
+            color: $white;
+        }
+    }
+    .navbar-toggler {
+        margin: 8px 0;
         padding: 0;
-        .navbar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            align-content: center;
-            @include screen(min, sm) {
-                display: inherit;
-            }
-            .navbar-brand {
-                color: $gray-lightest;
-                padding-top: 6px;
-                padding-bottom: 6px;
-                @include hover-focus-active {
-                    color: $white;
-                }
-            }
-            .navbar-toggler {
-                padding: 0;
-                border: 0;
-                width: 24px;
-                height: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                .menu-bar {
-                    width: 24px;
-                    height: 2px;
-                    opacity: 1;
-                    background-color: $white;
-                    @include transition(#{"opacity, transform"});
-                }
-                &.in {
-                    .menu-bar {
-                        &:nth-child(1) {
-                            transform: translateY(9px) rotate(45deg);
-                        }
-                        &:nth-child(2) {
-                            opacity: 0;
-                            transform: translateX(24px);
-                        }
-                        &:nth-child(3) {
-                            transform: translateY(-9px) rotate(-45deg);
-                        }
-                    }
-                }
-            }
-        }
-        .collapse {
+        border: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        @include screen(min, md) {
             display: none;
-            &.in {
-                display: block;
+        }
+        .menu-bar {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: $white;
+            @include transition(#{"transform, height"});
+        }
+        &.collapsed {
+            .menu-bar {
+                &:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+                &:nth-child(2) {
+                    height: 0px;
+                }
+                &:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
             }
         }
-        .navbar-nav {
-            clear: both;
-            @include screen(min, sm) {
-                clear: none;
-                float: right;
+    }
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+    .nav-item {
+        &.active {
+            .nav-link {
+                color: $white;
+                background-color: $brand-primary-dark;
             }
-            .nav-item {
-                margin-left: 0;
-                &.active {
-                    .nav-link {
-                        color: $white;
-                        background-color: $brand-primary-dark;
-                    }
-                }
-                .nav-link {
-                    color: $gray-lightest;
-                    padding: 10px 1rem;
-                    margin-left: -1rem;
-                    margin-right: -1rem;
-                    @include screen(min, sm) {
-                        margin: 0;
-                        padding-left: 1rem;
-                        padding-right: 1rem;
-                    }
-                    @include hover-focus-active {
-                        color: $white;
-                        background-color: $brand-primary-dark;
-                    }
-                }
+        }
+        .nav-link {
+            margin-left: -1rem;
+            margin-right: -1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @include screen(min, md) {
+                margin: 0;
+            }
+            @include hover-focus-active {
+                background-color: $brand-primary-dark;
             }
         }
     }

@@ -1,10 +1,10 @@
-.tag {
+.badge {
     padding: 5px 10px;
     display: inline;
     background-color: $brand-primary;
     border: 0;
     font-weight: normal;
-    &.tag-dark {
+    &.badge-dark {
         background-color: $brand-primary-dark;
     }
     @include hover-focus-active {
