@@ -6,7 +6,7 @@ body {
     width: 100%;
     padding-left: $grid-gutter-width-base/2;
     padding-right: $grid-gutter-width-base/2;
-    max-width: map-get($container-max-widths,xl);
+    max-width: map-get($container-max-widths, xl);
     margin-right: auto;
     margin-left: auto;
 }
@@ -53,4 +53,12 @@ body {
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
