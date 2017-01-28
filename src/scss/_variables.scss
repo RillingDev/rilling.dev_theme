@@ -168,7 +168,7 @@ $spacers: (
     y: ($spacer-y * 3)
   )
 ) !default;
-$border-width: 1px !default;
+$border-width: 0 !default;
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
@@ -291,7 +291,7 @@ $text-muted: $gray-light !default;
 $blockquote-small-color:  $gray-light !default;
 $blockquote-font-size:    ($font-size-base * 1.25) !default;
 $blockquote-border-color: $gray-lighter !default;
-$blockquote-border-width: .25rem !default;
+$blockquote-border-width: 0 !default;
 
 $hr-border-color: rgba(0,0,0,.1) !default;
 $hr-border-width: $border-width !default;
@@ -313,9 +313,9 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-$border-radius:          .25rem !default;
-$border-radius-lg:       .3rem !default;
-$border-radius-sm:       .2rem !default;
+$border-radius:          0 !default;
+$border-radius-lg:       0 !default;
+$border-radius-sm:       0 !default;
 
 $component-active-color: $white !default;
 $component-active-bg:    $brand-primary !default;
@@ -674,8 +674,8 @@ $pagination-line-height:              1.25 !default;
 
 $pagination-color:                     $gray-lightest !default;
 $pagination-bg:                        $link-color !default;
-$pagination-border-width:              $border-width !default;
-$pagination-border-color:              #ddd !default;
+$pagination-border-width:              0 !default;
+$pagination-border-color:              #333 !default;
 
 $pagination-hover-color:               $gray-lightest !default;
 $pagination-hover-bg:                  $brand-primary-dark !default;

@@ -81,6 +81,8 @@
 
         {% block css %}
             {% do
+                assets.addCss("theme://css/lib/normalize.css", 105) %}
+            {% do
                 assets.addCss("https://fonts.googleapis.com/css?family=Arvo|Lato|Source+Code+Pro", 104) %}
             {% do
                 assets.addCss("theme://css/lib/bootstrap.css", 103) %}
