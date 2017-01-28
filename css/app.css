@@ -10,7 +10,7 @@ body {
   margin-left: auto; }
 
 .container--sm {
-  max-width: 660px; }
+  max-width: 680px; }
 
 .social {
   max-width: 400px;
@@ -392,14 +392,15 @@ pre {
     .cookienotice .cookienotice-content p {
       color: #fff;
       margin: 0;
-      max-width: 50%; }
+      max-width: 25%; }
+      .cookienotice .cookienotice-content p:first-child {
+        max-width: 75%; }
     .cookienotice .cookienotice-content a {
       color: #fff;
       text-decoration: underline; }
 
 .project {
   min-width: 280px;
-  width: 25%;
   margin-bottom: 32px;
   padding-left: 8px;
   padding-right: 8px; }

@@ -35,9 +35,9 @@ const frilling = (function () {
             const $cookienoticeAccept = $("#cookienoticeAccept");
 
             $cookienotice.style.display = "block";
+            _document.cookie = cookieString + ";expires=Fri, 31 Dec 9999 23:59:59 GMT";
 
             $cookienoticeAccept.addEventListener("click", () => {
-                _document.cookie = cookieString + ";expires=Fri, 31 Dec 9999 23:59:59 GMT";
                 $cookienotice.style.display = "none";
             }, false);
         }
