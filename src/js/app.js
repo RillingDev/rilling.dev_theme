@@ -3,7 +3,6 @@
 const frilling = (function () {
     const _window = window;
     const _document = document;
-    const screenWidthSm = 606;
 
     /**
      * jQuery like selector
@@ -17,11 +16,11 @@ const frilling = (function () {
 
     /**
      * Iterate over NodeList
-     * @param  {NodeList}   node NodeList of elements
+     * @param  {NodeList} nodeList NodeList of elements
      * @param  {Function} fn   Function to run
      */
-    const eachNode = function (node, fn) {
-        return [].forEach.call(node, fn);
+    const eachNode = function (nodeList, fn) {
+        return Array.from(nodeList).forEach(fn);
     };
 
     /**
@@ -49,31 +48,18 @@ const frilling = (function () {
     const initNav = function () {
         const $toggle = $("#navbarToggle");
         const $nav = $("#navbarMenu");
-        const setAriaHidden = function (val) {
-            const ariaHidden = "aria-hidden";
-
-            $toggle.setAttribute(ariaHidden, val);
-            $nav.setAttribute(ariaHidden, val);
-        };
         let isNavOpen = false;
 
-        //Expand menu
+        //Toggle menu
         $toggle.addEventListener("click", () => {
             isNavOpen = !isNavOpen;
+
             $toggle.classList.toggle("collapsed");
             $nav.classList.toggle("show");
-
-            if (isNavOpen) {
-                setAriaHidden(false);
-            } else {
-                setAriaHidden(true);
-            }
+            
+            $toggle.setAttribute("aria-expanded", isNavOpen);
+            $nav.setAttribute("aria-hidden", !isNavOpen);
         }, false);
-
-        //Toggle aria-hidden on mobile
-        if (_window.innerWidth <= screenWidthSm) {
-            setAriaHidden(true);
-        }
     };
 
     /**
@@ -85,33 +71,29 @@ const frilling = (function () {
 
         //Highlight Code Snippets
         eachNode($pre, $e => {
-            const $code = $e.querySelector("code");
+            /*const $code = $e.querySelector("code");
             const lang = $code.className;
 
-            $e.className = lang;
+           $e.className = lang;*/
             _window.hljs.highlightBlock($e);
         });
 
         //Adjust Table classes
         eachNode($tables, $e => {
+            //@TODO makse this less dirty
             $e.classList.add("table", "table-bordered", "table-hover");
             $e.outerHTML = '<div class="table-responsive">' + $e.outerHTML + '</div>';
         });
     };
 
-    /**
-     * Master function to init all functions
-     */
-    const init = function (pageType) {
-        initNav();
-        initCookiepolicy();
-
-        if (pageType === "item") {
-            initArticle();
-        }
-    };
-
     return {
-        init: init
+        init: function (pageType) {
+            initCookiepolicy();
+            initNav();         
+
+            if (pageType === "item") {
+                initArticle();
+            }
+        }
     };
 })();

@@ -1,12 +1,12 @@
 <nav class="navbar navbar-light navbar-toggleable-sm fixed-top">
     <div class="container">
-        <a class="navbar-toggler navbar-toggler-right" href="javascript:;" id="navbarToggle" title="Expand mobile menu"  aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="menu-bar"></span>
-            <span class="menu-bar"></span>
-            <span class="menu-bar"></span>
+        <a class="navbar-toggler navbar-toggler-right" href="javascript:;" id="navbarToggle" role="button" title="Toggle navigation"  aria-controls="navbarMenu" aria-expanded="false">
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
         </a>
         <a class="navbar-brand" href="{{url('.', true) }}" title="Go to Home">F-Rilling.com</a>
-        <div class="collapse navbar-collapse" id="navbarMenu" role="navigation">
+        <div class="collapse navbar-collapse" id="navbarMenu" role="navigation" aria-hidden="true">
             <ul class="navbar-nav" role="menubar">
                 {% for page in pages.children.visible %}
                     {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
