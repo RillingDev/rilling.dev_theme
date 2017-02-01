@@ -112,7 +112,9 @@ $gray-lightest:             #fbfbfb !default;
 $white:                     #fefefe !default;
 
 $brand-primary:             #83d356 !default;
+$brand-primary-light:       lighten($brand-primary,8%) !default;
 $brand-primary-dark:        #68a844 !default;
+$brand-primary-darker:      darken($brand-primary-dark,8%) !default;
 $brand-success:             $brand-primary !default;
 $brand-info:                #9bc7e9 !default;
 $brand-warning:             #fff174 !default;
@@ -168,7 +170,7 @@ $spacers: (
     y: ($spacer-y * 3)
   )
 ) !default;
-$border-width: 1px !default;
+$border-width: 0 !default;
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
@@ -194,7 +196,7 @@ $inverse-color: $gray-lighter !default;
 
 $link-color:            $brand-primary !default;
 $link-decoration:       none !default;
-$link-hover-color:      lighten($brand-primary,8%) !default;
+$link-hover-color:      $brand-primary-light !default;
 $link-hover-decoration: underline !default;
 
 
@@ -299,8 +301,8 @@ $blockquote-font-size:    ($font-size-base * 1.25) !default;
 $blockquote-border-color: $gray-lighter !default;
 $blockquote-border-width: .25rem !default;
 
-$hr-border-color: rgba($black,.1) !default;
-$hr-border-width: $border-width !default;
+$hr-border-color: $gray-light;
+$hr-border-width: 2px !default;
 
 $mark-padding: .2em !default;
 
@@ -364,9 +366,9 @@ $btn-padding-x:                  1rem !default;
 $btn-padding-y:                  .5rem !default;
 $btn-line-height:                1.25 !default;
 $btn-font-weight:                $font-weight-normal !default;
-$btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
-$btn-focus-box-shadow:           0 0 0 2px rgba($brand-primary, .25) !default;
-$btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;
+$btn-box-shadow:                 none !default;
+$btn-focus-box-shadow:           none !default;
+$btn-active-box-shadow:          none !default;
 
 $btn-primary-color:              $gray-lightest !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -767,7 +769,7 @@ $popover-arrow-outer-color:           fade-in($popover-border-color, .05) !defau
 
 // Badges
 
-$badge-default-bg:            $brand-primary-dark !default;
+$badge-default-bg:            $brand-primary !default;
 $badge-primary-bg:            $brand-primary-dark !default;
 $badge-success-bg:            $brand-success !default;
 $badge-info-bg:               $brand-info !default;
@@ -776,10 +778,10 @@ $badge-danger-bg:             $brand-danger !default;
 
 $badge-color:                 $gray-lightest !default;
 $badge-link-hover-color:      $gray-lightest !default;
-$badge-font-size:             75% !default;
-$badge-font-weight:           $font-weight-bold !default;
-$badge-padding-x:             .4em !default;
-$badge-padding-y:             .25em !default;
+$badge-font-size:             0.8em !default;
+$badge-font-weight:           400 !default;
+$badge-padding-x:             10px !default;
+$badge-padding-y:             7px !default;
 
 $badge-pill-padding-x:        .6em !default;
 // Use a higher than normal value to ensure completely rounded edges when

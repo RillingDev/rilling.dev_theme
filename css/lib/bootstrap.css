@@ -523,7 +523,7 @@ hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #999999;
 }
 
 small,
@@ -602,7 +602,7 @@ mark,
 .img-thumbnail {
     padding: 0.25rem;
     background-color: #e0e0e0;
-    border: 1px solid #ddd;
+    border: 0 solid #ddd;
     transition: all 0.2s ease-in-out;
     max-width: 100%;
     height: auto;
@@ -686,16 +686,16 @@ pre code {
   .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #e0e0e0;
+    border-top: 0 solid #e0e0e0;
 }
 
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 0 solid #e0e0e0;
 }
 
 .table tbody + tbody {
-    border-top: 2px solid #e0e0e0;
+    border-top: 0 solid #e0e0e0;
 }
 
 .table .table {
@@ -708,17 +708,17 @@ pre code {
 }
 
 .table-bordered {
-    border: 1px solid #e0e0e0;
+    border: 0 solid #e0e0e0;
 }
 
 .table-bordered th,
   .table-bordered td {
-    border: 1px solid #e0e0e0;
+    border: 0 solid #e0e0e0;
 }
 
 .table-bordered thead th,
   .table-bordered thead td {
-    border-bottom-width: 2px;
+    border-bottom-width: 0;
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
@@ -848,7 +848,7 @@ pre code {
     white-space: nowrap;
     vertical-align: middle;
     user-select: none;
-    border: 1px solid transparent;
+    border: 0 solid transparent;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     transition: all 0.15s ease-in;
@@ -860,7 +860,7 @@ pre code {
 
 .btn:focus, .btn.focus {
     outline: 0;
-    box-shadow: 0 0 0 2px rgba(131, 211, 86, 0.25);
+    box-shadow: none;
 }
 
 .btn.disabled, .btn:disabled {
@@ -1336,15 +1336,15 @@ tbody.collapse.show {
 }
 
 .nav-tabs {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 0 solid #ddd;
 }
 
 .nav-tabs .nav-item {
-    margin-bottom: -1px;
+    margin-bottom: 0;
 }
 
 .nav-tabs .nav-link {
-    border: 1px solid transparent;
+    border: 0 solid transparent;
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
@@ -1365,7 +1365,7 @@ tbody.collapse.show {
 }
 
 .nav-tabs .dropdown-menu {
-    margin-top: -1px;
+    margin-top: 0;
 }
 
 .nav-pills .nav-link.active,
@@ -1439,7 +1439,7 @@ tbody.collapse.show {
     font-size: 1.25rem;
     line-height: 1;
     background: transparent;
-    border: 1px solid transparent;
+    border: 0 solid transparent;
 }
 
 .navbar-toggler:focus, .navbar-toggler:hover {
@@ -1799,7 +1799,7 @@ tbody.collapse.show {
     line-height: 1rem;
     color: #fbfbfb;
     background-color: #83d356;
-    border: 1px solid #ddd;
+    border: 0 solid #ddd;
 }
 
 .page-link:focus, .page-link:hover {
@@ -1821,9 +1821,9 @@ tbody.collapse.show {
 
 .badge {
     display: inline-block;
-    padding: 0.25em 0.4em;
-    font-size: 75%;
-    font-weight: bold;
+    padding: 7px 10px;
+    font-size: 0.8em;
+    font-weight: 400;
     line-height: 1;
     color: #fbfbfb;
     text-align: center;
@@ -1852,11 +1852,11 @@ a.badge:focus, a.badge:hover {
 }
 
 .badge-default {
-    background-color: #68a844;
+    background-color: #83d356;
 }
 
 .badge-default[href]:focus, .badge-default[href]:hover {
-    background-color: #528435;
+    background-color: #67c333;
 }
 
 .badge-primary {

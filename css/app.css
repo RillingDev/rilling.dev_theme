@@ -12,12 +12,6 @@ body {
 .container--sm {
   max-width: 680px; }
 
-.social {
-  max-width: 400px;
-  margin: 20px auto; }
-  .social > address {
-    text-align: center; }
-
 .section-margin {
   margin: 30px 0; }
 
@@ -27,10 +21,14 @@ body {
 .full-width {
   width: 100%; }
 
+.social {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
 .hr {
-  border-color: #999999;
-  border-style: solid;
-  border-width: 1px 0;
   margin-top: 0.333rem;
   margin-bottom: 0.333rem; }
   .hr.hr--sm {
@@ -56,10 +54,7 @@ h1.presenter-title {
   max-width: 650px;
   color: #fff;
   margin: 0;
-  font-size: 3em;
-  transition-property: font-size;
-  transition-duration: 0.15s;
-  transition-timing-function: ease; }
+  font-size: 3em; }
 
 h1.presenter-title-short {
   font-size: 2.75em; }
@@ -101,13 +96,14 @@ h3 .fa,
 h4 .fa {
   margin-right: 8px; }
 
-.article h2 {
-  margin-top: 38px; }
-  .article h2.article-title {
-    margin: 0; }
+.article h2,
+.article h3 {
+  margin-top: 16px; }
+
+.article h2.article-title {
+  margin: 0; }
 
 .article h3 {
-  margin-top: 32px;
   font-size: 1.6rem; }
 
 .about h2,
@@ -135,40 +131,44 @@ h4 .fa {
 .portfolio h3 {
   font-size: 1.4rem; }
 
-a:active, a:focus, a:hover {
-  transition-property: color, background-color;
-  transition-duration: 0.15s;
-  transition-timing-function: ease; }
+.btn.btn-primary:active, .btn.btn-primary:focus, .btn.btn-primary:hover {
+  background-color: #68a844;
+  color: #fff;
+  box-shadow: none; }
 
-.btn-primary {
-  border: 0; }
-  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-    background-color: #9bdb76; }
-  .btn-primary.btn-primary-margin {
-    margin-top: 10px; }
-  .btn-primary.btn-primary--lg {
-    width: 100%; }
-  .btn-primary.btn-primary-codepen, .btn-primary.btn-primary-github {
-    margin-top: 10px;
-    width: 100%; }
-    @media (min-width: 576px) {
-      .btn-primary.btn-primary-codepen, .btn-primary.btn-primary-github {
-        width: 50%; } }
-  .btn-primary.btn-primary-github {
-    background-color: #999999; }
-    .btn-primary.btn-primary-github:active, .btn-primary.btn-primary-github:focus, .btn-primary.btn-primary-github:hover {
-      background-color: #b3b3b3; }
-    @media (min-width: 576px) {
-      .btn-primary.btn-primary-github {
-        float: left; } }
-  .btn-primary.btn-primary-codepen {
-    background-color: #3a3a3a; }
-    .btn-primary.btn-primary-codepen:active, .btn-primary.btn-primary-codepen:focus, .btn-primary.btn-primary-codepen:hover {
-      background-color: #545454; }
-  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-    color: #fff; }
-  .btn-primary .fa {
-    margin-right: 4px; }
+.btn.btn-primary-margin {
+  margin-top: 10px; }
+
+.btn.btn-primary--lg {
+  width: 100%; }
+
+.btn.btn-codepen, .btn.btn-github {
+  margin-top: 10px;
+  width: 100%; }
+  @media (min-width: 576px) {
+    .btn.btn-codepen, .btn.btn-github {
+      width: 50%; } }
+
+.btn.btn-github {
+  background-color: #999999; }
+  .btn.btn-github:active, .btn.btn-github:focus, .btn.btn-github:hover {
+    background-color: #adadad; }
+
+.btn.btn-codepen {
+  background-color: #3a3a3a; }
+  .btn.btn-codepen:active, .btn.btn-codepen:focus, .btn.btn-codepen:hover {
+    background-color: #4e4e4e; }
+
+.btn .fa {
+  margin-right: 4px; }
+
+.badge:active, .badge:focus, .badge:hover {
+  transition-property: "background-color,color";
+  transition-duration: .15s;
+  transition-timing-function: ease-in; }
+
+.badge.badge-default:active, .badge.badge-default:focus, .badge.badge-default:hover {
+  background-color: #68a844; }
 
 .navbar {
   background-color: #83d356;
@@ -196,8 +196,8 @@ a:active, a:focus, a:hover {
       height: 2px;
       background-color: #fff;
       transition-property: transform, height;
-      transition-duration: 0.15s;
-      transition-timing-function: ease; }
+      transition-duration: .15s;
+      transition-timing-function: ease-in; }
     .navbar .navbar-toggler.collapsed .menu-bar:nth-child(1) {
       transform: translateY(8px) rotate(45deg); }
     .navbar .navbar-toggler.collapsed .menu-bar:nth-child(2) {
@@ -221,16 +221,14 @@ a:active, a:focus, a:hover {
       background-color: #68a844; }
 
 .presenter {
+  padding-bottom: 16px;
+  margin-top: 40px;
+  min-height: calc(50vh - 40px);
   background-color: #83d356;
-  width: 100%;
-  min-height: 50vh;
-  height: 100%;
   position: relative;
-  overflow: hidden;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 16px; }
+  justify-content: center; }
   .presenter.presenter--lg {
     align-items: center;
     padding-bottom: 0; }
@@ -246,17 +244,17 @@ a:active, a:focus, a:hover {
     padding-left: 15px;
     padding-right: 15px;
     position: relative; }
-    .presenter .presenter-content .presenter-meta {
-      text-align: center;
-      color: #fff;
-      margin: 0.5rem 0; }
-      .presenter .presenter-content .presenter-meta > span {
-        padding-left: 5px;
-        padding-right: 5px; }
-        .presenter .presenter-content .presenter-meta > span a {
-          color: #fff; }
-    .presenter .presenter-content .presenter-tags {
-      text-align: center; }
+  .presenter .presenter-meta {
+    text-align: center;
+    color: #fff;
+    margin: 0.5rem 0; }
+    .presenter .presenter-meta > span {
+      padding-left: 5px;
+      padding-right: 5px; }
+      .presenter .presenter-meta > span a {
+        color: #fff; }
+  .presenter .presenter-tags {
+    text-align: center; }
 
 footer {
   background-color: #3a3a3a;
@@ -286,8 +284,8 @@ footer {
       padding: 20px; } }
   .article.article-full {
     padding-top: 30px; }
-  .article .article-header .article-tags {
-    margin: 10px 0; }
+  .article .article-tags {
+    margin: 4px 0; }
 
 ol,
 ul {
@@ -361,25 +359,12 @@ pre {
     text-align: center; }
 
 .pagination {
-  display: flex;
   justify-content: center; }
   .pagination .page-item {
     margin-left: 2px;
     margin-right: 2px; }
   .pagination .page-link {
-    border: 0;
     padding: 11px 15px; }
-
-.badge {
-  padding: 5px 10px;
-  display: inline;
-  background-color: #83d356;
-  font-weight: normal;
-  font-size: 80%; }
-  .badge.badge-dark {
-    background-color: #68a844; }
-  .badge:active, .badge:focus, .badge:hover {
-    background-color: #9bdb76; }
 
 .cookienotice {
   display: none;
@@ -466,34 +451,38 @@ pre {
 .portfolio .portfolio-items {
   padding-top: 20px;
   padding-bottom: 20px; }
-  .portfolio .portfolio-items .portfolio-item {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto; }
-    .portfolio .portfolio-items .portfolio-item .portfolio-img,
-    .portfolio .portfolio-items .portfolio-item .portfolio-text {
-      min-height: 200px; }
-    .portfolio .portfolio-items .portfolio-item .portfolio-text {
-      width: 100%;
-      background-color: #fbfbfb;
-      height: 100%;
-      padding: 20px; }
-    .portfolio .portfolio-items .portfolio-item .portfolio-img {
-      overflow: hidden;
-      width: 100%;
-      border: 3px solid #fbfbfb; }
+
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
   @media (min-width: 768px) {
-    .portfolio .portfolio-items .portfolio-item {
+    .portfolio .portfolio-item {
       max-width: 100%; }
-      .portfolio .portfolio-items .portfolio-item .portfolio-text {
+      .portfolio .portfolio-item .portfolio-text {
         width: calc(100% - 310px); }
-      .portfolio .portfolio-items .portfolio-item .portfolio-img {
+      .portfolio .portfolio-item .portfolio-img {
         width: 300px;
         max-height: 200px; } }
+
+.portfolio .portfolio-img,
+.portfolio .portfolio-text {
+  min-height: 200px; }
+
+.portfolio .portfolio-text {
+  width: 100%;
+  background-color: #fbfbfb;
+  height: 100%;
+  padding: 20px; }
+
+.portfolio .portfolio-img {
+  overflow: hidden;
+  width: 100%;
+  border: 3px solid #fbfbfb; }
 
 @media (min-width: 768px) {
   .portfolio:nth-child(2n+1) .portfolio-items .portfolio-item {

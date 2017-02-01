@@ -1,3 +1,3 @@
 {% for tag in tags %}
-    <a class="badge {{dark ? " badge-dark" : " "}}" title="Show all articles with tag {{ tag }}" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+    <a class="badge {{dark ? 'badge-primary' : 'badge-default'}}" title="Show all articles with tag {{ tag }}" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
 {% endfor %}

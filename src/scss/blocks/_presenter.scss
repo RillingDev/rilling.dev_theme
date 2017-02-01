@@ -1,14 +1,13 @@
 .presenter {
+    padding-bottom: 16px;
+    margin-top: 40px;
+    min-height: calc(50vh - 40px);
     background-color: $brand-primary;
-    width: 100%;
-    min-height: 50vh;
-    height: 100%;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 16px;
     &.presenter--lg {
         align-items: center;
         padding-bottom: 0;
@@ -26,20 +25,20 @@
         padding-left: 15px;
         padding-right: 15px;
         position: relative;
-        .presenter-meta {
-            text-align: center;
-            color: $white;
-            margin: 0.5rem 0;
-            >span {
-                padding-left: 5px;
-                padding-right: 5px;
-                a {
-                    color: $white;
-                }
+    }
+    .presenter-meta {
+        text-align: center;
+        color: $white;
+        margin: 0.5rem 0;
+        >span {
+            padding-left: 5px;
+            padding-right: 5px;
+            a {
+                color: $white;
             }
         }
-        .presenter-tags {
-            text-align: center;
-        }
+    }
+    .presenter-tags {
+        text-align: center;
     }
 }

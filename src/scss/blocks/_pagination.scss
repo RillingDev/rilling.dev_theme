@@ -1,12 +1,10 @@
 .pagination {
-    display: flex;
     justify-content: center;
     .page-item {
         margin-left: 2px;
         margin-right: 2px;
     }
     .page-link {
-        border: 0;
         padding: 11px 15px;
     }
 }
