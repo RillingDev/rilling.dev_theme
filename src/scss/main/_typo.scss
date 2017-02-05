@@ -52,17 +52,8 @@ h4 {
 }
 
 .article {
-    h2,
-    h3 {
-        margin-top: 16px;
-    }
-    h2 {
-        &.article-title {
-            margin: 0;
-        }
-    }
-    h3 {
-        font-size: 1.6rem;
+    .article-title {
+        margin: 0;
     }
 }
 
@@ -72,16 +63,8 @@ h4 {
     h4 {
         text-align: center;
     }
-    h2 {
-        font-size: 2.75rem;
-        margin-bottom: 0;
-    }
     h3 {
-        font-size: 1.75rem;
         margin-bottom: 26px;
-    }
-    h4 {
-        font-size: 1.375rem;
     }
 }
 
@@ -90,9 +73,7 @@ h4 {
         text-align: center;
         line-height: 80px;
         position: relative;
-        font-size: 1.6rem;
-    }
-    h3 {
-        font-size: 1.4rem;
     }
 }
+
+

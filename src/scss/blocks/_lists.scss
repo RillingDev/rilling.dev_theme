@@ -1,6 +1,9 @@
 ol,
 ul {
     list-style-type: square;
+    p {
+        margin-bottom: 0.25rem;
+    }
 }
 
 p+ul {

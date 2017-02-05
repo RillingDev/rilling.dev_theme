@@ -4,7 +4,7 @@
     min-height: calc(50vh - 40px);
     background-color: $brand-primary;
     position: relative;
-    //overflow: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: flex-end;
     justify-content: center;

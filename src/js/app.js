@@ -6,9 +6,10 @@ const frilling = (function () {
 
     /**
      * jQuery like selector
-     * @param  {String} query String query
-     * @param  {Boolean} multi If the select will match multiple elements
-     * @return {NodeList}       NodeList of selcted elements
+     *
+     * @param {String} query String query
+     * @param {Boolean} multi If the select will match multiple elements
+     * @return {NodeList} NodeList of selcted elements
      */
     const $ = function (query, multi) {
         return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
@@ -16,15 +17,16 @@ const frilling = (function () {
 
     /**
      * Iterate over NodeList
-     * @param  {NodeList} nodeList NodeList of elements
-     * @param  {Function} fn   Function to run
+     *
+     * @param {NodeList} nodeList NodeList of elements
+     * @param {Function} fn   Function to run
      */
     const eachNode = function (nodeList, fn) {
         return Array.from(nodeList).forEach(fn);
     };
 
     /**
-     * Check if the cookie policy has been accepted and displays the notification if not.
+     * Checks if the cookie policy has been accepted and displays the notification if not.
      */
     const initCookiepolicy = function () {
         const cookieString = "cookies=true";
@@ -56,7 +58,7 @@ const frilling = (function () {
 
             $toggle.classList.toggle("collapsed");
             $nav.classList.toggle("show");
-            
+
             $toggle.setAttribute("aria-expanded", isNavOpen);
             $nav.setAttribute("aria-hidden", !isNavOpen);
         }, false);
@@ -86,14 +88,21 @@ const frilling = (function () {
         });
     };
 
-    return {
-        init: function (pageType) {
-            initCookiepolicy();
-            initNav();         
+    /**
+     * Inits the page with optional page-dependent function
+     *
+     * @param {String} pageType name of the grav template
+     */
+    const init = function (pageType) {
+        initCookiepolicy();
+        initNav();
 
-            if (pageType === "item") {
-                initArticle();
-            }
+        if (pageType === "item") {
+            initArticle();
         }
+    };
+
+    return {
+        init
     };
 })();
