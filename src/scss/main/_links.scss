@@ -23,13 +23,13 @@
     &.btn-github {
         background-color: $gray-light;
         @include hover-focus-active {
-            background-color: lighten($gray-light, 8%);
+            background-color: darken($gray-light, 8%);
         }
     }
     &.btn-codepen {
         background-color: $gray-dark;
         @include hover-focus-active {
-            background-color: lighten($gray-dark, 8%);
+            background-color: darken($gray-dark, 8%);
         }
     }
     .fa {
