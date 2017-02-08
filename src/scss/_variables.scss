@@ -42,19 +42,7 @@
 // Code
 
 @mixin _assert-ascending($map, $map-name) {
-  $prev-key: null;
-  $prev-num: null;
-  @each $key, $num in $map {
-    @if $prev-num == null {
-      // Do nothing
-    } @else if not comparable($prev-num, $num) {
-      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    } @else if $prev-num >= $num {
-      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    }
-    $prev-key: $key;
-    $prev-num: $num;
-  }
+
 }
 
 // Replace `$search` with `$replace` in `$string`
@@ -354,7 +342,7 @@ $table-bg-active:               $table-bg-hover !default;
 $table-head-bg:                 $gray-lighter !default;
 $table-head-color:              $gray !default;
 
-$table-border-width:            $border-width !default;
+$table-border-width:            1px !default;
 $table-border-color:            $gray-lighter !default;
 
 

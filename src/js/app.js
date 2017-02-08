@@ -68,15 +68,11 @@ const frilling = (function () {
      * Inits article-specific html changes
      */
     const initArticle = function () {
-        const $pre = $("pre", true);
-        const $tables = $("table", true);
+        const $pre = $("article pre", true);
+        const $tables = $("article table", true);
 
         //Highlight Code Snippets
         eachNode($pre, $e => {
-            /*const $code = $e.querySelector("code");
-            const lang = $code.className;
-
-           $e.className = lang;*/
             _window.hljs.highlightBlock($e);
         });
 

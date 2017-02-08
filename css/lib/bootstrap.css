@@ -686,16 +686,16 @@ pre code {
   .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 0 solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
 }
 
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 0 solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 .table tbody + tbody {
-    border-top: 0 solid #e0e0e0;
+    border-top: 2px solid #e0e0e0;
 }
 
 .table .table {
@@ -708,17 +708,17 @@ pre code {
 }
 
 .table-bordered {
-    border: 0 solid #e0e0e0;
+    border: 1px solid #e0e0e0;
 }
 
 .table-bordered th,
   .table-bordered td {
-    border: 0 solid #e0e0e0;
+    border: 1px solid #e0e0e0;
 }
 
 .table-bordered thead th,
   .table-bordered thead td {
-    border-bottom-width: 0;
+    border-bottom-width: 2px;
 }
 
 .table-striped tbody tr:nth-of-type(odd) {

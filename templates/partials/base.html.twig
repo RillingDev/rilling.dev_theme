@@ -79,13 +79,11 @@
 
         <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Lato:400,700|Source+Code+Pro">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
         {% block css %}
             {% do
-                assets.addCss("https://fonts.googleapis.com/css?family=Arvo|Lato|Source+Code+Pro", 104) %}
-            {% do
                 assets.addCss("theme://css/lib/bootstrap.css", 103) %}
-            {% do
-                assets.addCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", 102) %}
             {% do
                 assets.addCss("theme://css/app.css", 101) %}
         {% endblock %}
@@ -123,8 +121,7 @@
 
         {% block js %}
             {% if page.template == "item" %}
-                {% do
-                    assets.addJs("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js", 201) %}
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
             {% endif %}
             {% do
                 assets.addJs("theme://js/app.js", 100) %}
