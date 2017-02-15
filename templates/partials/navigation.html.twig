@@ -11,7 +11,7 @@
                 {% for page in pages.children.visible %}
                     {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
                 <li class="nav-item {{current_page}}" role="menuitem">
-                    <a class="nav-link" href="{{page.url}}" title="Go to {{page.menu}}">{{page.menu}}{% if current_page %}<span class="sr-only">(current)</span>{% endif %}</a>
+                    <a class="nav-link" href="{{page.url}}" title="Go to {{page.menu}}">{{page.menu}}</a>
                 </li>
                 {% endfor %}
             </ul>
