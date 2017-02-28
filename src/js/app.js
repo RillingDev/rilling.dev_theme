@@ -9,7 +9,7 @@ const frilling = (function () {
      *
      * @param {String} query String query
      * @param {Boolean} multi If the select will match multiple elements
-     * @return {NodeList} NodeList of selcted elements
+     * @returns {NodeList} NodeList of selcted elements
      */
     const $ = function (query, multi) {
         return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
@@ -22,7 +22,7 @@ const frilling = (function () {
      * @param {Function} fn   Function to run
      */
     const eachNode = function (nodeList, fn) {
-        return Array.from(nodeList).forEach(fn);
+        Array.from(nodeList).forEach(fn);
     };
 
     /**
@@ -59,6 +59,7 @@ const frilling = (function () {
             $toggle.classList.toggle("collapsed");
             $nav.classList.toggle("show");
 
+            //Set Aria attributes
             $toggle.setAttribute("aria-expanded", isNavOpen);
             $nav.setAttribute("aria-hidden", !isNavOpen);
         }, false);
@@ -71,16 +72,21 @@ const frilling = (function () {
         const $pre = $("article pre", true);
         const $tables = $("article table", true);
 
+        //Adjust Table classes
+        eachNode($tables, $e => {
+            const $clone = $e.cloneNode(true); //Deep-clones old table
+            const $tableVirtual = _document.createElement("div"); //Manipulate a virtual node instead of the actual one to improve performance
+
+            $clone.classList.add("table", "table-bordered", "table-hover");
+            $tableVirtual.classList.add("table-responsive");
+            $tableVirtual.appendChild($clone);
+
+            $e.replaceWith($tableVirtual);
+        });
+
         //Highlight Code Snippets
         eachNode($pre, $e => {
             _window.hljs.highlightBlock($e);
-        });
-
-        //Adjust Table classes
-        eachNode($tables, $e => {
-            //@TODO makse this less dirty
-            $e.classList.add("table", "table-bordered", "table-hover");
-            $e.outerHTML = '<div class="table-responsive">' + $e.outerHTML + '</div>';
         });
     };
 
