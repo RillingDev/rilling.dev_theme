@@ -1,4 +1,13 @@
 name: Frilling3
 version: 3.2.0
 description: "F-Rilling.com custom theme"
+icon: gear
+author:
+  name: Felix Rilling
+  email: contact@f-rilling.com
+  url: https://github.com/FelixRilling/f-rilling.com
+homepage: https://github.com/FelixRilling/f-rilling.com
+demo: https://f-rilling.com
+keywords: theme, modern, fast, responsive, html5, css3
+bugs: https://github.com/FelixRilling/f-rilling.com/issues
 license: MIT
