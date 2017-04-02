@@ -5,6 +5,8 @@ const sourcemaps = require("gulp-sourcemaps");
 const rollup = require("rollup-stream");
 const nodeResolve = require("rollup-plugin-node-resolve");
 const commonjs = require("rollup-plugin-commonjs");
+const babel = require("rollup-plugin-babel");
+const uglify = require("rollup-plugin-uglify");
 const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
 const packageJson = require("../package.json");
@@ -18,7 +20,9 @@ module.exports = function () {
                     jsnext: true,
                     main: true
                 }),
-                commonjs()
+                commonjs(),
+                babel(),
+                uglify()
             ],
             moduleName: packageJson.namespace.module
         })

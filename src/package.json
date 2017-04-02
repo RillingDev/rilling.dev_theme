@@ -1,9 +1,13 @@
 {
     "name": "frilling2",
-    "version": "v3.2.0",
+    "version": "v3.23.0",
     "description": "Grav theme",
     "main": "main.js",
-    "scripts": {},
+    "namespace": {
+        "module": "frilling"
+    },
+    "scripts": {
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/FelixRilling/frilling.com.git"
@@ -18,11 +22,22 @@
         "gulp-connect": "^5.0.0",
         "gulp-cssbeautify": "^0.1.3",
         "gulp-sass": "^3.0.0",
-        "gulp-uglify": "^2.0.0"
+        "gulp-uglify": "^2.0.0",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "gulp-clean": "^0.3.2",
+        "gulp-sequence": "^0.4.6",
+        "gulp-sourcemaps": "^2.4.1",
+        "rollup-plugin-babel": "^2.7.1",
+        "rollup-plugin-commonjs": "^8.0.2",
+        "rollup-plugin-node-resolve": "^2.0.0",
+        "rollup-plugin-uglify": "^1.0.1",
+        "rollup-stream": "^1.19.0",
+        "vinyl-buffer": "^1.0.0",
+        "vinyl-source-stream": "^1.1.0"
     },
     "dependencies": {
         "bootstrap": "^4.0.0-alpha.6",
         "font-awesome": "^4.7.0",
-        "highlight.js": "^9.9.0"
+        "highlight.js": "https://github.com/isagalaev/highlight.js"
     }
 }

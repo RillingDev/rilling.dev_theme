@@ -1,110 +1,94 @@
 "use strict";
 
-const frilling = (function () {
-    const _window = window;
-    const _document = document;
+import {
+    _window,
+    _document
+} from "./lib/constants";
+import $ from "./lib/$";
+import eachNode from "./lib/eachNode";
+//import hljs from "highlight.js/build/lib/index";
 
-    /**
-     * jQuery like selector
-     *
-     * @param {String} query String query
-     * @param {Boolean} multi If the select will match multiple elements
-     * @returns {NodeList} NodeList of selcted elements
-     */
-    const $ = function (query, multi) {
-        return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
-    };
+/**
+ * Checks if the cookie policy has been accepted and displays the notification if not.
+ */
+const initCookiepolicy = function () {
+    const cookieString = "cookies=true";
 
-    /**
-     * Iterate over NodeList
-     *
-     * @param {NodeList} nodeList NodeList of elements
-     * @param {Function} fn   Function to run
-     */
-    const eachNode = function (nodeList, fn) {
-        Array.from(nodeList).forEach(fn);
-    };
+    if (_document.cookie.indexOf(cookieString) === -1) {
+        const $cookienotice = $(".cookienotice");
+        const $cookienoticeAccept = $("#cookienoticeAccept");
 
-    /**
-     * Checks if the cookie policy has been accepted and displays the notification if not.
-     */
-    const initCookiepolicy = function () {
-        const cookieString = "cookies=true";
+        $cookienotice.style.display = "block";
+        _document.cookie = cookieString + ";expires=Fri, 31 Dec 9999 23:59:59 GMT";
 
-        if (_document.cookie.indexOf(cookieString) === -1) {
-            const $cookienotice = $(".cookienotice");
-            const $cookienoticeAccept = $("#cookienoticeAccept");
-
-            $cookienotice.style.display = "block";
-            _document.cookie = cookieString + ";expires=Fri, 31 Dec 9999 23:59:59 GMT";
-
-            $cookienoticeAccept.addEventListener("click", () => {
-                $cookienotice.style.display = "none";
-            }, false);
-        }
-    };
-
-    /**
-     * Binds the navigation event handler
-     */
-    const initNav = function () {
-        const $toggle = $("#navbarToggle");
-        const $nav = $("#navbarMenu");
-        let isNavOpen = false;
-
-        //Toggle menu
-        $toggle.addEventListener("click", () => {
-            isNavOpen = !isNavOpen;
-
-            $toggle.classList.toggle("collapsed");
-            $nav.classList.toggle("show");
-
-            //Set Aria attributes
-            $toggle.setAttribute("aria-expanded", isNavOpen);
-            $nav.setAttribute("aria-hidden", !isNavOpen);
+        $cookienoticeAccept.addEventListener("click", () => {
+            $cookienotice.style.display = "none";
         }, false);
-    };
+    }
+};
 
-    /**
-     * Inits article-specific html changes
-     */
-    const initArticle = function () {
-        const $pre = $("article pre", true);
-        const $tables = $("article table", true);
+/**
+ * Binds the navigation event handler
+ */
+const initNav = function () {
+    const $toggle = $("#navbarToggle");
+    const $nav = $("#navbarMenu");
+    let isNavOpen = false;
 
-        //Adjust Table classes
-        eachNode($tables, $e => {
-            const $clone = $e.cloneNode(true); //Deep-clones old table
-            const $tableVirtual = _document.createElement("div"); //Manipulate a virtual node instead of the actual one to improve performance
+    //Toggle menu
+    $toggle.addEventListener("click", () => {
+        isNavOpen = !isNavOpen;
 
-            $clone.classList.add("table", "table-bordered", "table-hover");
-            $tableVirtual.classList.add("table-responsive");
-            $tableVirtual.appendChild($clone);
+        $toggle.classList.toggle("collapsed");
+        $nav.classList.toggle("show");
 
-            $e.replaceWith($tableVirtual);
-        });
+        //Set Aria attributes
+        $toggle.setAttribute("aria-expanded", isNavOpen);
+        $nav.setAttribute("aria-hidden", !isNavOpen);
+    }, false);
+};
 
-        //Highlight Code Snippets
-        eachNode($pre, $e => {
-            _window.hljs.highlightBlock($e);
-        });
-    };
+/**
+ * Inits article-specific html changes
+ */
+const initArticle = function () {
+    const $pre = $("article pre", true);
+    const $tables = $("article table", true);
 
-    /**
-     * Inits the page with optional page-dependent function
-     *
-     * @param {String} pageType name of the grav template
-     */
-    const init = function (pageType) {
-        initCookiepolicy();
-        initNav();
+    //Adjust Table classes
+    eachNode($tables, $e => {
+        const $clone = $e.cloneNode(true); //Deep-clones old table
+        const $tableVirtual = _document.createElement("div"); //Manipulate a virtual node instead of the actual one to improve performance
 
-        if (pageType === "item") {
-            initArticle();
-        }
-    };
+        $clone.classList.add("table", "table-bordered", "table-hover");
+        $tableVirtual.classList.add("table-responsive");
+        $tableVirtual.appendChild($clone);
 
-    return {
-        init
-    };
-})();
+        $e.replaceWith($tableVirtual);
+    });
+
+    //Highlight Code Snippets
+    eachNode($pre, $e => {
+        _window.hljs.highlightBlock($e);
+    });
+};
+
+/**
+ * Inits the page with optional page-dependent function
+ *
+ * @param {String} pageType name of the grav template
+ */
+const init = function (pageType) {
+    initCookiepolicy();
+    initNav();
+
+    if (pageType === "item") {
+        initArticle();
+    }
+};
+
+const app = {
+    init
+};
+
+export default app;
