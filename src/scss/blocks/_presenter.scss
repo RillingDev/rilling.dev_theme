@@ -12,33 +12,37 @@
         align-items: center;
         padding-bottom: 0;
     }
-    .presenter-icon {
-        color: $brand-primary-dark;
-        font-size: calc(200px + 10vw);
-        opacity: 0.5;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .presenter-content {
-        padding-left: 15px;
-        padding-right: 15px;
-        position: relative;
-    }
-    .presenter-meta {
-        text-align: center;
-        color: $white;
-        margin: 0.5rem 0;
-        >span {
-            padding-left: 5px;
-            padding-right: 5px;
-            a {
-                color: $white;
-            }
+}
+
+.presenter-icon {
+    color: $brand-primary-dark;
+    font-size: calc(200px + 10vw);
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.presenter-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.presenter-meta {
+    text-align: center;
+    color: $white;
+    margin: 0.5rem 0;
+    >span {
+        padding-left: 5px;
+        padding-right: 5px;
+        a {
+            color: $white;
         }
     }
-    .presenter-tags {
-        text-align: center;
-    }
+}
+
+.presenter-tags {
+    text-align: center;
 }

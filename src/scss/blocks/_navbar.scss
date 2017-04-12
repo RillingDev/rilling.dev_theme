@@ -2,48 +2,6 @@
     background-color: $brand-primary;
     padding-top: 0;
     padding-bottom: 0;
-    .navbar-brand {
-        color: $gray-lightest;
-        @include hover-focus-active {
-            color: $white;
-        }
-    }
-    .navbar-toggler {
-        margin: 8px 0;
-        padding: 0;
-        border: 0;
-        width: 24px;
-        height: 24px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        @include screen(min, md) {
-            display: none;
-        }
-        .menu-bar {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background-color: $white;
-            @include transition(#{"transform, height"});
-        }
-        &.collapsed {
-            .menu-bar {
-                &:nth-child(1) {
-                    transform: translateY(8px) rotate(45deg);
-                }
-                &:nth-child(2) {
-                    height: 0px;
-                }
-                &:nth-child(3) {
-                    transform: translateY(-8px) rotate(-45deg);
-                }
-            }
-        }
-    }
-    .navbar-collapse {
-        justify-content: flex-end;
-    }
     .nav-item {
         &.active {
             .nav-link {
@@ -64,4 +22,49 @@
             }
         }
     }
+}
+
+.navbar-brand {
+    color: $gray-lightest;
+    @include hover-focus-active {
+        color: $white;
+    }
+}
+
+.navbar-toggler {
+    margin: 8px 0;
+    padding: 0;
+    border: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    @include screen(min, md) {
+        display: none;
+    }
+    .menu-bar {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: $white;
+        @include transition(#{"transform, height"});
+    }
+    &.collapsed {
+        .menu-bar {
+            &:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            &:nth-child(2) {
+                height: 0px;
+            }
+            &:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
 }

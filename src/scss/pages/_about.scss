@@ -1,51 +1,45 @@
-.about {
+.about-main {
+    margin-bottom: 40px;
+}
 
-    .about-main {
-        margin-bottom: 40px;
+.about-skills {
+    margin-bottom: 0;
+}
+
+.skill-section {
+    &:not(:last-child) {
+        margin-bottom: 42px;
     }
-
-    .about-skills {
-        margin-bottom: 0;
-
-        .skill-section {
-            &:not(:last-child) {
-                margin-bottom: 42px;
-            }
-
-            .skill {
-                min-width: 175px;
-                width: 33.333%;
-                margin-bottom: 32px;
-                padding-left: 8px;
-                padding-right: 8px;
-                @include screen(min,sm) {
-                    margin-bottom: 16px;
-                }
-
-                ul {
-                    text-align: center;
-                    padding: 0;
-                    list-style: none;
-                }
-            }
+    .skill {
+        min-width: 175px;
+        width: 33.333%;
+        margin-bottom: 32px;
+        padding-left: 8px;
+        padding-right: 8px;
+        @include screen(min, sm) {
+            margin-bottom: 16px;
         }
-    }
-
-    .about-experience {
-        margin-bottom: 56px;
-
         ul {
-            padding: 0;
-            margin: 36px auto 0;
             text-align: center;
+            padding: 0;
             list-style: none;
         }
     }
+}
 
-    .about-main,
-    .about-skills {
-        @include screen(min,md) {
-            margin-bottom: 52px;
-        }
+.about-experience {
+    margin-bottom: 56px;
+    ul {
+        padding: 0;
+        margin: 36px auto 0;
+        text-align: center;
+        list-style: none;
+    }
+}
+
+.about-main,
+.about-skills {
+    @include screen(min, md) {
+        margin-bottom: 52px;
     }
 }
