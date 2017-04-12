@@ -10,19 +10,22 @@ const buffer = require("vinyl-buffer");
 const packageJson = require("../package.json");
 
 module.exports = function () {
-    return rollup({
-            entry: "./js/app.js",
-            format: "iife",
-            plugins: [
-                nodeResolve({
-                    jsnext: true,
-                    main: true
-                }),
-                commonjs()
-            ],
-            moduleName: packageJson.namespace.module
-        })
-        .pipe(source("app.js"))
+    const rollupOptions = {
+        entry: "./js/app.js",
+        format: "iife",
+        sourceMap: true,
+        plugins: [
+            nodeResolve({
+                jsnext: true,
+                main: true
+            }),
+            commonjs()
+        ],
+        moduleName: packageJson.namespace.module
+    };
+
+    return rollup(rollupOptions)
+        .pipe(source("app.js","./js/"))
         .pipe(buffer())
         .pipe(sourcemaps.init({
             loadMaps: true

@@ -2,7 +2,7 @@
     "name": "frilling3",
     "version": "v3.3.0",
     "description": "Grav theme",
-    "main": "main.js",
+    "main": "gulpfile.js",
     "namespace": {
         "module": "frilling"
     },
@@ -16,17 +16,15 @@
     "license": "MIT",
     "homepage": "https://github.com/FelixRilling/bae-todo#readme",
     "devDependencies": {
-        "babel-preset-es2015": "^6.24.0",
+        "babel-preset-es2015": "^6.24.1",
         "gulp": "^3.9.1",
         "gulp-babel": "^6.1.2",
-        "gulp-connect": "^5.0.0",
         "gulp-cssbeautify": "^0.1.3",
         "gulp-sass": "^3.1.0",
         "gulp-uglify": "^2.1.2",
         "babel-plugin-external-helpers": "^6.22.0",
         "gulp-clean": "^0.3.2",
-        "gulp-sequence": "^0.4.6",
-        "gulp-sourcemaps": "^2.5.0",
+        "gulp-sourcemaps": "^2.6.0",
         "rollup-plugin-babel": "^2.7.1",
         "rollup-plugin-commonjs": "^8.0.2",
         "rollup-plugin-node-resolve": "^3.0.0",
@@ -37,7 +35,6 @@
     },
     "dependencies": {
         "bootstrap": "^4.0.0-alpha.6",
-        "font-awesome": "^4.7.0",
-        "highlight.js": "https://github.com/isagalaev/highlight.js"
+        "font-awesome": "^4.7.0"
     }
 }
