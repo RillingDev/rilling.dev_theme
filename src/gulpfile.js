@@ -11,12 +11,14 @@ gulp.task("js-dist", [], task_js_dist);
 gulp.task("css", task_css);
 gulp.task("bootstrap", task_bootstrap);
 
+
 gulp.task("watch", function () {
-    gulp.watch(["./scss/**/*.scss"], ["css"]);
-    gulp.watch(["./scss/bootstrap.scss","./scss/_variables.scss"], ["bootstrap", "css"]);
-    gulp.watch(["./js/**/*.js"], ["js"]);
+    gulp.watch(["./src/scss/**/*.scss"], ["css"]);
+    gulp.watch(["./src/scss/bootstrap.scss", "./src/scss/_variables.scss"], ["bootstrap", "css"]);
+    gulp.watch(["./src/js/**/*.js"], ["js"]);
 });
 
-gulp.task("build", ["bootstrap", "css", "js"]);
-gulp.task("dist", ["bootstrap", "css", "js-dist"]);
+gulp.task("dev", ["watch"]);
+gulp.task("build", ["js", "bootstrap", "css"]);
+gulp.task("dist", ["js-dist", "bootstrap", "css"]);
 gulp.task("default", ["dist"]);

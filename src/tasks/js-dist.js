@@ -29,7 +29,7 @@ module.exports = function () {
     };
 
     return rollup(rollupOptions)
-        .pipe(source("app.js", "./js/"))
+        .pipe(source("app.js", ".js/"))
         .pipe(buffer())
         .pipe(sourcemaps.init({
             loadMaps: true
