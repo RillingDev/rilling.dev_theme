@@ -48,7 +48,7 @@
         <meta property="og:url" content="{{ page.url(true, true) }}"/>
         <meta property="og:description" content="{{description|e|slice(0,300)}}"/>
         <meta property="og:type" content="{{ogType}}"/>
-        <meta property="og:image" content="{{ url('theme://img/icons/android-chrome-256x256.png', true) }}"/>
+        <meta property="og:image" content="{{ url('theme://img/icons/apple-touch-icon.png', true) }}"/>
         <meta property="og:site_name" content="F-Rilling.com"/>
         {% if ogType == "article"%}
             <meta property="og:article:tag" content="{{page.taxonomy.tag|join (', ')|e}}"/>
@@ -64,7 +64,7 @@
         <meta name="twitter:url" content="{{ page.url(true, true) }}">
         <meta name="twitter:title" content="{{title|e}}">
         <meta name="twitter:description" content="{{description|e|slice(0,200)}}">
-        <meta name="twitter:image" content="{{ url('theme://img/icons/android-chrome-256x256.png', true) }}"/>
+        <meta name="twitter:image" content="{{ url('theme://img/icons/apple-touch-icon.png', true) }}"/>
         <meta name="twitter:creator" content="@FelixRilling">
 
         <!--Favicons-->
