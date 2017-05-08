@@ -100,9 +100,9 @@ $gray-lightest:             #fbfbfb !default;
 $white:                     #fefefe !default;
 
 $brand-primary:             #83d356 !default;
-$brand-primary-light:       lighten($brand-primary,8%) !default;
+$brand-primary-light:       lighten($brand-primary, 8%) !default;
 $brand-primary-dark:        #68a844 !default;
-$brand-primary-darker:      darken($brand-primary-dark,8%) !default;
+$brand-primary-darker:      darken($brand-primary-dark, 8%) !default;
 $brand-success:             $brand-primary !default;
 $brand-info:                #9bc7e9 !default;
 $brand-warning:             #fff174 !default;

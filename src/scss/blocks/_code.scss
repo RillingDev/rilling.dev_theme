@@ -1,7 +1,7 @@
 pre {
     padding: 15px;
-    color:$white;
-    background-color:$gray-dark;
+    color: $white;
+    background-color: $gray-dark;
     @include screen(min, md) {
         padding: 20px;
     }

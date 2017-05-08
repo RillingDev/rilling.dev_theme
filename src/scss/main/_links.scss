@@ -1,9 +1,12 @@
 .btn {
+    .fa {
+        margin-right: 4px;
+    }
     &.btn-primary {
         @include hover-focus-active {
             background-color: $brand-primary-dark;
-            color:$white;
-            box-shadow:none;
+            color: $white;
+            box-shadow: none;
         }
     }
     &.btn-primary-margin {
@@ -11,6 +14,11 @@
     }
     &.btn-primary--lg {
         width: 100%;
+    }
+    &.btn-centered {
+        display: block;
+        max-width: 160px;
+        margin: auto;
     }
     &.btn-codepen,
     &.btn-github {
@@ -31,9 +39,6 @@
         @include hover-focus-active {
             background-color: darken($gray-dark, 8%);
         }
-    }
-    .fa {
-        margin-right: 4px;
     }
 }
 

@@ -41,15 +41,6 @@ body {
   width: 22px;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-}
-
 .fixed-top {
   position: fixed;
   top: 0;
@@ -175,7 +166,11 @@ h4 .fa {
   font-size: 1.6rem;
 }
 
-.btn.btn-primary:active, .btn.btn-primary:focus, .btn.btn-primary:hover {
+.btn .fa {
+  margin-right: 4px;
+}
+
+.btn.btn-primary:focus, .btn.btn-primary:hover {
   background-color: #68a844;
   color: #fff;
   box-shadow: none;
@@ -187,6 +182,12 @@ h4 .fa {
 
 .btn.btn-primary--lg {
   width: 100%;
+}
+
+.btn.btn-centered {
+  display: block;
+  max-width: 160px;
+  margin: auto;
 }
 
 .btn.btn-codepen, .btn.btn-github {
@@ -204,7 +205,7 @@ h4 .fa {
   background-color: #999999;
 }
 
-.btn.btn-github:active, .btn.btn-github:focus, .btn.btn-github:hover {
+.btn.btn-github:focus, .btn.btn-github:hover {
   background-color: #858585;
 }
 
@@ -212,21 +213,17 @@ h4 .fa {
   background-color: #3a3a3a;
 }
 
-.btn.btn-codepen:active, .btn.btn-codepen:focus, .btn.btn-codepen:hover {
+.btn.btn-codepen:focus, .btn.btn-codepen:hover {
   background-color: #262626;
 }
 
-.btn .fa {
-  margin-right: 4px;
-}
-
-.badge:active, .badge:focus, .badge:hover {
+.badge:focus, .badge:hover {
   transition-property: "background-color,color";
   transition-duration: .15s;
   transition-timing-function: ease-in;
 }
 
-.badge.badge-default:active, .badge.badge-default:focus, .badge.badge-default:hover {
+.badge.badge-default:focus, .badge.badge-default:hover {
   background-color: #68a844;
 }
 
@@ -254,7 +251,7 @@ h4 .fa {
   }
 }
 
-.navbar .nav-item .nav-link:active, .navbar .nav-item .nav-link:focus, .navbar .nav-item .nav-link:hover {
+.navbar .nav-item .nav-link:focus, .navbar .nav-item .nav-link:hover {
   background-color: #68a844;
 }
 
@@ -262,7 +259,7 @@ h4 .fa {
   color: #fbfbfb;
 }
 
-.navbar-brand:active, .navbar-brand:focus, .navbar-brand:hover {
+.navbar-brand:focus, .navbar-brand:hover {
   color: #fff;
 }
 
@@ -385,7 +382,7 @@ h4 .fa {
   color: #fbfbfb;
 }
 
-.footer-list li a:active, .footer-list li a:focus, .footer-list li a:hover {
+.footer-list li a:focus, .footer-list li a:hover {
   color: #fff;
 }
 
@@ -407,6 +404,10 @@ h4 .fa {
 
 .article .article-tags {
   margin: 4px 0;
+}
+
+.article img {
+  max-width: 100%;
 }
 
 ol,
@@ -549,11 +550,17 @@ pre {
   text-decoration: underline;
 }
 
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .project {
-  min-width: 280px;
+  min-width: 300px;
   margin-bottom: 32px;
-  padding-left: 8px;
-  padding-right: 8px;
 }
 
 .project ul li .fa {
@@ -680,15 +687,5 @@ pre {
   background-color: #fbfbfb;
   max-width: 300px;
   margin: 80px auto;
-}
-
-.error h1,
-.error p {
   text-align: center;
-}
-
-.error .btn-primary {
-  display: block;
-  max-width: 160px;
-  margin: auto;
 }

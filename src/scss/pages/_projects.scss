@@ -1,9 +1,14 @@
-.project {
-    min-width: 280px;
-    margin-bottom: 32px;
-    padding-left: 8px;
-    padding-right: 8px;
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
 
+.project {
+    min-width: 300px;
+    margin-bottom: 32px;
     ul li {
         .fa {
             margin-left: 6px;
