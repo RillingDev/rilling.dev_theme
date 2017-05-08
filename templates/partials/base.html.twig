@@ -1,9 +1,9 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {# Set Metadata#}
 {% if header.title == "Blog" %}
-    {% set title = "F-Rilling.com" | e("html") %}
+    {% set title = "F-Rilling.com" |e('html') %}
 {% else %}
-    {% set title = header.title ~ " | " ~ site.title | e("html") %}
+    {% set title = header.title ~ " | " ~ site.title |e('html') %}
 {% endif %}
 {% if page.header.taxonomy %}
     {% set description = page.summary | striptags | truncate(300) %}
@@ -33,27 +33,27 @@
 {% endif %}
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/{{schemaType}}">
-    <head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb# {{ogUrl}}">
+    <head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb#{{ogUrl}}">
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index,follow"/>
-        <title>{{title |e}}</title>
+        <title>{{title|e}}</title>
         <meta name="description" content="{{description|e|slice(0,160)}}"/>
         <meta name="keywords" content="{{keywords}}"/>
         <meta name="author" content="Felix Rilling"/>
 
         <!--Open Graph for Facebook-->
         <meta property="og:title" content="{{title|e}}"/>
-        <meta property="og:url" content="{{ page.url(true, true) }}"/>
+        <meta property="og:url" content="{{page.url(true, true)}}"/>
         <meta property="og:description" content="{{description|e|slice(0,300)}}"/>
         <meta property="og:type" content="{{ogType}}"/>
-        <meta property="og:image" content="{{ url('theme://img/icons/apple-touch-icon.png', true) }}"/>
+        <meta property="og:image" content="{{url('theme://img/icons/apple-touch-icon.png', true)}}"/>
         <meta property="og:site_name" content="F-Rilling.com"/>
         {% if ogType == "article"%}
-            <meta property="og:article:tag" content="{{page.taxonomy.tag|join (', ')|e}}"/>
+            <meta property="og:article:tag" content="{{page.taxonomy.tag|join(', ')|e}}"/>
             <meta property="og:article:author" content="Felix Rilling"/>
-            <meta property="og:article:published_time" content="{{page.date|date('d')}}.{{page.date|date('m')}}.{{page.date|date('Y')}}"/>
+            <meta property="og:article:published_time" content="{{page.date|date("d.m.Y")}}"/>
         {% elseif ogType == "profile" %}
             <meta property="og:profile:first_name" content="Felix"/>
             <meta property="og:profile:last_name" content="Rilling"/>
@@ -61,31 +61,31 @@
 
         <!--Card Data for Twitter-->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:url" content="{{ page.url(true, true) }}">
+        <meta name="twitter:url" content="{{page.url(true, true)}}">
         <meta name="twitter:title" content="{{title|e}}">
         <meta name="twitter:description" content="{{description|e|slice(0,200)}}">
-        <meta name="twitter:image" content="{{ url('theme://img/icons/apple-touch-icon.png', true) }}"/>
+        <meta name="twitter:image" content="{{url('theme://img/icons/apple-touch-icon.png', true)}}"/>
         <meta name="twitter:creator" content="@FelixRilling">
 
         <!--Favicons-->
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://img/icons/apple-touch-icon.png', true) }}">
-        <link rel="icon" type="image/png" href="{{ url('theme://img/icons/favicon-32x32.png', true) }}" sizes="32x32">
-        <link rel="icon" type="image/png" href="{{ url('theme://img/icons/favicon-16x16.png', true) }}" sizes="16x16">
-        <link rel="manifest" href="{{ url('theme://img/icons/manifest.json', true) }}">
-        <link rel="mask-icon" href="{{ url('theme://img/icons/safari-pinned-tab.svg', true) }}" color="#83d356">
-        <link rel="shortcut icon" href="{{ url('theme://img/icons/favicon.ico', true) }}">
-        <meta name="msapplication-config" content="{{ url('theme://img/icons/browserconfig.xml', true) }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{url('theme://img/icons/apple-touch-icon.png', true)}}">
+        <link rel="icon" type="image/png" href="{{url('theme://img/icons/favicon-32x32.png', true)}}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{{url('theme://img/icons/favicon-16x16.png', true)}}" sizes="16x16">
+        <link rel="manifest" href="{{url('theme://img/icons/manifest.json', true)}}">
+        <link rel="mask-icon" href="{{url('theme://img/icons/safari-pinned-tab.svg', true)}}" color="#83d356">
+        <link rel="shortcut icon" href="{{url('theme://img/icons/favicon.ico', true)}}">
+        <meta name="msapplication-config" content="{{url('theme://img/icons/browserconfig.xml', true)}}">
         <meta name="theme-color" content="#83d356">
 
-        <link rel="canonical" href="{{ page.url(true, true) }}"/>
+        <link rel="canonical" href="{{page.url(true, true)}}"/>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Lato:400,700|Source+Code+Pro">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
         {% block css %}
             {% do
-                assets.addCss("theme://css/lib/bootstrap.css", 103) %}
+                assets.addCss('theme://css/lib/bootstrap.css', 103) %}
             {% do
-                assets.addCss("theme://css/app.css", 101) %}
+                assets.addCss('theme://css/app.css', 101) %}
         {% endblock %}
         {{ assets.css() }}
 
@@ -127,6 +127,7 @@
                 assets.addJs("theme://js/app.js", 100) %}
         {% endblock %}
         {{ assets.js() }}
+        {# put pagetype for JS #}
         <script>frilling.init("{{page.template}}");</script>
     </body>
 </html>
