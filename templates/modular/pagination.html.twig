@@ -8,12 +8,12 @@
 
                 {% if paginate.isCurrent %}
                     <li class="page-item active">
-                        <span class="page-link">{{ paginate.number }}</span>
+                        <span class="page-link">{{paginate.number}}</span>
                     </li>
                 {% elseif paginate.isInDelta %}
                     {% set url = (base_url ~ pagination.params ~ paginate.url) | replace({'//': '/'}) %}
                     <li class="page-item">
-                        <a class="page-link" title="Go to page {{ paginate.number }}" href="{{ url }}">{{ paginate.number }}</a>
+                        <a class="page-link" title="Go to page {{paginate.number}}" href="{{url, true}}">{{paginate.number}}</a>
                     </li>
                 {% endif %}
 

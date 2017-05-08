@@ -1,5 +1,4 @@
 {% embed 'partials/base.html.twig' %}
-
     {% set collection = page.collection() %}
     {% block presenter %}
         {% include 'partials/presenter.html.twig' with {'page': page} %}
@@ -22,5 +21,4 @@
             {% endif %}
         </div>
     {% endblock %}
-
 {% endembed %}

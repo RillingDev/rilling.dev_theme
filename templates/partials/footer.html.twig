@@ -4,12 +4,10 @@
             <nav>
                 <ul class="footer-list">
                     {% for page in pages.children.visible %}
-                        {% set current_page = (page.active or page.activeChild)
-                            ? 'active'
-                            : '' %}
-                        <li class="{{ current_page }}">
-                            <a href="{{ page.url }}" title="Go to {{ page.menu }}">
-                                {{ page.menu }}
+                        {% set current_page = (page.active or page.activeChild)? 'active' : '' %}
+                        <li class="{{current_page}}">
+                            <a href="{{page.url}}" title="Go to {{page.menu}}">
+                                {{page.menu}}
                             </a>
                         </li>
                     {% endfor %}
@@ -28,8 +26,8 @@
                     <a href="mailto:contact@f-rilling.com" title="Contact Felix Rilling">contact&#64;f-rilling.com</a>
                 </li>
                 <li>
-                    <a href="http://f-rilling.com/about" title="About Felix Rilling">&copy;<span itemprop="copyrightYear">2017</span>
-                        <span itemprop="copyrightHolder creator">Felix Rilling</span>
+                    <a href="http://f-rilling.com/about" title="About Felix Rilling">
+                        &copy;<span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder creator">Felix Rilling</span>
                     </a>
                 </li>
             </ul>

@@ -1,5 +1,4 @@
 {% embed 'partials/base.html.twig' %}
-
     {% block presenter %}
         {% include 'partials/presenter.html.twig' with {'page': page} %}
     {% endblock %}
@@ -14,5 +13,4 @@
             {% include 'modular/comments.html.twig' with {'page': page} %}
         </div>
     {% endblock %}
-
 {% endembed %}

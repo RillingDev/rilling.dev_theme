@@ -89,10 +89,10 @@
         {% endblock %}
         {{ assets.css() }}
 
-        {% include "partials/analytics.html.twig"%}
+        {% include "modular/analytics.html.twig"%}
     </head>
     <body id="top">
-        {% include "partials/browsehappy.html.twig"%}
+        {% include "modular/browsehappy.html.twig"%}
 
         {% block header %}
             <header>
@@ -116,7 +116,7 @@
         {% endblock %}
 
         {% block cookies %}
-                {% include "partials/cookienotice.html.twig" %}
+                {% include "modular/cookienotice.html.twig" %}
         {% endblock %}
 
         {% block js %}

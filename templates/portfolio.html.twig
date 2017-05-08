@@ -7,10 +7,10 @@
 {% block main %}
     <div class="section portfolio" itemprop="mainContentOfPage">
         {% for category in header.data.categories %}
-            <div class="portfolio-category" style="background-image:url('{{ url('theme://img/images/' ~ category.img) }}');">
+            <div class="portfolio-category" style="background-image:url('{{url('theme://img/images/' ~ category.img, true)}}');">
                 <div class="arrow-wrapper">
                     <div class="arrow"></div>
-                    <h2>{{category.name}}</h2>
+                    <h2>{{category.name|e}}</h2>
                 </div>
                 <div class="container">
                     <div class="portfolio-items">
@@ -18,13 +18,13 @@
                             {% if project.category == category.id %}
                                 <div class="portfolio-item">
                                     <div class="portfolio-img">
-                                        <a href="{{project.url}}" title="Go to {{project.name}}" target="_blank">
-                                            <img src="{{ url('theme://img/thumbs/' ~ project.img) }}" class="full-width" alt="Thumbnail of {{project.name}}" title="Thumbnail of {{project.name}}" width="300" height="200">
+                                        <a href="{{project.url}}" title="Go to {{project.name|e}}" target="_blank">
+                                            <img src="{{url('theme://img/thumbs/' ~ project.img, true)}}" class="full-width" alt="Thumbnail of {{project.name}}" title="Thumbnail of {{project.name}}" width="300" height="200">
                                         </a>
                                     </div>
                                     <div class="portfolio-text">
-                                        <a href="{{project.url}}" title="Go to {{project.name}}" target="_blank">
-                                            <h3>{{project.name}}</h3>
+                                        <a href="{{project.url}}" title="Go to {{project.name|e}}" target="_blank">
+                                            <h3>{{project.name|e}}</h3>
                                         </a>
                                         <p>{{project.description}}</p>
                                     </div>

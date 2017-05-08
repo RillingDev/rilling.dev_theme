@@ -4,20 +4,18 @@
 
 {% if crumbs | length > 1 or breadcrumbs_config.show_all %}
     <ol class="breadcrumb hidden-sm-down" itemprop="breadcrumb">
-
         {% for crumb in crumbs %}
             {% if not loop.last %}
                 <li class="breadcrumb-item">
-                    <a href="{{ crumb.url }}" title="Go to {{ crumb.menu }}" itemprop="url">
-                        {{ crumb.menu }}
+                    <a href="{{crumb.url}}" title="Go to {{crumb.menu}}" itemprop="url">
+                        {{crumb.menu}}
                     </a>
                 </li>
             {% else %}
                 <li class="breadcrumb-item active">
-                    {{ crumb.menu |e}}
+                    {{crumb.menu|e}}
                 </li>
             {% endif %}
         {% endfor %}
-
     </ol>
 {% endif %}

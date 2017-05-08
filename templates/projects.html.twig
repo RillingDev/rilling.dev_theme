@@ -12,22 +12,22 @@
                 {% for category in header.data.categories %}
                     <div class="project">
                         <h3 class="project-headline">
-                            <i class="fa fa-{{category.icon}}"></i>{{category.name}}:
+                            <i class="fa fa-{{category.icon}}"></i>{{category.name|e}}:
                         </h3>
                         <ul>
                             {% for project in header.data.projects | sort_by_key("name") %}
                                 {% if project.category == category.id %}
                                     <li >
-                                        <a href="{{project.external ? project.link : url('projects/' ~ project.link) }}" title="Go to Project {{project.name}}">
+                                        <a href="{{project.external ? project.link : url('projects/' ~ project.link, true) }}" title="Go to Project {{project.name|e}}">
                                             {{project.name}}
                                         </a>
                                         {% if project.download %}
-                                            <a href="{{url('user/data/files/' ~ project.download )}}" class="icon" title="Download {{project.name}}">
+                                            <a href="{{url('user/data/files/' ~ project.download, true)}}" class="icon" title="Download {{project.name|e}}">
                                                 <i class="fa fa-download"></i>
                                             </a>
                                         {% endif %}
                                         {% if project.article %}
-                                            <a href="{{url(project.article)}}" class="icon" title="Article for {{project.name}}">
+                                            <a href="{{url(project.article, true)}}" class="icon" title="Article for {{project.name|e}}">
                                                 <i class="fa fa-file-text-o"></i>
                                             </a>
                                         {% endif %}
