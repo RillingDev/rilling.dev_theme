@@ -596,7 +596,7 @@ $navbar-border-radius:              $border-radius !default;
 $navbar-padding-x:                  $spacer !default;
 $navbar-padding-y:                  ($spacer / 2) !default;
 
-$navbar-brand-padding-y:            .25rem !default;
+$navbar-brand-padding-y:            0 !default;
 
 $navbar-toggler-padding-x:           1rem !default;
 $navbar-toggler-padding-y:           1rem !default;
@@ -621,7 +621,7 @@ $navbar-light-toggler-border:       rgba($black,.1) !default;
 
 $nav-item-margin:               .25rem !default;
 $nav-item-inline-spacer:        1rem !default;
-$nav-link-padding:              .5em 1em !default;
+$nav-link-padding:              7.5px 1em !default;
 $nav-link-hover-bg:             $gray-lighter !default;
 $nav-disabled-link-color:       $gray-light !default;
 

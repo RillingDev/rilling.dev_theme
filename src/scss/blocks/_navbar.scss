@@ -2,33 +2,6 @@
     background-color: $brand-primary;
     padding-top: 0;
     padding-bottom: 0;
-    .nav-item {
-        &.active {
-            .nav-link {
-                color: $white;
-                background-color: $brand-primary-dark;
-            }
-        }
-        .nav-link {
-            margin-left: -1rem;
-            margin-right: -1rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            @include screen(min, md) {
-                margin: 0;
-            }
-            @include hover-focus-active {
-                background-color: $brand-primary-dark;
-            }
-        }
-    }
-}
-
-.navbar-brand {
-    color: $gray-lightest;
-    @include hover-focus-active {
-        color: $white;
-    }
 }
 
 .navbar-toggler {
@@ -67,4 +40,36 @@
 
 .navbar-collapse {
     justify-content: flex-end;
+}
+
+.navbar-nav {
+    .nav-item {
+        &.active {
+            .nav-link {
+                color: $white;
+                background-color: $brand-primary-dark;
+            }
+        }
+        .nav-link {
+            margin-left: -1rem;
+            margin-right: -1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @include transition(background-color);
+            @include hover-focus-active {
+                background-color: $brand-primary-dark;
+            }
+            @include screen(min, md) {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }

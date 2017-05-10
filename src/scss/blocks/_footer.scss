@@ -17,12 +17,10 @@
     margin: 0;
     list-style: none;
     color: $gray-lightest;
-    li {
-        a {
-            color: $gray-lightest;
-            @include hover-focus-active {
-                color: $white;
-            }
+    a {
+        color: inherit;
+        @include hover-focus-active {
+            color: $white;
         }
     }
 }

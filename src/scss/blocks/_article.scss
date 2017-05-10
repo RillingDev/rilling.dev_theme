@@ -8,10 +8,15 @@
     &.article-full {
         padding-top: 30px;
     }
-    .article-tags {
-        margin: 4px 0;
-    }
     img {
         max-width: 100%;
     }
+}
+
+.article-title {
+    margin: 0;
+}
+
+.article-tags {
+    margin: 4px 0;
 }

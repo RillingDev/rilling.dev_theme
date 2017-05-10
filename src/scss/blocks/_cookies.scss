@@ -13,8 +13,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    color: $white;
     p {
-        color: $white;
         margin: 0;
         max-width: 25%;
         &:first-child {
@@ -22,7 +22,7 @@
         }
     }
     a {
-        color: $white;
+        color: inherit;
         text-decoration: underline;
     }
 }

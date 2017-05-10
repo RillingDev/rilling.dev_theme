@@ -11,10 +11,12 @@ body {
     margin-left: auto;
 }
 
-.container--sm {
-    max-width: 680px;
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
 }
-
 .section-margin {
     margin: 30px 0;
 }
@@ -40,26 +42,3 @@ body {
     }
 }
 
-.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
-
-.arrow-wrapper {
-    height: 10px;
-    background-color: $gray-lightest;
-    margin-bottom: 150px;
-    .arrow {
-        width: 0;
-        height: 0;
-        border-left: 150px solid transparent;
-        border-right: 150px solid transparent;
-        border-top: 150px solid $gray-lightest;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}

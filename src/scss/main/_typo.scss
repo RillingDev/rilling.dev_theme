@@ -1,46 +1,56 @@
-h1 {
-    &.presenter-title {
-        text-align: center;
-        max-width: 650px;
-        color: $white;
-        margin: 0;
+.presenter-title {
+    text-align: center;
+    max-width: 650px;
+    color: $white;
+    margin: 0;
+    font-size: 2.75em;
+}
+
+.presenter-title-short {
+    font-size: 2.75em;
+}
+
+.presenter-title-medium {
+    font-size: 2.5em;
+}
+
+.presenter-title-long {
+    font-size: 1.5em;
+}
+
+@include screen(min, sm) {
+    .presenter-title-short {
+        font-size: 3.5em;
+    }
+    .presenter-title-medium {
         font-size: 3em;
     }
-    &.presenter-title-short {
-        font-size: 2.75em;
-        @include screen(min, sm) {
-            font-size: 3.5em;
-        }
-        @include screen(min, md) {
-            font-size: 5.75em;
-        }
-        @include screen(min, lg) {
-            font-size: 6.25em;
-        }
+    .presenter-title-long {
+        font-size: 1.75em;
     }
-    &.presenter-title-medium {
-        font-size: 2.5em;
-        @include screen(min, sm) {
-            font-size: 3em;
-        }
-        @include screen(min, md) {
-            font-size: 4em;
-        }
-        @include screen(min, lg) {
-            font-size: 5em;
-        }
+}
+
+@include screen(min, md) {
+    .presenter-title-short {
+        font-size: 5.75em;
     }
-    &.presenter-title-long {
-        font-size: 1.5em;
-        @include screen(min, sm) {
-            font-size: 1.75em;
-        }
-        @include screen(min, md) {
-            font-size: 2.25em;
-        }
-        @include screen(min, lg) {
-            font-size: 3em;
-        }
+    .presenter-title-medium {
+        font-size: 4em;
+    }
+    .presenter-title-long {
+        font-size: 2.25em;
+    }
+}
+
+@include screen(min, lg) {
+    .presenter-title-short {
+        font-size: 6.25em;
+    }
+    .presenter-title-medium {
+        font-size: 5em;
+    }
+    .presenter-title-long {
+        font-size: 3em;
     }
 }
 
@@ -48,31 +58,5 @@ h3,
 h4 {
     .fa {
         margin-right: 8px;
-    }
-}
-
-.article {
-    .article-title {
-        margin: 0;
-    }
-}
-
-.about {
-    h2,
-    h3,
-    h4 {
-        text-align: center;
-    }
-    h3 {
-        margin-bottom: 26px;
-    }
-}
-
-.portfolio {
-    h2 {
-        text-align: center;
-        line-height: 80px;
-        position: relative;
-        font-size: 1.6rem;
     }
 }
