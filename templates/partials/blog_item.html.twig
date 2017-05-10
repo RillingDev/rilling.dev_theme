@@ -1,29 +1,30 @@
-<div class="article-header" {{full ? 'hidden' : ''}}>
+<article class="article {{full ? 'article-full' : ''}}" itemscope itemtype="http://schema.org/TechArticle">
+<div class="article-header" {{full ? 'hidden aria-hidden' : ''}}>
     <div>
-        <h2 class="article-title" itemprop="name">
-            <a href="{{page.url}}" title="Read {{page.title|e}}">{{page.title|e}}</a>
+        <h2 class="article-title">
+            <a href="{{page.url}}" title="Read {{page.title|e}}" itemprop="name headline">{{page.title|e}}</a>
         </h2>
     </div>
-    <div>
-        <div class="article-tags " itemprop="keywords">
-            {% if page.taxonomy.tag %}
-                {% include 'modular/tags.html.twig' with {'tags': page.taxonomy.tag} %}
-            {% endif %}
-        </div>
+    <div class="article-tags" itemprop="keywords">
+        {% if page.taxonomy.tag %}
+            {% include 'modular/tags.html.twig' with {'tags': page.taxonomy.tag} %}
+        {% endif %}
     </div>
     <div>
         <p class="article-meta">
-            <span itemprop="datePublished dateCreated dateModified">
+            <span itemprop="datePublished dateCreated">
                 {% include 'modular/date.html.twig' with {'date': page.date} %}
             </span>
             |
-            <span itemprop="author">
-                <a href="{{url('about/')}}">Felix Rilling</a>
+            <span>
+                <a href="{{url('about/')}}" rel="author">Felix Rilling</a>
             </span>
         </p>
     </div>
+    <div hidden aria-hidden itemprop="image">{{url('theme://img/icons/apple-touch-icon.png', true)}}</div>
+    <div hidden aria-hidden itemprop="isFamilyFriendly">true</div>
 </div>
-<div class="article-content" itemprop="articleBody">
+<div class="article-content" itemprop="articleBody text">
     {% if full %}
         {{page.content}}
     {% else %}
@@ -31,3 +32,4 @@
         <a class="btn btn-primary btn-primary-margin" href="{{page.url}}" title="Read {{page.title|e}}">Continue Reading</a>
     {% endif %}
 </div>
+             </article>

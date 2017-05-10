@@ -5,24 +5,24 @@
 {% else %}
     {% set titleLength = "long" %}
 {% endif %}
-<div class="presenter {{page.template == 'item' ? ' ' : 'presenter--lg'}}">
+<div class="presenter {{page.template == 'item' ? '' : 'presenter--lg'}}">
 
     {% if page.header.icon %}
         <i class="presenter-icon fa fa-{{page.header.icon}}" aria-hidden="true"></i>
     {% endif %}
 
     <div class="presenter-content">
-        <h1 class="presenter-title presenter-title-{{titleLength}}" itemprop="name">{{page.title|e}}</h1>
+        <h1 class="presenter-title presenter-title-{{titleLength}}" itemprop="name headline">{{page.title|e}}</h1>
 
         {% if page.template == "item" %}
             {% if page.date %}
-                <p class="presenter-meta" itemprop="datePublished">
-                    <span itemprop="datePublished">
+                <p class="presenter-meta">
+                    <span itemprop="datePublished dateCreated">
                         {% include 'modular/date.html.twig' with {'date': page.date} %}
                     </span>
                     |
-                    <span itemprop="author">
-                        <a href="{{url('about/', true)}}">Felix Rilling</a>
+                    <span>
+                        <a href="{{url('about/')}}" rel="author">Felix Rilling</a>
                     </span>
                 </p>
             {% endif %}
@@ -32,6 +32,9 @@
                 </div>
             {% endif %}
         {% endif %}
+
+        <div hidden aria-hidden itemprop="isFamilyFriendly">true</div>
+        <div hidden aria-hidden itemprop="isAccessibleForFree">true</div>
     </div>
 
 </div>

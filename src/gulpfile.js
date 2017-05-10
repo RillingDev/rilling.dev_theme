@@ -13,9 +13,9 @@ gulp.task("bootstrap", task_bootstrap);
 
 
 gulp.task("watch", function () {
-    gulp.watch(["./src/scss/**/*.scss"], ["css"]);
-    gulp.watch(["./src/scss/bootstrap.scss", "./src/scss/_variables.scss"], ["bootstrap", "css"]);
-    gulp.watch(["./src/js/**/*.js"], ["js"]);
+    gulp.watch(["./scss/**/*.scss"], ["css"]);
+    gulp.watch(["./scss/bootstrap.scss", "./scss/_variables.scss"], ["bootstrap", "css"]);
+    gulp.watch(["./js/**/*.js"], ["js"]);
 });
 
 gulp.task("dev", ["watch"]);
