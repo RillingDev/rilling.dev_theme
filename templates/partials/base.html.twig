@@ -1,4 +1,3 @@
-{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {# Set Metadata#}
 {% if header.title == "Blog" %}
     {% set title = "F-Rilling.com" |e('html') %}
@@ -31,6 +30,7 @@
     {% set ogType = "website" %}
     {% set ogUrl = ""%}
 {% endif %}
+
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/{{schemaType}}">
     <head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb#{{ogUrl}}">
@@ -43,7 +43,7 @@
         <meta name="keywords" content="{{keywords}}"/>
         <meta name="author" content="Felix Rilling"/>
 
-        <!--Open Graph for Facebook-->
+        <!--OpenGraph for Facebook-->
         <meta property="og:title" content="{{title|e}}"/>
         <meta property="og:url" content="{{page.url(true, true)}}"/>
         <meta property="og:description" content="{{description|e|slice(0,300)}}"/>
@@ -89,31 +89,32 @@
         {% endblock %}
         {{ assets.css() }}
 
-        {% include "modular/analytics.html.twig"%}
+        <!--Analytics-->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-56958424-1', 'auto');
+            ga('send', 'pageview');
+        </script>
     </head>
     <body id="top">
-        {% include "modular/browsehappy.html.twig"%}
+        <header>
+            {% block navigation %}
+                {% include "partials/navigation.html.twig" %}
+            {% endblock %}
+            {% block presenter %}{% endblock %}
+        </header>
 
-        {% block header %}
-            <header>
-                {% block navigation %}
-                    {% include "partials/navigation.html.twig" %}
-                {% endblock %}
-                {% block presenter %}{% endblock %}
-            </header>
-        {% endblock %}
+        <main>
+            {% block main %}{% endblock %}
+        </main>
 
-        {% block content %}
-            <main>
-                {% block main %}{% endblock %}
-            </main>
-        {% endblock %}
-
-        {% block footer %}
-            <footer class="footer">
-                {% include "partials/footer.html.twig" %}
-            </footer>
-        {% endblock %}
+        <footer class="footer">
+            {% include "partials/footer.html.twig" %}
+        </footer>
 
         {% block cookies %}
                 {% include "modular/cookienotice.html.twig" %}
