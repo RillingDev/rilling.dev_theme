@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-    <div class="container container--sm">
+    <div class="container">
         <div class="section section-margin about" itemprop="mainContentOfPage">
             <div class="about-section about-main" itemscope itemtype="http://schema.org/Person">
                 <h2>
@@ -15,13 +15,16 @@
                 <hr class="hr hr--sm">
                 <h3 itemprop="jobTitle">Web Developer</h3>
                 {{page.content}}
+                <div hidden aria-hidden itemprop="email">contact@f-rilling.com</div>
+                <div hidden aria-hidden itemprop="gender">Male</div>
+                <div hidden aria-hidden itemprop="nationality">Germany</div>
             </div>
             <div class="about-section about-skills">
                 <h2>Skills</h2>
                 <hr class="hr hr--sm">
                 <h3>Languages</h3>
                 <div class="skill-section">
-                    <div class="flex-row">
+                    <div class="skill-row">
                         <div class="skill">
                             <h4>HTML</h4>
                             <hr class="hr hr--sm">
@@ -41,8 +44,8 @@
                             <ul>
                                 <li>CSS3</li>
                                 <li>Responsive Design</li>
-                                <li>Bootstrap</li>
-                                <li>Animations</li>
+                                <li>Mobile First Developement</li>
+                                <li>Bootstrap3/4</li>
                                 <li>SCSS</li>
                                 <li>LESS</li>
                             </ul>
@@ -52,12 +55,11 @@
                             <h4>JS</h4>
                             <hr class="hr hr--sm">
                             <ul>
-                                <li>ES5/ES6</li>
+                                <li>ES6/ES7</li>
+                                <li>NodeJS</li>
+                                <li>VueJS</li>
                                 <li>jQuery</li>
                                 <li>AngularJS</li>
-                                <li>VueJS</li>
-                                <li>NodeJS</li>
-                                <li>TypeScript</li>
                             </ul>
                         </div>
 
@@ -76,7 +78,6 @@
                             <hr class="hr hr--sm">
                             <ul>
                                 <li>Wordpress</li>
-                                <li>Typo3</li>
                                 <li>Grav</li>
                             </ul>
                         </div>
@@ -85,7 +86,7 @@
                 </div>
                 <h3>Tools</h3>
                 <div class="skill-section">
-                    <div class="flex-row">
+                    <div class="skill-row">
 
                         <div class="skill">
                             <h4>Dev</h4>
@@ -104,9 +105,9 @@
                             <h4>OS</h4>
                             <hr class="hr hr--sm">
                             <ul>
+                                <li>Ubuntu/Debian</li>
                                 <li>Windows</li>
                                 <li>OS X</li>
-                                <li>Ubuntu/Debian</li>
                             </ul>
                         </div>
 
@@ -115,7 +116,7 @@
                             <hr class="hr hr--sm">
                             <ul>
                                 <li>Coffee</li>
-                                <li>Mate Tea</li>
+                                <li>Green Tea</li>
                             </ul>
                         </div>
 

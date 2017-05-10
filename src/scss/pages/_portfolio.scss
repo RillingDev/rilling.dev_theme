@@ -1,5 +1,6 @@
 .portfolio-category {
     background-size: cover;
+    width: 100vw;
 }
 
 .portfolio-items {
@@ -18,7 +19,7 @@
     @include screen(min, md) {
         max-width: 100%;
         .portfolio-text {
-            width: calc(100% - 310px);
+            width: calc(100% - 305px);
         }
         .portfolio-img {
             width: 300px;
@@ -45,9 +46,9 @@
     border: 3px solid $gray-lightest;
 }
 
-.portfolio {
-    //Row dir
-    @include screen(min, md) {
+//Row direction
+@include screen(min, md) {
+    .portfolio {
         &:nth-child(2n+1) {
             .portfolio-items .portfolio-item {
                 flex-direction: row;
@@ -82,7 +83,6 @@
         transform: translateX(-50%);
     }
 }
-
 
 .portfolio {
     h2 {

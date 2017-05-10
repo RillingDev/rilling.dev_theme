@@ -1,5 +1,6 @@
 .about-main {
     margin-bottom: 40px;
+    max-width: 640px;
 }
 
 .about-skills {
@@ -10,13 +11,21 @@
     &:not(:last-child) {
         margin-bottom: 42px;
     }
+    .skill-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        @include screen(min, sm) {
+            flex-direction: row;
+        }
+    }
     .skill {
-        min-width: 175px;
-        width: 33.333%;
         margin-bottom: 32px;
         padding-left: 8px;
         padding-right: 8px;
         @include screen(min, sm) {
+            width: 33.333%;
             margin-bottom: 16px;
         }
         ul {

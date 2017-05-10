@@ -1,6 +1,6 @@
 {
   "name": "frilling3",
-  "version": "v3.4.0",
+  "version": "v3.5.0",
   "description": "Grav theme",
   "main": "gulpfile.js",
   "scripts": {
