@@ -64,6 +64,22 @@ body {
   font-size: 1.5em;
 }
 
+.about-main h2 {
+  font-size: 3em;
+}
+
+.about-main h3 {
+  font-size: 2em;
+}
+
+.about-main p {
+  font-size: 1.2em;
+}
+
+.about-main > p {
+  margin-bottom: 0.5em;
+}
+
 @media (min-width: 576px) {
   .presenter-title-short {
     font-size: 3.5em;
@@ -571,7 +587,7 @@ pre {
 }
 
 .about-experience {
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 }
 
 .about-experience ul {
@@ -579,6 +595,10 @@ pre {
   margin: 36px auto 0;
   text-align: center;
   list-style: none;
+}
+
+.about-experience ul li {
+  margin-bottom: 24px;
 }
 
 @media (min-width: 768px) {

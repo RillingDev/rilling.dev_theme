@@ -18,6 +18,18 @@
     font-size: 1.5em;
 }
 
+.about-main {
+    h2 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+}
+
 @include screen(min, sm) {
     .presenter-title-short {
         font-size: 3.5em;

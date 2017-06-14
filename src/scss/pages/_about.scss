@@ -47,12 +47,15 @@
 }
 
 .about-experience {
-    margin-bottom: 56px;
+    margin-bottom: 48px;
     ul {
         padding: 0;
         margin: 36px auto 0;
         text-align: center;
         list-style: none;
+        li{
+            margin-bottom: 24px;
+        }
     }
 }
 
