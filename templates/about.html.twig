@@ -8,16 +8,20 @@
     <div class="container">
         <div class="section section-margin about" itemprop="mainContentOfPage">
             <div class="about-section about-main" itemscope itemtype="http://schema.org/Person">
+                <img class="about-img" itemprop="image" src="{{url('theme://img/images/selfie_smaller.png/')}}">
                 <h2>
                     <span itemprop="name">Felix</span>
                     <span itemprop="familyName">Rilling</span>
                 </h2>
                 <hr class="hr hr--sm">
                 <h3 itemprop="jobTitle">Web Developer</h3>
-                {{page.content}}
-                <div hidden aria-hidden itemprop="email">contact@f-rilling.com</div>
-                <div hidden aria-hidden itemprop="gender">Male</div>
-                <div hidden aria-hidden itemprop="nationality">Germany</div>
+
+                <p><b>Born</b>: <span itemprop="birthDate">1997-03-07</span></p>
+                <p><b>Nationality</b>: <span itemprop="nationality">Germany</span></p>
+                <p><b>Gender</b>: <span itemprop="gender">Male</span></p>
+                <p hidden aria-hidden itemprop="email">contact@f-rilling.com</p>
+
+                <div itemprop="description">{{page.content}}</div>
             </div>
             <div class="about-section about-skills">
                 <h2>Skills</h2>
@@ -55,11 +59,11 @@
                             <h4>JS</h4>
                             <hr class="hr hr--sm">
                             <ul>
-                                <li>ES6/ES7</li>
+                                <li>ES6/ES7/ES8</li>
                                 <li>NodeJS</li>
                                 <li>VueJS</li>
-                                <li>jQuery</li>
                                 <li>AngularJS</li>
+                                <li>jQuery</li>
                             </ul>
                         </div>
 
@@ -67,7 +71,7 @@
                             <h4>PHP</h4>
                             <hr class="hr hr--sm">
                             <ul>
-                                <li>PHP5/PHP7</li>
+                                <li>PHP7</li>
                                 <li>MySQLi</li>
                                 <li>Twig</li>
                             </ul>
@@ -93,7 +97,7 @@
                             <hr class="hr hr--sm">
                             <ul>
                                 <li>Git</li>
-                                <li>Npm/Yarn</li>
+                                <li>NPM/Yarn</li>
                                 <li>Gulp/Grunt</li>
                                 <li>Browserify/Rollup</li>
                                 <li>Photoshop</li>
