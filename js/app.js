@@ -1,1 +1,112 @@
-var frilling=function(){"use strict";const e=window,t=document,i=function(e,i){return i?t.querySelectorAll(e):t.querySelector(e)},n=function(){if(-1===t.cookie.indexOf("cookies=true")){const e=i(".cookienotice"),n=i("#cookienoticeAccept");e.style.display="block",t.cookie="cookies=true;expires=Fri, 31 Dec 9999 23:59:59 GMT",n.addEventListener("click",()=>{e.style.display="none"},!1)}},o=function(){const e=i("#navbarToggle"),t=i("#navbarMenu");let n=!1;e.addEventListener("click",()=>{n=!n;e.classList.toggle("collapsed");t.classList.toggle("show");e.setAttribute("aria-expanded",n);t.setAttribute("aria-hidden",!n)},!1)},c=function(e,t){Array.from(e).forEach(t)},l=function(){const n=i("article pre",!0),o=i("article table",!0);c(o,e=>{const i=e.cloneNode(!0);const n=t.createElement("div");i.classList.add("table","table-bordered","table-hover");n.classList.add("table-responsive");n.appendChild(i);e.replaceWith(n)}),c(n,t=>{e.hljs.highlightBlock(t)})};return{init:function(e){n(),o(),"item"===e&&l()}}}();
+var frilling = (function () {
+'use strict';
+
+const _window = window;
+const _document = document;
+
+/**
+ * jQuery-like selector
+ * @param {String} query String query
+ * @param {Boolean} multi If the select will match multiple elements
+ * @returns {NodeList} NodeList of selcted elements
+ */
+const $ = function (query, multi) {
+    return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
+};
+
+/**
+ * Checks if the cookie policy has been accepted and displays the notification if not.
+ */
+const initCookiePolicy = function () {
+    const cookieString = "cookies=true";
+
+    if (_document.cookie.indexOf(cookieString) === -1) {
+        const $cookienotice = $(".cookienotice");
+        const $cookienoticeAccept = $("#cookienoticeAccept");
+
+        $cookienotice.style.display = "block";
+        _document.cookie = cookieString + ";expires=Fri, 31 Dec 9999 23:59:59 GMT";
+
+        $cookienoticeAccept.addEventListener("click", () => {
+            $cookienotice.style.display = "none";
+        }, false);
+    }
+};
+
+/**
+ * Binds the navigation event handler
+ */
+const initNav = function () {
+    const $toggle = $("#navbarToggle");
+    const $nav = $("#navbarMenu");
+    let isNavOpen = false;
+
+    //Toggle menu
+    $toggle.addEventListener("click", () => {
+        isNavOpen = !isNavOpen;
+
+        $toggle.classList.toggle("collapsed");
+        $nav.classList.toggle("show");
+
+        //Set Aria attributes
+        $toggle.setAttribute("aria-expanded", isNavOpen);
+        $nav.setAttribute("aria-hidden", !isNavOpen);
+    }, false);
+};
+
+/**
+ * Iterate over NodeList
+ *
+ * @param {NodeList} nodeList NodeList of elements
+ * @param {Function} fn   Function to run
+ */
+const eachNode = function (nodeList, fn) {
+    Array.from(nodeList).forEach(fn);
+};
+
+/**
+ * Inits article-specific html changes
+ */
+const initArticle = function () {
+    const $pre = $("article pre", true);
+    const $tables = $("article table", true);
+
+    //Adjust Table classes
+    eachNode($tables, $e => {
+        const $clone = $e.cloneNode(true); //Deep-clones old table
+        const $tableVirtual = _document.createElement("div"); //Manipulate a virtual node instead of the actual one to improve performance
+
+        $clone.classList.add("table", "table-bordered", "table-hover");
+        $tableVirtual.classList.add("table-responsive");
+        $tableVirtual.appendChild($clone);
+
+        $e.replaceWith($tableVirtual);
+    });
+
+    //Highlight Code Snippets
+    eachNode($pre, $e => {
+        _window.hljs.highlightBlock($e);
+    });
+};
+
+/**
+ * Inits the page with optional page-dependent function
+ *
+ * @param {String} pageType name of the grav template
+ */
+const init = function (pageType) {
+    initCookiePolicy();
+    initNav();
+
+    if (pageType === "item") {
+        initArticle();
+    }
+};
+
+const app = {
+    init
+};
+
+return app;
+
+}());
