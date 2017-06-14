@@ -76,10 +76,6 @@ body {
   font-size: 1.2em;
 }
 
-.about-main > p {
-  margin-bottom: 0.5em;
-}
-
 @media (min-width: 576px) {
   .presenter-title-short {
     font-size: 3.5em;
@@ -620,6 +616,7 @@ pre {
 
 .portfolio-category {
   background-size: cover;
+  width: 100%;
 }
 
 .portfolio-items {
