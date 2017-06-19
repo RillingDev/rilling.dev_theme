@@ -3,7 +3,6 @@
 const rollup = require("rollup");
 const nodeResolve = require("rollup-plugin-node-resolve");
 const commonjs = require("rollup-plugin-commonjs");
-const replace = require("rollup-plugin-replace");
 const packageJson = require("../package.json");
 
 const saveOutput = require("./lib/saveOutput");
@@ -20,10 +19,7 @@ rollup
                 jsnext: true,
                 main: true
             }),
-            commonjs(),
-            replace({
-                "process.env.NODE_ENV": JSON.stringify("developement")
-            }),
+            commonjs()
         ]
     })
     .catch(err => {

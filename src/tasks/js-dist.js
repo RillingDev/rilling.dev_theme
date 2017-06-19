@@ -5,7 +5,6 @@ const babel = require("babel-core");
 const uglify = require("uglify-es");
 const nodeResolve = require("rollup-plugin-node-resolve");
 const commonjs = require("rollup-plugin-commonjs");
-const replace = require("rollup-plugin-replace");
 const packageJson = require("../package.json");
 
 const saveOutput = require("./lib/saveOutput");
@@ -22,10 +21,7 @@ rollup
                 jsnext: true,
                 main: true
             }),
-            commonjs(),
-            replace({
-                "process.env.NODE_ENV": JSON.stringify("production")
-            })
+            commonjs()
         ]
     })
     .catch(err => {
@@ -36,14 +32,7 @@ rollup
             moduleName: packageJson.namespace.module,
             format: "iife"
         }).code;
-        const result_min = uglify.minify(
-            babel.transform(result).code, {
-                compress: {
-                    dead_code: true,
-                    properties: true
-                }
-            }
-        ).code;
+        const result_min = uglify.minify(babel.transform(result).code).code;
 
         saveOutput(`${DIR_DIST}/js/app.js`, result_min, "JS:Dist");
     });
