@@ -1,12 +1,11 @@
-{% if page.title | length < 10 %}
+{% if page.title | length < 12 %}
     {% set titleLength = "short" %}
-{% elseif page.title | length < 25 %}
+{% elseif page.title | length < 24 %}
     {% set titleLength = "medium" %}
 {% else %}
     {% set titleLength = "long" %}
 {% endif %}
 <div class="presenter {{page.template == 'item' ? '' : 'presenter--lg'}}">
-
     {% if page.header.icon %}
         <i class="presenter-icon fa fa-{{page.header.icon}}" aria-hidden="true"></i>
     {% endif %}
@@ -36,5 +35,4 @@
         <div hidden aria-hidden itemprop="isFamilyFriendly">true</div>
         <div hidden aria-hidden itemprop="isAccessibleForFree">true</div>
     </div>
-
 </div>
