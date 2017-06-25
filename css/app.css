@@ -345,15 +345,6 @@ ul {
   list-style-type: square;
 }
 
-ol p,
-ul p {
-  margin-bottom: 0.25rem;
-}
-
-p + ul {
-  margin-top: -1rem;
-}
-
 .article {
   margin-bottom: 30px;
   background-color: #fff;
