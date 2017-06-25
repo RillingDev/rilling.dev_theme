@@ -1,7 +1,7 @@
 {
     "name": "frilling3",
     "version": "v3.6.0",
-    "description": "Grav theme",
+    "description": "f-rilling.com custom theme",
     "main": "js/app.js",
     "scripts": {
         "start": "npm-run-all lint build",
@@ -30,7 +30,7 @@
     "devDependencies": {
         "babel-core": "^7.0.0-alpha.12",
         "babel-preset-es2015": "^7.0.0-alpha.12",
-        "eslint": "^4.0.0",
+        "eslint": "^4.1.0",
         "node-sass": "^4.5.3",
         "npm-run-all": "^4.0.2",
         "rollup": "^0.43.0",
