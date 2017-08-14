@@ -1,7 +1,7 @@
 pre {
     padding: 15px;
     color: $white;
-    background-color: $gray-dark;
+    background-color: $gray-700;
     @include screen(min, md) {
         padding: 20px;
     }
@@ -13,12 +13,12 @@ pre {
 }
 
 .hljs-comment {
-    color: $gray-light;
+    color: $gray-300;
 }
 
 .hljs-subst,
 .hljs-template-tag {
-    color: $gray-lighter;
+    color: $gray-400;
 }
 
 .hljs-keyword,
@@ -29,24 +29,24 @@ pre {
 .hljs-selector-tag,
 .hljs-tag .hljs-keyword,
 .hljs-type {
-    color: $brand-primary;
+    color:theme-color("primary");
 }
 
 .hljs-addition,
 .hljs-meta,
 .hljs-quote {
-    color: $brand-primary-dark;
+    color:theme-color("dark");
 }
 
 .hljs-number,
 .hljs-template-variable,
 .hljs-variable {
-    color: $brand-info;
+    color: theme-color("info");
 }
 
 .hljs-literal,
 .hljs-title {
-    color: $brand-warning;
+    color: theme-color("warning");
 }
 
 .hljs-built_in,
@@ -56,7 +56,7 @@ pre {
 .hljs-link,
 .hljs-string,
 .hljs-symbol {
-    color: $brand-danger;
+    color: theme-color("danger");
 }
 
 .hljs-emphasis {

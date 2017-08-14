@@ -1,22 +1,22 @@
 body {
-    background: repeating-linear-gradient(45deg, $gray-lighter 0, $gray-lighter 5%, $gray-lightest 0, $gray-lightest 50%) 0 / 10px 10px;
+    background: repeating-linear-gradient(45deg, $gray-300 0, $gray-300 5%, $gray-100 0, $gray-100 50%) 0 / 10px 10px;
 }
 
 //We dont use the bootstrap grid because its bundled with the grid
 .container {
     width: 100%;
-    padding-left: $grid-gutter-width-base/2;
-    padding-right: $grid-gutter-width-base/2;
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
     max-width: map-get($container-max-widths, xl);
     margin-right: auto;
     margin-left: auto;
 }
 
 .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: space-around;
+    //align-items: center;
 }
 
 .section-margin {

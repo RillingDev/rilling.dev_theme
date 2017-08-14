@@ -1,5 +1,5 @@
 .footer {
-    background-color: $gray-dark;
+    background-color: $gray-700;
     padding: 18px 0 16px;
     margin-top: 10px;
 }
@@ -16,7 +16,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    color: $gray-lightest;
+    color: $gray-100;
     a {
         color: inherit;
         @include hover-focus-active {
