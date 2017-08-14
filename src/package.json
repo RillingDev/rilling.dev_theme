@@ -38,7 +38,7 @@
     "license": "MIT",
     "homepage": "https://f-rilling.com",
     "dependencies": {
-        "bootstrap": "^4.0.0-alpha.6"
+        "bootstrap": "^4.0.0-beta"
     },
     "devDependencies": {
         "babel-core": "^7.0.0-alpha.18",

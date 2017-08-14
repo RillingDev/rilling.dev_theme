@@ -10,14 +10,14 @@ sass.render({
     outputStyle: "compressed"
 }, (err, result) => {
     if (err) {
-        console.log(err);
+        console.log(err.formatted);
     } else {
         fs.writeFile(
             `${CONSTANTS.dirBase.output}/${CONSTANTS.css.output}.css`,
             result.css,
             err => {
                 if (err) {
-                    console.log(err);
+                    console.log(err.);
                 } else {
                     console.log("CSS complete");
                 }

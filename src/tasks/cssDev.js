@@ -10,7 +10,7 @@ sass.render({
     outputStyle: "expanded"
 }, (err, result) => {
     if (err) {
-        console.log(err);
+        console.log(err.formatted);
     } else {
         fs.writeFile(
             `${CONSTANTS.dirBase.output}/${CONSTANTS.css.output}.css`,
