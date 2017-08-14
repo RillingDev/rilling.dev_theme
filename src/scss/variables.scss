@@ -236,7 +236,7 @@ $component-active-bg:    theme-color("primary") !default;
 
 $caret-width:            .3em !default;
 
-$transition-base:        all .2s ease-in-out !default;
+$transition-base:        all .15s ease-in-out !default;
 $transition-fade:        opacity .15s linear !default;
 $transition-collapse:    height .35s ease !default;
 
@@ -693,8 +693,8 @@ $popover-arrow-outer-color:           fade-in($popover-border-color, .05) !defau
 $badge-color:                 $white !default;
 $badge-font-size:             0.8em !default;
 $badge-font-weight:           400 !default;
-$badge-padding-y:             10px !default;
-$badge-padding-x:             7px !default;
+$badge-padding-y:             7px !default;
+$badge-padding-x:             10px !default;
 
 $badge-pill-padding-x:        .6em !default;
 // Use a higher than normal value to ensure completely rounded edges when

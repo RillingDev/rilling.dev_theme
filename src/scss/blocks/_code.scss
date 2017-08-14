@@ -1,7 +1,7 @@
 pre {
     padding: 15px;
     color: $white;
-    background-color: $gray-700;
+    background-color: $gray-800;
     @include screen(min, md) {
         padding: 20px;
     }
@@ -13,12 +13,13 @@ pre {
 }
 
 .hljs-comment {
-    color: $gray-300;
+    color: $gray-500;
 }
 
 .hljs-subst,
-.hljs-template-tag {
-    color: $gray-400;
+.hljs-template-tag,
+.hljs-tag {
+    color: $gray-300;
 }
 
 .hljs-keyword,
@@ -27,15 +28,14 @@ pre {
 .hljs-selector-class,
 .hljs-selector-id,
 .hljs-selector-tag,
-.hljs-tag .hljs-keyword,
 .hljs-type {
-    color:theme-color("primary");
+    color: theme-color("primary");
 }
 
 .hljs-addition,
 .hljs-meta,
 .hljs-quote {
-    color:theme-color("dark");
+    color: theme-color("dark");
 }
 
 .hljs-number,

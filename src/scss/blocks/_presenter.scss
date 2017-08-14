@@ -2,7 +2,7 @@
     padding-bottom: 16px;
     margin-top: 40px;
     min-height: calc(50vh - 40px);
-    background-color:theme-color("primary");
+    background-color: theme-color("primary");
     position: relative;
     overflow: hidden;
     display: flex;
@@ -15,7 +15,7 @@
 }
 
 .presenter-icon {
-    color:theme-color("dark");
+    color: theme-color("secondary");
     font-size: calc(200px + 10vw);
     opacity: 0.5;
     position: absolute;

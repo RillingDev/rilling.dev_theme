@@ -1,5 +1,5 @@
 .navbar {
-    background-color:theme-color("primary");
+    background-color: theme-color("primary");
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -47,7 +47,7 @@
         &.active {
             .nav-link {
                 color: $white;
-                background-color:theme-color("dark");
+                background-color: theme-color("dark");
             }
         }
         .nav-link {
@@ -57,7 +57,7 @@
             padding-right: 1rem;
             @include transition(background-color);
             @include hover-focus-active {
-                background-color:theme-color("dark");
+                background-color: theme-color("dark");
             }
             @include screen(min, md) {
                 margin: 0;

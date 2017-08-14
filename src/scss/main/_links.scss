@@ -4,7 +4,7 @@
     }
     &.btn-primary {
         @include hover-focus-active {
-            background-color:theme-color("dark");
+            background-color: theme-color("dark");
             color: $white;
             box-shadow: none;
         }
@@ -35,9 +35,9 @@
         }
     }
     &.btn-codepen {
-        background-color: $gray-700;
+        background-color: $gray-800;
         @include hover-focus-active {
-            background-color: darken($gray-700, 8%);
+            background-color: darken($gray-800, 8%);
         }
     }
 }
@@ -48,7 +48,15 @@
     }
     &.badge-default {
         @include hover-focus-active {
-            background-color:theme-color("dark");
+            background-color: theme-color("dark");
+        }
+    }
+    &.badge-primary {
+        color: $white;
+        background-color: theme-color("secondary");
+        @include hover-focus-active {
+            background-color: theme-color("dark");
+            color: $white;
         }
     }
 }
