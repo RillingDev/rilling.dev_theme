@@ -17,7 +17,7 @@ sass.render({
             result.css,
             err => {
                 if (err) {
-                    console.log(err.);
+                    console.log(err);
                 } else {
                     console.log("CSS complete");
                 }
