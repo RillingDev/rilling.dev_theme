@@ -1,3 +1,12 @@
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+
 .navbar {
     background-color: theme-color("primary");
     padding-top: 0;
@@ -41,7 +50,9 @@
 }
 
 .navbar-collapse {
-    justify-content: flex-end;
+    @include screen(min, md) {
+        flex-basis: auto;
+    }
 }
 
 .navbar-nav {
@@ -49,30 +60,23 @@
         &.active {
             .nav-link {
                 color: $white;
-                background-color: theme-color("dark");
+                background-color: theme-color("secondary");
             }
         }
         .nav-link {
+            height: 40px;
             margin-left: -1rem;
             margin-right: -1rem;
             padding-left: 1rem;
             padding-right: 1rem;
             @include transition(background-color);
             @include hover-focus-active {
-                background-color: theme-color("dark");
+                background-color: theme-color("secondary");
             }
             @include screen(min, md) {
                 margin: 0;
             }
         }
     }
-}
-
-.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
 }
 

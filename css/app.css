@@ -1507,8 +1507,8 @@ tbody.collapse.show {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding-top: 4px;
+  padding-bottom: 4px;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -1846,7 +1846,7 @@ tbody.collapse.show {
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(254, 254, 254, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: none;
 }
 
 .navbar-dark .navbar-text {
@@ -2216,6 +2216,14 @@ h4 .fa {
   background-color: #568b38;
 }
 
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
 .navbar {
   background-color: #83d356;
   padding-top: 0;
@@ -2263,16 +2271,19 @@ h4 .fa {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-.navbar-collapse {
-  justify-content: flex-end;
+@media (min-width: 768px) {
+  .navbar-collapse {
+    flex-basis: auto;
+  }
 }
 
 .navbar-nav .nav-item.active .nav-link {
   color: #fefefe;
-  background-color: #568b38;
+  background-color: #68a844;
 }
 
 .navbar-nav .nav-item .nav-link {
+  height: 40px;
   margin-left: -1rem;
   margin-right: -1rem;
   padding-left: 1rem;
@@ -2283,21 +2294,13 @@ h4 .fa {
 }
 
 .navbar-nav .nav-item .nav-link:focus, .navbar-nav .nav-item .nav-link:hover, .navbar-nav .nav-item .nav-link:active {
-  background-color: #568b38;
+  background-color: #68a844;
 }
 
 @media (min-width: 768px) {
   .navbar-nav .nav-item .nav-link {
     margin: 0;
   }
-}
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
 }
 
 .presenter {
@@ -2496,19 +2499,19 @@ pre {
   text-align: center;
 }
 
-.pagination {
-  margin-bottom: 0;
+/*.pagination {
+    margin-bottom: 0;
 }
 
 .page-item {
-  margin-left: 2px;
-  margin-right: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .page-link {
-  padding: 10px 14px;
+    padding: 10px 14px;
 }
-
+*/
 .cookienotice {
   display: none;
   position: fixed;
