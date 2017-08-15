@@ -1,4 +1,4 @@
 {% for tag in tags %}
-    <a class="badge {{dark ? 'badge-primary' : 'badge-default'}}" title="Show all articles with tag {{tag}}" href="{{url(page.blog ~ '/tag' ~ config.system.param_sep ~ tag, true)}}">{{tag}}</a>
+    <a class="badge {{dark ? 'badge-secondary' : 'badge-primary'}}" title="Show all articles with tag {{tag}}" href="{{url(page.blog ~ '/tag' ~ config.system.param_sep ~ tag, true)}}">{{tag}}</a>
 {% endfor %}
 

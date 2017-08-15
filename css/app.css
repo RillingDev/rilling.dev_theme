@@ -833,7 +833,7 @@ pre code {
   vertical-align: middle;
   user-select: none;
   border: 0 solid transparent;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: 1.25;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -1351,7 +1351,7 @@ fieldset[disabled] a.btn {
 }
 
 .btn-lg {
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 1.5rem;
   font-size: 1.25rem;
   line-height: 1.6;
 }
@@ -2133,6 +2133,10 @@ h4 .fa {
   margin-right: 8px;
 }
 
+.btn {
+  color: #fefefe;
+}
+
 .btn .fa {
   margin-right: 4px;
 }
@@ -2184,24 +2188,32 @@ h4 .fa {
   background-color: #262626;
 }
 
-.badge:focus, .badge:hover, .badge:active {
-  transition-property: "background-color,color";
-  transition-duration: .15s;
-  transition-timing-function: ease;
+.badge.badge-primary, .badge.badge-secondary {
+  color: #fefefe;
 }
 
-.badge.badge-default:focus, .badge.badge-default:hover, .badge.badge-default:active {
-  background-color: #568b38;
+.badge.badge-primary:focus, .badge.badge-primary:hover, .badge.badge-primary:active, .badge.badge-secondary:focus, .badge.badge-secondary:hover, .badge.badge-secondary:active {
+  transition-property: "background-color";
+  transition-duration: .15s;
+  transition-timing-function: ease;
+  text-decoration: none;
+  color: #fefefe;
 }
 
 .badge.badge-primary {
-  color: #fefefe;
-  background-color: #68a844;
+  background-color: #83d356;
 }
 
 .badge.badge-primary:focus, .badge.badge-primary:hover, .badge.badge-primary:active {
+  background-color: #68a844;
+}
+
+.badge.badge-secondary {
+  background-color: #68a844;
+}
+
+.badge.badge-secondary:focus, .badge.badge-secondary:hover, .badge.badge-secondary:active {
   background-color: #568b38;
-  color: #fefefe;
 }
 
 .navbar {

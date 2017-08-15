@@ -1,4 +1,5 @@
 .btn {
+    color: $white;
     .fa {
         margin-right: 4px;
     }
@@ -43,20 +44,25 @@
 }
 
 .badge {
-    @include hover-focus-active {
-        @include transition("background-color,color")
-    }
-    &.badge-default {
+    &.badge-primary,
+    &.badge-secondary {
+        color: $white;
         @include hover-focus-active {
-            background-color: theme-color("dark");
+            @include transition("background-color");
+            text-decoration: none;
+            color: $white;
         }
     }
     &.badge-primary {
-        color: $white;
+        background-color: theme-color("primary");
+        @include hover-focus-active {
+            background-color: theme-color("secondary");
+        }
+    }
+    &.badge-secondary {
         background-color: theme-color("secondary");
         @include hover-focus-active {
             background-color: theme-color("dark");
-            color: $white;
         }
     }
 }
