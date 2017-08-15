@@ -1866,21 +1866,21 @@ tbody.collapse.show {
 .page-item.active .page-link {
   z-index: 2;
   color: #fbfbfb;
-  background-color: #9bdb76;
-  border-color: #9bdb76;
+  background-color: #68a844;
+  border-color: #68a844;
 }
 
 .page-item.disabled .page-link {
-  color: #999999;
+  color: #fbfbfb;
   pointer-events: none;
-  background-color: #fefefe;
-  border-color: #ddd;
+  background-color: #9bdb76;
+  border-color: #9bdb76;
 }
 
 .page-link {
   position: relative;
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   margin-left: -1px;
   line-height: 1rem;
   color: #fbfbfb;
@@ -1891,8 +1891,8 @@ tbody.collapse.show {
 .page-link:focus, .page-link:hover {
   color: #fbfbfb;
   text-decoration: none;
-  background-color: #9bdb76;
-  border-color: #9bdb76;
+  background-color: #68a844;
+  border-color: #68a844;
 }
 
 .pagination-lg .page-link {
@@ -1902,7 +1902,7 @@ tbody.collapse.show {
 }
 
 .pagination-sm .page-link {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.75rem;
   font-size: 0.875rem;
   line-height: 1.6;
 }
@@ -2034,6 +2034,13 @@ body {
   margin-left: auto;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .section-margin {
   margin: 30px 0;
 }
@@ -2142,7 +2149,7 @@ h4 .fa {
 }
 
 .btn.btn-primary:focus, .btn.btn-primary:hover, .btn.btn-primary:active {
-  background-color: #568b38;
+  background-color: #68a844;
   color: #fefefe;
   box-shadow: none;
 }
@@ -2173,11 +2180,11 @@ h4 .fa {
 }
 
 .btn.btn-github {
-  background-color: #e0e0e0;
+  background-color: #999999;
 }
 
 .btn.btn-github:focus, .btn.btn-github:hover, .btn.btn-github:active {
-  background-color: #cccccc;
+  background-color: #858585;
 }
 
 .btn.btn-codepen {
@@ -2499,19 +2506,20 @@ pre {
   text-align: center;
 }
 
-/*.pagination {
-    margin-bottom: 0;
+.pagination {
+  margin-bottom: 0;
+  justify-content: center;
 }
 
 .page-item {
-    margin-left: 2px;
-    margin-right: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .page-link {
-    padding: 10px 14px;
+  padding: 10px 14px;
 }
-*/
+
 .cookienotice {
   display: none;
   position: fixed;

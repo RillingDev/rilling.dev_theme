@@ -594,10 +594,10 @@ $navbar-light-toggler-border-color: none !default;
 
 // Pagination
 
-$pagination-padding-y:                .5rem !default;
+$pagination-padding-y:                1rem !default;
 $pagination-padding-x:                1rem !default;
 $pagination-padding-y-sm:             .75rem !default;
-$pagination-padding-x-sm:             1.25rem !default;
+$pagination-padding-x-sm:             .75rem !default;
 $pagination-padding-y-lg:             1.5rem !default;
 $pagination-padding-x-lg:             1.5rem !default;
 $pagination-line-height:              1rem !default;
@@ -608,16 +608,16 @@ $pagination-border-width:              0 !default;
 $pagination-border-color:              theme-color("primary") !default;
 
 $pagination-hover-color:               $gray-200 !default;
-$pagination-hover-bg:                  theme-color("light") !default;
-$pagination-hover-border-color:        theme-color("light") !default;
+$pagination-hover-bg:                  theme-color("secondary") !default;
+$pagination-hover-border-color:        theme-color("secondary") !default;
 
 $pagination-active-color:              $gray-200 !default;
-$pagination-active-bg:                 theme-color("light") !default;
-$pagination-active-border-color:       theme-color("light") !default;
+$pagination-active-bg:                 theme-color("secondary") !default;
+$pagination-active-border-color:       theme-color("secondary") !default;
 
-$pagination-disabled-color:            $gray-600 !default;
-$pagination-disabled-bg:               $white !default;
-$pagination-disabled-border-color:     #ddd !default;
+$pagination-disabled-color:            $gray-200 !default;
+$pagination-disabled-bg:               theme-color("light") !default;
+$pagination-disabled-border-color:     theme-color("light") !default;
 
 
 // Jumbotron

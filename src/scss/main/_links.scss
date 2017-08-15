@@ -5,7 +5,7 @@
     }
     &.btn-primary {
         @include hover-focus-active {
-            background-color: theme-color("dark");
+            background-color: theme-color("secondary");
             color: $white;
             box-shadow: none;
         }
@@ -30,9 +30,9 @@
         }
     }
     &.btn-github {
-        background-color: $gray-300;
+        background-color: $gray-500;
         @include hover-focus-active {
-            background-color: darken($gray-300, 8%);
+            background-color: darken($gray-500, 8%);
         }
     }
     &.btn-codepen {
