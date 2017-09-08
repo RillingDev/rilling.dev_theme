@@ -27,8 +27,8 @@
                 <h2>Skills</h2>
                 <hr class="hr hr--sm">
                 {% for grouptype, groupcontent in header.data.skills %}
-                    <h3>{{grouptype}}</h3>
-                     <div class="skill-section">
+                    <div class="skill-section">
+                        <h3>{{grouptype}}</h3>
                         <ul>
                             {% for skillname, skillitems in groupcontent %}
                                 <li class="skill">
@@ -42,9 +42,9 @@
                                 </li>
                             {% endfor %}
                         </ul>
-                     </div>
+                    </div>
                 {% endfor %}
-
+            </div>
             <div class="about-section about-experience">
                 <h2>References</h2>
                 <hr class="hr hr--sm">
