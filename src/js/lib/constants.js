@@ -1,5 +1,3 @@
-"use strict";
-
 const _window = window;
 const _document = document;
 

@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * Iterate over NodeList
  *

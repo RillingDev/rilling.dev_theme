@@ -1,24 +1,22 @@
-"use strict";
-
 import $ from "../lib/$";
 /**
  * Binds the navigation event handler
  */
 const initNav = function () {
-    const $toggle = $("#navbarToggle");
-    const $nav = $("#navbarMenu");
+    const $navToggle = $("#navbarToggle");
+    const $navMenu = $("#navbarMenu");
     let isNavOpen = false;
 
     //Toggle menu
-    $toggle.addEventListener("click", () => {
+    $navToggle.addEventListener("click", () => {
         isNavOpen = !isNavOpen;
 
-        $toggle.classList.toggle("collapsed");
-        $nav.classList.toggle("show");
+        $navToggle.classList.toggle("collapsed");
+        $navMenu.classList.toggle("show");
 
         //Set Aria attributes
-        $toggle.setAttribute("aria-expanded", isNavOpen);
-        $nav.setAttribute("aria-hidden", !isNavOpen);
+        $navToggle.setAttribute("aria-expanded", isNavOpen);
+        $navMenu.setAttribute("aria-hidden", !isNavOpen);
     }, false);
 };
 

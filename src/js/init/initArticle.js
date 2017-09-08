@@ -1,5 +1,3 @@
-"use strict";
-
 import {
     _window,
     _document
@@ -16,14 +14,14 @@ const initArticle = function () {
 
     //Adjust Table classes
     eachNode($tables, $e => {
-        const $clone = $e.cloneNode(true); //Deep-clones old table
-        const $tableVirtual = _document.createElement("div"); //Manipulate a virtual node instead of the actual one to improve performance
+        const $tableClone = $e.cloneNode(true); //Deep-clones old table
+        const $tableWrapperVirtual = _document.createElement("div"); //Manipulate a virtual node instead of the actual one to improve performance
 
-        $clone.classList.add("table", "table-bordered", "table-hover");
-        $tableVirtual.classList.add("table-responsive");
-        $tableVirtual.appendChild($clone);
+        $tableClone.classList.add("table", "table-bordered", "table-hover");
+        $tableWrapperVirtual.classList.add("table-responsive");
+        $tableWrapperVirtual.appendChild($tableClone);
 
-        $e.replaceWith($tableVirtual);
+        $e.replaceWith($tableWrapperVirtual);
     });
 
     //Highlight Code Snippets
