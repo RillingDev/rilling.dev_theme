@@ -13,47 +13,47 @@
     }
 }
 
-.about-skills {
-    margin-bottom: 0;
-}
-
 .skill-section {
     &:not(:last-child) {
-        margin-bottom: 42px;
+        margin-bottom: 22px;
     }
-    .skill-row {
+    ul {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
+        list-style: none;
+        padding: 0;
         @include screen(min, sm) {
             flex-direction: row;
         }
-    }
-    .skill {
-        margin-bottom: 32px;
-        padding-left: 8px;
-        padding-right: 8px;
-        @include screen(min, sm) {
-            width: 33.333%;
-            margin-bottom: 16px;
-        }
-        ul {
-            text-align: center;
-            padding: 0;
-            list-style: none;
+        li.skill {
+            margin-bottom: 32px;
+            padding-left: 8px;
+            padding-right: 8px;
+            @include screen(min, sm) {
+                width: 33.333%;
+                margin-bottom: 22px;
+            }
+            ul {
+                text-align: center;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
 }
 
 .about-experience {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     ul {
         padding: 0;
         margin: 36px auto 0;
         text-align: center;
         list-style: none;
-        li{
+        li {
             margin-bottom: 24px;
         }
     }

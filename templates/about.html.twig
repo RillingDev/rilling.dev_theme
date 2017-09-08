@@ -17,7 +17,7 @@
                 <h3 itemprop="jobTitle">Web Developer</h3>
 
                 <p><b>Born</b>: <span itemprop="birthDate">1997-03-07</span></p>
-                <p><b>Nationality</b>: <span itemprop="nationality">Germany</span></p>
+                <p><b>Nationality</b>: <span itemprop="nationality">German</span></p>
                 <p><b>Gender</b>: <span itemprop="gender">Male</span></p>
                 <p hidden aria-hidden itemprop="email">contact@f-rilling.com</p>
 
@@ -26,130 +26,41 @@
             <div class="about-section about-skills">
                 <h2>Skills</h2>
                 <hr class="hr hr--sm">
-                <h3>Languages</h3>
-                <div class="skill-section">
-                    <div class="skill-row">
-                        <div class="skill">
-                            <h4>HTML</h4>
-                            <hr class="hr hr--sm">
-                            <ul>
-                                <li>HTML5</li>
-                                <li>Accessible Markup</li>
-                                <li>Microdata</li>
-                                <li>Template Construction</li>
-                                <li>Jade/Pug</li>
-                                <li>Basic SEO</li>
-                            </ul>
-                        </div>
+                {% for grouptype, groupcontent in header.data.skills %}
+                    <h3>{{grouptype}}</h3>
+                     <div class="skill-section">
+                        <ul>
+                            {% for skillname, skillitems in groupcontent %}
+                                <li class="skill">
+                                    <h4>{{skillname}}</h4>
+                                    <hr class="hr hr--sm">
+                                    <ul>
+                                        {% for skillitem in skillitems %}
+                                            <li>{{skillitem}}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                     </div>
+                {% endfor %}
 
-                        <div class="skill">
-                            <h4>CSS</h4>
-                            <hr class="hr hr--sm">
-                            <ul>
-                                <li>CSS3</li>
-                                <li>Responsive Design</li>
-                                <li>Mobile First Developement</li>
-                                <li>Bootstrap3/4</li>
-                                <li>SCSS</li>
-                                <li>LESS</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill">
-                            <h4>JS</h4>
-                            <hr class="hr hr--sm">
-                            <ul>
-                                <li>ES6/ES7/ES8</li>
-                                <li>NodeJS</li>
-                                <li>VueJS</li>
-                                <li>AngularJS</li>
-                                <li>jQuery</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill">
-                            <h4>PHP</h4>
-                            <hr class="hr hr--sm">
-                            <ul>
-                                <li>PHP7</li>
-                                <li>MySQLi</li>
-                                <li>Twig</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill">
-                            <h4>CMS</h4>
-                            <hr class="hr hr--sm">
-                            <ul>
-                                <li>Wordpress</li>
-                                <li>Grav</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-                <h3>Tools</h3>
-                <div class="skill-section">
-                    <div class="skill-row">
-
-                        <div class="skill">
-                            <h4>Dev</h4>
-                            <hr class="hr hr--sm">
-                            <ul>
-                                <li>Git</li>
-                                <li>NPM/Yarn</li>
-                                <li>Gulp/Grunt</li>
-                                <li>Browserify/Rollup</li>
-                                <li>Photoshop</li>
-                                <li>Illustrator</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill">
-                            <h4>OS</h4>
-                            <hr class="hr hr--sm">
-                            <ul>
-                                <li>Ubuntu/Debian</li>
-                                <li>Windows</li>
-                                <li>OS X</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill">
-                            <h4>Fuel</h4>
-                            <hr class="hr hr--sm">
-                            <ul>
-                                <li>Coffee</li>
-                                <li>Green Tea</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
             <div class="about-section about-experience">
                 <h2>References</h2>
                 <hr class="hr hr--sm">
                 <h3>Professional Experience</h3>
                 <ul>
-                    <li>
-                        <p>
-                            <b>Junior Frontend Developer</b>
-                            <br/>
-                            <span>At Kultwerk GmbH, Freiburg/Germany</span>
-                            <br/>
-                            </span>March 2016 - September 2016</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <b>Freelance Frontend Developer</b>
-                            <br/>
-                            <span>Selfemployed</span>
-                            <br/>
-                            </span>September 2016 - Now</span>
-                        </p>
-                    </li>
+                    {% for reference in header.data.references %}
+                        <li>
+                            <p>
+                                <b>{{reference.role}}</b>
+                                <br/>
+                                <span>{{reference.at}}</span>
+                                <br/>
+                                </span>{{reference.time}}</span>
+                            </p>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
