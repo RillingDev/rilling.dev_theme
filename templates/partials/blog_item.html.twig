@@ -1,5 +1,5 @@
 <article class="article{{full ? ' article-full' : ''}}" itemscope itemtype="http://schema.org/TechArticle">
-    <div class="article-header" {{full ? 'hidden aria-hidden' : ''}}>
+    <div class="article-header" {{full ? 'hidden="true"' : ''}}>
         <div>
             <h2 class="article-title">
                 <a href="{{page.url}}" title="Read {{page.title|e}}" itemprop="name headline">{{page.title|e}}</a>
@@ -21,8 +21,8 @@
                 </span>
             </p>
         </div>
-        <div hidden aria-hidden itemprop="image">{{url('theme://img/icons/apple-touch-icon.png', true)}}</div>
-        <div hidden aria-hidden itemprop="isFamilyFriendly">true</div>
+        <div hidden="true" itemprop="image">{{url('theme://img/icons/apple-touch-icon.png', true)}}</div>
+        <div hidden="true" itemprop="isFamilyFriendly">true</div>
     </div>
     <div class="article-content" itemprop="articleBody text">
         {% if full %}

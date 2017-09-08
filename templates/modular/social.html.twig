@@ -6,21 +6,21 @@
 
     {% if header.title == 'Portfolio' %}
         <a href="{{url('about', true)}}" target="_blank" title="About Felix Rilling" class="btn btn-primary btn-primary--lg">
-            <i class="fa fa-rocket"></i>
+            <span class="fa fa-rocket"><!--icon--></span>
             About Me
         </a>
     {% else %}
         <a href="{{url('portfolio', true)}}" target="_blank" title="Felix Rilling Portfolio" class="btn btn-primary btn-primary--lg">
-            <i class="fa fa-diamond"></i>
+            <span class="fa fa-diamond"><!--icon--></span>
             My Portfolio
         </a>
     {% endif %}
     <a href="https://github.com/FelixRilling/" target="_blank" title="Felix Rilling Github" class="btn btn-primary btn-github">
-        <i class="fa fa-github"></i>
+        <span class="fa fa-github"><!--icon--></span>
         Me on GitHub
     </a>
     <a href="http://codepen.io/FelixRilling/" target="_blank" title="Felix Rilling CodePen" class="btn btn-primary btn-codepen">
-        <i class="fa fa-codepen"></i>
+        <span class="fa fa-codepen"><!--icon--></span>
         Me on CodePen
     </a>
 

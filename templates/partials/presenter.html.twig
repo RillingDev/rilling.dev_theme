@@ -7,7 +7,7 @@
 {% endif %}
 <div class="presenter {{page.template == 'item' ? '' : 'presenter--lg'}}">
     {% if page.header.icon %}
-        <i class="presenter-icon fa fa-{{page.header.icon}}" aria-hidden="true"></i>
+        <span class="presenter-icon fa fa-{{page.header.icon}}" aria-hidden="true"><!--icon--></span>
     {% endif %}
 
     <div class="presenter-content">
@@ -32,7 +32,7 @@
             {% endif %}
         {% endif %}
 
-        <div hidden aria-hidden itemprop="isFamilyFriendly">true</div>
-        <div hidden aria-hidden itemprop="isAccessibleForFree">true</div>
+        <div hidden="true" itemprop="isFamilyFriendly">true</div>
+        <div hidden="true" itemprop="isAccessibleForFree">true</div>
     </div>
 </div>
