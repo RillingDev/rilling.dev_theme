@@ -1,7 +1,3 @@
-import {
-    _document
-} from "./constants";
-
 /**
  * jQuery-like selector
  *
@@ -10,7 +6,7 @@ import {
  * @returns {NodeList} NodeList of selcted elements
  */
 const $ = function (query, multi) {
-    return multi ? _document.querySelectorAll(query) : _document.querySelector(query);
+    return multi ? document.querySelectorAll(query) : document.querySelector(query);
 };
 
 export default $;

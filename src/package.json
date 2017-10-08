@@ -41,7 +41,8 @@
     "license": "MIT",
     "homepage": "https://f-rilling.com",
     "dependencies": {
-        "bootstrap": "^4.0.0-beta"
+        "bootstrap": "^4.0.0-beta",
+        "highlight.js": "git+https://github.com/isagalaev/highlight.js.git"
     },
     "devDependencies": {
         "babel-core": "^7.0.0-beta.2",

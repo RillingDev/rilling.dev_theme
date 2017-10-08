@@ -1,4 +1,5 @@
-import $ from "../lib/$";
+import $ from "../lib/query";
+
 /**
  * Binds the navigation event handler
  */
