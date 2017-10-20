@@ -6,7 +6,6 @@
     z-index: 1030;
 }
 
-
 .navbar {
     background-color: theme-color("primary");
     padding-top: 0;
@@ -52,6 +51,7 @@
 .navbar-collapse {
     @include screen(min, md) {
         flex-basis: auto;
+        justify-content: flex-end;
     }
 }
 
@@ -79,4 +79,3 @@
         }
     }
 }
-

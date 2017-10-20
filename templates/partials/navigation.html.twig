@@ -7,7 +7,7 @@
                 <span class="menu-bar" aria-hidden="true"><!--icon--></span>
                 <span class="menu-bar" aria-hidden="true"><!--icon--></span>
             </a>
-            <div class="collapse navbar-collapse" id="navbarMenu" role="navigation" aria-hidden="true">
+            <div class="collapse navbar-collapse" id="navbarMenu" role="navigation" aria-hidden="false">
                 <ul class="navbar-nav mr-auto" role="menubar">
                     {% for page in pages.children.visible %}
                         {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
