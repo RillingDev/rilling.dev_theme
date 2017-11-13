@@ -41,21 +41,20 @@
     "license": "MIT",
     "homepage": "https://f-rilling.com",
     "dependencies": {
-        "bootstrap": "^4.0.0-beta",
-        "highlight.js": "git+https://github.com/isagalaev/highlight.js.git"
+        "bootstrap": "^4.0.0-beta"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-plugin-external-helpers": "^6.22.0",
         "babel-preset-env": "^1.6.1",
-        "eslint": "^4.9.0",
-        "node-sass": "^4.5.3",
-        "npm-run-all": "^4.1.1",
+        "eslint": "^4.11.0",
+        "node-sass": "^4.6.1",
+        "npm-run-all": "^4.1.2",
+        "rollup": "^0.51.5",
         "rollup-plugin-babel": "^3.0.2",
-        "rollup-plugin-commonjs": "^8.2.1",
+        "rollup-plugin-commonjs": "^8.2.6",
         "rollup-plugin-node-resolve": "^3.0.0",
         "rollup-plugin-uglify-es": "0.0.1",
-        "rollup": "^0.50.0",
-        "uglify-es": "^3.1.3"
+        "uglify-es": "^3.1.9"
     }
 }
