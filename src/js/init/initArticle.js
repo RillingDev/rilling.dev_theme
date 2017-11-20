@@ -6,7 +6,7 @@ const hljs = window.hljs;
 /**
  * Inits article-specific html changes
  */
-const initArticle = function () {
+const initArticle = () => {
     const $pre = $("article pre", true);
     const $tables = $("article table", true);
 

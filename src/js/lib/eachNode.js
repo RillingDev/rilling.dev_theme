@@ -1,11 +1,13 @@
+import {
+    arrFrom
+} from "lightdash";
+
 /**
  * Iterate over NodeList
  *
- * @param {NodeList} nodeList NodeList of elements
- * @param {Function} fn   Function to run
+ * @param {NodeList} nodeList
+ * @param {Function} fn
  */
-const eachNode = function (nodeList, fn) {
-    Array.from(nodeList).forEach(fn);
-};
+const eachNode = (nodeList, fn) => arrFrom(nodeList).forEach(fn);
 
 export default eachNode;

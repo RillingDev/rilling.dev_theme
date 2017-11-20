@@ -1,12 +1,10 @@
 /**
  * jQuery-like selector
  *
- * @param {string} query String query
- * @param {boolean} multi If the select will match multiple elements
- * @returns {NodeList} NodeList of selcted elements
+ * @param {string} query
+ * @param {boolean} multi
+ * @returns {NodeList}
  */
-const $ = function (query, multi) {
-    return multi ? document.querySelectorAll(query) : document.querySelector(query);
-};
+const $ = (query, multi) => multi ? document.querySelectorAll(query) : document.querySelector(query);
 
 export default $;

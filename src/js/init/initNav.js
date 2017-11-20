@@ -3,7 +3,7 @@ import $ from "../lib/query";
 /**
  * Binds the navigation event handler
  */
-const initNav = function () {
+const initNav = () => {
     const $navToggle = $("#navbarToggle");
     const $navMenu = $("#navbarMenu");
     let isNavOpen = false;
