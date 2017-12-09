@@ -3,35 +3,18 @@
     "version": "v3.8.0",
     "description": "f-rilling.com custom theme",
     "main": "js/app.js",
-    "constants": {
-        "dirBase": {
-            "input": "./",
-            "output": "../"
-        },
-        "js": {
-            "input": "js/app",
-            "namespace": {
-                "module": "frilling",
-                "file": "js/app"
-            },
-            "targets": {
-                "browsers": "chrome >= 58"
-            }
-        },
-        "css": {
-            "input": "scss/app",
-            "output": "css/app"
-        }
-    },
     "scripts": {
         "start": "npm-run-all lint build",
         "build": "npm-run-all --parallel css:dev js:dev",
         "dist": "npm-run-all --parallel css:dist js:dist",
-        "css:dev": "node tasks/cssDev",
-        "css:dist": "node tasks/cssDist",
-        "js:dev": "node tasks/jsDev",
-        "js:dist": "node tasks/jsDist",
-        "lint": "eslint src/"
+        "css:dev": "node-sass scss/app.scss -o ../css/ --output-style expanded",
+        "css:dist":
+            "node-sass scss/app.scss -o ../css/ --output-style compressed",
+        "js:dev":
+            "cross-env NODE_ENV=development webpack --progress --hide-modules",
+        "js:dist":
+            "cross-env NODE_ENV=production webpack --progress --hide-modules",
+        "lint": "eslint js/"
     },
     "repository": {
         "type": "git",
@@ -41,21 +24,21 @@
     "license": "MIT",
     "homepage": "https://f-rilling.com",
     "dependencies": {
-        "bootstrap": "^4.0.0-beta",
-        "lightdash": "^3.1.0"
+        "bootstrap": "^4.0.0-beta.2",
+        "lightdash": "^3.3.0"
     },
     "devDependencies": {
-        "babel-core": "^6.26.0",
-        "babel-plugin-external-helpers": "^6.22.0",
-        "babel-preset-env": "^1.6.1",
-        "eslint": "^4.11.0",
-        "node-sass": "^4.6.1",
+        "@babel/core": "^7.0.0-beta.34",
+        "@babel/preset-env": "^7.0.0-beta.34",
+        "babel-loader": "^8.0.0-beta.0",
+        "cross-env": "^5.1.1",
+        "eslint": "^4.12.1",
+        "node-sass": "^4.7.2",
         "npm-run-all": "^4.1.2",
-        "rollup": "^0.51.7",
-        "rollup-plugin-babel": "^3.0.2",
-        "rollup-plugin-commonjs": "^8.2.6",
-        "rollup-plugin-node-resolve": "^3.0.0",
-        "rollup-plugin-uglify-es": "0.0.1",
-        "uglify-es": "^3.1.10"
+        "prettier": "^1.9.1",
+        "rimraf": "^2.6.2",
+        "uglify-es": "^3.2.1",
+        "uglifyjs-webpack-plugin": "^1.1.2",
+        "webpack": "^3.10.0"
     }
 }
