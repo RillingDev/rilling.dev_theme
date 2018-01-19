@@ -16,6 +16,6 @@ const init = (pageType) => {
     }
 };
 
-export {
+window.frilling = {
     init
 };

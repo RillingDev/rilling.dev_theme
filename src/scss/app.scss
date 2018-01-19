@@ -1,6 +1,7 @@
 // Core variables
 @import "node_modules/bootstrap/scss/functions";
-@import "variables";
+@import "node_modules/bootstrap/scss/variables";
+@import "variables.custom";
 
 // Bootstrap CSS
 @import "bootstrap";
