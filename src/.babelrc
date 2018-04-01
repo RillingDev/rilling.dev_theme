@@ -5,7 +5,7 @@
             {
                 "modules": false,
                 "targets": {
-                    "browsers": ["> 5%", "last 2 versions", "not ie <= 10"]
+                    "browsers": ["> 1%", "last 5 versions", "not ie <=9"]
                 }
             }
         ]
