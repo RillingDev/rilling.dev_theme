@@ -13,7 +13,7 @@
                 {% for category in header.data.categories %}
                     <div class="project">
                         <h3 class="project-headline">
-                            <i class="fa fa-{{category.icon}}"></i>{{category.name|e}}:
+                            <i class="fal fa-{{category.icon}}"></i>{{category.name|e}}:
                         </h3>
                         <ul>
                             {% for project in header.data.projects | sort_by_key("name") %}
@@ -24,12 +24,12 @@
                                         </a>
                                         {% if project.download %}
                                             <a href="{{url('user/data/files/' ~ project.download, true)}}" class="icon" title="Download {{project.name|e}}">
-                                                <i class="fa fa-download"></i>
+                                                <i class="fal fa-download"></i>
                                             </a>
                                         {% endif %}
                                         {% if project.article %}
                                             <a href="{{url(project.article, true)}}" class="icon" title="Article for {{project.name|e}}">
-                                                <i class="fa fa-file-text-o"></i>
+                                                <i class="fal fa-file-alt"></i>
                                             </a>
                                         {% endif %}
                                     </li>
