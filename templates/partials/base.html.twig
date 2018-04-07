@@ -63,8 +63,10 @@
         <meta property="og:url" content="{{page.url(true, true)}}"/>
         <meta property="og:description" content="{{description|e|slice(0,300)}}"/>
         <meta property="og:type" content="{{ogType}}"/>
-        <meta property="og:image" content="{{url('theme://img/icons/apple-touch-icon.png', true)}}"/>
-        <meta property="og:site_name" content="F-Rilling.com"/>
+        <meta property="og:image:width" content="279">
+        <meta property="og:image:height" content="279">
+        <meta property="og:image" content="{{url('theme://img/icons/og-image.jpg', true)}}"/>
+        <meta property="og:site_name" content="F-Rilling"/>
         {% if ogType == "article"%}
         <meta property="og:article:tag" content="{{page.taxonomy.tag|join(', ')|e}}"/>
         <meta property="og:article:author" content="Felix Rilling"/>
@@ -85,10 +87,10 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{{url('theme://img/icons/favicon-32x32.png', true)}}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{url('theme://img/icons/favicon-16x16.png', true)}}">
         <link rel="manifest" href="{{url('theme://img/icons/manifest.json', true)}}">
-        <link rel="mask-icon" href="{{url('theme://img/icons/safari-pinned-tab.svg', true)}}" color="#83d356">
+        <link rel="mask-icon" href="{{url('theme://img/icons/safari-pinned-tab.', true)}}" color="#83d356">
         <link rel="shortcut icon" href="{{url('theme://img/icons/favicon.ico', true)}}">
         <meta name="msapplication-config" content="{{url('theme://img/icons/browserconfig.xml', true)}}">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="#83d356">
 
         <link rel="canonical" href="{{page.url(true, true)}}"/>
 

@@ -34,7 +34,7 @@ $brand-secondary:#68a844;
 $brand-info:#9bc7e9;
 $brand-warning:#fff174;
 $brand-danger:#EB5E55;
-$theme-colors: ( primary: $brand-primary, secondary: $brand-secondary, success: $green, info: $brand-info, warning: $brand-warning, danger: $brand-danger, light: lighten($brand-primary, 8%), dark: darken($brand-secondary, 8%));
+$theme-colors: ( primary: $brand-primary, secondary: $brand-secondary, light: lighten($brand-primary, 8%), dark: darken($brand-secondary, 8%));
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8%;
 // Options
