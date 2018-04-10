@@ -33,44 +33,24 @@ $grays: (
   "900": $gray-900
 );
 
-$blue:    #007bff;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #dc3545;
-$orange:  #fd7e14;
-$yellow:  #ffc107;
-$green:   #28a745;
-$teal:    #20c997;
-$cyan:    #17a2b8;
+$blue:         #9bc7e9;
+$yellow:       #fff174;
+$red:          #EB5E55;
 
-$colors: (
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
-);
+$colors: ();
 
 $primary:       #83d356;
 $secondary:     #68a844;
-$info:          #9bc7e9;
-$warning:       #fff174;
-$danger:        #EB5E55;
+$light:         lighten($primary, 8%);
+$dark:          darken($secondary, 8%);
 
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
-  "light":      lighten($primary, 8%),
-  "dark":       darken($secondary, 8%)
+  "light":      $light,
+  "dark":       $dark,
+  "gray":       $gray-600,
+  "black":      $gray-800
 );
 // stylelint-enable
 
@@ -78,7 +58,7 @@ $theme-colors: (
 $theme-color-interval:      8%;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-$yiq-contrasted-threshold: 150;
+$yiq-contrasted-threshold: 180;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $gray-900;
@@ -316,7 +296,7 @@ $input-btn-padding-x:         .75rem;
 $input-btn-line-height:       $line-height-base;
 
 $input-btn-focus-width:       .2rem;
-$input-btn-focus-color:       gba(theme-color("primary"), .25);
+$input-btn-focus-color:       theme-color("primary");
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
 $input-btn-padding-y-sm:      .5rem;
@@ -511,7 +491,7 @@ $custom-file-text: (
 $form-feedback-margin-top:          $form-text-margin-top;
 $form-feedback-font-size:           $small-font-size;
 $form-feedback-valid-color:         theme-color("success");
-$form-feedback-invalid-color:       $danger;
+$form-feedback-invalid-color:       $red;
 
 
 // Dropdowns

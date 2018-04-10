@@ -41,12 +41,12 @@ pre {
 .hljs-number,
 .hljs-template-variable,
 .hljs-variable {
-    color: $info;
+    color: $blue;
 }
 
 .hljs-literal,
 .hljs-title {
-    color: $warning;
+    color: $yellow;
 }
 
 .hljs-built_in,
@@ -56,7 +56,7 @@ pre {
 .hljs-link,
 .hljs-string,
 .hljs-symbol {
-    color: $danger;
+    color: $red;
 }
 
 .hljs-emphasis {

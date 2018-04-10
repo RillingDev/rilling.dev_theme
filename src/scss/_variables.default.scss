@@ -65,9 +65,9 @@ $colors: map-merge((
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
+$blue:          $cyan !default;
+$yellow:       $yellow !default;
+$red:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
@@ -76,9 +76,9 @@ $theme-colors: map-merge((
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
+  "info":       $blue,
+  "warning":    $yellow,
+  "danger":     $red,
   "light":      $light,
   "dark":       $dark
 ), $theme-colors);
@@ -522,7 +522,7 @@ $custom-file-text: (
 $form-feedback-margin-top:          $form-text-margin-top !default;
 $form-feedback-font-size:           $small-font-size !default;
 $form-feedback-valid-color:         theme-color("success") !default;
-$form-feedback-invalid-color:       $danger !default;
+$form-feedback-invalid-color:       $red !default;
 
 
 // Dropdowns

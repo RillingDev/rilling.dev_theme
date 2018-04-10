@@ -1,15 +1,7 @@
 .btn {
-    color: $white;
     border:0;
     .fal {
-        margin-right: 4px;
-    }
-    &.btn-primary {
-        @include hover-focus-active {
-            background-color: theme-color("secondary");
-            color: $white;
-            box-shadow: none;
-        }
+        margin-right: 6px;
     }
     &.btn-primary-margin {
         margin-top: 10px;
@@ -28,42 +20,6 @@
         width: 100%;
         @include screen(min, sm) {
             width: 50%;
-        }
-    }
-    &.btn-github {
-        background-color: $gray-500;
-        @include hover-focus-active {
-            background-color: darken($gray-500, 8%);
-        }
-    }
-    &.btn-codepen {
-        background-color: $gray-800;
-        @include hover-focus-active {
-            background-color: darken($gray-800, 8%);
-        }
-    }
-}
-
-.badge {
-    &.badge-primary,
-    &.badge-secondary {
-        color: $white;
-        @include hover-focus-active {
-            @include transition("background-color");
-            text-decoration: none;
-            color: $white;
-        }
-    }
-    &.badge-primary {
-        background-color: theme-color("primary");
-        @include hover-focus-active {
-            background-color: theme-color("secondary");
-        }
-    }
-    &.badge-secondary {
-        background-color: theme-color("secondary");
-        @include hover-focus-active {
-            background-color: theme-color("dark");
         }
     }
 }
