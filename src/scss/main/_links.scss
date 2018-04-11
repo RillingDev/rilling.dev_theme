@@ -1,6 +1,6 @@
 .btn {
-    border:0;
-    .fal {
+    border: 0;
+    .fal,.fab {
         margin-right: 6px;
     }
     &.btn-primary-margin {
@@ -14,12 +14,20 @@
         max-width: 160px;
         margin: auto;
     }
-    &.btn-codepen,
-    &.btn-github {
-        margin-top: 10px;
-        width: 100%;
-        @include screen(min, sm) {
-            width: 50%;
+}
+
+.btn-social-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    .btn-social {
+        margin-top: 0.5rem;
+    }
+    @include screen(min, md) {
+        flex-direction: row;
+        .btn-social {
+            width: 32%;
         }
     }
 }
