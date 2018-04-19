@@ -6,6 +6,3 @@ Grav CMS theme for <https://f-rilling.com>
 
 Required:
  - Pagination
-
-Recommended:
- - TidyHTML
