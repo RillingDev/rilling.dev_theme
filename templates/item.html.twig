@@ -8,7 +8,6 @@
             <div class="section" itemprop="mainContentOfPage">
                 {% include 'partials/blog_item.html.twig' with {'blog': page.parent, 'truncate': false, 'full': true} %}
             </div>
-            {% include 'modular/comments.html.twig' with {'page': page} %}
         </div>
     {% endblock %}
 {% endembed %}
