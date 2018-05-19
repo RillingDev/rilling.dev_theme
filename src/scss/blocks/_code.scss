@@ -1,7 +1,13 @@
+samp,
+kbd,
+code,
 pre {
-    padding: 15px;
     color: $white;
     background-color: $gray-800;
+}
+
+pre {
+    padding: 15px;
     @include screen(min, md) {
         padding: 20px;
     }
