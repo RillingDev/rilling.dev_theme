@@ -95,9 +95,9 @@
         <link rel="canonical" href="{{page.url(true, true)}}"/>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Lato:400,700|Source+Code+Pro">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/light.css" integrity="sha384-DZAoxBcs4G15aUXLX4vKbO53ye8L8AB/zg07HOVhIMVclhx8rdWye0AJSQl51ehV" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-rmUpvtaCngUop5CYz7WL1LnqkMweXskxP+1AXmkuMSbImsUuy82bUYS4A8Syd3Pf" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-PPeKwWhk5XZBVVq089DuhGmjaEVB1r+jdmx6jZrqzlef8ojhZXG+E/D6SP7uO1dk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.1/css/light.css" >
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.1/css/brands.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.1/css/fontawesome.css">
         {% block css %}
             {% do
                 assets.addCss('theme://css/app.css', 101) %}
@@ -136,7 +136,7 @@
 
         {% block js %}
             {% if page.template == "item" %}
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous"></script>
             {% endif %}
             {% do
                 assets.addJs("theme://js/app.js", 100) %}
