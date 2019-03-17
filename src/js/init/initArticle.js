@@ -1,5 +1,5 @@
-import $ from "../lib/query";
-import eachNode from "../lib/eachNode";
+import $ from "../util/query";
+import eachNode from "../util/eachNode";
 
 const hljs = window.hljs;
 
@@ -10,10 +10,10 @@ const initArticle = () => {
     const $pre = $("article pre", true);
     const $tables = $("article table", true);
 
-    //Adjust Table classes
     eachNode($tables, $e => {
-        const $tableClone = $e.cloneNode(true); //Deep-clones old table
-        const $tableWrapperVirtual = document.createElement("div"); //Manipulate a virtual node instead of the actual one to improve performance
+        // Manipulate a virtual node instead of the actual one to improve performance
+        const $tableClone = $e.cloneNode(true);
+        const $tableWrapperVirtual = document.createElement("div");
 
         $tableClone.classList.add("table", "table-bordered", "table-hover");
         $tableWrapperVirtual.classList.add("table-responsive");
@@ -22,8 +22,8 @@ const initArticle = () => {
         $e.replaceWith($tableWrapperVirtual);
     });
 
-    //Highlight Code Snippets
     eachNode($pre, $e => {
+        // noinspection JSUnresolvedFunction
         hljs.highlightBlock($e);
     });
 };

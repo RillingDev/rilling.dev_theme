@@ -5,6 +5,6 @@
  * @param {boolean} multi
  * @returns {NodeList}
  */
-const $ = (query, multi) => multi ? document.querySelectorAll(query) : document.querySelector(query);
+const $ = (query, multi = false) => multi ? document.querySelectorAll(query) : document.querySelector(query);
 
 export default $;

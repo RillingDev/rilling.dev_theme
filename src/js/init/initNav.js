@@ -1,4 +1,4 @@
-import $ from "../lib/query";
+import $ from "../util/query";
 
 /**
  * Binds the navigation event handler
@@ -8,16 +8,14 @@ const initNav = () => {
     const $navMenu = $("#navbarMenu");
     let isNavOpen = false;
 
-    //Toggle menu
     $navToggle.addEventListener("click", () => {
         isNavOpen = !isNavOpen;
 
         $navToggle.classList.toggle("collapsed");
         $navMenu.classList.toggle("show");
 
-        //Set Aria attributes
-        $navToggle.setAttribute("aria-expanded", isNavOpen);
-        $navMenu.setAttribute("aria-hidden", !isNavOpen);
+        $navToggle.setAttribute("aria-expanded", String(isNavOpen));
+        $navMenu.setAttribute("aria-hidden", String(!isNavOpen));
     }, false);
 };
 

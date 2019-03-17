@@ -16,6 +16,7 @@ const init = (pageType) => {
     }
 };
 
+// noinspection JSUnusedGlobalSymbols
 window.frilling = {
     init
 };
