@@ -1,16 +1,12 @@
 const webpack = require("webpack");
 const path = require("path");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 const NODE_ENV = process.env.NODE_ENV;
 const PRODUCTION_ENABLED = NODE_ENV === "production";
 const CACHE_PATH = path.resolve(__dirname, "./.cache/");
 
-const optimizationUglify = new UglifyJsPlugin({
-    cache: path.join(CACHE_PATH, "uglifyjs/"),
-    parallel: true,
-    sourceMap: true
-});
+const optimizationTerser = new TerserPlugin();
 
 const pluginEnv = new webpack.DefinePlugin({
     "process.env.NODE_ENV": JSON.stringify(NODE_ENV)
@@ -35,7 +31,7 @@ module.exports = {
     },
     mode: NODE_ENV,
     optimization: {
-        minimizer: [optimizationUglify]
+        minimizer: [optimizationTerser]
     },
     plugins: [pluginEnv],
     module: {
