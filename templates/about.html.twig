@@ -20,28 +20,6 @@
 
                 <div itemprop="description">{{page.content}}</div>
             </div>
-            <div class="about-section about-skills">
-                <h2>Skills</h2>
-                <hr class="hr hr--sm">
-                {% for grouptype, groupcontent in header.data.skills %}
-                    <div class="skill-section">
-                        <h3>{{grouptype}}</h3>
-                        <ul>
-                            {% for skillname, skillitems in groupcontent %}
-                                <li class="skill">
-                                    <h4>{{skillname}}</h4>
-                                    <hr class="hr hr--sm">
-                                    <ul>
-                                        {% for skillitem in skillitems %}
-                                            <li>{{skillitem}}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                {% endfor %}
-            </div>
             <div class="about-section about-experience">
                 <h2>References</h2>
                 <hr class="hr hr--sm">
