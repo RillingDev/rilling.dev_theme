@@ -1,8 +1,9 @@
 # F-Rilling
 
-Grav CMS theme for <https://f-rilling.com>
+Hexo theme for <https://f-rilling.com>.
 
-# Plugins: 
+## Structure
 
-Required:
- - Pagination
+- `src` actual source code.
+- `source` compiled source code, folder name is required by hexo.
+- `layout` EJS templates.

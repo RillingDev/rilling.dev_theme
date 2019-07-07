@@ -1,14 +1,19 @@
 .btn {
     border: 0;
-    .fal,.fab {
+
+    .fal,
+    .fab {
         margin-right: 6px;
     }
+
     &.btn-primary-margin {
         margin-top: 10px;
     }
+
     &.btn-primary--lg {
         width: 100%;
     }
+
     &.btn-centered {
         display: block;
         max-width: 160px;
@@ -21,9 +26,11 @@
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
+
     .btn-social {
         margin-top: 0.5rem;
     }
+
     @include screen(min, md) {
         flex-direction: row;
         .btn-social {

@@ -1,75 +1,115 @@
+@import "../variables.page";
+@import "../mixins/screen";
+
 samp,
 kbd,
 code,
 pre {
-    color: $white;
-    background-color: $gray-800;
-    padding: 1px 3px;
+    font-size: 1em;
+    color: $black;
 }
 
-pre {
-    padding: 15px;
-    @include screen(min, md) {
-        padding: 20px;
+.highlight {
+    background-color: $gray-900;
+    overflow-x: auto;
+
+    pre {
+        color: $white;
+        padding: 0.75rem;
+        @include screen(min, md) {
+            padding: 0.5rem;
+        }
     }
-}
 
-.hljs-attr,
-.hljs-attribute {
-    color: $white;
-}
+    .gutter,
+    .code {
+        pre {
+            margin-bottom: 0;
+        }
+    }
 
-.hljs-comment {
-    color: $gray-500;
-}
+    .gutter {
+        background-color: $gray-700;
 
-.hljs-subst,
-.hljs-template-tag,
-.hljs-tag {
-    color: $gray-300;
-}
+        pre {
+            background-color: $gray-800;
+        }
+    }
 
-.hljs-keyword,
-.hljs-name,
-.hljs-section,
-.hljs-selector-class,
-.hljs-selector-id,
-.hljs-selector-tag,
-.hljs-type {
-    color: theme-color("primary");
-}
+    .code {
+        color: #abb2bf;
 
-.hljs-addition,
-.hljs-meta,
-.hljs-quote {
-    color: theme-color("dark");
-}
+        pre {
+            padding-left: 0.75rem;
+        }
 
-.hljs-number,
-.hljs-template-variable,
-.hljs-variable {
-    color: $blue;
-}
+        .comment,
+        .quote {
+            color: #5c6370;
+            font-style: italic;
+        }
 
-.hljs-literal,
-.hljs-title {
-    color: $yellow;
-}
+        .doctag,
+        .keyword,
+        .formula {
+            color: #c678dd;
+        }
 
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-bullet,
-.hljs-deletion,
-.hljs-link,
-.hljs-string,
-.hljs-symbol {
-    color: $red;
-}
+        .section,
+        .name,
+        .selector-tag,
+        .deletion,
+        .subst {
+            color: #e06c75;
+        }
 
-.hljs-emphasis {
-    font-style: italic;
-}
+        .literal {
+            color: #56b6c2;
+        }
 
-.hljs-strong {
-    font-weight: bold;
+        .string,
+        .regexp,
+        .addition,
+        .attribute,
+        .meta-string {
+            color: #98c379;
+        }
+
+        .built_in,
+        .class .title {
+            color: #e6c07b;
+        }
+
+        .attr,
+        .variable,
+        .template-variable,
+        .type,
+        .selector-class,
+        .selector-attr,
+        .selector-pseudo,
+        .number {
+            color: #d19a66;
+        }
+
+        .symbol,
+        .bullet,
+        .link,
+        .meta,
+        .selector-id,
+        .title {
+            color: #61aeee;
+        }
+
+        .emphasis {
+            font-style: italic;
+        }
+
+        .strong {
+            font-weight: bold;
+        }
+
+        .link {
+            text-decoration: underline;
+        }
+    }
 }

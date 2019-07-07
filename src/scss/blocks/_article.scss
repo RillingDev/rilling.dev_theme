@@ -6,9 +6,11 @@
     @include screen(min, md) {
         padding: 20px;
     }
+
     &.article-full {
         padding-top: 30px;
     }
+
     img {
         max-width: 100%;
     }

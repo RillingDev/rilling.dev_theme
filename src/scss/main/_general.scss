@@ -1,5 +1,12 @@
 body {
-    background: repeating-linear-gradient(45deg, $gray-300 0, $gray-300 5%, $gray-100 0, $gray-100 50%) 0 / 10px 10px;
+    background: repeating-linear-gradient(
+            45deg,
+            $gray-300 0,
+            $gray-300 5%,
+            $gray-100 0,
+            $gray-100 50%
+        )
+        0 / 10px 10px;
 }
 
 //We dont use the bootstrap grid because its bundled with the grid
@@ -39,6 +46,7 @@ body {
 .hr {
     margin-top: 0.333rem;
     margin-bottom: 0.333rem;
+
     &.hr--sm {
         width: 22px;
     }

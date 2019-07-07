@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8">
+    <%
+    let title = page.title;
+
+    if (is_archive()) {
+        title = __('archive_a');
+
+        if (is_month()) {
+            title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()) {
+            title += ': ' + page.year;
+        }
+    } else if (is_category()) {
+        title = __('category') + ': ' + page.category;
+    } else if (is_tag()) {
+        title = __('tag') + ': ' + page.tag;
+    }
+    %>
+    <title>
+        <% if (title){ %><%= title %> |
+        <% } %>
+        <%= config.title %></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow"/>
+    <%- open_graph({
+        twitter_id: theme.twitter
+    }) %>
+
+    <%- css('css/style') %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Lato:400,700|Ubuntu+Mono">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/light.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/brands.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/fontawesome.css">
+
+</head>

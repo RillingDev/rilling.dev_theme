@@ -1,0 +1,35 @@
+<div class="container">
+    <section>
+        <article class="article article-type-<%= post.layout %> article-<%- index ? '' : 'full' %>" itemscope
+                 itemprop="blogPost">
+
+            <% if (post.link || post.title){ %>
+                <header class="article-header" <%- index ? '' : 'hidden' %>>
+                    <%- partial('post/title', {class_name: 'article-title'}) %>
+                    <div class="article-meta">
+                        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+                        <%- partial('post/tag') %>
+                        <div hidden="hidden" itemprop="isFamilyFriendly">true</div>
+                    </div>
+                </header>
+            <% } %>
+            <main class="article-content" itemprop="articleBody text">
+                <% if (post.excerpt && index){ %>
+                    <%- post.excerpt %>
+                    <% if (theme.excerpt_link){ %>
+                        <a class="btn btn-primary btn-primary-margin"
+                           href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+                    <% } %>
+                <% } else { %>
+                    <%- post.content %>
+                <% } %>
+            </main>
+        </article>
+
+        <% if (!index){ %>
+            <%- partial('post/nav') %>
+        <% } %>
+
+    </section>
+
+</div>

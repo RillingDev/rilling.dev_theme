@@ -14,13 +14,16 @@
     justify-content: space-between;
     align-items: center;
     color: $white;
+
     p {
         margin: 0;
         max-width: 25%;
+
         &:first-child {
             max-width: 75%;
         }
     }
+
     a {
         color: inherit;
         text-decoration: underline;

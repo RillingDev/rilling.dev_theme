@@ -1,0 +1,24 @@
+<div class="navbar-expand-md fixed-top">
+    <nav class="navbar navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="<%- url_for('/') %>" title="Go to Home">F-Rilling</a>
+            <a class="navbar-toggler navbar-toggler-right" href="javascript:" id="navbarToggler" role="button"
+               title="Toggle navigation" aria-controls="navbarMenu" aria-expanded="false">
+                <span class="menu-bar" aria-hidden="true"><!-- Icon --></span>
+                <span class="menu-bar" aria-hidden="true"><!-- Icon --></span>
+                <span class="menu-bar" aria-hidden="true"><!-- Icon --></span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarMenu" role="navigation" aria-hidden="false">
+                <ul class="navbar-nav" role="menubar">
+                    <% for (const [name, path] of Object.entries(theme.menu)){ %>
+                        <% const activePage = url_for(path) === url_for(page.path); %>
+                        <li class="nav-item <%= activePage ? 'active' : '' %>" role="menuitem">
+                            <a class="nav-link" href="<%= url_for(path) %>"
+                               title="Go to <%= name %>"><%= name %></a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

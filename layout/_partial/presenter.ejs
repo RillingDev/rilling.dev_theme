@@ -1,0 +1,44 @@
+<%
+let title;
+if (is_home()) {
+    title = "Blog";
+} else if (is_archive()) {
+    title = "Archive";
+} else {
+    title = page.title;
+}
+
+let titleLength = "short";
+if (title.length > 12) {
+    titleLength = "medium";
+}
+if (title.length > 24) {
+    titleLength = "long";
+}
+
+let icon;
+if (is_home()) {
+    icon = "newspaper";
+} else if (is_archive()) {
+    icon = "newspaper";
+} else {
+    icon = custom_field(page, "icon", "code");
+}
+%>
+<div class="presenter">
+    <span class="presenter-icon fal fa-<%- icon %>"
+          aria-hidden="true"><!-- Icon --></span>
+    <div class="presenter-content">
+        <h1 class="presenter-title presenter-title-<%- titleLength %>" itemprop="name headline"><%= title %></h1>
+
+        <% if(false){ %>
+            <%- partial('post/title', {class_name: 'article-title'}) %>
+            <div class="article-meta">
+                <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+                <%- partial('post/tag') %>
+            </div>
+        <% } %>
+        <div hidden="hidden" itemprop="isFamilyFriendly">true</div>
+        <div hidden="hidden" itemprop="isAccessibleForFree">true</div>
+    </div>
+</div>

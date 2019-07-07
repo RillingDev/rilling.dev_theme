@@ -1,0 +1,10 @@
+# Header
+menu:
+  Blog: /index.html
+  Code: /code.html
+  About: /about.html
+  Portfolio: /portfolio.html
+
+# Content
+excerpt_link: Read More
+

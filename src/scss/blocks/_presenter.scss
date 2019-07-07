@@ -8,6 +8,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
     &.presenter--lg {
         align-items: center;
         padding-bottom: 0;
@@ -34,9 +35,11 @@
     text-align: center;
     color: $white;
     margin: 0.5rem 0;
-    >span {
+
+    > span {
         padding-left: 5px;
         padding-right: 5px;
+
         a {
             color: $white;
         }

@@ -17,6 +17,7 @@
     margin: 0;
     list-style: none;
     color: $gray-100;
+
     a {
         color: inherit;
         @include hover-focus-active {

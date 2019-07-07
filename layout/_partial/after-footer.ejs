@@ -1,0 +1,14 @@
+<%- js('js/index') %>
+<%
+let layout;
+if (is_home()) {
+    layout = "index";
+} else if (is_archive()) {
+    layout = "archive";
+} else {
+    layout = page.layout;
+}
+%>
+<script>
+    frilling.init(document, "<%- layout %>");
+</script>

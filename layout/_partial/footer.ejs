@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="footer-wrapper">
+
+        <div class="footer-block">
+            <nav>
+                <ul class="footer-list" role="menubar">
+                    <% for (const [name, path] of Object.entries(theme.menu)){ %>
+                        <li role="menuitem">
+                            <a href="<%= url_for(path) %>"
+                               title="Go to <%= name %>"><%= name %></a>
+                        </li>
+                    <% } %>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-block">
+            <ul class="footer-list">
+                <li>
+                    Email: <span>contact at f-rilling.com</span>
+                </li>
+                <li>
+                    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

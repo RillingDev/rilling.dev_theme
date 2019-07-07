@@ -49,18 +49,21 @@
 //Row direction
 @include screen(min, md) {
     .portfolio {
-        &:nth-child(2n+1) {
+        &:nth-child(2n + 1) {
             .portfolio-items .portfolio-item {
                 flex-direction: row;
-                &:nth-child(2n+2) {
+
+                &:nth-child(2n + 2) {
                     flex-direction: row-reverse;
                 }
             }
         }
-        &:nth-child(2n+2) {
+
+        &:nth-child(2n + 2) {
             .portfolio-items .portfolio-item {
                 flex-direction: row-reverse;
-                &:nth-child(2n+2) {
+
+                &:nth-child(2n + 2) {
                     flex-direction: row;
                 }
             }
@@ -72,6 +75,7 @@
     height: 10px;
     background-color: $gray-100;
     margin-bottom: 150px;
+
     .arrow {
         width: 0;
         height: 0;

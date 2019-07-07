@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .about-img {
         border-radius: 50%;
         max-width: 300px;
@@ -17,6 +18,7 @@
     &:not(:last-child) {
         margin-bottom: 22px;
     }
+
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -27,6 +29,7 @@
         @include screen(min, sm) {
             flex-direction: row;
         }
+
         li.skill {
             margin-bottom: 32px;
             padding-left: 8px;
@@ -35,6 +38,7 @@
                 width: 33.333%;
                 margin-bottom: 22px;
             }
+
             ul {
                 text-align: center;
                 padding: 0;
@@ -48,11 +52,13 @@
 
 .about-experience {
     margin-bottom: 32px;
+
     ul {
         padding: 0;
         margin: 26px auto 0;
         text-align: center;
         list-style: none;
+
         li {
             margin-bottom: 22px;
         }
@@ -72,6 +78,7 @@
     h4 {
         text-align: center;
     }
+
     h3 {
         margin-bottom: 26px;
     }

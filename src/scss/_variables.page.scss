@@ -1,0 +1,37 @@
+// Color system
+
+$white: #fff;
+$gray-100: #fbfbfb;
+$gray-200: #f9f9f9;
+$gray-300: #e0e0e0;
+$gray-400: #dedede;
+$gray-500: #999999;
+$gray-600: #777777;
+$gray-700: #555555;
+$gray-800: #3a3a3a;
+$gray-900: #2f2f2f;
+$black: #2a2a2a;
+
+$green: #83d356;
+$green-dark: #68a844;
+$green-darker: darken($green, 8%);
+$green-light: lighten($green-dark, 8%);
+
+$blue: #2364aa;
+$indigo: #c200fb;
+$purple: #dc0073;
+$pink: #db3069;
+$red: #ec4e20;
+$orange: #f18f01;
+$yellow: #fde74c;
+$teal: #1be7ff;
+$cyan: #048ba8;
+
+$primary: $green;
+$secondary: $green-dark;
+$light: $green-light;
+$dark: $green-darker;
+
+$social-twitter: #1da1f2;
+$social-github: #333;
+$social-codepen: #191919;

@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "module": "esnext",
+        "target": "esnext",
+        "newLine": "LF",
+        "removeComments": true,
+        "strict": true,
+        "noImplicitAny": true
+    }
+}
