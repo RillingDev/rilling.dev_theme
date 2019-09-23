@@ -2,10 +2,12 @@
 let title;
 if (is_home()) {
     title = "Blog";
-} else if (is_archive()) {
+} else if (is_archive() || is_tag()) {
     title = "Archive";
-} else {
+} else if (page.title) {
     title = page.title;
+} else {
+    throw new Error("No Title found!");
 }
 
 let titleLength = "short";
@@ -15,30 +17,11 @@ if (title.length > 12) {
 if (title.length > 24) {
     titleLength = "long";
 }
-
-let icon;
-if (is_home()) {
-    icon = "newspaper";
-} else if (is_archive()) {
-    icon = "newspaper";
-} else {
-    icon = custom_field(page, "icon", "code");
-}
-%>
+_%>
 <div class="presenter">
-    <span class="presenter-icon fal fa-<%- icon %>"
-          aria-hidden="true"><!-- Icon --></span>
-    <div class="presenter-content">
-        <h1 class="presenter-title presenter-title-<%- titleLength %>" itemprop="name headline"><%= title %></h1>
+    <h1 class="presenter-title presenter-title-<%- titleLength %>"><%= title %></h1>
 
-        <% if(false){ %>
-            <%- partial('post/title', {class_name: 'article-title'}) %>
-            <div class="article-meta">
-                <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-                <%- partial('post/tag') %>
-            </div>
-        <% } %>
-        <div hidden="hidden" itemprop="isFamilyFriendly">true</div>
-        <div hidden="hidden" itemprop="isAccessibleForFree">true</div>
-    </div>
+    <% if(is_post()){ %>
+        <%- partial('component/meta', { post: page, presenter: true }) %>
+    <% } %>
 </div>

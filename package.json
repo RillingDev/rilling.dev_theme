@@ -1,7 +1,8 @@
 {
-    "name": "f-rilling.com",
+    "name": "rilling.dev",
     "version": "v4.0.0",
-    "description": "f-rilling.com custom theme",
+    "private": true,
+    "description": "rilling.dev custom theme",
     "scripts": {
         "start": "npm-run-all lint build",
         "build": "npm-run-all --parallel css js",
@@ -16,11 +17,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/FelixRilling/frilling.com.git"
+        "url": "git+https://github.com/FelixRilling/rilling.dev.git"
     },
     "author": "FelixRilling",
     "license": "MIT",
-    "homepage": "https://f-rilling.com",
+    "homepage": "https://rilling.dev",
     "dependencies": {
         "bootstrap": "^4.3.1",
         "lightdash": "^10.2.3"
@@ -29,16 +30,16 @@
         "@babel/core": "^7.5.0",
         "@babel/preset-env": "^7.5.2",
         "@babel/preset-typescript": "^7.3.3",
-        "@types/node": "^12.6.1",
+        "@types/node": "^12.7.3",
         "babel-loader": "^8.0.6",
-        "cross-env": "^5.2.0",
+        "cross-env": "^6.0.0",
         "node-sass": "^4.12.0",
         "npm-run-all": "^4.1.5",
         "terser": "^4.1.2",
-        "terser-webpack-plugin": "^1.3.0",
+        "terser-webpack-plugin": "^2.1.0",
         "tslint": "^5.18.0",
-        "typescript": "^3.5.3",
-        "webpack": "^4.35.3",
-        "webpack-cli": "^3.3.5"
+        "typescript": "^3.6.2",
+        "webpack": "^4.39.3",
+        "webpack-cli": "^3.3.9"
     }
 }

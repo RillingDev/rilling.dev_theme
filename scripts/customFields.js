@@ -1,15 +1,11 @@
-const findCustomField = (page, field, fallback = null) => {
-    const val = page[field];
+const getCustomPageData = (page) => {
+    const data = page.data;
 
-    if (!val) {
-        if(fallback!=null){
-            return fallback;
-        }
-
-        throw new Error(`Could not find field '${field}'`);
+    if (!data) {
+        throw new Error(`Could not find page data.`);
     }
 
-    return val;
+    return data;
 };
 
-hexo.extend.helper.register('custom_field', findCustomField);
+hexo.extend.helper.register("get_custom_page_data", getCustomPageData);

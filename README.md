@@ -1,6 +1,6 @@
-# F-Rilling
+# Rilling.dev
 
-Hexo theme for <https://f-rilling.com>.
+Hexo theme for <https://rilling.dev>.
 
 ## Structure
 

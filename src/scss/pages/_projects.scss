@@ -1,18 +1,19 @@
-.projects {
-    max-width: 640px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+@import "../mixins/screen";
+
+.projects p {
+    text-align: center;
 }
 
-.project {
-    padding: 1rem;
-    margin-bottom: 32px;
-
-    ul li {
-        .fal {
-            margin-left: 6px;
-        }
+.projects-wrapper {
+    max-width: 650px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include screen(min, md) {
+        flex-direction: row;
     }
+}
+
+.category {
+    padding: 0.5rem 2rem 0.5rem 2rem;
 }

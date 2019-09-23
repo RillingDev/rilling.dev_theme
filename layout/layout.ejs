@@ -1,27 +1,17 @@
-<%
-let schemaType;
-if (page.layout === "projects" || page.layout === "portfolio") {
-    schemaType = "CollectionPage";
-} else if (page.layout === "about") {
-    schemaType = "AboutPage";
-} else {
-    schemaType = "WebPage";
-}
-%>
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/<%- schemaType %>">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <%- partial('_partial/head') %>
 <body>
 <header class="header">
-    <%- partial('_partial/navbar', null, {cache: !config.relative_link}) %>
-    <%- partial('_partial/presenter', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/navbar', null) %>
+    <%- partial('_partial/presenter', null) %>
 </header>
-<main>
+<main class="main">
     <%- body %>
 </main>
 <footer class="footer">
-    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/footer', null) %>
 </footer>
-<%- partial('_partial/after-footer') %>
+<%- partial('_partial/after-footer', null) %>
 </body>
 </html>

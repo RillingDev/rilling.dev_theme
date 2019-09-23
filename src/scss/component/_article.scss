@@ -1,0 +1,20 @@
+@import "../variables.bootstrap";
+@import "../mixins/screen";
+
+.article {
+    margin-bottom: 1rem;
+    background-color: $white;
+    padding: 1rem;
+    width: 100%;
+    @include screen(min, md) {
+        padding: 1.25rem;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.article-meta {
+    margin-bottom: 0.5rem;
+}

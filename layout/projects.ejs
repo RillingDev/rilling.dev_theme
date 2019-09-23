@@ -1,0 +1,28 @@
+<div class="container section section-margin projects">
+    <%- page.content %>
+    <div class="projects-wrapper">
+        <%
+        const data = get_custom_page_data(page);
+        const categories = data.categories;
+        const projects = data.projects;
+        categories.forEach(category=>{ %>
+            <div class="category">
+                <h3>
+                    <%- partial('_partial/component/icon', { classname: `fas fa-${category.icon}` }) _%>
+                    <%= category.name %>
+                </h3>
+                <ul>
+                    <% projects.filter(project => project.category === category.id).forEach(project=>{ %>
+                        <li class="project">
+                            <a href="<%= project.link %>"
+                               title="Go to Project <%= project.name %>" target="_blank">
+                                <%= project.name %>
+                            </a>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% }); %>
+    </div>
+    <%- partial('_partial/component/social', null) %>
+</div>

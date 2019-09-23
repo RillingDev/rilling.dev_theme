@@ -1,0 +1,29 @@
+<div class="container section section-margin about">
+    <div class="about-main">
+        <h2>Felix Rilling</h2>
+        <h3>Web Developer</h3>
+        <%- page.content %>
+    </div>
+    <div class="about-experience">
+        <h2>References</h2>
+        <hr class="hr hr--sm">
+        <h3>Professional Experience</h3>
+        <ul>
+            <%
+            const data = get_custom_page_data(page);
+            const references = data.references;
+            references.forEach(reference=>{ %>
+                <li>
+                    <p>
+                        <strong><%= reference.role %></strong>
+                        <br/>
+                        <span><%= reference.at %></span>
+                        <br/>
+                        <span><%= reference.time %></span>
+                    </p>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    <%- partial('_partial/component/social', null) %>
+</div>

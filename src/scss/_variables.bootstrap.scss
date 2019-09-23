@@ -14,6 +14,16 @@ $enable-responsive-font-sizes: true;
 $enable-validation-icons: false;
 $enable-deprecation-messages: true;
 
+$theme-color-interval: 8%;
+$yiq-contrasted-threshold: 300;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "light": $light,
+    "dark": $dark
+);
+
 // Body
 $body-bg: $gray-100;
 $body-color: $gray-700;
