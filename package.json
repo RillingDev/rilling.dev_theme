@@ -1,6 +1,6 @@
 {
-    "name": "rilling.dev",
-    "version": "v4.0.0",
+    "name": "rilling.dev_theme",
+    "version": "4.0.0",
     "private": true,
     "description": "rilling.dev custom theme",
     "scripts": {
@@ -17,7 +17,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/FelixRilling/rilling.dev.git"
+        "url": "git+https://github.com/FelixRilling/rilling.dev_theme.git"
     },
     "author": "FelixRilling",
     "license": "MIT",
@@ -30,12 +30,12 @@
         "@babel/core": "^7.6.2",
         "@babel/preset-env": "^7.6.2",
         "@babel/preset-typescript": "^7.3.3",
-        "@types/node": "^12.7.9",
+        "@types/node": "^12.7.11",
         "babel-loader": "^8.0.6",
         "cross-env": "^6.0.3",
         "node-sass": "^4.12.0",
         "npm-run-all": "^4.1.5",
-        "terser": "^4.3.4",
+        "terser": "^4.3.6",
         "terser-webpack-plugin": "^2.1.2",
         "tslint": "^5.18.0",
         "typescript": "^3.6.2",
