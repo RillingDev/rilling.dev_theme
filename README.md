@@ -1,4 +1,4 @@
-# Rilling.dev
+# Rilling.dev Theme
 
 Hexo theme for <https://rilling.dev>.
 

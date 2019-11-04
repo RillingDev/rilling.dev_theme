@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
+        "baseUrl": "./",
         "module": "esnext",
-        "target": "esnext",
+        "target": "es2018",
         "newLine": "LF",
-        "removeComments": true,
         "strict": true,
-        "noImplicitAny": true
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "removeComments": false
     }
 }

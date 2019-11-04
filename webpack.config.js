@@ -2,7 +2,7 @@ const { resolve } = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-    entry: "./src/ts/index.ts",
+    entry: "./src/ts/main.ts",
     output: {
         filename: "index.js",
         path: resolve(__dirname, "source/js")
@@ -11,14 +11,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|ts)$/,
-                exclude: /node_modules/,
-                loader: "babel-loader"
+                test: /\.ts$/,
+                use: "ts-loader",
+                exclude: /node_modules/
             }
         ]
     },
     resolve: {
-        extensions: ["*", ".js", ".ts"]
+        extensions: [".ts"]
     },
     optimization: {
         minimizer: [new TerserPlugin()]
