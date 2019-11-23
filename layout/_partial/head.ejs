@@ -17,12 +17,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="<%= isError ? "noindex" : "index" _%>,follow"/>
 
+    <!--
+    Source code can be found here:
+        - site hexo project and content: https://github.com/FelixRilling/rilling.dev
+        - site theme:                    https://github.com/FelixRilling/rilling.dev_theme
+    -->
+
     <meta name="author" content="Felix Rilling"/>
     <%- open_graph({
         image: url_for('apple-touch-icon.png'),
         twitter_id: config.social.twitter
     }) %>
 
+    <!-- Generated through https://realfavicongenerator.net/ -->
     <link rel="apple-touch-icon" sizes="180x180" href="<%- url_for('apple-touch-icon.png') %>">
     <link rel="icon" type="image/png" sizes="32x32" href="<%- url_for('favicon-32x32.png') %>">
     <link rel="icon" type="image/png" sizes="16x16" href="<%- url_for('favicon-16x16.png') %>">
@@ -32,6 +39,9 @@
     <meta name="msapplication-TileColor" content="#83d356">
     <meta name="msapplication-config" content="<%- url_for('browserconfig.xml') %>">
     <meta name="theme-color" content="#83d356">
+
+    <!-- No dark mode yet :( -->
+    <meta name="color-scheme" content="only light">
 
     <%- css('css/main') %>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo|Lato:400,700|Ubuntu+Mono">
