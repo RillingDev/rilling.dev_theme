@@ -1,12 +1,17 @@
 {
     "compilerOptions": {
+        "moduleResolution": "node",
+        "rootDir": "./",
         "baseUrl": "./",
         "module": "esnext",
         "target": "es2018",
         "newLine": "LF",
-        "strict": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "removeComments": false
-    }
+        "strict": true
+    },
+    "include": [
+        "./src/ts/"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }
