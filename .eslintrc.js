@@ -18,8 +18,7 @@ module.exports = {
         "prettier/@typescript-eslint"
     ],
     env: {
-        "browser": true,
-        "node": true
+        "browser": true
     },
     rules: {
         "no-shadow": "error",
