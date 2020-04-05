@@ -6,7 +6,10 @@
         "module": "esnext",
         "target": "es2018",
         "newLine": "LF",
-        "strict": true
+        "removeComments": false,
+        "strict": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     },
     "include": [
         "./src/ts/"
