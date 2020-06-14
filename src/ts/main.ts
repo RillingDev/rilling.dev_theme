@@ -1,7 +1,11 @@
 import { init } from "./init";
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-// @ts-ignore
+declare global {
+    interface Window {
+        rilling: { init: typeof init };
+    }
+}
+
 window.rilling = {
     init,
 };

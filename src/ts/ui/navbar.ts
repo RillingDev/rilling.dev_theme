@@ -1,6 +1,6 @@
 const initNavbar = (document: Document): void => {
-    const $navToggler = <Element>document.querySelector("#navbarToggler");
-    const $navMenu = <Element>document.querySelector("#navbarMenu");
+    const $navToggler = document.querySelector("#navbarToggler") as Element;
+    const $navMenu = document.querySelector("#navbarMenu") as Element;
     let isNavOpen = false;
 
     $navToggler.addEventListener(
