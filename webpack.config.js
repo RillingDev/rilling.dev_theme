@@ -5,7 +5,7 @@ module.exports = {
     entry: "./src/ts/main.ts",
     output: {
         filename: "main.js",
-        path: resolve(__dirname, "source/js")
+        path: resolve(__dirname, "source")
     },
     mode: process.env.NODE_ENV,
     module: {

@@ -5,19 +5,16 @@
     "description": "rilling.dev custom theme",
     "scripts": {
         "start": "npm run dist",
-        "dist": "npm run clean:dist && npm run lint && npm run build:dist",
-        "build": "npm-run-all --parallel css js",
-        "build:dist": "npm-run-all --parallel css:dist js:dist",
+        "dist": "npm run clean && npm run lint && npm run build",
+        "build": "npm-run-all --parallel css:dist js:dist",
         "watch": "npm-run-all --parallel css:watch js:watch",
-        "css": "node-sass src/scss/main.scss -o ./source/css/ --output-style expanded",
-        "css:watch": "node-sass src/scss/main.scss -o ./source/css/ --output-style expanded --watch",
-        "css:dist": "node-sass src/scss/main.scss -o ./source/css/ --output-style compressed",
-        "js": "webpack -d",
+        "css:watch": "node-sass src/scss/main.scss -o ./source/ --output-style expanded --watch",
+        "css:dist": "node-sass src/scss/main.scss -o ./source/ --output-style compressed",
         "js:watch": "webpack -d --watch",
         "js:dist": "webpack -p",
         "lint": "eslint ./src/ts/ --ext .ts",
         "fix": "eslint ./src/ts/ --ext .ts --fix",
-        "clean:dist": "rimraf ./source/css/ ./source/js/"
+        "clean": "rimraf ./source/*"
     },
     "repository": {
         "type": "git",
