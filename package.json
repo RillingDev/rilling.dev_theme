@@ -2,6 +2,7 @@
     "name": "rilling.dev_theme",
     "version": "4.0.1",
     "private": true,
+    "license": "MIT",
     "description": "rilling.dev custom theme",
     "scripts": {
         "start": "npm run dist",
@@ -16,13 +17,16 @@
         "fix": "eslint ./src/ts/ --ext .ts --fix",
         "clean": "rimraf ./source/*"
     },
+    "author": {
+        "name": "Felix Rilling",
+        "email": "contact@rilling.dev",
+        "url": "https://rilling.dev"
+    },
+    "homepage": "https://rilling.dev",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/FelixRilling/rilling.dev_theme.git"
     },
-    "author": "FelixRilling",
-    "license": "MIT",
-    "homepage": "https://rilling.dev",
     "dependencies": {
         "bootstrap": "^4.5.0"
     },
