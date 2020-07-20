@@ -10,31 +10,16 @@ $enable-prefers-reduced-motion-media-query: true;
 $enable-grid-classes: false;
 $enable-pointer-cursor-for-buttons: true;
 $enable-print-styles: true;
-$enable-responsive-font-sizes: true;
+$enable-responsive-font-sizes: false;
 $enable-validation-icons: false;
 $enable-deprecation-messages: true;
 
 $theme-color-interval: 8%;
-$yiq-contrasted-threshold: 255;
+$yiq-contrasted-threshold: 200;
 
 // Body
 $body-bg: $gray-100;
 $body-color: $gray-700;
-
-// Links
-
-$link-hover-color: $light;
-
-// Components
-
-$line-height-lg: 1.6;
-$line-height-sm: 1.6;
-
-$border-width: 0;
-
-$border-radius: 0;
-$border-radius-lg: 0;
-$border-radius-sm: 0;
 
 // Typography
 $font-family-sans-serif: "Lato", sans-serif;
@@ -47,6 +32,8 @@ $font-size-lg: 1.25rem;
 $font-size-sm: 0.875rem;
 
 $line-height-base: 1.6;
+$line-height-lg: $line-height-base;
+$line-height-sm: $line-height-base;
 
 $h1-font-size: 2.25rem;
 $h2-font-size: 2rem;
@@ -57,10 +44,6 @@ $h6-font-size: $font-size-base;
 
 $headings-font-family: $font-family-serif;
 $headings-font-weight: 400;
-
-// Tables
-$table-border-width: 1px;
-$table-border-color: $gray-400;
 
 // Navbar
 $navbar-brand-height: 40px;
@@ -74,7 +57,6 @@ $navbar-light-toggler-icon-bg: none;
 $navbar-light-toggler-border-color: none;
 
 // Pagination
-
 $pagination-padding-y: 1rem;
 $pagination-padding-x: 1rem;
 $pagination-padding-y-sm: 0.75rem;
@@ -82,28 +64,3 @@ $pagination-padding-x-sm: 0.75rem;
 $pagination-padding-y-lg: 1.5rem;
 $pagination-padding-x-lg: 1.5rem;
 $pagination-line-height: 1rem;
-
-$pagination-color: $gray-200;
-$pagination-bg: $primary;
-$pagination-border-width: $border-width;
-$pagination-border-color: $gray-300;
-
-$pagination-hover-color: $gray-200;
-$pagination-hover-bg: $secondary;
-$pagination-hover-border-color: $secondary;
-
-$pagination-active-color: $gray-200;
-$pagination-active-bg: $secondary;
-$pagination-active-border-color: $secondary;
-
-$pagination-disabled-color: $gray-200;
-$pagination-disabled-bg: $light;
-$pagination-disabled-border-color: $light;
-
-// Badges
-
-$badge-font-size: 0.85em;
-$badge-font-weight: 400;
-$badge-padding-y: 0.4em;
-$badge-padding-x: 0.6em;
-$badge-border-radius: $border-radius;
