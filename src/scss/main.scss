@@ -1,21 +1,10 @@
-@import "variables.page";
-@import "variables.bootstrap";
-@import "bootstrap";
-@import "mixins/screen";
-@import "mixins/hover-focus-active";
-@import "mixins/transition";
-@import "base/general";
-@import "base/typo";
-@import "base/links";
-@import "component/navbar";
-@import "component/presenter";
-@import "component/footer";
-@import "component/section";
-@import "component/article";
-@import "component/code";
-@import "component/pagination";
-@import "component/meta";
-@import "component/social";
-@import "pages/projects";
-@import "pages/about";
-@import "pages/error";
+@use "normalize";
+
+@use "variables";
+
+@use "base/theme";
+@use "base/core";
+@use "base/text";
+@use "base/table";
+
+@use "component/button";

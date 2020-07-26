@@ -9,8 +9,8 @@
         "dist": "npm run clean && npm run lint && npm run build",
         "build": "npm-run-all --parallel css:dist js:dist",
         "watch": "npm-run-all --parallel css:watch js:watch",
-        "css:watch": "node-sass src/scss/main.scss -o ./source/ --output-style expanded --watch",
-        "css:dist": "node-sass src/scss/main.scss -o ./source/ --output-style compressed",
+        "css:watch": "sass ./src/scss/main.scss ./source/main.css --watch  -I ./node_modules/normalize.css/",
+        "css:dist": "sass ./src/scss/main.scss ./source/main.css --style compressed -I ./node_modules/normalize.css/",
         "js:watch": "webpack -d --watch",
         "js:dist": "webpack -p",
         "lint": "eslint ./src/ts/ --ext .ts",
@@ -28,7 +28,7 @@
         "url": "git+https://github.com/FelixRilling/rilling.dev_theme.git"
     },
     "dependencies": {
-        "bootstrap": "^4.5.0"
+        "normalize.css": "^8.0.1"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^3.6.1",
@@ -37,10 +37,10 @@
         "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-import": "^2.22.0",
         "eslint-plugin-prettier": "^3.1.4",
-        "node-sass": "^4.14.1",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.0.5",
         "rimraf": "^3.0.2",
+        "sass": "^1.26.10",
         "terser": "^4.8.0",
         "terser-webpack-plugin": "^3.0.7",
         "ts-loader": "^8.0.1",

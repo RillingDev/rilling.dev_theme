@@ -1,0 +1,27 @@
+@use "../variables";
+
+body {
+    @include variables.variables-light();
+    &.theme--dark {
+        @include variables.variables-dark();
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        @include variables.variables-dark();
+        &.theme--light {
+            @include variables.variables-light();
+        }
+    }
+}
+
+@media print {
+    body {
+        &,
+        &.theme--light,
+        &.theme--dark {
+            @include variables.variables-print();
+        }
+    }
+}

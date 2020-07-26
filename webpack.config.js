@@ -5,7 +5,7 @@ module.exports = {
     entry: "./src/ts/main.ts",
     output: {
         filename: "main.js",
-        path: resolve(__dirname, "source")
+        path: resolve(__dirname, "source"),
     },
     mode: process.env.NODE_ENV,
     module: {
@@ -13,14 +13,15 @@ module.exports = {
             {
                 test: /\.ts$/,
                 use: "ts-loader",
-                exclude: /node_modules/
-            }
-        ]
+                exclude: /node_modules/,
+            },
+        ],
     },
     resolve: {
-        extensions: [".ts"]
+        extensions: [".ts"],
     },
     optimization: {
-        minimizer: [new TerserPlugin()]
-    }
+        minimizer: [new TerserPlugin()],
+    },
+    devtool: "source-map",
 };

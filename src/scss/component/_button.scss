@@ -1,0 +1,50 @@
+@use "./../mixins/transition" as *;
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75em;
+
+    border: none;
+    border-radius: var(--border-radius);
+    @include transition(#{background-color, box-shadow});
+
+    background-color: var(--gray-625);
+    color: var(--white);
+
+    &:hover {
+        text-decoration: none;
+        background-color: var(--gray-750);
+    }
+    &:focus {
+        outline: 0; /* Usually removing the outline is bad, but we use box-shadow instead */
+        box-shadow: 0 0 0 0.225rem var(--gray-375);
+    }
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        background-color: var(--gray-500);
+        color: var(--gray-250);
+    }
+
+    &-primary {
+        background-color: var(--primary);
+        color: var(--text-contrast-color);
+
+        &:hover {
+            background-color: var(--primary-contrast);
+        }
+        &:focus {
+            box-shadow: 0 0 0 0.225rem var(--primary-transparent);
+        }
+        &:disabled {
+            background-color: var(--primary-transparent);
+            color: var(--text-contrast-color);
+        }
+    }
+}

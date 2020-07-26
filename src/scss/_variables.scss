@@ -1,0 +1,118 @@
+@use "sass:color";
+
+//
+// Color system
+//
+
+$-color-step: 10.75%;
+
+$-black: #222123;
+$-gray-875: color.adjust($-black, $lightness: $-color-step * 1);
+$-gray-750: color.adjust($-black, $lightness: $-color-step * 2);
+$-gray-625: color.adjust($-black, $lightness: $-color-step * 3);
+$-gray-500: color.adjust($-black, $lightness: $-color-step * 4);
+$-gray-375: color.adjust($-black, $lightness: $-color-step * 5);
+$-gray-250: color.adjust($-black, $lightness: $-color-step * 6);
+$-gray-125: color.adjust($-black, $lightness: $-color-step * 7);
+$-white: color.adjust($-black, $lightness: $-color-step * 8);
+
+$-purple-bright: #e2a3c7;
+$-purple: color.adjust($-purple-bright, $lightness: - ($-color-step * 1));
+$-purple-dark: color.adjust($-purple-bright, $lightness: - ($-color-step * 2));
+$-purple-transparent: color.change($-purple-bright, $alpha: 0.5);
+$-yellow-bright: #fffd98;
+$-cyan-bright: #75b9be;
+
+//
+// Sizes
+//
+$breakpoint-xs: 340px;
+$breakpoint-sm: 660px;
+$breakpoint-md: 920px;
+$breakpoint-lg: 1140px;
+$breakpoint-xl: 1420px;
+
+//
+// Primary variables
+//
+:root {
+    /**
+    * Colors
+    */
+    --black: #{$-black};
+    --gray-875: #{$-gray-875};
+    --gray-750: #{$-gray-750};
+    --gray-625: #{$-gray-625};
+    --gray-500: #{$-gray-500};
+    --gray-375: #{$-gray-375};
+    --gray-250: #{$-gray-250};
+    --gray-125: #{$-gray-125};
+    --white: #{$-white};
+
+    --purple-bright: #{$-purple-bright};
+    --purple: #{$-purple};
+    --purple-dark: #{$-purple-dark};
+    --purple-transparent: #{$-purple-transparent};
+    --yellow-bright: #{$-yellow-bright};
+    --cyan-bright: #{$-cyan-bright};
+
+    --social-github: #586069;
+    --social-codepen: #1e1f26;
+
+    /**
+    * Typography
+    */
+    --font-family-sans: "Noto Sans", sans-serif;
+    --font-family-serif: "Noto Serif", serif;
+    --font-family-monospace: "Fira Code", monospace;
+
+    /**
+    * Sizes
+    */
+    --border-radius: 3px;
+}
+
+//
+// Dark/Light mode
+//
+@mixin variables-light {
+    --background-color: var(--white);
+    --background-contrast-color: var(--gray-125);
+    --text-color: var(--gray-875);
+    --text-contrast-color: var(--white);
+    --text-muted-color: var(--gray-250);
+
+    --primary: var(--purple-dark);
+    --primary-contrast: var(--purple);
+    --primary-transparent: var(--purple-transparent);
+    --secondary: var(--yellow-bright);
+    --tertiary: var(--cyan-bright);
+}
+
+@mixin variables-dark {
+    --background-color: var(--gray-875);
+    --background-contrast-color: var(--black);
+    --text-color: var(--white);
+    --text-contrast-color: var(--gray-875);
+    --text-muted-color: var(--gray-625);
+
+    --primary: var(--purple-bright);
+    --primary-contrast: var(--purple);
+    --primary-transparent: var(--purple-transparent);
+    --secondary: var(--yellow-bright);
+    --tertiary: var(--cyan-bright);
+}
+
+@mixin variables-print {
+    --background-color: transparent;
+    --background-contrast-color: var(--gray-125);
+    --text-color: var(--gray-875);
+    --text-contrast-color: var(--white);
+    --text-muted-color: var(--gray-625);
+
+    --primary: var(--gray-625);
+    --primary-contrast: var(--gray-750);
+    --primary-transparent: var(--gray-375);
+    --secondary: var(--gray-250);
+    --tertiary: var(--gray-375);
+}
