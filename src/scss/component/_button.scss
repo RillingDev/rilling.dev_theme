@@ -1,11 +1,12 @@
 @use "./../mixins/transition" as *;
 
 .btn {
-    font-family: var(--font-family-sans);
     display: inline-block;
     cursor: pointer;
     padding: 0.625rem 1rem;
 
+    font-family: var(--font-family-sans);
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
