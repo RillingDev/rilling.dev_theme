@@ -19,7 +19,7 @@ $-white: color.adjust($-black, $lightness: $-color-step * 8);
 $-purple-bright: #e2a3c7;
 $-purple: color.adjust($-purple-bright, $lightness: - ($-color-step * 1));
 $-purple-dark: color.adjust($-purple-bright, $lightness: - ($-color-step * 2));
-$-purple-transparent: color.change($-purple-bright, $alpha: 0.5);
+$-purple-transparent: color.change($-purple-bright, $alpha: 0.75);
 $-yellow-bright: #fffd98;
 $-cyan-bright: #75b9be;
 
@@ -90,8 +90,8 @@ $breakpoint-xl: 1420px;
 }
 
 @mixin variables-dark {
-    --background-color: var(--gray-875);
-    --background-contrast-color: var(--black);
+    --background-color: var(--black);
+    --background-contrast-color: var(--gray-875);
     --text-color: var(--white);
     --text-contrast-color: var(--gray-875);
     --text-muted-color: var(--gray-625);
