@@ -1,6 +1,7 @@
 /**
 * Base
 */
+
 *,
 *:before,
 *:after {
@@ -8,16 +9,14 @@
 }
 
 body {
-    font-size: 18px;
-    line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: var(--font-family-serif);
 }
 
 /**
 * General display changes.
 */
+
 video,
 audio,
 picture,
@@ -58,8 +57,23 @@ input[type="week"] {
 }
 
 /**
+* Table changes
+*/
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid var(--text-muted-color);
+    padding: 0.5rem;
+}
+
+/**
  * Margin/Padding changes
  */
+
 h1,
 h2,
 h3,
