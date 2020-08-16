@@ -17,14 +17,47 @@
         <a href="#" class="btn btn-primary disabled">Btn primary disabled</a>
     </section>
 </section>
-
+<section>
+    <figure class="highlight js">
+        <table>
+            <tbody>
+            <tr>
+                <td class="gutter">
+                    <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                class="line">3</span><br><span class="line">4</span><br><span
+                                class="line">5</span><br><span class="line">6</span><br><span
+                                class="line">7</span><br><span class="line">8</span><br><span
+                                class="line">9</span><br><span class="line">10</span><br></pre>
+                </td>
+                <td class="code">
+                    <pre><span class="line"><span
+                                    class="comment">// Main file</span></span><br><span
+                                class="line"><span class="keyword">const</span> foo = <span
+                                    class="built_in">require</span>(<span
+                                    class="string">"foo"</span>);</span><br><span class="line">foo.bar();</span><br><span
+                                class="line"></span><br><span class="line"><span class="comment">// Module file</span></span><br><span
+                                class="line"><span class="built_in">module</span>.exports = {</span><br><span
+                                class="line">    bar: <span class="function"><span class="keyword">function</span> (<span
+                                        class="params"></span>) </span>{</span><br><span
+                                class="line">        <span class="keyword">return</span> <span
+                                    class="string">"fooBar"</span>;</span><br><span class="line">    },</span><br><span
+                                class="line">};</span><br></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </figure>
+</section>
 <section>
 
 
     <!-- HTML5 Kitchen sink by @dbox -->
     <header role="banner">
         <h1>HTML5 Kitchen Sink</h1>
-        <small>Jump to: <a href="#headings">Headings</a> | <a href="#sections">Sections</a> | <a href="#phrasing">Phrasing</a> | <a href="#palpable">Palpable Content</a> | <a href="#embeds">Embeds</a> | <a href="#forms">Forms</a> | <a href="#tables">Tables</a> </small> <br><br>
+        <small>Jump to: <a href="#headings">Headings</a> | <a href="#sections">Sections</a> | <a
+                    href="#phrasing">Phrasing</a> | <a href="#palpable">Palpable Content</a> | <a
+                    href="#embeds">Embeds</a> | <a href="#forms">Forms</a> | <a href="#tables">Tables</a>
+        </small> <br><br>
         <p>This section seves as the <code>header</code>.</p>
 
     </header>
@@ -41,11 +74,13 @@
                 <h2>h2 Back in my quaint <a href='#'>garden</a></h2>
                 <h3>h3 Jaunty <a href='#'>zinnias</a> vie with flaunting phlox.</h3>
                 <h4>h4 Five or six big jet planes zoomed quickly by the new tower.</h4>
-                <h5>h5 Expect skilled signwriters to use many jazzy, quaint old alphabets effectively.</h5>
+                <h5>h5 Expect skilled signwriters to use many jazzy, quaint old alphabets
+                    effectively.</h5>
                 <h6>h6 Pack my box with five dozen liquor jugs.</h6>
             </hgroup>
             <footer>
-                <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#heading-content">Heading
+                <p>See the <a target="_blank"
+                              href="https://www.w3.org/TR/html5/dom.html#heading-content">Heading
                         Content spec.</a></p>
                 <p>Note: these two paragraphs are contained in a <code>footer</code> element.
                 </p>
@@ -68,13 +103,29 @@
                 </nav>
             </header>
             <article>
-                <p>This paragraph is nested inside an <code>article</code> element. It contains many different, sometimes useful, <a href="http://www.w3schools.com/tags/">HTML5 elements</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>,
-                    and <small>small</small> but there are many others as well. Hover the following text for abbreviation element: <abbr title="abbreviation">abbr</abbr>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p>
-                <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> elements. Even more specifically, there is an element just for <var>variables</var>. Not to be mistaken with block
-                    quotes below, the quote element lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) elements.</p>
+                <p>This paragraph is nested inside an <code>article</code> element. It contains many
+                    different, sometimes useful, <a href="http://www.w3schools.com/tags/">HTML5
+                        elements</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>,
+                    and <small>small</small> but there are many others as well. Hover the following
+                    text for abbreviation element: <abbr title="abbreviation">abbr</abbr>. You can
+                    define
+                    <del>deleted text</del>
+                    which often gets replaced with
+                    <ins>inserted</ins>
+                    text.
+                </p>
+                <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to
+                    the <code>&lt;code&gt;</code> or <samp>samp</samp> elements. Even more
+                    specifically, there is an element just for <var>variables</var>. Not to be
+                    mistaken with block
+                    quotes below, the quote element lets you denote something as <q>quoted text</q>.
+                    Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>)
+                    elements.</p>
                 <section>
-                    <p>This paragraph is contained in a <code>section</code> element of its parent <code>article</code> element.</p>
-                    <p>↓ The following paragraph has the <code>hidden</code> attribute and should not be displayed. ↓</p>
+                    <p>This paragraph is contained in a <code>section</code> element of its parent
+                        <code>article</code> element.</p>
+                    <p>↓ The following paragraph has the <code>hidden</code> attribute and should
+                        not be displayed. ↓</p>
                     <p hidden>→ You should not see this paragraph. ←</p>
                     <p>↑ The previous paragraph should not be displayed. ↑</p>
                 </section>
@@ -83,7 +134,8 @@
                 <p>This is contained in an <code>aside</code> element.</p>
             </aside>
             <footer>
-                <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#sectioning-content">Sectioning
+                <p>See the <a target="_blank"
+                              href="https://www.w3.org/TR/html5/dom.html#sectioning-content">Sectioning
                         Content spec.</a></p>
             </footer>
         </section>
@@ -105,35 +157,79 @@
             <p><code>abbr</code>: Some vehicles meet the
                 <abbr title="Super Ultra Low Emission Vehicle">SULEV</abbr> standard.<br>
                 <code>br</code> was used to make this sentence start on a new line.</p>
-            <p><code>bdi</code>: Some languages read right to left, <bdi lang="ar">مرحبا</bdi>.
+            <p><code>bdi</code>: Some languages read right to left,
+                <bdi lang="ar">مرحبا</bdi>
+                .
                 <code>bdo</code>: <bdo dir="rtl">The normal direction has been
                     overridden.</bdo></p>
-            <p><code>em</code> is used for <em>emphasis</em> and usually renders as italics, contrast that with <code>i</code> which is used for alternate voice or to offset from the normal (such as a phrase from a different language or taxonomic designation): <i>E. coli</i>      can be bad. <code>strong</code> is used for <strong>importance or urgency</strong> and usually renders as bold, contrast that with <code>b</code> which is used to <b>draw
+            <p><code>em</code> is used for <em>emphasis</em> and usually renders as italics,
+                contrast that with <code>i</code> which is used for alternate voice or to offset
+                from the normal (such as a phrase from a different language or taxonomic
+                designation): <i>E. coli</i> can be bad. <code>strong</code> is used for <strong>importance
+                    or urgency</strong> and usually renders as bold, contrast that with
+                <code>b</code> which is used to <b>draw
                     attention</b> without the semantic meaning of importance.</p>
             <p><code>cite</code>: In the words of <cite>Charles Bukowski</cite> —
                 <q>An intellectual says a simple thing in a hard way. An artist says a
                     hard thing in a simple way.</q></p>
-            <p><code>data</code> can be used to specify <data value="2018-09-24T05:00-07:00">5 A.M.</data> that is machine-readable, but <code>time</code> is a better choice for specifying <time datetime="2018-09-24T05:00-07:00">5 A.M.</time> in a machine-readable
-                format.</p>
-            <p><code>del</code> can be <del datetime="2017-10-11T01:25-07:00">varily</del> used to mark deletions. <code>ins</code> marks <ins datetime="2007-12-19 00:00Z">insertions</ins>. <code>s</code>: similar to <code>del</code>, but used to mark content that
-                is no longer relevant. <s>Windows XP version available.</s> <code>u</code>: a holdover with no real meaning that should be <u>removed</u>. <code>mark</code>: the HTML equivalent of the <mark>yellow highlighter</mark>. <code>span</code>: a <span>generic element</span>      with no meaning by itself.</p>
-            <p><code>dfn</code>: Foreign phrases add a certain <dfn lang="fr" title="French: indefinable quality">je ne sais quoi</dfn> to one's prose.
+            <p><code>data</code> can be used to specify
+                <data value="2018-09-24T05:00-07:00">5 A.M.</data>
+                that is machine-readable, but <code>time</code> is a better choice for specifying
+                <time datetime="2018-09-24T05:00-07:00">5 A.M.</time>
+                in a machine-readable
+                format.
             </p>
-            <p><code>q</code>: The W3C page <cite>About W3C</cite> says the W3C’s mission is <q cite="https://www.w3.org/Consortium/">To lead the World
+            <p><code>del</code> can be
+                <del datetime="2017-10-11T01:25-07:00">varily</del>
+                used to mark deletions. <code>ins</code> marks
+                <ins datetime="2007-12-19 00:00Z">insertions</ins>
+                . <code>s</code>: similar to <code>del</code>, but used to mark content that
+                is no longer relevant. <s>Windows XP version available.</s> <code>u</code>: a
+                holdover with no real meaning that should be <u>removed</u>. <code>mark</code>: the
+                HTML equivalent of the
+                <mark>yellow highlighter</mark>
+                . <code>span</code>: a <span>generic element</span> with no meaning by itself.
+            </p>
+            <p><code>dfn</code>: Foreign phrases add a certain <dfn lang="fr"
+                                                                    title="French: indefinable quality">je
+                    ne sais quoi</dfn> to one's prose.
+            </p>
+            <p><code>q</code>: The W3C page <cite>About W3C</cite> says the W3C’s mission is <q
+                        cite="https://www.w3.org/Consortium/">To lead the World
                     Wide Web to its full potential by developing protocols and
                     guidelines that ensure long-term growth for the Web</q>.</p>
             <p><code>kbd</code> and <code>samp</code>: I did this:</p>
             <pre><samp>c:\&gt;<kbd>format c: /yes</kbd></samp></pre>
             <p>Is that bad? Press <kbd><kbd>Ctrl</kbd></kbd>+<kbd><kbd>F5</kbd></kbd>
                 for a hard reload.</p>
-            <p><code>var</code>: To log in, type <kbd>ssh <var>user</var>@example.com</kbd>, where <var>user</var> is your user ID.</p>
+            <p><code>var</code>: To log in, type <kbd>ssh <var>user</var>@example.com</kbd>, where
+                <var>user</var> is your user ID.</p>
             <p><code>meter</code> and <code>progress</code>: Storage space usage:
-                <meter value=6 max=8>6 blocks used (out of 8 total)</meter> Progress:
-                <progress value="37" max=100>37%</progress></p>
-            <p><code>sub</code> is used for subscripts: H<sub>2</sub>O. <code>sup</code> is used for superscripts: E = MC<sup>2</sup>. <code>small</code> is used for side comments: <q>I wrote this whole document. <small>[Editor's
-                        note: no he did not]</small></q> <code>wbr</code>: used to specify where a word may break and it is super<wbr>cali<wbr>fragil<wbr>istic<wbr>expiali<wbr>do<wbr>cious.</p>
+                <meter value=6 max=8>6 blocks used (out of 8 total)</meter>
+                Progress:
+                <progress value="37" max=100>37%</progress>
+            </p>
+            <p><code>sub</code> is used for subscripts: H<sub>2</sub>O. <code>sup</code> is used for
+                superscripts: E = MC<sup>2</sup>. <code>small</code> is used for side comments: <q>I
+                    wrote this whole document. <small>[Editor's
+                        note: no he did not]</small></q> <code>wbr</code>: used to specify where a
+                word may break and it is super
+                <wbr>
+                cali
+                <wbr>
+                fragil
+                <wbr>
+                istic
+                <wbr>
+                expiali
+                <wbr>
+                do
+                <wbr>
+                cious.
+            </p>
             <footer>
-                <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#phrasing-content">Phrasing
+                <p>See the <a target="_blank"
+                              href="https://www.w3.org/TR/html5/dom.html#phrasing-content">Phrasing
                         Content spec.</a></p>
             </footer>
         </section>
@@ -142,7 +238,8 @@
             <header>
                 <h3><a href="#palpable">#</a> Palpable Content</h3>
                 <p>Elements <code>a</code>, <code>address</code>, <code>blockquote</code>,
-                    <code>button</code>, <code>details</code>, <code>dl</code>, <code>fieldset</code>,
+                    <code>button</code>, <code>details</code>, <code>dl</code>,
+                    <code>fieldset</code>,
                     <code>figure</code>, <code>form</code>, <code>input</code>, <code>label</code>,
                     <code>map</code>, <code>ol</code>, <code>output</code>, <code>pre</code>,
                     <code>select</code>, <code>table</code>, <code>textarea</code>,
@@ -153,20 +250,27 @@
             <p><code>address</code>:</p>
             <address>1 Infinite Loop<br>
                 Cupertino, CA 95014<br>
-                United States</address>
+                United States
+            </address>
             <p><code>blockquote</code>:</p>
             <blockquote>
                 <p>I quickly explained that many big jobs involve few hazards</p>
             </blockquote>
             <blockquote>
-                <p>This is a mult-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick
-                    carefully. I’m actually as proud of the things we haven’tdone as the things I have done. Innovation is saying no to 1,000 things.</p>
+                <p>This is a mult-line blockquote with a cite reference. People think focus means
+                    saying yes to the thing you’ve got to focus on. But that’s not what it means at
+                    all. It means saying no to the hundred other good ideas that there are. You have
+                    to pick
+                    carefully. I’m actually as proud of the things we haven’tdone as the things I
+                    have done. Innovation is saying no to 1,000 things.</p>
                 <footer>Steve Jobs, <cite>Apple Worldwide Developers’ Conference,
                         1997</cite></footer>
             </blockquote>
             <p><code>details</code> and <code>summary</code>:</p>
             <details>
-                <summary>Copying... <progress max="375505392" value="97543282"></progress> 25%
+                <summary>Copying...
+                    <progress max="375505392" value="97543282"></progress>
+                    25%
                 </summary>
                 <dl>
                     <dt>Transfer rate:</dt>
@@ -184,7 +288,9 @@
                 <dt>Definition List Title</dt>
                 <dd>Definition list division.</dd>
                 <dt>Kitchen Sink</dt>
-                <dd>Used in expressions to describe work in which all conceivable (and some inconceivable) sources have been mined. In this case, a bunch of markup.</dd>
+                <dd>Used in expressions to describe work in which all conceivable (and some
+                    inconceivable) sources have been mined. In this case, a bunch of markup.
+                </dd>
                 <dt>aside</dt>
                 <dd>Defines content aside from the page content</dd>
                 <dt>blockquote</dt>
@@ -193,7 +299,8 @@
             <p><code>figure</code>:</p>
             <figure>
                 <img src="https://www.fillmurray.com/402/295">
-                <figcaption>Figure 1: A picture of Bill Murray from <a href="https://www.fillmurray.com/">fillmurray.com</a>
+                <figcaption>Figure 1: A picture of Bill Murray from <a
+                            href="https://www.fillmurray.com/">fillmurray.com</a>
                 </figcaption>
             </figure>
             <br><br>
@@ -354,7 +461,8 @@
                 <fieldset>
                     <legend>I am legend</legend>
                     <div>
-                        <input type="radio" name="option-radio" id="option-radio1" value="option1" checked>
+                        <input type="radio" name="option-radio" id="option-radio1" value="option1"
+                               checked>
                         <label for="option-radio1">Option one is this and that&mdash;be
                             sure to include why it's great</label>
                     </div>
@@ -364,7 +472,8 @@
                             deselect option one</label>
                     </div>
                     <div>
-                        <input type="radio" name="option-radio" id="option-radio3" value="option3" disabled>
+                        <input type="radio" name="option-radio" id="option-radio3" value="option3"
+                               disabled>
                         <label>Option three is disabled</label>
                     </div>
                 </fieldset>
@@ -377,9 +486,10 @@
                 </fieldset>
                 <p>
                     <button type="button" name="button" class="btn">Button</button>
-                    <input type="button" name="input" value="Input Button"  class="btn btn-primary">
-                    <input type="submit" name="submit" value="Input Submit"  class="btn" disabled>
-                    <button type="submit" name="submit2" class="btn btn-primary" disabled>Submit</button>
+                    <input type="button" name="input" value="Input Button" class="btn btn-primary">
+                    <input type="submit" name="submit" value="Input Submit" class="btn" disabled>
+                    <button type="submit" name="submit2" class="btn btn-primary" disabled>Submit
+                    </button>
                     <input type="reset" name="reset" value="Input Reset">
                     <button type="reset" name="reset2">Reset</button>
                     <button disabled>Cancel</button>
@@ -455,7 +565,8 @@ There is a small mailbox here.
 <samp>Opening the mailbox reveals:
 A leaflet.
 
-></samp></pre><br><br>
+></samp></pre>
+            <br><br>
             <h4 id="tables"><a href="#tables">#</a> Tables</h4>
             <hr>
             <table>
@@ -474,21 +585,29 @@ A leaflet.
                 <tr>
                     <td><a href="#">Person Name</a></td>
                     <td>1200</td>
-                    <td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td>
+                    <td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non
+                        metus auctor fringilla.
+                    </td>
                 </tr>
                 <tr>
                     <td>Another Person</td>
                     <td>1500</td>
-                    <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+                    <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                        Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </td>
                 </tr>
                 <tr>
                     <td>Last One</td>
                     <td>2800</td>
-                    <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td>
+                    <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis
+                        consectetur purus sit amet fermentum.
+                    </td>
                 </tr>
                 </tbody>
             </table>
-            <p id="table-summary">In the following table, characteristics are given in the second column, with the negative side in the left column and the positive side in the right column.</p>
+            <p id="table-summary">In the following table, characteristics are given in the second
+                column, with the negative side in the left column and the positive side in the right
+                column.</p>
             <table aria-describedby="table-summary">
                 <caption>Characteristics with positive and negative sides</caption>
                 <thead>
@@ -512,7 +631,9 @@ A leaflet.
                 </tbody>
             </table>
             <table>
-                <caption>Complex table with a <code>thead</code>, multiple <code>tbody</code> elements, and a <code>tfoot</code>.</caption>
+                <caption>Complex table with a <code>thead</code>, multiple <code>tbody</code>
+                    elements, and a <code>tfoot</code>.
+                </caption>
                 <thead>
                 <tr>
                     <th></th>
@@ -553,7 +674,8 @@ A leaflet.
                 </tfoot>
             </table>
             <footer>
-                <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#palpable-content">Palpable
+                <p>See the <a target="_blank"
+                              href="https://www.w3.org/TR/html5/dom.html#palpable-content">Palpable
                         Content spec.</a></p>
             </footer>
         </section>
@@ -563,15 +685,27 @@ A leaflet.
                 <h3><a href="#embeds">#</a> Embeds</h3>
                 <p>Elements <code>audio</code>, <code>canvas</code>, <code>embed</code>,
                     <code>iframe</code>, <code>img</code>, <code>math</code>, <code>object</code>,
-                    <code>picture</code>, <code>svg</code>, <code>video</code> make up the <em>embedded content</em> category.</p>
+                    <code>picture</code>, <code>svg</code>, <code>video</code> make up the <em>embedded
+                        content</em> category.</p>
             </header>
-            <p><code>audio</code>: <audio controls src="https://upload.wikimedia.org/wikipedia/commons/c/c7/What_hath_God_wrought.ogg"></audio> By Cqdx [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC
-                    BY-SA 3.0 </a>], <a href="https://commons.wikimedia.org/wiki/File:What_hath_God_wrought.ogg">from
-                    Wikimedia Commons</a>.</p>
-            <p><code>embed</code>: <embed src="http://www.bannerblog.com.au/banners2009/mini-options-300x250-hq-en.swf" width="120" height="50" type='application/pdf'></p>
-            <p><code>iframe</code>: <iframe sandbox srcdoc="<h1>Sample Document</h1><p>This
-            is a sample content.</p>"></iframe></p>
-            <p><code>img</code>: <img src="https://www.fillmurray.com/150/150" alt="Bill Murray"></p>
+            <p><code>audio</code>:
+                <audio controls
+                       src="https://upload.wikimedia.org/wikipedia/commons/c/c7/What_hath_God_wrought.ogg"></audio>
+                By Cqdx [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC
+                    BY-SA 3.0 </a>], <a
+                        href="https://commons.wikimedia.org/wiki/File:What_hath_God_wrought.ogg">from
+                    Wikimedia Commons</a>.
+            </p>
+            <p><code>embed</code>:
+                <embed src="http://www.bannerblog.com.au/banners2009/mini-options-300x250-hq-en.swf"
+                       width="120" height="50" type='application/pdf'>
+            </p>
+            <p><code>iframe</code>:
+                <iframe sandbox srcdoc="<h1>Sample Document</h1><p>This
+            is a sample content.</p>"></iframe>
+            </p>
+            <p><code>img</code>: <img src="https://www.fillmurray.com/150/150" alt="Bill Murray">
+            </p>
             <p><code>math</code>:</p>
             <math xmlns="http://www.w3.org/1998/Math/MathML">
                 <mtable>
@@ -619,15 +753,24 @@ A leaflet.
                     <img src="https://www.fillmurray.com/120/150" alt="Bill Murray">
                 </picture>
             </p>
-            <p><code>svg</code>: <svg role="presentation" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.199 24C19.199 13.467
+            <p><code>svg</code>:
+                <svg role="presentation" width="24" height="24" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.199 24C19.199 13.467
             10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291
             17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301
             3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909
             24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909
-            7.184 15.909 15.91z" /></svg></p>
-            <p><code>video</code>: <video controls src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Dwarf_hamsters_running_on_disc_2.ogv"></video></p>
+            7.184 15.909 15.91z"/>
+                </svg>
+            </p>
+            <p><code>video</code>:
+                <video controls
+                       src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Dwarf_hamsters_running_on_disc_2.ogv"></video>
+            </p>
             <footer>
-                <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#embedded-content">Embedded
+                <p>See the <a target="_blank"
+                              href="https://www.w3.org/TR/html5/dom.html#embedded-content">Embedded
                         Content spec.</a></p>
             </footer>
         </section>
@@ -635,7 +778,8 @@ A leaflet.
 
     </main>
     <footer role="contentinfo">
-        <p>Find this document on <a href="https://github.com/dbox/html5-kitchen-sink">GitHub</a>.</p>
+        <p>Find this document on <a href="https://github.com/dbox/html5-kitchen-sink">GitHub</a>.
+        </p>
     </footer>
     <!-- end kitchen sink -->
 

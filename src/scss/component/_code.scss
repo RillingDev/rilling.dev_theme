@@ -1,0 +1,96 @@
+@use "../variables" as *;
+@use "../mixins/screen-min-width" as *;
+
+/**
+ * Highlight.js support
+ */
+.highlight {
+    overflow-x: auto;
+    display: block;
+
+    .gutter,
+    .code {
+        padding: 0;
+        > pre {
+            padding: 0.25em 0.5em;
+            margin-bottom: 0;
+        }
+    }
+    .code {
+        width: 100%;
+    }
+    .gutter {
+        text-align: right;
+    }
+
+    .code {
+        /* Tomorrow Base */
+        > pre {
+            background: var(--highlight-background);
+            color: var(--highlight-foreground);
+        }
+
+        /* Tomorrow Comment */
+        .comment,
+        .quote {
+            color: var(--highlight-comment);
+        }
+
+        /* Tomorrow Red */
+        .variable,
+        .template-variable,
+        .tag,
+        .name,
+        .selector-id,
+        .selector-class,
+        .regexp,
+        .deletion {
+            color: var(--highlight-red);
+        }
+
+        /* Tomorrow Orange */
+        .number,
+        .built_in,
+        .builtin-name,
+        .literal,
+        .type,
+        .params,
+        .meta,
+        .link {
+            color: var(--highlight-orange);
+        }
+
+        /* Tomorrow Yellow */
+        .attribute {
+            color: var(--highlight-yellow);
+        }
+
+        /* Tomorrow Green */
+        .string,
+        .symbol,
+        .bullet,
+        .addition {
+            color: var(--highlight-green);
+        }
+
+        /* Tomorrow Blue */
+        .title,
+        .section {
+            color: var(--highlight-blue);
+        }
+
+        /* Tomorrow Purple */
+        .keyword,
+        .selector-tag {
+            color: var(--highlight-purple);
+        }
+
+        .emphasis {
+            font-style: italic;
+        }
+
+        .strong {
+            font-weight: bold;
+        }
+    }
+}
