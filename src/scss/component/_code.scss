@@ -5,20 +5,23 @@
  * Highlight.js support
  */
 .highlight {
-    overflow-x: auto;
     display: block;
+    overflow-x: auto;
 
     .gutter,
     .code {
         padding: 0;
+
         > pre {
-            padding: 0.25em 0.5em;
             margin-bottom: 0;
+            padding: 0.25em 0.5em;
         }
     }
+
     .code {
         width: 100%;
     }
+
     .gutter {
         text-align: right;
     }
@@ -26,8 +29,8 @@
     .code {
         /* Tomorrow Base */
         > pre {
-            background: var(--highlight-background);
             color: var(--highlight-foreground);
+            background: var(--highlight-background);
         }
 
         /* Tomorrow Comment */

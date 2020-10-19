@@ -9,8 +9,8 @@
 }
 
 body {
-    background-color: var(--background-color);
     color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 /**
@@ -52,8 +52,8 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-    border-radius: var(--border-radius);
     border: 1px solid var(--text-muted-color);
+    border-radius: var(--border-radius);
 }
 
 /**
@@ -66,8 +66,8 @@ table {
 
 td,
 th {
-    border: 1px solid var(--text-muted-color);
     padding: 0.5rem;
+    border: 1px solid var(--text-muted-color);
 }
 
 /**
@@ -134,8 +134,8 @@ blockquote {
 
 figure {
     margin-top: 0;
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
 }
 
 dd {

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
+<!--
+Source code can be found here:
+    - site hexo project and content: https://github.com/FelixRilling/rilling.dev
+    - site theme:                    https://github.com/FelixRilling/rilling.dev_theme
+-->
 <html lang="en" prefix="og: http://ogp.me/ns#">
-<%- partial('_partial/head') %>
-<body>
-<header class="header">
-    <%- partial('_partial/navbar', null) %>
-    <%- partial('_partial/presenter', null) %>
-</header>
-<main class="main">
-    <%- body %>
-</main>
-<footer class="footer">
-    <%- partial('_partial/footer', null) %>
-</footer>
-<%- partial('_partial/after-footer', null) %>
-</body>
+    <%- partial('_partial/head', null, {cache: false}) %>
+    <body>
+        <%- partial('_partial/navbar', null, {cache: false}) %>
+        <main>
+            <%- body %>
+        </main>
+        <%- partial('_partial/footer', null, {cache: false}) %>
+        <%- partial('_partial/after-footer', null, {cache: false}) %>
+    </body>
 </html>

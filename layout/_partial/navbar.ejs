@@ -1,36 +1,35 @@
-<div class="navbar-expand-md fixed-top">
-    <nav class="navbar navbar-light">
-        <div class="container">
+<div class="container">
+    <nav class="navbar">
+        <a class="navbar__title" href="<%= url_for("/"); %>"
+           title="Go to Home">Rilling.dev</a>
 
-            <a class="navbar-brand" href="<%= url_for('/') %>" title="Go to Home">Rilling.dev</a>
+        <a class="navbar__toggle-button" href="#" id="navbarToggleButton"
+           role="button"
+           title="Toggle navigation" aria-controls="navbarMenu" aria-expanded="false">
+            <span class="navbar__toggle-button__bar fa fas-menu-bar" aria-hidden="true"></span>
+            <span class="navbar__toggle-button__bar fa fas-menu-bar" aria-hidden="true"></span>
+            <span class="navbar__toggle-button__bar fa fas-menu-bar" aria-hidden="true"></span>
+        </a>
 
-            <a class="navbar-toggler navbar-toggler-right" href="javascript:" id="navbarToggler" role="button"
-               title="Toggle navigation" aria-controls="navbarMenu" aria-expanded="false">
-                <%- partial('_partial/component/icon', { classname: 'menu-bar' }) _%>
-                <%- partial('_partial/component/icon', { classname: 'menu-bar' }) _%>
-                <%- partial('_partial/component/icon', { classname: 'menu-bar' }) _%>
-            </a>
+        <div class="navbar__collapse" id="navbarMenu" role="navigation"
+             aria-hidden="false">
+            <ul class="navbar__nav" role="menubar">
+                <% for (const [name, path] of Object.entries(config.menu)){ %>
+                    <%
+                        let isCurrent = false;
+                        if (is_current(path)) {
+                            isCurrent = true;
+                        } else if (is_post() && name == "Blog") {
+                            isCurrent = true;
+                        }
+                    %>
 
-            <div class="collapse navbar-collapse" id="navbarMenu" role="navigation" aria-hidden="false">
-                <ul class="navbar-nav" role="menubar">
-                    <% for (const [name, path] of Object.entries(config.menu)){ %>
-                        <%
-                            let isCurrent = false;
-                            if (is_current(path)) {
-                                isCurrent = true;
-                            } else if (is_post() && name == "Blog") {
-                                isCurrent = true;
-                            }
-                        %>
-
-                        <li class="nav-item <%= isCurrent ? 'active' : '' %>" role="menuitem">
-                            <a class="nav-link" href="<%= url_for(path) %>"
-                               title="Go to <%= name %>"><%= name %></a>
-                        </li>
-                    <% } %>
-                </ul>
-            </div>
-
+                    <li class="navbar__nav__item <%= isCurrent ? "active" : ""; %>" role="menuitem">
+                        <a class="navbar__nav__item__link" href="<%= url_for(path); %>"
+                           title="Go to <%= name; %>"><%= name; %></a>
+                    </li>
+                <% } %>
+            </ul>
         </div>
     </nav>
 </div>

@@ -1,44 +1,29 @@
 <head>
-    <meta charset="utf-8"/>
     <%
-    let title;
-    if (is_home()) {
-        title = config.index.title;
-    } else if (page.title) {
-        title = page.title;
-    } else {
-        throw new Error("Could not get title.");
-    }
+    const title = page.title;
 
     const isError = page.layout === "error";
-    _%>
-    <title><%= `${title} | ${config.title} ` _%></title>
-
+    %>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="<%= isError ? "noindex" : "index" _%>,follow"/>
+    <meta name="robots" content="<%= isError ? "noindex" : "index" ;_%>,follow"/>
 
-    <!--
-    Source code can be found here:
-        - site hexo project and content: https://github.com/FelixRilling/rilling.dev
-        - site theme:                    https://github.com/FelixRilling/rilling.dev_theme
-    -->
-
+    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
     <meta name="author" content="Felix Rilling"/>
     <%- open_graph({
-        image: url_for('apple-touch-icon.png')
-    }) %>
+        image: url_for("apple-touch-icon.png")
+    }); %>
 
     <!-- Generated through https://realfavicongenerator.net/ -->
-    <link rel="apple-touch-icon" sizes="180x180" href="<%- url_for('apple-touch-icon.png') %>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%- url_for('favicon-32x32.png') %>">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%- url_for('favicon-16x16.png') %>">
-    <link rel="mask-icon" href="<%- url_for('safari-pinned-tab.svg') %>" color="#83d356">
-    <link rel="shortcut icon" href="<%- url_for('favicon.ico') %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%- url_for("apple-touch-icon.png"); %>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%- url_for("favicon-32x32.png"); %>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%- url_for("favicon-16x16.png"); %>">
+    <link rel="mask-icon" href="<%- url_for("safari-pinned-tab.svg"); %>" color="#83d356">
+    <link rel="shortcut icon" href="<%- url_for("favicon.ico"); %>">
 
     <meta name="color-scheme" content="dark light">
 
-    <%- css('main') %>
-
+    <%- css("main"); %>
     <link rel="stylesheet"
           as="style"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css"
@@ -54,5 +39,4 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css"
           integrity="sha512-AMDXrE+qaoUHsd0DXQJr5dL4m5xmpkGLxXZQik2TvR2VCVKT/XRPQ4e/LTnwl84mCv+eFm92UG6ErWDtGM/Q5Q=="
           crossorigin="anonymous"/>
-
 </head>

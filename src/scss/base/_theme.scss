@@ -2,6 +2,7 @@
 
 body {
     @include variables.variables-light();
+
     &.theme--dark {
         @include variables.variables-dark();
     }
@@ -10,6 +11,7 @@ body {
 @media (prefers-color-scheme: dark) {
     body {
         @include variables.variables-dark();
+
         &.theme--light {
             @include variables.variables-light();
         }

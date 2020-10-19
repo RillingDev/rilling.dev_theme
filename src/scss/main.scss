@@ -2,9 +2,12 @@
 
 @use "variables";
 
+@use "base/fontface";
 @use "base/theme";
 @use "base/core";
 @use "base/text";
 
-@use "component/button";
+@use "component/container";
 @use "component/code";
+@use "component/button";
+@use "component/navbar";

@@ -1,4 +1,4 @@
-const initArticle = (document: Document): void => {
+const initArticle = (_document: Document): void => {
     // TODO
 };
 
