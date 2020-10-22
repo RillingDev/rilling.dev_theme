@@ -1,21 +1,14 @@
 <head>
     <meta charset="utf-8"/>
     <%
-    let title;
-    if (is_home()) {
-        title = config.index.title;
-    } else if (page.title) {
-        title = page.title;
-    } else {
-        throw new Error("Could not get title.");
-    }
+    const title = page.title;
 
     const isError = page.layout === "error";
     _%>
-    <title><%= `${title} | ${config.title} ` _%></title>
+    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="<%= isError ? "noindex" : "index" _%>,follow"/>
+    <meta name="robots" content="<%= isError ? "noindex" : "index" ;_%>,follow"/>
 
     <!--
     Source code can be found here:
@@ -25,37 +18,35 @@
 
     <meta name="author" content="Felix Rilling"/>
     <%- open_graph({
-        image: url_for('apple-touch-icon.png')
-    }) %>
+        image: url_for("apple-touch-icon.png")
+    }); %>
 
     <!-- Generated through https://realfavicongenerator.net/ -->
-    <link rel="apple-touch-icon" sizes="180x180" href="<%- url_for('apple-touch-icon.png') %>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%- url_for('favicon-32x32.png') %>">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%- url_for('favicon-16x16.png') %>">
-    <link rel="mask-icon" href="<%- url_for('safari-pinned-tab.svg') %>" color="#83d356">
-    <link rel="shortcut icon" href="<%- url_for('favicon.ico') %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%- url_for("apple-touch-icon.png"); %>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%- url_for("favicon-32x32.png"); %>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%- url_for("favicon-16x16.png"); %>">
+    <link rel="mask-icon" href="<%- url_for("safari-pinned-tab.svg"); %>" color="#83d356">
+    <link rel="shortcut icon" href="<%- url_for("favicon.ico"); %>">
     <meta name="theme-color" content="#83d356">
 
     <!-- No dark mode yet :( -->
     <meta name="color-scheme" content="only light">
 
-    <%- css('main') %>
+    <%- css("main"); %>
 
-    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@400;700&family=Ubuntu+Mono&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet"
-          as="style"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css"
-          integrity="sha512-8jdwayz5n8F2cnW26l9vpV6+yGOcRAqz6HTu+DQ3FtVIAts2gTdlFZOGpYhvBMXkWEgxPN3Y22UWyZXuDowNLA=="
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css"
+          integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g=="
           crossorigin="anonymous"/>
     <link rel="stylesheet"
-          as="font"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css"
-          integrity="sha512-QN7X/bUbbeel9bbq6JVNJXk1Zowt+n+QPN+DjhEmTa4TdL1YPCsCey5JrvfRW8xp28LDYgGG/waNVdrhwMQmVQ=="
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css"
+          integrity="sha512-SazV6tF6Ko4GxhyIZpKoXiKYndqzh7+cqxl9HDH7DGSpjkCN3QLqTAlhJHJnKxu3/2rfCsltzwFC4CmxZE1hPg=="
           crossorigin="anonymous"/>
     <link rel="stylesheet"
-          as="font"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css"
-          integrity="sha512-AMDXrE+qaoUHsd0DXQJr5dL4m5xmpkGLxXZQik2TvR2VCVKT/XRPQ4e/LTnwl84mCv+eFm92UG6ErWDtGM/Q5Q=="
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css"
+          integrity="sha512-D0B6cFS+efdzUE/4wh5XF5599DtW7Q1bZOjAYGBfC0Lg9WjcrqPXZto020btDyrlDUrfYKsmzFvgf/9AB8J0Jw=="
           crossorigin="anonymous"/>
 
 </head>
