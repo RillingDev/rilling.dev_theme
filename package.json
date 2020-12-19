@@ -15,7 +15,7 @@
         "js:dist": "webpack --mode='production'",
         "lint": "eslint ./src/ts/ --ext .ts",
         "fix": "eslint ./src/ts/ --ext .ts --fix",
-        "clean": "rimraf ./source/*"
+        "clean": "rimraf ./source/main.css ./source/main.js"
     },
     "author": {
         "name": "Felix Rilling",
