@@ -11,8 +11,8 @@
         "watch": "npm-run-all --parallel css:watch js:watch",
         "css:watch": "sass ./src/scss/main.scss ./source/main.css --watch  -I ./node_modules/normalize.css/",
         "css:dist": "sass ./src/scss/main.scss ./source/main.css --style compressed -I ./node_modules/normalize.css/",
-        "js:watch": "webpack -d --watch",
-        "js:dist": "webpack -p",
+        "js:watch": "webpack --mode='development' --watch --hot",
+        "js:dist": "webpack --mode='production'",
         "lint": "eslint ./src/ts/ --ext .ts",
         "fix": "eslint ./src/ts/ --ext .ts --fix",
         "clean": "rimraf ./source/main.css ./source/main.js"
@@ -33,21 +33,21 @@
         "bootstrap": "^4.5.3"
     },
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^4.1.1",
-        "@typescript-eslint/parser": "^4.1.1",
-        "eslint": "^7.9.0",
-        "eslint-config-prettier": "^6.11.0",
-        "eslint-plugin-import": "^2.22.0",
-        "eslint-plugin-prettier": "^3.1.4",
+        "@typescript-eslint/eslint-plugin": "^4.10.0",
+        "@typescript-eslint/parser": "^4.10.0",
+        "eslint": "^7.16.0",
+        "eslint-config-prettier": "^7.1.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-prettier": "^3.3.0",
         "npm-run-all": "^4.1.5",
-        "prettier": "^2.1.2",
+        "prettier": "^2.2.1",
         "rimraf": "^3.0.2",
-        "sass": "^1.26.11",
-        "terser": "^5.3.2",
-        "terser-webpack-plugin": "^4.2.1",
-        "ts-loader": "^8.0.3",
-        "typescript": "^4.0.2",
-        "webpack": "^4.44.2",
-        "webpack-cli": "^3.3.12"
+        "sass": "^1.30.0",
+        "terser": "^5.5.1",
+        "terser-webpack-plugin": "^5.0.3",
+        "ts-loader": "^8.0.12",
+        "typescript": "^4.1.3",
+        "webpack": "^5.11.0",
+        "webpack-cli": "^4.2.0"
     }
 }
