@@ -7,12 +7,13 @@
     "scripts": {
         "start": "npm run dist",
         "dist": "npm run clean && npm run lint && npm run build",
-        "build": "npm-run-all --parallel css:dist js:dist",
+        "build": "npm-run-all --parallel css:dist js:dist copy-deps",
         "watch": "npm-run-all --parallel css:watch js:watch",
         "css:watch": "sass ./src/scss/main.scss ./source/main.css --watch  -I ./node_modules/normalize.css/",
         "css:dist": "sass ./src/scss/main.scss ./source/main.css --style compressed -I ./node_modules/normalize.css/",
         "js:watch": "webpack --mode='development' --watch --hot",
         "js:dist": "webpack --mode='production'",
+        "copy-deps": "node copy-deps.js",
         "lint": "eslint ./src/ts/ --ext .ts",
         "fix": "eslint ./src/ts/ --ext .ts --fix",
         "clean": "rimraf ./source/main.css ./source/main.js"
