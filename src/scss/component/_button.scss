@@ -1,7 +1,8 @@
 @use "./../mixins/transition" as *;
+@use "./../variables" as variables;
 
 .btn {
-    font-family: var(--font-family-sans);
+    font-family: variables.$font-family-sans;
     font-size: 0.75em;
     font-weight: 700;
     line-height: 1;
@@ -15,7 +16,7 @@
     text-transform: uppercase;
     color: var(--white);
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: variables.$border-radius;
     background-color: var(--gray-700);
     @include transition(#{background-color, box-shadow});
 

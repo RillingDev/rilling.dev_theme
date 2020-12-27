@@ -52,6 +52,18 @@ $breakpoint-md: 920px;
 $breakpoint-lg: 1140px;
 $breakpoint-xl: 1420px;
 
+/**
+* Typography
+*/
+$font-family-sans: "Noto Sans", sans-serif;
+$font-family-serif: "Noto Serif", serif;
+$font-family-monospace: "Fira Code", monospace;
+
+/**
+* Sizes
+*/
+$border-radius: 3px;
+
 //
 // Primary variables
 //
@@ -94,18 +106,6 @@ $breakpoint-xl: 1420px;
 
     --social-github: #586069;
     --social-codepen: #1e1f26;
-
-    /**
-    * Typography
-    */
-    --font-family-sans: "Noto Sans", sans-serif;
-    --font-family-serif: "Noto Serif", serif;
-    --font-family-monospace: "Fira Code", monospace;
-
-    /**
-    * Sizes
-    */
-    --border-radius: 3px;
 }
 
 //

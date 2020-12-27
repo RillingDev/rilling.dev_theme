@@ -1,6 +1,6 @@
 @use "../mixins/screen-min-width" as *;
 @use "../mixins/transition" as *;
-@use "../variables" as *;
+@use "../variables" as variables;
 
 .navbar {
     display: flex;
@@ -20,20 +20,20 @@
     padding: 0;
     list-style: none;
 
-    @include screen-min-width($breakpoint-sm) {
+    @include screen-min-width(variables.$breakpoint-sm) {
         flex-direction: row;
     }
 }
 
 .navbar__nav__item__link,
 .navbar__title {
-    font-family: var(--font-family-sans);
+    font-family: variables.$font-family-sans;
     line-height: 1;
     display: block;
     padding: 1rem 0;
     text-decoration: none;
 
-    @include screen-min-width($breakpoint-sm) {
+    @include screen-min-width(variables.$breakpoint-sm) {
         padding: 1rem;
     }
 }
@@ -42,7 +42,7 @@
     display: none;
     width: 100%;
 
-    @include screen-min-width($breakpoint-sm) {
+    @include screen-min-width(variables.$breakpoint-sm) {
         display: initial;
         width: auto;
     }
@@ -61,7 +61,7 @@
     padding: 0;
     border: 0;
 
-    @include screen-min-width($breakpoint-sm) {
+    @include screen-min-width(variables.$breakpoint-sm) {
         display: none;
     }
 

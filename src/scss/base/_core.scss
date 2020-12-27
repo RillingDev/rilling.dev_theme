@@ -1,3 +1,5 @@
+@use "../variables" as variables;
+
 /**
 * Base
 */
@@ -53,7 +55,7 @@ input[type="time"],
 input[type="url"],
 input[type="week"] {
     border: 1px solid var(--text-muted-color);
-    border-radius: var(--border-radius);
+    border-radius: variables.$border-radius;
 }
 
 /**
