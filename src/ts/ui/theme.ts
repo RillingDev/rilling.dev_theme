@@ -1,17 +1,11 @@
 const prefersColorScheme = (colorScheme: string): boolean =>
     window.matchMedia(`(prefers-color-scheme: ${colorScheme})`).matches;
 
-const initDarkMode = (
-    container: HTMLElement,
-    toggleButton: HTMLElement
-): void => {
-    const darkModeByDefault = prefersColorScheme("dark");
-
+const initTheme = (container: HTMLElement, toggleButton: HTMLElement): void =>
     toggleButton.addEventListener("click", () => {
         container.classList.toggle(
-            `theme--${darkModeByDefault ? "light" : "dark"}`
+            `theme--${prefersColorScheme("dark") ? "light" : "dark"}`
         );
     });
-};
 
-export { initDarkMode };
+export { initTheme };
