@@ -16,7 +16,7 @@
     color: var(--white);
     border: none;
     border-radius: var(--border-radius);
-    background-color: var(--gray-625);
+    background-color: var(--gray-700);
     @include transition(#{background-color, box-shadow});
 
     &:not(.disabled) {
@@ -24,7 +24,7 @@
         &:focus {
             text-decoration: none;
             color: var(--white);
-            background-color: var(--gray-750);
+            background-color: var(--gray-800);
         }
 
         &:focus {
@@ -39,22 +39,21 @@
         pointer-events: none;
         opacity: 0.5;
 
-        color: var(--gray-125);
+        color: var(--gray-100);
     }
 
     &-primary {
-        color: var(--text-contrast-color);
+        color: var(--white);
         background-color: var(--primary);
 
         &:not(.disabled) {
             &:hover,
             &:focus {
-                color: var(--text-contrast-color);
                 background-color: var(--primary-contrast);
             }
 
             &:focus {
-                box-shadow: 0 0 0 0.2rem var(--primary-transparent);
+                box-shadow: 0 0 0 0.2rem var(--primary);
             }
         }
 

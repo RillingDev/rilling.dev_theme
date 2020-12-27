@@ -1,0 +1,25 @@
+@mixin variables-highlight-light {
+    // Tomorrow: https://github.com/chriskempson/tomorrow-theme
+    --highlight-background: #ffffff;
+    --highlight-foreground: #4d4d4c;
+    --highlight-comment: #8e908c;
+    --highlight-red: #c82829;
+    --highlight-orange: #f5871f;
+    --highlight-yellow: #eab700;
+    --highlight-green: #718c00;
+    --highlight-blue: #4271ae;
+    --highlight-purple: #8959a8;
+}
+
+@mixin variables-highlight-dark {
+    // Tomorrow Night Bright: https://github.com/chriskempson/tomorrow-theme
+    --highlight-background: #000000;
+    --highlight-foreground: #eaeaea;
+    --highlight-comment: #969896;
+    --highlight-red: #d54e53;
+    --highlight-orange: #e78c45;
+    --highlight-yellow: #e7c547;
+    --highlight-green: #b9ca4a;
+    --highlight-blue: #7aa6da;
+    --highlight-purple: #c397d8;
+}

@@ -1,27 +1,47 @@
 @use "sass:color";
+@use "./variables-highlight" as highlight;
 
 //
 // Color system
 //
-
-$-color-step: 10.75%;
+// See https://coolors.co/8f8b92-c95497-45bac4
+//
 
 $-black: #222123;
-$-gray-875: color.adjust($-black, $lightness: $-color-step * 1);
-$-gray-750: color.adjust($-black, $lightness: $-color-step * 2);
-$-gray-625: color.adjust($-black, $lightness: $-color-step * 3);
-$-gray-500: color.adjust($-black, $lightness: $-color-step * 4);
-$-gray-375: color.adjust($-black, $lightness: $-color-step * 5);
-$-gray-250: color.adjust($-black, $lightness: $-color-step * 6);
-$-gray-125: color.adjust($-black, $lightness: $-color-step * 7);
-$-white: color.adjust($-black, $lightness: $-color-step * 8);
+$-white: #fff;
 
-$-purple-bright: #e2a3c7;
-$-purple: color.adjust($-purple-bright, $lightness: - ($-color-step * 1));
-$-purple-dark: color.adjust($-purple-bright, $lightness: - ($-color-step * 2));
-$-purple-transparent: color.change($-purple-bright, $alpha: 0.75);
-$-yellow-bright: #fffd98;
-$-cyan-bright: #75b9be;
+$-gray-100: color.adjust($-black, $lightness: 90%);
+$-gray-200: color.adjust($-black, $lightness: 80%);
+$-gray-300: color.adjust($-black, $lightness: 70%);
+$-gray-400: color.adjust($-black, $lightness: 60%);
+$-gray-500: color.adjust($-black, $lightness: 50%);
+$-gray-600: color.adjust($-black, $lightness: 40%);
+$-gray-700: color.adjust($-black, $lightness: 30%);
+$-gray-800: color.adjust($-black, $lightness: 20%);
+$-gray-900: color.adjust($-black, $lightness: 10%);
+
+$-pink: #c95497;
+$-cyan: #45bac4;
+
+$-pink-100: color.adjust($-pink, $lightness: 40%);
+$-pink-200: color.adjust($-pink, $lightness: 30%);
+$-pink-300: color.adjust($-pink, $lightness: 20%);
+$-pink-400: color.adjust($-pink, $lightness: 10%);
+$-pink-500: $-pink;
+$-pink-600: color.adjust($-pink, $lightness: -10%);
+$-pink-700: color.adjust($-pink, $lightness: -20%);
+$-pink-800: color.adjust($-pink, $lightness: -30%);
+$-pink-900: color.adjust($-pink, $lightness: -40%);
+
+$-cyan-100: color.adjust($-cyan, $lightness: 40%);
+$-cyan-200: color.adjust($-cyan, $lightness: 30%);
+$-cyan-300: color.adjust($-cyan, $lightness: 20%);
+$-cyan-400: color.adjust($-cyan, $lightness: 10%);
+$-cyan-500: $-cyan;
+$-cyan-600: color.adjust($-cyan, $lightness: -10%);
+$-cyan-700: color.adjust($-cyan, $lightness: -20%);
+$-cyan-800: color.adjust($-cyan, $lightness: -30%);
+$-cyan-900: color.adjust($-cyan, $lightness: -40%);
 
 //
 // Sizes
@@ -40,21 +60,37 @@ $breakpoint-xl: 1420px;
     * Colors
     */
     --black: #{$-black};
-    --gray-875: #{$-gray-875};
-    --gray-750: #{$-gray-750};
-    --gray-625: #{$-gray-625};
-    --gray-500: #{$-gray-500};
-    --gray-375: #{$-gray-375};
-    --gray-250: #{$-gray-250};
-    --gray-125: #{$-gray-125};
     --white: #{$-white};
 
-    --purple-bright: #{$-purple-bright};
-    --purple: #{$-purple};
-    --purple-dark: #{$-purple-dark};
-    --purple-transparent: #{$-purple-transparent};
-    --yellow-bright: #{$-yellow-bright};
-    --cyan-bright: #{$-cyan-bright};
+    --gray-100: #{$-gray-100};
+    --gray-200: #{$-gray-200};
+    --gray-300: #{$-gray-300};
+    --gray-400: #{$-gray-400};
+    --gray-500: #{$-gray-500};
+    --gray-600: #{$-gray-600};
+    --gray-700: #{$-gray-700};
+    --gray-800: #{$-gray-800};
+    --gray-900: #{$-gray-900};
+
+    --pink-100: #{$-pink-100};
+    --pink-200: #{$-pink-200};
+    --pink-300: #{$-pink-300};
+    --pink-400: #{$-pink-400};
+    --pink-500: #{$-pink-500};
+    --pink-600: #{$-pink-600};
+    --pink-700: #{$-pink-700};
+    --pink-800: #{$-pink-800};
+    --pink-900: #{$-pink-900};
+
+    --cyan-100: #{$-cyan-100};
+    --cyan-200: #{$-cyan-200};
+    --cyan-300: #{$-cyan-300};
+    --cyan-400: #{$-cyan-400};
+    --cyan-500: #{$-cyan-500};
+    --cyan-600: #{$-cyan-600};
+    --cyan-700: #{$-cyan-700};
+    --cyan-800: #{$-cyan-800};
+    --cyan-900: #{$-cyan-900};
 
     --social-github: #586069;
     --social-codepen: #1e1f26;
@@ -72,79 +108,47 @@ $breakpoint-xl: 1420px;
     --border-radius: 3px;
 }
 
-@mixin variables-highlight-light {
-    // Tomorrow: https://github.com/chriskempson/tomorrow-theme
-    --highlight-background: #ffffff;
-    --highlight-foreground: #4d4d4c;
-    --highlight-comment: #8e908c;
-    --highlight-red: #c82829;
-    --highlight-orange: #f5871f;
-    --highlight-yellow: #eab700;
-    --highlight-green: #718c00;
-    --highlight-blue: #4271ae;
-    --highlight-purple: #8959a8;
-}
-
-@mixin variables-highlight-dark {
-    // Tomorrow Night Bright: https://github.com/chriskempson/tomorrow-theme
-    --highlight-background: #000000;
-    --highlight-foreground: #eaeaea;
-    --highlight-comment: #969896;
-    --highlight-red: #d54e53;
-    --highlight-orange: #e78c45;
-    --highlight-yellow: #e7c547;
-    --highlight-green: #b9ca4a;
-    --highlight-blue: #7aa6da;
-    --highlight-purple: #c397d8;
-}
-
 //
 // Dark/Light mode
 //
 @mixin variables-light {
     --background-color: var(--white);
-    --background-contrast-color: var(--gray-125);
-    --text-color: var(--gray-875);
+    --background-contrast-color: var(--gray-100);
+    --text-color: var(--gray-900);
     --text-contrast-color: var(--white);
-    --text-muted-color: var(--gray-250);
+    --text-muted-color: var(--gray-300);
 
-    --primary: var(--purple-dark);
-    --primary-contrast: var(--purple);
-    --primary-transparent: var(--purple-transparent);
-    --secondary: var(--yellow-bright);
-    --tertiary: var(--cyan-bright);
+    --primary: var(--pink-500);
+    --primary-contrast: var(--pink-400);
+    --secondary: var(--cyan-400);
 
-    @include variables-highlight-light;
+    @include highlight.variables-highlight-light;
 }
 
 @mixin variables-dark {
     --background-color: var(--black);
-    --background-contrast-color: var(--gray-875);
+    --background-contrast-color: var(--gray-900);
     --text-color: var(--white);
-    --text-contrast-color: var(--gray-875);
-    --text-muted-color: var(--gray-625);
+    --text-contrast-color: var(--black);
+    --text-muted-color: var(--gray-600);
 
-    --primary: var(--purple-bright);
-    --primary-contrast: var(--purple);
-    --primary-transparent: var(--purple-transparent);
-    --secondary: var(--yellow-bright);
-    --tertiary: var(--cyan-bright);
+    --primary: var(--pink-400);
+    --primary-contrast: var(--pink-500);
+    --secondary: var(--cyan-400);
 
-    @include variables-highlight-dark;
+    @include highlight.variables-highlight-dark;
 }
 
 @mixin variables-print {
     --background-color: transparent;
-    --background-contrast-color: var(--gray-125);
-    --text-color: var(--gray-875);
+    --background-contrast-color: var(--gray-100);
+    --text-color: var(--gray-900);
     --text-contrast-color: var(--white);
-    --text-muted-color: var(--gray-625);
+    --text-muted-color: var(--gray-600);
 
-    --primary: var(--gray-625);
-    --primary-contrast: var(--gray-750);
-    --primary-transparent: var(--gray-375);
-    --secondary: var(--gray-250);
-    --tertiary: var(--gray-375);
+    --primary: var(--gray-600);
+    --primary-contrast: var(--gray-700);
+    --secondary: var(--gray-300);
 
-    @include variables-highlight-light;
+    @include highlight.variables-highlight-light;
 }
