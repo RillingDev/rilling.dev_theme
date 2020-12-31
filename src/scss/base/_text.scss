@@ -55,8 +55,8 @@ code,
 kbd,
 samp {
     font-family: variables.$font-family-monospace;
-    color: var(--text-color);
-    background-color: var(--background-contrast-color);
+    color: var(--text);
+    background-color: var(--background-contrast);
 }
 
 code,
@@ -72,6 +72,6 @@ a {
 
     &:hover,
     &:focus {
-        color: var(--primary-contrast);
+        color: var(--primary-contrast-alt);
     }
 }

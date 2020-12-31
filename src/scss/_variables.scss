@@ -112,26 +112,32 @@ $border-radius: 3px;
 // Dark/Light mode
 //
 @mixin variables-light {
-    --background-color: var(--white);
-    --background-contrast-color: var(--gray-100);
-    --text-color: var(--gray-900);
-    --text-contrast-color: var(--white);
-    --text-muted-color: var(--gray-300);
+    --background: var(--white);
+    --background-contrast: var(--gray-100);
 
-    --primary: var(--pink-500);
-    --primary-contrast: var(--pink-400);
+    --text: var(--gray-900);
+    --text-contrast: var(--gray-200);
+    --text-contrast-high: var(--gray-100);
+    --text-muted: var(--gray-300);
+
+    --primary-contrast-alt: var(--pink-700);
+    --primary: var(--pink-600);
+    --primary-contrast: var(--pink-500);
     --secondary: var(--cyan-400);
 
     @include highlight.variables-highlight-light;
 }
 
 @mixin variables-dark {
-    --background-color: var(--black);
-    --background-contrast-color: var(--gray-900);
-    --text-color: var(--white);
-    --text-contrast-color: var(--black);
-    --text-muted-color: var(--gray-600);
+    --background: var(--black);
+    --background-contrast: var(--gray-900);
 
+    --text: var(--white);
+    --text-contrast: var(--gray-900);
+    --text-contrast-high: var(--black);
+    --text-muted: var(--gray-600);
+
+    --primary-contrast-alt: var(--pink-300);
     --primary: var(--pink-400);
     --primary-contrast: var(--pink-500);
     --secondary: var(--cyan-400);
@@ -140,12 +146,15 @@ $border-radius: 3px;
 }
 
 @mixin variables-print {
-    --background-color: transparent;
-    --background-contrast-color: var(--gray-100);
-    --text-color: var(--gray-900);
-    --text-contrast-color: var(--white);
-    --text-muted-color: var(--gray-600);
+    --background: transparent;
+    --background-contrast: var(--gray-100);
 
+    --text: var(--gray-900);
+    --text-contrast: var(--white);
+    --text-contrast-high: var(--white);
+    --text-muted: var(--gray-600);
+
+    --primary-contrast-alt: var(--gray-500);
     --primary: var(--gray-600);
     --primary-contrast: var(--gray-700);
     --secondary: var(--gray-300);

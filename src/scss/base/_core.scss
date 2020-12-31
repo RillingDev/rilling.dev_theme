@@ -11,8 +11,8 @@
 }
 
 body {
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--text);
+    background-color: var(--background);
 }
 
 /**
@@ -54,7 +54,7 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-    border: 1px solid var(--text-muted-color);
+    border: 1px solid var(--text-muted);
     border-radius: variables.$border-radius;
 }
 
@@ -69,7 +69,7 @@ table {
 td,
 th {
     padding: 0.5rem;
-    border: 1px solid var(--text-muted-color);
+    border: 1px solid var(--text-muted);
 }
 
 /**

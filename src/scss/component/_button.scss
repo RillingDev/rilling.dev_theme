@@ -14,53 +14,37 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--white);
     border: none;
     border-radius: variables.$border-radius;
-    background-color: var(--gray-700);
-    @include transition(#{background-color, box-shadow});
 
-    &:not(.disabled) {
-        &:hover,
-        &:focus {
-            text-decoration: none;
-            color: var(--white);
-            background-color: var(--gray-800);
-        }
+    @include transition(#{background-color, color});
 
-        &:focus {
-            outline: 0; /* Usually removing the outline is bad, but we use box-shadow instead */
-            box-shadow: 0 0 0 0.2rem var(--gray-500);
-        }
+    &:hover,
+    &.hover {
+        text-decoration: none;
     }
 
     &:disabled,
     &.disabled {
-        cursor: not-allowed;
+        opacity: 0.65;
         pointer-events: none;
-        opacity: 0.5;
-
-        color: var(--gray-100);
+        cursor: not-allowed;
     }
 
     &-primary {
-        color: var(--white);
+        color: var(--text-contrast-high);
         background-color: var(--primary);
 
-        &:not(.disabled) {
-            &:hover,
-            &:focus {
-                background-color: var(--primary-contrast);
-            }
-
-            &:focus {
-                box-shadow: 0 0 0 0.2rem var(--primary);
-            }
+        &:hover,
+        &.hover {
+            color: var(--text-contrast-high);
+            background-color: var(--primary-contrast-alt);
         }
 
-        &:disabled,
-        &.disabled {
-            color: var(--text-contrast-color);
+        &:focus,
+        &.focus {
+            color: var(--text-contrast-high);
+            background-color: var(--primary-contrast-alt);
         }
     }
 }
