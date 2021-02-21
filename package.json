@@ -23,6 +23,9 @@
         "url": "git+https://github.com/FelixRilling/rilling.dev_theme.git"
     },
     "dependencies": {
+        "@fontsource/fira-code": "^4.2.1",
+        "@fontsource/noto-sans": "^4.2.1",
+        "@fontsource/noto-serif": "^4.2.1",
         "@fortawesome/fontawesome-free": "^5.15.2",
         "normalize.css": "^8.0.1"
     },

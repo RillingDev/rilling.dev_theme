@@ -30,16 +30,13 @@ module.exports = {
                     {
                         loader: "sass-loader",
                         options: {
-                            sourceMap: true,
-                            sassOptions: {
-                                includePaths: ["./node_modules/normalize.css/"],
-                            },
+                            sourceMap: true
                         },
                     },
                 ],
             },
             {
-                test: /\.woff2$/,
+                test: /\.(woff2|woff)$/,
                 type: "asset/resource",
                 generator: {
                     filename: "fonts/[name][ext]",
