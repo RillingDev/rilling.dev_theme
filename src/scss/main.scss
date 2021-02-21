@@ -1,13 +1,13 @@
-@use "normalize";
+@use "~normalize.css" as *;
 
-@use "variables";
+@use "./variables";
 
-@use "base/fontface";
-@use "base/theme";
-@use "base/core";
-@use "base/text";
+@use "./base/fontface";
+@use "./base/theme";
+@use "./base/core";
+@use "./base/text";
 
-@use "component/container";
-@use "component/code";
-@use "component/button";
-@use "component/navbar";
+@use "./component/container";
+@use "./component/code";
+@use "./component/button";
+@use "./component/navbar";
