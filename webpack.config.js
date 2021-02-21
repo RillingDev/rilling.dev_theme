@@ -24,8 +24,7 @@ module.exports = {
                     {
                         loader: "css-loader",
                         options: {
-                            sourceMap: true,
-                            url: false,
+                            sourceMap: true
                         },
                     },
                     {
@@ -41,7 +40,10 @@ module.exports = {
             },
             {
                 test: /\.(eot|woff|woff2|svg|ttf)([?]?.*)$/,
-                use: ["file-loader"],
+                type: "asset/resource",
+                generator: {
+                    filename: 'fonts/[name][ext]'
+                }
             },
         ],
     },
