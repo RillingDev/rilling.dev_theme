@@ -1,6 +1,7 @@
 const { resolve } = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
     entry: "./src/main.ts",
@@ -9,7 +10,6 @@ module.exports = {
         path: resolve(__dirname, "source"),
         publicPath: "./",
     },
-    mode: process.env.NODE_ENV,
     module: {
         rules: [
             {
@@ -24,7 +24,7 @@ module.exports = {
                     {
                         loader: "css-loader",
                         options: {
-                            sourceMap: true
+                            sourceMap: true,
                         },
                     },
                     {
@@ -39,15 +39,26 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(eot|woff|woff2|svg|ttf)([?]?.*)$/,
+                test: /\.woff2$/,
                 type: "asset/resource",
                 generator: {
-                    filename: 'fonts/[name][ext]'
-                }
+                    filename: "fonts/[name][ext]",
+                },
+            },
+            {
+                test: /\.svg$/,
+                type: "asset/resource",
+                generator: {
+                    filename: "sprites/font-awesome-[name][ext]",
+                },
             },
         ],
     },
+    resolve: {
+        extensions: [".ts"],
+    },
     plugins: [
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
@@ -55,10 +66,8 @@ module.exports = {
             chunkFilename: "[id].css",
         }),
     ],
-    resolve: {
-        extensions: [".ts"],
-    },
     optimization: {
         minimizer: [new TerserPlugin()],
     },
+    devtool: "source-map",
 };
