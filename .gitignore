@@ -33,5 +33,4 @@ tsconfig.*.tsbuildinfo
 
 
 # Build Output files
-source/main.js
-source/main.css
+source/*

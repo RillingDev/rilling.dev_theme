@@ -1,5 +1,6 @@
 const { resolve } = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
+const LicenseWebpackPlugin = require("license-webpack-plugin").LicenseWebpackPlugin;
 
 module.exports = {
     entry: "./src/ts/main.ts",
@@ -20,7 +21,11 @@ module.exports = {
     resolve: {
         extensions: [".ts"]
     },
+    plugins: [
+        new LicenseWebpackPlugin()
+    ],
     optimization: {
         minimizer: [new TerserPlugin()]
-    }
+    },
+    devtool: "source-map"
 };
