@@ -27,7 +27,7 @@
         "@fontsource/noto-sans": "^4.2.1",
         "@fontsource/noto-serif": "^4.2.1",
         "@fortawesome/fontawesome-free": "^5.15.2",
-        "normalize.css": "^8.0.1"
+        "modern-normalize": "^1.0.0"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^4.15.1",

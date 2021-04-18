@@ -4,11 +4,11 @@
 //
 // Color system
 //
-// See https://coolors.co/8f8b92-c95497-45bac4
+// See https://coolors.co/222222-c95497-45bac4-53dd6c-e16036-fcba04
 //
 
-$-black: #222123;
-$-white: #fff;
+$-black: #222222;
+$-white: #ffffff;
 
 $-gray-100: color.adjust($-black, $lightness: 90%);
 $-gray-200: color.adjust($-black, $lightness: 80%);
@@ -20,8 +20,12 @@ $-gray-700: color.adjust($-black, $lightness: 30%);
 $-gray-800: color.adjust($-black, $lightness: 20%);
 $-gray-900: color.adjust($-black, $lightness: 10%);
 
-$-pink: #c95497;
-$-cyan: #45bac4;
+$-pink: #c95497; // Primary
+$-cyan: #45bac4; // Accent
+
+$-red: #e16036; // Semantic: Error
+$-yellow: #fcba04; // Semantic: Warn
+$-green: #53dd6c; // Semantic: Success
 
 $-pink-100: color.adjust($-pink, $lightness: 40%);
 $-pink-200: color.adjust($-pink, $lightness: 30%);

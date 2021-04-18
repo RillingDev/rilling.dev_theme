@@ -4,12 +4,6 @@
 * Base
 */
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
 body {
     color: var(--text);
     background-color: var(--background);
