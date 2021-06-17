@@ -47,4 +47,10 @@
             background-color: var(--primary-contrast-alt);
         }
     }
+
+    > svg {
+        fill: var(--white);
+        height: 1em;
+        width: 1em;
+    }
 }
