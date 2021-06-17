@@ -22,6 +22,7 @@
 
     @include screen-min-width(variables.$breakpoint-sm) {
         flex-direction: row;
+        gap: 2rem;
     }
 }
 
@@ -30,12 +31,8 @@
     font-family: variables.$font-family-sans;
     line-height: 1;
     display: block;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-decoration: none;
-
-    @include screen-min-width(variables.$breakpoint-sm) {
-        padding: 1rem;
-    }
 }
 
 .navbar__collapse {
