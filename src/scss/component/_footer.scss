@@ -1,0 +1,16 @@
+@use "../mixins/screen-min-width" as *;
+@use "../mixins/transition" as *;
+@use "../variables" as variables;
+
+.footer {
+    text-align: center;
+    font-size: 0.8em;
+
+    &__copy, &__contact {
+        font-weight: 700;
+    }
+
+    &__contact {
+        font-style: normal;
+    }
+}

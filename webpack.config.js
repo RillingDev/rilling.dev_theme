@@ -2,7 +2,7 @@ const { resolve } = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const LicenseWebpackPlugin = require('license-webpack-plugin').LicenseWebpackPlugin;
+const LicenseWebpackPlugin = require("license-webpack-plugin").LicenseWebpackPlugin;
 
 module.exports = {
     entry: "./src/main.ts",
@@ -55,7 +55,8 @@ module.exports = {
     resolve: {
         extensions: [".ts"],
     },
-    plugins: [ new LicenseWebpackPlugin(),
+    plugins: [
+        new LicenseWebpackPlugin({ perChunkOutput: false }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
