@@ -24,9 +24,14 @@
                         }
                     %>
 
-                    <li class="navbar__nav__item <%= isCurrent ? "active" : ""; %>" role="menuitem">
-                        <a class="navbar__nav__item__link" href="<%= url_for(path); %>"
-                           title="Go to <%= name; %>"><%= name; %></a>
+                    <li class="navbar__nav__item" role="menuitem">
+                        <% if (isCurrent){ %>
+                            <a class="navbar__nav__item__link active" href="<%= url_for(path); %>"
+                               aria-current="page"><%= name; %></a>
+                        <% } else { %>
+                            <a class="navbar__nav__item__link"
+                               href="<%= url_for(path); %>"><%= name; %></a>
+                        <% } %>
                     </li>
                 <% } %>
             </ul>

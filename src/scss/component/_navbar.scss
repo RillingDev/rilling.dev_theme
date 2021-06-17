@@ -29,10 +29,19 @@
 .navbar__nav__item__link,
 .navbar__title {
     font-family: variables.$font-family-sans;
+    font-weight: 700;
     line-height: 1;
     display: block;
     padding: 1.5rem 0;
     text-decoration: none;
+}
+
+.navbar__nav__item__link {
+    &.active {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 7px;
+    }
 }
 
 .navbar__collapse {
@@ -46,6 +55,10 @@
 
     &.show {
         display: initial;
+        border-top: 2px solid var(--primary);
+        @include screen-min-width(variables.$breakpoint-sm) {
+            border-top: 0;
+        }
     }
 }
 

@@ -72,7 +72,8 @@ a {
     @include transition(color);
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.active {
         color: var(--primary-contrast-alt);
     }
 }
