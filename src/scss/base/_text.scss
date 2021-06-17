@@ -70,6 +70,10 @@ mark {
 a {
     color: var(--primary);
     @include transition(color);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.15em;
 
     &:hover,
     &:focus,
