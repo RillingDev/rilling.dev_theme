@@ -3,3 +3,6 @@
 
 # don't lint build output
 ./source/
+
+# don't lint build tooling configs
+.eslintrc.js

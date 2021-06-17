@@ -11,7 +11,6 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "prettier",
-        "prettier/@typescript-eslint",
         "plugin:import/errors",
         "plugin:import/warnings",
         "plugin:import/typescript",
@@ -22,7 +21,6 @@ module.exports = {
          */
         // Error prevention
         "no-undef-init": "error",
-        "no-import-assign": "error",
         "no-loss-of-precision": "error",
         "no-promise-executor-return": "error",
         "no-template-curly-in-string": "warn",
@@ -30,8 +28,9 @@ module.exports = {
         radix: "warn",
         "array-callback-return": "warn",
         "consistent-return": "warn",
-        "no-dupe-else-if": "warn",
+        "no-constructor-return": "warn",
         "no-unreachable-loop": "warn",
+        "require-atomic-updates": "warn",
 
         /*
          * Prettier
