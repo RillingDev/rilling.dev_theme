@@ -1,4 +1,4 @@
-<article class="article <%- index ? 'article--excerpt' : ''%>">
+<article class="article <%- index ? 'article--excerpt' : '' %>">
 
     <header class="article__header">
         <h1 class="article__header__title">
@@ -21,8 +21,7 @@
             <section class="article__content__body">
                 <%- post.excerpt %>
             </section>
-            <a class="btn btn--primary"
-               href="<%= url_for(post.path) %>">Read more</a>
+            <a href="<%= url_for(post.path) %>">Read more</a>
         <% } else { %>
             <section class="article__content__body">
                 <%- post.content %>
