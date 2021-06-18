@@ -1,0 +1,33 @@
+@use "../mixins/screen-min-width" as *;
+@use "../mixins/transition" as *;
+@use "../variables" as variables;
+
+
+.article__header__title {
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.article__header__meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    font-size: 0.85em;
+    font-family: variables.$font-family-sans;
+
+    .date {
+        font-style: italic;
+    }
+}
+
+.article--excerpt {
+    .article__header__title {
+        font-size: 2em;
+    }
+    .article__header__meta{
+
+        margin-bottom: 0.25rem;
+    }
+}
