@@ -25,9 +25,9 @@
 
     &:disabled,
     &.disabled {
-        opacity: 0.65;
-        pointer-events: none;
         cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.65;
     }
 
     &--primary {
@@ -48,8 +48,8 @@
     }
 
     > svg {
-        fill: var(--white);
-        height: 1em;
         width: 1em;
+        height: 1em;
+        fill: var(--white);
     }
 }
