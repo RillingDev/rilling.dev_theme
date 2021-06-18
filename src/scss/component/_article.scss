@@ -4,18 +4,29 @@
 
 
 .article__header__title {
-    font-size: 5em;
+    font-size: 3em;
     margin-top: 0;
     margin-bottom: 0.75rem;
+
+    @include screen-min-width(variables.$breakpoint-sm) {
+        font-size: 5em;
+    }
 }
 
 .article__header__meta {
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+
     margin-bottom: 2.5rem;
 
     font-size: 0.85em;
     font-family: variables.$font-family-sans;
+
+    @include screen-min-width(variables.$breakpoint-sm) {
+        gap: 1.5rem;
+        flex-direction: row;
+    }
 
     .date {
         font-style: italic;
@@ -26,8 +37,11 @@
     .article__header__title {
         font-size: 2em;
     }
-    .article__header__meta{
 
-        margin-bottom: 0.25rem;
+    .article__header__meta {
+        margin-bottom: 0.75rem;
+        @include screen-min-width(variables.$breakpoint-sm) {
+            margin-bottom: 0.25rem;
+        }
     }
 }
