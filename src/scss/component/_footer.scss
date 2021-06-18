@@ -3,14 +3,17 @@
 @use "../variables" as variables;
 
 .footer {
-    text-align: center;
-    font-size: 0.8em;
+    margin-top: 3rem;
 
-    &__copy, &__contact {
-        font-weight: 700;
-    }
+    text-align: center;
+    font-size: 0.85em;
+    font-family: variables.$font-family-sans;
 
     &__contact {
         font-style: normal;
+
+        &__mail{
+            font-style: italic;
+        }
     }
 }
