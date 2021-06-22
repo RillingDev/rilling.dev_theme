@@ -27,6 +27,9 @@ $-red: #e16036; // Semantic: Error
 $-yellow: #fcba04; // Semantic: Warn
 $-green: #53dd6c; // Semantic: Success
 
+$-brand-github: #586069;
+$-brand-codepen: #1e1f26;
+
 $-pink-100: color.adjust($-pink, $lightness: 40%);
 $-pink-200: color.adjust($-pink, $lightness: 30%);
 $-pink-300: color.adjust($-pink, $lightness: 20%);
@@ -94,8 +97,8 @@ $border-radius: 3px;
     --yellow: #{$-yellow};
     --green: #{$-green};
 
-    --social-github: #586069;
-    --social-codepen: #1e1f26;
+    --brand-github: #{$-brand-codepen};
+    --brand-codepen: #{$-brand-github};
 }
 
 //

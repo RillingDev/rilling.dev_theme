@@ -4,15 +4,12 @@
         <p class="footer__copy">
             &copy; <%= date(new Date(), "YYYY"); %> <%= config.author; %><br>
         </p>
-        <address class="footer__contact">Email address: <span class="footer__contact__mail">contact at rilling.dev</span>
-        </address>
+        <%- partial('component/contact') %>
 
         <p class="footer__tech">
             Source code available at GitHub: <a
-                    href="https://github.com/FelixRilling/rilling.dev" target="_blank"
-                    rel="noopener noreferrer">Contents</a>, <a
-                    href="https://github.com/FelixRilling/rilling.dev_theme" target="_blank"
-                    rel="noopener noreferrer">Theme</a>.
+                    href="https://github.com/FelixRilling/rilling.dev" target="_blank">Contents</a>, <a
+                    href="https://github.com/FelixRilling/rilling.dev_theme" target="_blank">Theme</a>.
             <br>
             This site makes use of open source components. A full list can be found
             in the repositories linked above. Licenses (if supported) can be found <a

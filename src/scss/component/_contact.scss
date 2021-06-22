@@ -1,0 +1,11 @@
+@use "../mixins/screen-min-width" as *;
+@use "../mixins/transition" as *;
+@use "../variables" as variables;
+
+.contact {
+    font-style: normal;
+
+    &__mail {
+        font-style: italic;
+    }
+}

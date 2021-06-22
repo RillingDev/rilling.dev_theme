@@ -1,7 +1,9 @@
 @use "../variables";
 
-body {
-    @include variables.variables-light();
+@media (prefers-color-scheme: light) {
+    body {
+        @include variables.variables-light();
+    }
 }
 
 @media (prefers-color-scheme: dark) {
