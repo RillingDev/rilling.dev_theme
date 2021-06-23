@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "./../mixins/transition" as *;
 @use "./../variables" as variables;
 
@@ -7,7 +8,8 @@
     font-weight: 700;
     line-height: 1;
 
-    display: inline-block;
+    display: flex;
+    width: max-content;
     padding: 0.625rem 1rem;
     cursor: pointer;
 
@@ -34,6 +36,7 @@
         width: 1em;
         height: 1em;
         fill: currentcolor;
+        margin-right: 0.25rem;
     }
 
     &--primary {
@@ -50,6 +53,38 @@
         &.focus {
             color: var(--text-contrast-high);
             background-color: var(--primary-contrast-alt);
+        }
+    }
+
+    &--social--github {
+        $-brand-github: #171515;
+        $-brand-github-alt: color.adjust($-brand-github, $lightness: 12.5%);
+
+        border: 2px solid var(--gray-800);
+
+        color: var(--white);
+        background-color: $-brand-github;
+
+        &:hover,
+        &:focus {
+            color: var(--white);
+            background-color: $-brand-github-alt;
+        }
+    }
+
+    &--social--codepen {
+        $-brand-codepen: #1e1f26;
+        $-brand-codepen-alt: color.adjust($-brand-codepen, $lightness: 12.5%);
+
+        border: 2px solid var(--gray-800);
+
+        color: var(--white);
+        background-color: $-brand-codepen;
+
+        &:hover,
+        &:focus {
+            color: var(--white);
+            background-color: $-brand-codepen-alt;
         }
     }
 }

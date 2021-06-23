@@ -3,7 +3,6 @@
 @use "./variables";
 
 @use "./base/fontface";
-@use "./base/theme";
 @use "./base/core";
 @use "./base/text";
 
@@ -14,6 +13,7 @@
 @use "./component/footer";
 @use "./component/pagination";
 @use "./component/contact";
+@use "./component/social";
 
 @use "./component/article";
 @use "./component/error";

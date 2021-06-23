@@ -1,0 +1,9 @@
+@use "../mixins/screen-min-width" as *;
+@use "../mixins/transition" as *;
+@use "../variables" as variables;
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
