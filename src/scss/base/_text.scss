@@ -23,6 +23,11 @@ h6 {
 
     margin-top: 1em;
     margin-bottom: 0.5em;
+
+    > a {
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.15em;
+    }
 }
 
 h1 {
@@ -75,8 +80,6 @@ a {
     @include transition(color);
     text-decoration: underline;
     color: var(--primary);
-    text-decoration-thickness: 0.1em;
-    text-underline-offset: 0.15em;
 
     &:hover,
     &:focus,
