@@ -3,9 +3,7 @@
 @use "../variables" as variables;
 
 .contact {
+    margin: 2.5rem 0;
+    text-align: center;
     font-style: normal;
-
-    &__mail {
-        font-style: italic;
-    }
 }
