@@ -5,5 +5,8 @@
 .contact {
     margin: 2.5rem 0;
     text-align: center;
-    font-style: normal;
+
+    &__details {
+        font-style: normal;
+    }
 }

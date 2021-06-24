@@ -18,14 +18,14 @@
 
     <div class="article__content">
         <% if (post.excerpt && index){ %>
-            <section class="article__content__body">
+            <div class="article__content__body">
                 <%- post.excerpt %>
-            </section>
+            </div>
             <a href="<%= url_for(post.path) %>">Read more</a>
         <% } else { %>
-            <section class="article__content__body">
+            <div class="article__content__body">
                 <%- post.content %>
-            </section>
+            </div>
         <% } %>
     </div>
 
