@@ -152,3 +152,14 @@ hr {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 }
+
+body{
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+
+    grid: "nav" min-content "main" 1fr "footer" max-content;
+}
+
+.footer{
+}

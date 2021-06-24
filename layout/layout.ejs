@@ -8,9 +8,11 @@ Source code can be found here:
     <%- partial('_partial/head', null, {cache: false}) %>
     <body>
         <%- partial('_partial/navbar', null, {cache: false}) %>
-        <main>
-            <%- body %>
-        </main>
+        <div class="container">
+            <main>
+                <%- body %>
+            </main>
+        </div>
         <%- partial('_partial/footer', null, {cache: false}) %>
         <%- partial('_partial/after-footer', null, {cache: false}) %>
     </body>

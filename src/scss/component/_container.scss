@@ -2,8 +2,7 @@
 
 .container {
     max-width: $breakpoint-lg;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100vw;
     padding-right: 0.75rem;
     padding-left: 0.75rem;
 }
