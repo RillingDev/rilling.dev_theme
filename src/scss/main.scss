@@ -8,13 +8,14 @@
 
 @use "./component/code";
 @use "./component/button";
-@use "./component/navbar";
+@use "./component/table";
 @use "./component/container";
+@use "./component/navbar";
 @use "./component/footer";
 @use "./component/pagination";
-@use "./component/contact";
 @use "./component/social";
 
-@use "./component/article";
-@use "./component/error";
 @use "./component/index";
+@use "./component/article";
+@use "./component/contact";
+@use "./component/error";
