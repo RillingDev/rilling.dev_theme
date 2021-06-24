@@ -1,15 +1,15 @@
 <head>
     <%
-    const title = page.title;
+    const title = page.title ?? "Blog";
 
     const isError = page.layout === "error";
     %>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="<%= isError ? "noindex" : "index" ;_%>,follow"/>
+    <meta name="robots" content="<%= isError ? "noindex" : "index"; _%>,follow"/>
 
-    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
-    <meta name="author" content="Felix Rilling"/>
+    <title><%= title %> | <%= config.title %></title>
+    <meta name="author" content="<%= config.author %>"/>
     <%- open_graph({
         image: url_for("apple-touch-icon.png")
     }); %>
@@ -24,4 +24,8 @@
     <meta name="color-scheme" content="dark light">
 
     <%- css("main"); %>
+
+    <!-- Prefetch-able data -->
+    <link rel="prefetch" href="<%- url_for("/sprites/font-awesome-brands.svg"); %>">
+    <link rel="prefetch" href="<%- url_for("/sprites/font-awesome-solid.svg"); %>">
 </head>
