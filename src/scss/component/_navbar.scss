@@ -24,13 +24,23 @@
     }
 }
 
-.navbar__nav__item__link,
-.navbar__title {
+.navbar__title,
+.navbar__nav__item__link {
     font-family: variables.$font-family-sans;
     line-height: 1;
     display: block;
-    padding: 1.5rem 0;
+    padding: 1.375rem 0;
     text-decoration: none;
+}
+
+.navbar__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar__title__logo {
+    margin-bottom: 0;
 }
 
 .navbar__nav__item__link {

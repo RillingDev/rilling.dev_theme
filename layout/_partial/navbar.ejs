@@ -1,7 +1,11 @@
 <div class="container">
     <nav class="navbar">
         <a class="navbar__title" href="<%- url_for("/"); %>"
-           title="Go to Home">Rilling.dev</a>
+           title="Go to Home">
+            <img class="navbar__title__logo" aria-hidden="true" alt=""
+                 src="<%- url_for("nav-icon.svg"); %>" width="22" height="22"/>
+            <span class="navbar__title__text" ><%= config.title %></span>
+        </a>
 
         <a class="navbar__toggle-button" href="#" id="navbarToggleButton"
            role="button"
@@ -15,24 +19,24 @@
              aria-hidden="false">
             <ul class="navbar__nav" role="menubar">
                 <% for (const [name, path] of Object.entries(config.menu)){ %>
-                    <%_
-                        let isCurrent = false;
-                        if (is_current(path)) {
-                            isCurrent = true;
-                        } else if (is_post() && name === "Blog") {
-                            isCurrent = true;
-                        }
-                    _%>
+                <%_
+                    let isCurrent = false;
+                    if (is_current(path)) {
+                        isCurrent = true;
+                    } else if (is_post() && name === "Blog") {
+                        isCurrent = true;
+                    }
+                _%>
 
-                    <li class="navbar__nav__item" role="menuitem">
-                        <% if (isCurrent){ %>
-                            <a class="navbar__nav__item__link active" href="<%- url_for(path); %>"
-                               aria-current="page"><%= name; %></a>
-                        <% } else { %>
-                            <a class="navbar__nav__item__link"
-                               href="<%- url_for(path); %>"><%= name; %></a>
-                        <% } %>
-                    </li>
+                <li class="navbar__nav__item" role="menuitem">
+                    <% if (isCurrent){ %>
+                        <a class="navbar__nav__item__link active" href="<%- url_for(path); %>"
+                           aria-current="page"><%= name; %></a>
+                    <% } else { %>
+                        <a class="navbar__nav__item__link"
+                           href="<%- url_for(path); %>"><%= name; %></a>
+                    <% } %>
+                </li>
                 <% } %>
             </ul>
         </div>
