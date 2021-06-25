@@ -153,13 +153,9 @@ hr {
     margin-bottom: 0.75rem;
 }
 
-body{
+body {
     display: grid;
-    min-height: 100vh;
     justify-content: center;
-
+    min-height: 100vh;
     grid: "nav" min-content "main" 1fr "footer" max-content;
-}
-
-.footer{
 }
