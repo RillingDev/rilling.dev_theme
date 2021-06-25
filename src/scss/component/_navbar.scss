@@ -91,6 +91,13 @@
         @include mixins.transition(#{"transform, height"});
     }
 
+    &:hover,
+    &:focus {
+        .navbar__toggle-button__bar {
+            background-color: var(--primary-contrast-alt);
+        }
+    }
+
     &.collapsed {
         .navbar__toggle-button__bar {
             &:nth-child(1) {
