@@ -1,0 +1,15 @@
+@use "../variables" as variables;
+
+.skip-link {
+    position: fixed;
+    top: -50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: variables.$font-family-sans;
+    line-height: 1;
+    padding: 0.25rem;
+}
+
+.skip-link:focus {
+    top: 0;
+}

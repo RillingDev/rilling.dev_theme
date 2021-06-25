@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<!--
-Source code can be found here:
-    - site hexo project and content: https://github.com/FelixRilling/rilling.dev
-    - site theme:                    https://github.com/FelixRilling/rilling.dev_theme
--->
 <html lang="en" prefix="og: http://ogp.me/ns#">
-<%- partial('_partial/head', null, { cache: false }) %>
+<%- partial("_partial/head", null, { cache: false }); %>
 <body>
-<%- partial('_partial/navbar', null, { cache: false }) %>
+<a href="#main" class="skip-link">Skip to main content</a>
+<%- partial("_partial/navbar", null, { cache: false }); %>
 <div class="container">
-    <main>
-        <%- body %>
+    <main id="main">
+        <%- body; %>
     </main>
 </div>
-<%- partial('_partial/footer', null, { cache: false }) %>
-<%- partial('_partial/after-footer', null, { cache: false }) %>
+<%- partial("_partial/footer", null, { cache: false }); %>
+<%- partial("_partial/after-footer", null, { cache: false }); %>
 </body>
 </html>
