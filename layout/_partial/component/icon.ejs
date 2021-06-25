@@ -1,1 +1,3 @@
-<span class="<%= classname %>" aria-hidden="true"><!-- Icon --></span>
+<svg aria-hidden="true" role="img">
+    <use xlink:href="<%= url_for(`sprites/font-awesome-${style}.svg#${icon}`); %>"></use>
+</svg>

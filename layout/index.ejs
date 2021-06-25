@@ -1,7 +1,8 @@
-<div class="container section section-margin index">
-    <% page.posts.each(function(post){ %>
+<div class="index">
+    <% page.posts.each((post)=>{ %>
         <%- partial('_partial/article', { post: post, index: true }) %>
-    <% }) %>
+    <% }); %>
+
     <%- partial('_partial/component/pagination'); %>
 </div>
 

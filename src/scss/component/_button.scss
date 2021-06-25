@@ -1,0 +1,90 @@
+@use "sass:color";
+@use "../mixins" as mixins;
+@use "../variables" as variables;
+
+.btn {
+    font-family: variables.$font-family-sans;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+
+    display: flex;
+    width: max-content;
+    padding: 0.625rem 1rem;
+    cursor: pointer;
+
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: variables.$border-radius;
+
+    @include mixins.transition(#{background-color, color});
+
+    &:hover,
+    &.hover {
+        text-decoration: none;
+    }
+
+    &:disabled,
+    &.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.65;
+    }
+
+    > svg {
+        width: 1em;
+        height: 1em;
+        margin-right: 0.25rem;
+        fill: currentcolor;
+    }
+
+    &--primary {
+        color: var(--text-contrast-high);
+        background-color: var(--primary);
+
+        &:hover,
+        &.hover {
+            color: var(--text-contrast-high);
+            background-color: var(--primary-contrast-alt);
+        }
+
+        &:focus,
+        &.focus {
+            color: var(--text-contrast-high);
+            background-color: var(--primary-contrast-alt);
+        }
+    }
+
+    &--social--github {
+        $-brand-github: #171515;
+        $-brand-github-alt: color.adjust($-brand-github, $lightness: 12.5%);
+
+        color: var(--white);
+
+        border: 2px solid var(--gray-800);
+        background-color: $-brand-github;
+
+        &:hover,
+        &:focus {
+            color: var(--white);
+            background-color: $-brand-github-alt;
+        }
+    }
+
+    &--social--codepen {
+        $-brand-codepen: #1e1f26;
+        $-brand-codepen-alt: color.adjust($-brand-codepen, $lightness: 12.5%);
+
+        color: var(--white);
+
+        border: 2px solid var(--gray-800);
+        background-color: $-brand-codepen;
+
+        &:hover,
+        &:focus {
+            color: var(--white);
+            background-color: $-brand-codepen-alt;
+        }
+    }
+}

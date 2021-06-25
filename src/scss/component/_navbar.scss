@@ -1,43 +1,105 @@
-@import "../mixins/screen";
-@import "../mixins/transition";
-@import "../mixins/hover-focus-active";
-@import "../variables.bootstrap";
-
-.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
+@use "../mixins" as mixins;
+@use "../variables" as variables;
 
 .navbar {
-    background-color: theme-color("primary");
-    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+    border-bottom: 2px solid var(--primary);
 }
 
-.navbar-toggler {
+.navbar__nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     padding: 0;
-    border: 0;
+    list-style: none;
+
+    @include mixins.screen-min-width(variables.$breakpoint-sm) {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+.navbar__title,
+.navbar__nav__item__link {
+    font-family: variables.$font-family-sans;
+    line-height: 1;
+    display: block;
+    padding: 1.375rem 0;
+    text-decoration: none;
+}
+
+.navbar__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar__title__logo {
+    margin-bottom: 0;
+}
+
+.navbar__nav__item__link {
+    &.active {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 7px;
+    }
+}
+
+.navbar__collapse {
+    display: none;
+    width: 100%;
+    background-color: var(--background);
+
+    @include mixins.screen-min-width(variables.$breakpoint-sm) {
+        display: initial;
+        width: auto;
+    }
+
+    &.show {
+        display: initial;
+        border-top: 2px solid var(--primary);
+        @include mixins.screen-min-width(variables.$breakpoint-sm) {
+            border-top: 0;
+        }
+    }
+}
+
+.navbar__toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 24px;
     height: 24px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    @include screen(min, md) {
+    padding: 0;
+    border: 0;
+
+    @include mixins.screen-min-width(variables.$breakpoint-sm) {
         display: none;
     }
 
-    .menu-bar {
+    .navbar__toggle-button__bar {
         display: block;
         width: 100%;
         height: 2px;
-        background-color: $white;
-        @include transition(#{"transform, height"});
+        background-color: var(--primary);
+        @include mixins.transition(#{"transform, height"});
+    }
+
+    &:hover,
+    &:focus {
+        .navbar__toggle-button__bar {
+            background-color: var(--primary-contrast-alt);
+        }
     }
 
     &.collapsed {
-        .menu-bar {
+        .navbar__toggle-button__bar {
             &:nth-child(1) {
                 transform: translateY(8px) rotate(45deg);
             }
@@ -51,41 +113,4 @@
             }
         }
     }
-}
-
-.navbar-collapse {
-    @include screen(min, md) {
-        flex-basis: auto;
-        justify-content: flex-end;
-    }
-}
-
-.navbar-nav {
-    .nav-item {
-        &.active {
-            .nav-link {
-                color: $white;
-                background-color: theme-color("secondary");
-            }
-        }
-
-        .nav-link {
-            height: 40px;
-            margin-left: -1rem;
-            margin-right: -1rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            @include transition(background-color);
-            @include hover-focus-active {
-                background-color: theme-color("secondary");
-            }
-            @include screen(min, md) {
-                margin: 0;
-            }
-        }
-    }
-}
-
-.navbar-light .navbar-brand {
-    color: $white;
 }

@@ -1,13 +1,7 @@
 .pagination {
-    margin-bottom: 0;
+    display: flex;
     justify-content: center;
-}
-
-.page-item {
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-.page-link {
-    padding: 10px 14px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
 }

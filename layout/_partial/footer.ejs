@@ -1,31 +1,22 @@
 <div class="container">
-    <div class="footer-wrapper">
+    <footer class="footer">
 
-        <div class="footer-block">
-            <nav>
-                <ul class="footer-list" role="menubar">
-                    <% for (const [name, path] of Object.entries(config.menu)){ %>
-                        <li role="menuitem">
-                            <a href="<%= url_for(path) %>"
-                               title="Go to <%= name %>"><%= name %></a>
-                        </li>
-                    <% } %>
-                </ul>
-            </nav>
-        </div>
+        <p class="footer__copy">
+            &copy; <%= date(new Date(), "YYYY"); %> <%= config.author; %><br>
+        </p>
 
-        <div class="footer-block">
-            <ul class="footer-list">
-                <li>
-                    <address class="footer-contact">Email:
-                        <span title="Contact email">contact at rilling.dev</span>
-                    </address>
-                </li>
-                <li>
-                    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author %><br>
-                </li>
-            </ul>
-        </div>
+        <p class="footer__tech">
+            Source code available at GitHub: <a
+                    href="https://github.com/FelixRilling/rilling.dev" target="_blank"
+                    rel="noreferrer">Contents</a>,
+            <a href="https://github.com/FelixRilling/rilling.dev_theme" target="_blank"
+               rel="noreferrer">Theme</a>.
+            <br>
+            This site makes use of open source components. A full list can be found
+            in the repositories linked above. <a href="<%- url_for("licenses.txt") %>">Licenses (if
+                supported) can be found here</a>.
+        </p>
 
-    </div>
+    </footer>
 </div>
+

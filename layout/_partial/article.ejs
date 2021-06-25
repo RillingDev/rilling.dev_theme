@@ -1,19 +1,31 @@
-<article class="article <%- index ? '' : 'article-full' %>">
+<article class="article <%= index ? 'article--excerpt' : '' %>">
 
-    <% if (index){ %>
-        <header>
-            <%- partial('component/title') %>
-            <%- partial('component/meta', { post: post, presenter: false }) %>
-        </header>
-    <% } %>
+    <header class="article__header">
+        <h1 class="article__header__title">
+            <% if (index){ %>
+                <a href="<%- url_for(post.path) %>">
+                    <%= post.title %>
+                </a>
+            <% } else { %>
+                <%= post.title %>
+            <% } %>
+        </h1>
+        <p class="article__header__meta">
+            <span>Published: <%- partial('component/date', { datetime: post.date }) %></span>
+            <span>Last updated: <%- partial('component/date', { datetime: post.updated }) %></span>
+        </p>
+    </header>
 
-    <div class="article-content">
+    <div class="article__content">
         <% if (post.excerpt && index){ %>
-            <%- post.excerpt %>
-            <a class="btn btn-primary"
-               href="<%= url_for(post.path) %>#more">Read more</a>
+            <div class="article__content__body">
+                <%- post.excerpt %>
+            </div>
+            <a href="<%- url_for(post.path) %>">Read '<%= post.title %>'</a>
         <% } else { %>
-            <%- post.content %>
+            <div class="article__content__body">
+                <%- post.content %>
+            </div>
         <% } %>
     </div>
 

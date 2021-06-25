@@ -1,12 +1,10 @@
-import { initArticle } from "./ui/article";
 import { initNavbar } from "./ui/navbar";
 
-const init = (document: Document, layout: string): void => {
-    initNavbar(document);
-
-    if (layout === "post" || layout === "index" || layout === "archive") {
-        initArticle(document);
-    }
+const init = (document: Document, _layout: string): void => {
+    initNavbar(
+        document.getElementById("navbarToggleButton")!,
+        document.getElementById("navbarMenu")!
+    );
 };
 
 export { init };

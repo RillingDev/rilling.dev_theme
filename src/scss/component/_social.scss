@@ -1,26 +1,6 @@
 .social {
-    margin-top: 1rem;
-    max-width: 400px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-}
-
-.btn-social-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-
-    .btn {
-        margin-bottom: 0.5rem;
-    }
-
-    @include screen(min, md) {
-        flex-direction: row;
-        .btn-social {
-            width: calc(50% - 0.25rem);
-        }
-    }
+    margin: 2rem 0;
+    gap: 1rem;
 }

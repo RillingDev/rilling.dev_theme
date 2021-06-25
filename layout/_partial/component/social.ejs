@@ -1,30 +1,15 @@
 <div class="social">
 
-    <address>Email:
-        <span title="Contact email">contact at rilling.dev</span>
-    </address>
+    <a href="https://github.com/FelixRilling/" target="_blank" rel="noreferrer"
+       class="btn btn--social--github">
+        <%- partial("_partial/component/icon", { style: "brands", icon: "github" }); _%>
+        <span>Me on GitHub</span>
+    </a>
 
-    <div class="btn-social-container">
+    <a href="https://codepen.io/FelixRilling/" target="_blank" rel="noreferrer"
+       class="btn btn--social--codepen">
+        <%- partial("_partial/component/icon", { style: "brands", icon: "codepen" }); _%>
+        <span>Me on CodePen</span>
+    </a>
 
-        <% if(page.layout !== "about"){ %>
-            <a href="<%- url_for("about") %>" title="About Felix Rilling"
-               class="btn btn-primary btn-primary--lg">
-                <%- partial('_partial/component/icon', { classname: 'fas fa-rocket' }) _%>
-                About Me
-            </a>
-        <% } %>
-
-        <a href="https://github.com/FelixRilling/" target="_blank" title="Felix Rilling on Github"
-           class="btn btn-social btn-social-github">
-            <%- partial('_partial/component/icon', { classname: 'fab fa-github' }) _%>
-            GitHub
-        </a>
-
-        <a href="http://codepen.io/FelixRilling/" target="_blank" title="Felix Rilling on CodePen"
-           class="btn btn-social btn-social-codepen">
-            <%- partial('_partial/component/icon', { classname: 'fab fa-codepen' }) _%>
-            CodePen
-        </a>
-
-    </div>
 </div>

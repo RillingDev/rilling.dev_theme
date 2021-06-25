@@ -1,0 +1,161 @@
+@use "../variables" as variables;
+
+/**
+* Base
+*/
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+/**
+* General display changes.
+*/
+
+video,
+audio,
+picture,
+img,
+iframe,
+object {
+    display: block;
+    max-width: 100%;
+}
+
+pre {
+    overflow: auto;
+}
+
+/**
+* Border unification
+*/
+
+hr,
+fieldset,
+iframe,
+select,
+textarea,
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+    border: 1px solid var(--text-muted);
+    border-radius: variables.$border-radius;
+}
+
+/**
+* Table changes
+*/
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 0.5rem;
+    border: 1px solid var(--text-muted);
+}
+
+/**
+ * Margin/Padding changes
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.5rem;
+}
+
+p,
+ul,
+ol,
+table,
+video,
+audio,
+picture,
+img,
+iframe,
+object,
+blockquote,
+address,
+details,
+figure,
+form,
+pre {
+    margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+ol,
+ul {
+    padding-left: 2rem;
+}
+
+blockquote {
+    margin-top: 0;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+figure {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+dd {
+    margin-left: 2rem;
+}
+
+pre {
+    margin-top: 0;
+    padding: 0.5rem 0.75rem;
+}
+
+fieldset {
+    margin: 0 0.5rem 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+hr {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    min-height: 100vh;
+    grid: "nav" min-content "main" 1fr "footer" max-content;
+}
