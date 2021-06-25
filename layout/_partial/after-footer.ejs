@@ -1,11 +1,6 @@
 <%- js('main') %>
-<%
-let layout;
-if (is_home()) {
-    layout = "index";
-} else {
-    layout = page.layout;
-}
+<%_
+const layout = is_home() ? "index" : page.layout;
 _%>
 <script>
     rilling.init(document, "<%- layout %>");

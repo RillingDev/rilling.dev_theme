@@ -5,15 +5,15 @@ Source code can be found here:
     - site theme:                    https://github.com/FelixRilling/rilling.dev_theme
 -->
 <html lang="en" prefix="og: http://ogp.me/ns#">
-    <%- partial('_partial/head', null, {cache: false}) %>
-    <body>
-        <%- partial('_partial/navbar', null, {cache: false}) %>
-        <div class="container">
-            <main>
-                <%- body %>
-            </main>
-        </div>
-        <%- partial('_partial/footer', null, {cache: false}) %>
-        <%- partial('_partial/after-footer', null, {cache: false}) %>
-    </body>
+<%- partial('_partial/head', null, { cache: false }) %>
+<body>
+<%- partial('_partial/navbar', null, { cache: false }) %>
+<div class="container">
+    <main>
+        <%- body %>
+    </main>
+</div>
+<%- partial('_partial/footer', null, { cache: false }) %>
+<%- partial('_partial/after-footer', null, { cache: false }) %>
+</body>
 </html>

@@ -1,9 +1,9 @@
-<article class="article <%- index ? 'article--excerpt' : '' %>">
+<article class="article <%= index ? 'article--excerpt' : '' %>">
 
     <header class="article__header">
         <h1 class="article__header__title">
             <% if (index){ %>
-                <a href="<%= url_for(post.path) %>">
+                <a href="<%- url_for(post.path) %>">
                     <%= post.title %>
                 </a>
             <% } else { %>
@@ -21,7 +21,7 @@
             <div class="article__content__body">
                 <%- post.excerpt %>
             </div>
-            <a href="<%= url_for(post.path) %>">Read more</a>
+            <a href="<%- url_for(post.path) %>" title="Read full article '<%= post.title %>'.">Read more</a>
         <% } else { %>
             <div class="article__content__body">
                 <%- post.content %>
