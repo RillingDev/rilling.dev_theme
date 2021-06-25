@@ -1,6 +1,6 @@
 # Rilling.dev Theme
 
-Hexo theme for <https://rilling.dev>.
+[Hexo](https://hexo.io/) theme for <https://rilling.dev>.
 
 ## Structure
 
