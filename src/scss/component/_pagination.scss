@@ -1,7 +1,3 @@
-@use "../mixins/screen-min-width" as *;
-@use "../mixins/transition" as *;
-@use "../variables" as variables;
-
 .pagination {
     display: flex;
     justify-content: center;

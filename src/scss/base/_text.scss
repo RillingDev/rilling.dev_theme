@@ -1,4 +1,4 @@
-@use "../mixins/transition" as *;
+@use "../mixins" as mixins;
 @use "../variables" as variables;
 
 /**
@@ -82,7 +82,7 @@ mark {
 
 a {
     font-weight: 700;
-    @include transition(color);
+    @include mixins.transition(color);
     text-decoration: underline;
     color: var(--primary);
 

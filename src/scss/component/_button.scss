@@ -1,6 +1,6 @@
 @use "sass:color";
-@use "./../mixins/transition" as *;
-@use "./../variables" as variables;
+@use "../mixins" as mixins;
+@use "../variables" as variables;
 
 .btn {
     font-family: variables.$font-family-sans;
@@ -18,7 +18,7 @@
     border: none;
     border-radius: variables.$border-radius;
 
-    @include transition(#{background-color, color});
+    @include mixins.transition(#{background-color, color});
 
     &:hover,
     &.hover {
