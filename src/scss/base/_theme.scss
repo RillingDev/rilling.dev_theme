@@ -1,0 +1,19 @@
+@use "../variables" as variables;
+
+@media (prefers-color-scheme: light) {
+    :root {
+        @include variables.variables-light()
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include variables.variables-dark()
+    }
+}
+
+@media print {
+    :root {
+        @include variables.variables-print()
+    }
+}
