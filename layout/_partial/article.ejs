@@ -21,7 +21,7 @@
             <div class="article__content__body">
                 <%- post.excerpt %>
             </div>
-            <a href="<%- url_for(post.path) %>" title="Read full article '<%= post.title %>'.">Read more</a>
+            <a href="<%- url_for(post.path) %>">Read '<%= post.title %>'</a>
         <% } else { %>
             <div class="article__content__body">
                 <%- post.content %>
