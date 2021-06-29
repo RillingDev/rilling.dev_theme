@@ -7,8 +7,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 1.75rem;
     border-bottom: 2px solid var(--primary);
+
+    @media print {
+        display: none;
+    }
 }
 
 .navbar__nav {
@@ -41,10 +44,6 @@
 
 .navbar__title__logo {
     margin-bottom: 0;
-
-    @media print {
-        filter: saturate(0);
-    }
 }
 
 .navbar__nav__item__link {

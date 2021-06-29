@@ -2,18 +2,18 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        @include variables.variables-light()
+        @include variables.variables-light();
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        @include variables.variables-dark()
+        @include variables.variables-dark();
     }
 }
 
 @media print {
     :root {
-        @include variables.variables-print()
+        @include variables.variables-print();
     }
 }
