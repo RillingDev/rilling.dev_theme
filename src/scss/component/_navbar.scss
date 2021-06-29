@@ -41,6 +41,10 @@
 
 .navbar__title__logo {
     margin-bottom: 0;
+
+    @media print {
+        filter: saturate(0);
+    }
 }
 
 .navbar__nav__item__link {
