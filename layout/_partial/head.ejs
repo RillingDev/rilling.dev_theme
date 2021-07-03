@@ -4,10 +4,12 @@
     const isError = page.layout === "error";
     _%>
     <meta charset="utf-8"/>
+
+    <title><%= title %> | <%= config.title %></title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="<%= isError ? "noindex" : "index"; _%>,follow"/>
 
-    <title><%= title %> | <%= config.title %></title>
     <meta name="author" content="<%= config.author %>"/>
     <%- open_graph({
         image: url_for("apple-touch-icon.png")
