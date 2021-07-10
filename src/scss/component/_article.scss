@@ -18,8 +18,12 @@
             font-size: 0.85em;
             display: flex;
             flex-direction: column;
-            margin-bottom: 1.5rem;
             gap: 0.5rem;
+            margin-bottom: 1.5rem;
+
+            > p {
+                margin-bottom: 0;
+            }
 
             @include mixins.screen-min-width(variables.$breakpoint-sm) {
                 flex-direction: row;
@@ -39,7 +43,7 @@
             }
 
             &__meta {
-                margin-bottom: 0.75rem;
+                margin-bottom: 0.5rem;
                 @include mixins.screen-min-width(variables.$breakpoint-sm) {
                     margin-bottom: 0.25rem;
                 }
