@@ -1,8 +1,9 @@
 @use "../variables" as variables;
 
 .container {
-    width: 100vw;
+    width: 100%;
     max-width: variables.$breakpoint-lg;
     padding-right: 0.75rem;
     padding-left: 0.75rem;
+    overflow-x: auto; // A bit hacky, but seems justified as content should never stretch the container.
 }
