@@ -9,7 +9,8 @@ hexo.extend.filter.register("after_render:html", (str, data) => {
     }
 
     let $ = load(str);
-    $("article table").each((_i, table) => {
+    // Only select tables directly in content. THis ensures the tables used for code blocks are not included.
+    $(".article__content__body > table").each((_i, table) => {
         const $tableWrapper = $("<div></div>");
         $tableWrapper.addClass("table__wrapper");
 
