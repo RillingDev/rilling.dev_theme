@@ -11,7 +11,6 @@ pre > code {
  * Highlight.js support
  */
 
-/* Tomorrow Base */
 pre {
     color: var(--highlight-foreground);
     background: var(--highlight-background);
@@ -19,13 +18,11 @@ pre {
 
 .hljs {
 
-    /* Tomorrow Comment */
     &-comment,
     &-quote {
         color: var(--highlight-comment);
     }
 
-    /* Tomorrow Red */
     &-variable,
     &-template-variable,
     &-tag,
@@ -37,10 +34,8 @@ pre {
         color: var(--highlight-red);
     }
 
-    /* Tomorrow Orange */
     &-number,
     &-built_in,
-    &-builtin-name,
     &-literal,
     &-type,
     &-params,
@@ -49,12 +44,10 @@ pre {
         color: var(--highlight-orange);
     }
 
-    /* Tomorrow Yellow */
     &-attribute {
         color: var(--highlight-yellow);
     }
 
-    /* Tomorrow Green */
     &-string,
     &-symbol,
     &-bullet,
@@ -62,13 +55,11 @@ pre {
         color: var(--highlight-green);
     }
 
-    /* Tomorrow Blue */
     &-title,
     &-section {
         color: var(--highlight-blue);
     }
 
-    /* Tomorrow Purple */
     &-keyword,
     &-selector-tag {
         color: var(--highlight-purple);

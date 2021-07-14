@@ -1,25 +1,25 @@
 @mixin variables-highlight-light {
-    // Tomorrow: https://github.com/chriskempson/tomorrow-theme
-    --highlight-background: #ffffff;
-    --highlight-foreground: #4d4d4c;
-    --highlight-comment: #8e908c;
-    --highlight-red: #c82829;
-    --highlight-orange: #f5871f;
-    --highlight-yellow: #eab700;
-    --highlight-green: #718c00;
-    --highlight-blue: #4271ae;
-    --highlight-purple: #8959a8;
+    // https://github.com/highlightjs/highlight.js/blob/main/src/styles/a11y-light.css
+    --highlight-background: #fefefe;
+    --highlight-foreground: #545454;
+    --highlight-comment: #696969;
+    --highlight-red: #d91e18;
+    --highlight-orange: #aa5d00;
+    --highlight-yellow: #aa5d00;
+    --highlight-green: #008000;
+    --highlight-blue: #007faa;
+    --highlight-purple: #7928a1;
 }
 
 @mixin variables-highlight-dark {
-    // Tomorrow Night Bright: https://github.com/chriskempson/tomorrow-theme
-    --highlight-background: #000000;
-    --highlight-foreground: #eaeaea;
-    --highlight-comment: #969896;
-    --highlight-red: #d54e53;
-    --highlight-orange: #e78c45;
-    --highlight-yellow: #e7c547;
-    --highlight-green: #b9ca4a;
-    --highlight-blue: #7aa6da;
-    --highlight-purple: #c397d8;
+    // https://github.com/highlightjs/highlight.js/blob/main/src/styles/a11y-dark.css
+    --highlight-background: #2b2b2b;
+    --highlight-foreground: #f8f8f2;
+    --highlight-comment: #d4d0ab;
+    --highlight-red: #ffa07a;
+    --highlight-orange: #f5ab35;
+    --highlight-yellow: #ffd700;
+    --highlight-green: #abe338;
+    --highlight-blue: #00e0e0;
+    --highlight-purple: #dcc6e0;
 }
