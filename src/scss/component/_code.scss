@@ -1,96 +1,84 @@
+
+pre {
+    border: 1px solid var(--text-muted-high);
+}
+
+pre > code {
+    background-color: transparent; // Ensure `pre` background color is used.
+}
+
 /**
  * Highlight.js support
  */
-.highlight {
-    display: block;
-    overflow-x: auto;
 
-    .gutter,
-    .code {
-        padding: 0;
+/* Tomorrow Base */
+pre {
+    color: var(--highlight-foreground);
+    background: var(--highlight-background);
+}
 
-        > pre {
-            margin-bottom: 0;
-            padding: 0.25em 0.5em;
-        }
+.hljs {
+
+    /* Tomorrow Comment */
+    &-comment,
+    &-quote {
+        color: var(--highlight-comment);
     }
 
-    .code {
-        width: 100%;
+    /* Tomorrow Red */
+    &-variable,
+    &-template-variable,
+    &-tag,
+    &-name,
+    &-selector-id,
+    &-selector-class,
+    &-regexp,
+    &-deletion {
+        color: var(--highlight-red);
     }
 
-    .gutter {
-        text-align: right;
+    /* Tomorrow Orange */
+    &-number,
+    &-built_in,
+    &-builtin-name,
+    &-literal,
+    &-type,
+    &-params,
+    &-meta,
+    &-link {
+        color: var(--highlight-orange);
     }
 
-    .code {
-        /* Tomorrow Base */
-        > pre {
-            color: var(--highlight-foreground);
-            background: var(--highlight-background);
-        }
+    /* Tomorrow Yellow */
+    &-attribute {
+        color: var(--highlight-yellow);
+    }
 
-        /* Tomorrow Comment */
-        .comment,
-        .quote {
-            color: var(--highlight-comment);
-        }
+    /* Tomorrow Green */
+    &-string,
+    &-symbol,
+    &-bullet,
+    &-addition {
+        color: var(--highlight-green);
+    }
 
-        /* Tomorrow Red */
-        .variable,
-        .template-variable,
-        .tag,
-        .name,
-        .selector-id,
-        .selector-class,
-        .regexp,
-        .deletion {
-            color: var(--highlight-red);
-        }
+    /* Tomorrow Blue */
+    &-title,
+    &-section {
+        color: var(--highlight-blue);
+    }
 
-        /* Tomorrow Orange */
-        .number,
-        .built_in,
-        .builtin-name,
-        .literal,
-        .type,
-        .params,
-        .meta,
-        .link {
-            color: var(--highlight-orange);
-        }
+    /* Tomorrow Purple */
+    &-keyword,
+    &-selector-tag {
+        color: var(--highlight-purple);
+    }
 
-        /* Tomorrow Yellow */
-        .attribute {
-            color: var(--highlight-yellow);
-        }
+    &-emphasis {
+        font-style: italic;
+    }
 
-        /* Tomorrow Green */
-        .string,
-        .symbol,
-        .bullet,
-        .addition {
-            color: var(--highlight-green);
-        }
-
-        /* Tomorrow Blue */
-        .title,
-        .section {
-            color: var(--highlight-blue);
-        }
-
-        /* Tomorrow Purple */
-        .keyword,
-        .selector-tag {
-            color: var(--highlight-purple);
-        }
-
-        .emphasis {
-            font-style: italic;
-        }
-
-        .strong {
-            font-weight: bold;
-        }
+    &-strong {
+        font-weight: bold;
     }
 }
