@@ -7,13 +7,13 @@
 @use "./base/core";
 @use "./base/text";
 
-@use "./component/code";
-@use "./component/button";
-@use "./component/table";
 @use "./component/container";
 @use "./component/navbar";
 @use "./component/main";
 @use "./component/footer";
+@use "./component/code";
+@use "./component/button";
+@use "./component/table";
 @use "./component/pagination";
 @use "./component/social";
 @use "./component/skip-link";

@@ -48,7 +48,7 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-    border: 1px solid var(--text-muted);
+    border: 1px solid var(--text-muted-high);
     border-radius: variables.$border-radius;
 }
 
@@ -63,7 +63,7 @@ table {
 td,
 th {
     padding: 0.5rem;
-    border: 1px solid var(--text-muted);
+    border: 1px solid var(--text-muted-high);
 }
 
 /**

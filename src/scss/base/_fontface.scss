@@ -13,18 +13,8 @@ $unicodeMap: (
     $unicodeMap: $unicodeMap
 );
 @include notoSans.fontFace(
-    $weight: 400,
-    $style: italic,
-    $unicodeMap: $unicodeMap
-);
-@include notoSans.fontFace(
     $weight: 700,
     $style: normal,
-    $unicodeMap: $unicodeMap
-);
-@include notoSans.fontFace(
-    $weight: 700,
-    $style: italic,
     $unicodeMap: $unicodeMap
 );
 

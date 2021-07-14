@@ -14,8 +14,8 @@
         }
 
         &__meta {
-            font-family: variables.$font-family-sans;
-            font-size: 0.85em;
+            font-size: 0.825em;
+            color: var(--text-muted);
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
@@ -28,10 +28,6 @@
             @include mixins.screen-min-width(variables.$breakpoint-sm) {
                 flex-direction: row;
                 gap: 1.5rem;
-            }
-
-            .date {
-                font-style: italic;
             }
         }
     }

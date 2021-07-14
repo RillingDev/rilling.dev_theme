@@ -100,9 +100,10 @@ $border-radius: 3px;
     --background-contrast: var(--gray-100);
 
     --text: var(--gray-900);
+    --text-muted: var(--gray-800);
+    --text-muted-high: var(--gray-300);
     --text-contrast: var(--gray-200);
     --text-contrast-high: var(--gray-100);
-    --text-muted: var(--gray-300);
 
     --primary-contrast-alt: var(--pink-700);
     --primary: var(--pink-600);
@@ -116,9 +117,10 @@ $border-radius: 3px;
     --background-contrast: var(--gray-900);
 
     --text: var(--white);
+    --text-muted: var(--gray-300);
+    --text-muted-high: var(--gray-600);
     --text-contrast: var(--gray-900);
     --text-contrast-high: var(--black);
-    --text-muted: var(--gray-600);
 
     --primary-contrast-alt: var(--pink-300);
     --primary: var(--pink-400);
@@ -132,9 +134,10 @@ $border-radius: 3px;
     --background-contrast: var(--gray-100);
 
     --text: var(--gray-900);
+    --text-muted: var(--gray-700);
+    --text-muted-high: var(--gray-300);
     --text-contrast: var(--white);
     --text-contrast-high: var(--white);
-    --text-muted: var(--gray-600);
 
     --primary-contrast-alt: var(--gray-500);
     --primary: var(--gray-600);
