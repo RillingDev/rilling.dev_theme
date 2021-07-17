@@ -69,9 +69,15 @@ code,
 kbd,
 samp {
     font-family: variables.$font-family-monospace;
+}
+
+code,
+kbd,
+samp {
     color: var(--text);
     background-color: var(--background-contrast);
 }
+
 
 code,
 kbd,
