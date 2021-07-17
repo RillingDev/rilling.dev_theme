@@ -78,7 +78,6 @@ samp {
     background-color: var(--background-contrast);
 }
 
-
 code,
 kbd,
 samp,
@@ -100,5 +99,16 @@ a {
 
     &:focus {
         outline: 1px solid var(--primary-contrast-alt);
+    }
+
+    code,
+    kbd,
+    samp {
+        /*
+         * Reset to match link styling, as that is more important semantically.
+         */
+        color: inherit;
+        background-color: inherit;
+        padding: 0;
     }
 }
