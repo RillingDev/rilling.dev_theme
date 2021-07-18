@@ -22,7 +22,7 @@
         <div class="navbar__collapse" id="navbarMenu" role="navigation"
              aria-hidden="false">
             <ul class="navbar__nav" role="menubar">
-                <% for (const [name, path] of Object.entries(config.menu)){ %>
+                <% for (const [name, path] of Object.entries(theme.menu)){ %>
                 <%_
                     let isCurrent = false;
                     if (is_current(path)) {
