@@ -1,0 +1,12 @@
+@use "../mixins" as mixins;
+@use "../variables" as variables;
+
+body {
+    display: grid;
+    justify-content: center;
+    min-height: 100vh;
+    grid-template-areas: "nav" "main" "footer";
+    grid-template-rows: min-content 1fr min-content;
+    grid-auto-columns: minmax(auto, 1140px);
+    gap: 1.75rem;
+}

@@ -152,10 +152,3 @@ hr {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 }
-
-body {
-    display: grid;
-    justify-content: center;
-    min-height: 100vh;
-    grid: "nav" min-content "main" 1fr "footer" max-content;
-}

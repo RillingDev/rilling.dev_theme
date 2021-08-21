@@ -15,11 +15,11 @@
 
         &__meta {
             font-size: 0.825em;
-            color: var(--text-muted);
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
             margin-bottom: 1.5rem;
+            color: var(--text-muted);
+            gap: 0.5rem;
 
             > p {
                 margin-bottom: 0;
