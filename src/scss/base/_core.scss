@@ -1,17 +1,16 @@
 @use "../variables" as variables;
-
-/**
-* Base
-*/
+@use "../mixins" as mixins;
 
 body {
+    font-family: variables.$font-family-serif;
+    font-size: variables.$font-size-base;
+    line-height: 1.6;
     color: var(--text);
+
     background-color: var(--background);
 }
 
-/**
-* General display changes.
-*/
+/* General display improvements */
 
 video,
 audio,
@@ -23,13 +22,26 @@ object {
     max-width: 100%;
 }
 
+p,
+ul,
+ol,
+table,
+video,
+audio,
+picture,
+img,
+iframe,
+object,
+blockquote,
+address,
+details,
+figure,
+form,
 pre {
-    overflow: auto;
+    margin-bottom: 1rem;
 }
 
-/**
-* Border unification
-*/
+/* Border unification */
 
 hr,
 fieldset,
@@ -52,23 +64,7 @@ input[type="week"] {
     border-radius: variables.$border-radius;
 }
 
-/**
-* Table changes
-*/
-
-table {
-    border-collapse: collapse;
-}
-
-td,
-th {
-    padding: 0.5rem;
-    border: 1px solid var(--text-muted-high);
-}
-
-/**
- * Margin/Padding changes
- */
+/* Text */
 
 h1,
 h2,
@@ -88,26 +84,49 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: variables.$font-family-sans;
+    font-weight: 700;
+    line-height: 1.2;
     margin-bottom: 0.5rem;
+
+    > a {
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.15em;
+    }
 }
 
-p,
-ul,
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.75em;
+    margin-top: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin-top: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25em;
+    margin-top: 1.25rem;
+}
+
+h6 {
+    font-size: 1em;
+    margin-top: 1rem;
+}
+
 ol,
-table,
-video,
-audio,
-picture,
-img,
-iframe,
-object,
-blockquote,
-address,
-details,
-figure,
-form,
-pre {
-    margin-bottom: 1rem;
+ul {
+    padding-left: 2rem;
 }
 
 ol ol,
@@ -117,9 +136,35 @@ ul ol {
     margin-bottom: 0;
 }
 
-ol,
-ul {
-    padding-left: 2rem;
+a {
+    font-weight: 700;
+    @include mixins.transition(color);
+    text-decoration: underline;
+    color: var(--primary);
+
+    &:hover,
+    &:focus,
+    &.active {
+        color: var(--primary-contrast-alt);
+    }
+
+    &:focus {
+        outline: 1px solid var(--primary-contrast-alt);
+    }
+
+    code,
+    kbd,
+    samp {
+        // Reset to match link styling, as that is more important semantically
+        padding: 0;
+        color: inherit;
+        background-color: inherit;
+    }
+}
+
+mark {
+    color: var(--black);
+    background-color: var(--yellow);
 }
 
 blockquote {
@@ -128,19 +173,57 @@ blockquote {
     margin-left: 2rem;
 }
 
-figure {
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
-}
-
 dd {
     margin-left: 2rem;
 }
 
 pre {
+    overflow: auto;
+
     margin-top: 0;
     padding: 0.5rem 0.75rem;
+}
+
+code,
+kbd,
+samp {
+    color: var(--text);
+    background-color: var(--background-contrast);
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: variables.$font-family-monospace;
+}
+
+code,
+kbd,
+samp,
+mark {
+    padding: 0 0.15em;
+}
+
+/* Table changes */
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 0.5rem;
+    border: 1px solid var(--text-muted-high);
+}
+
+/* Misc element changes */
+
+
+figure {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 fieldset {
