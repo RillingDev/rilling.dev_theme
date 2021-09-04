@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>" dir="ltr" prefix="og: https://ogp.me/ns#">
-<%- partial("_partial/head", null, { cache: false }); %>
+<%- partial("_partial/head"); %>
 <body data-layout="<%= is_home() ? "index" : page.layout %>">
 <a href="#main" class="skip-link">Skip to main content</a>
-<%- partial("_partial/navbar", null, { cache: false }); %>
+<%- partial("_partial/navbar"); %>
 <div class="container">
     <main id="main" class="main">
         <%- body; %>
     </main>
 </div>
-<%- partial("_partial/footer", null, { cache: false }); %>
-<%- partial("_partial/after-footer", null, { cache: false }); %>
+<%- partial("_partial/footer"); %>
+<%- partial("_partial/after-footer"); %>
 </body>
 </html>
