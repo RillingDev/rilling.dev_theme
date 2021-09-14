@@ -8,5 +8,5 @@ body {
     grid-template-areas: "nav" "main" "footer";
     grid-template-rows: min-content 1fr min-content;
     grid-auto-columns: minmax(auto, 1140px);
-    gap: 1.75rem;
+    gap: 2rem;
 }

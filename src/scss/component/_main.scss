@@ -1,2 +1,6 @@
 @use "../mixins" as mixins;
 @use "../variables" as variables;
+
+.main {
+    margin-bottom: 2rem;
+}
