@@ -1,2 +1,6 @@
-# Ordered map of menu item name to path
+# Ordered map of menu item name to path.
 menu:
+# Links to author social media.
+social:
+    github:
+    codepen:
