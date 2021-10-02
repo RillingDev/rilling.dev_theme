@@ -1,14 +1,10 @@
 <head>
-    <%_
-    const title = page.title ?? "Blog";
-    const isError = page.layout === "error";
-    _%>
     <meta charset="utf-8"/>
 
-    <title><%= title %> | <%= config.title %></title>
+    <title><%= page.title ?? "Blog" %> | <%= config.title %></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="<%= isError ? "noindex" : "index"; _%>, follow"/>
+    <meta name="robots" content="<%= page.layout === "error" ? "noindex" : "index"; _%>, follow"/>
 
     <meta name="author" content="<%= config.author %>"/>
     <%- open_graph({
