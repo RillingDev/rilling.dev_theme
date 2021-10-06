@@ -20,7 +20,7 @@
         padding: 0;
         list-style: none;
 
-        @include mixins.screen-min-width(variables.$breakpoint-sm) {
+        @media (min-width: variables.$breakpoint-sm) {
             flex-direction: row;
             gap: 2rem;
         }
@@ -62,7 +62,7 @@
         padding: 0;
         border: 0;
 
-        @include mixins.screen-min-width(variables.$breakpoint-sm) {
+        @media (min-width: variables.$breakpoint-sm) {
             display: none;
         }
 
@@ -103,7 +103,7 @@
         width: 100%;
         background-color: var(--background);
 
-        @include mixins.screen-min-width(variables.$breakpoint-sm) {
+        @media (min-width: variables.$breakpoint-sm) {
             display: initial;
             width: auto;
         }
@@ -111,7 +111,8 @@
         &.show {
             display: initial;
             border-top: 2px solid var(--primary);
-            @include mixins.screen-min-width(variables.$breakpoint-sm) {
+
+            @media (min-width: variables.$breakpoint-sm) {
                 border-top: 0;
             }
         }

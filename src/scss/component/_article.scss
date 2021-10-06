@@ -8,7 +8,7 @@
             margin-top: 0;
             margin-bottom: 0.75rem;
 
-            @include mixins.screen-min-width(variables.$breakpoint-sm) {
+            @media (min-width: variables.$breakpoint-sm) {
                 font-size: 5em;
             }
         }
@@ -25,7 +25,7 @@
                 margin-bottom: 0;
             }
 
-            @include mixins.screen-min-width(variables.$breakpoint-sm) {
+            @media (min-width: variables.$breakpoint-sm) {
                 flex-direction: row;
                 gap: 1.5rem;
             }
