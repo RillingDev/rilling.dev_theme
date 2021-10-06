@@ -2,15 +2,18 @@
 
 @use "./variables";
 
-@use "./base/fontface";
 @use "./base/theme";
+@use "./base/fontface";
 @use "./base/core";
 
+// Layout Components
 @use "./component/body";
 @use "./component/container";
 @use "./component/navbar";
 @use "./component/main";
 @use "./component/footer";
+
+// 'Regular' Components
 @use "./component/code";
 @use "./component/button";
 @use "./component/table";
@@ -18,6 +21,7 @@
 @use "./component/social";
 @use "./component/skip-link";
 
+// Page Layouts
 @use "./component/index";
 @use "./component/article";
 @use "./component/contact";
