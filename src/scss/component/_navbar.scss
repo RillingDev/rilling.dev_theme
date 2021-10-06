@@ -71,7 +71,7 @@
             width: 100%;
             height: 2px;
             background-color: var(--primary);
-            @include mixins.transition(#{"transform, height"});
+            @include mixins.transition(#{transform, height});
         }
 
         &:hover,
