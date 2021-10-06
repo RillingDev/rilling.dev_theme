@@ -1,5 +1,5 @@
+// https://github.com/highlightjs/highlight.js/blob/main/src/styles/a11y-light.css
 @mixin variables-highlight-light {
-    // https://github.com/highlightjs/highlight.js/blob/main/src/styles/a11y-light.css
     --highlight-background: #fefefe;
     --highlight-foreground: #545454;
     --highlight-comment: #696969;
@@ -11,8 +11,8 @@
     --highlight-purple: #7928a1;
 }
 
+// https://github.com/highlightjs/highlight.js/blob/main/src/styles/a11y-dark.css
 @mixin variables-highlight-dark {
-    // https://github.com/highlightjs/highlight.js/blob/main/src/styles/a11y-dark.css
     --highlight-background: #2b2b2b;
     --highlight-foreground: #f8f8f2;
     --highlight-comment: #d4d0ab;

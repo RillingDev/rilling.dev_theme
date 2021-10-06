@@ -7,6 +7,7 @@ $unicodeMap: (
     latin: map-get(notoSans.$unicodeMap, latin),
 );
 
+// https://fonts.google.com/specimen/Noto+Sans
 @include notoSans.fontFace(
     $weight: 400,
     $style: normal,
@@ -18,6 +19,7 @@ $unicodeMap: (
     $unicodeMap: $unicodeMap
 );
 
+// https://fonts.google.com/specimen/Noto+Serif
 @include notoSerif.fontFace(
     $weight: 400,
     $style: normal,

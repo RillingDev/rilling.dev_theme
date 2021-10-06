@@ -1,5 +1,9 @@
 @use "../variables" as variables;
 
+:root {
+    @include variables.variables-base();
+}
+
 @media (prefers-color-scheme: light) {
     :root {
         @include variables.variables-light();
