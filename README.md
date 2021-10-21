@@ -4,6 +4,6 @@
 
 ## Structure
 
-- `src` actual source code.
-- `source` compiled source code, folder name is required by hexo.
-- `layout` EJS templates.
+-   `src` actual source code.
+-   `source` compiled source code, folder name is required by hexo.
+-   `layout` EJS templates.

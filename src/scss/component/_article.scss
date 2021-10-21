@@ -2,45 +2,45 @@
 @use "../variables" as variables;
 
 .article {
-    &__header {
-        &__title {
-            font-size: 3em;
-            margin-top: 0;
-            margin-bottom: 0.75rem;
+	&__header {
+		&__title {
+			font-size: 3em;
+			margin-top: 0;
+			margin-bottom: 0.75rem;
 
-            @media (min-width: variables.$breakpoint-sm) {
-                font-size: 5em;
-            }
-        }
+			@media (min-width: variables.$breakpoint-sm) {
+				font-size: 5em;
+			}
+		}
 
-        &__meta {
-            font-size: variables.$font-size-sm;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1.25rem;
-            color: var(--text-muted);
-            gap: 0.25rem;
+		&__meta {
+			font-size: variables.$font-size-sm;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 1.25rem;
+			color: var(--text-muted);
+			gap: 0.25rem;
 
-            > p {
-                margin-bottom: 0;
-            }
+			> p {
+				margin-bottom: 0;
+			}
 
-            @media (min-width: variables.$breakpoint-sm) {
-                flex-direction: row;
-                gap: 1.5rem;
-            }
-        }
-    }
+			@media (min-width: variables.$breakpoint-sm) {
+				flex-direction: row;
+				gap: 1.5rem;
+			}
+		}
+	}
 
-    &--excerpt {
-        .article__header {
-            &__title {
-                font-size: 2em;
-            }
+	&--excerpt {
+		.article__header {
+			&__title {
+				font-size: 2em;
+			}
 
-            &__meta {
-                margin-bottom: 0.25rem;
-            }
-        }
-    }
+			&__meta {
+				margin-bottom: 0.25rem;
+			}
+		}
+	}
 }

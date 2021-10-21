@@ -1,23 +1,23 @@
 @use "../variables" as variables;
 
 :root {
-    @include variables.variables-base();
+	@include variables.variables-base();
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        @include variables.variables-light();
-    }
+	:root {
+		@include variables.variables-light();
+	}
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        @include variables.variables-dark();
-    }
+	:root {
+		@include variables.variables-dark();
+	}
 }
 
 @media print {
-    :root {
-        @include variables.variables-print();
-    }
+	:root {
+		@include variables.variables-print();
+	}
 }

@@ -1,5 +1,5 @@
 @mixin transition($type) {
-    transition-property: $type;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
+	transition-property: $type;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
 }

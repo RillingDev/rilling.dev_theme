@@ -2,12 +2,12 @@
 @use "../mixins" as mixins;
 
 body {
-    font-family: variables.$font-family-serif;
-    font-size: variables.$font-size-base;
-    line-height: 1.6;
-    color: var(--text);
+	font-family: variables.$font-family-serif;
+	font-size: variables.$font-size-base;
+	line-height: 1.6;
+	color: var(--text);
 
-    background-color: var(--background);
+	background-color: var(--background);
 }
 
 /* General display improvements */
@@ -18,8 +18,8 @@ picture,
 img,
 iframe,
 object {
-    display: block;
-    max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 p,
@@ -38,7 +38,7 @@ details,
 figure,
 form,
 pre {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 /* Border unification */
@@ -60,8 +60,8 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-    border: 1px solid var(--text-muted-high);
-    border-radius: variables.$border-radius;
+	border: 1px solid var(--text-muted-high);
+	border-radius: variables.$border-radius;
 }
 
 /* Text */
@@ -75,7 +75,7 @@ h6,
 p,
 ul,
 ol {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 h1,
@@ -84,153 +84,153 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: variables.$font-family-sans;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
+	font-family: variables.$font-family-sans;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 0.5rem;
 
-    > a {
-        text-decoration-thickness: 0.1em;
-        text-underline-offset: 0.15em;
-    }
+	> a {
+		text-decoration-thickness: 0.1em;
+		text-underline-offset: 0.15em;
+	}
 }
 
 h1 {
-    font-size: 2.5em;
+	font-size: 2.5em;
 }
 
 h2 {
-    font-size: 2em;
-    margin-top: 2rem;
+	font-size: 2em;
+	margin-top: 2rem;
 }
 
 h3 {
-    font-size: 1.75em;
-    margin-top: 1.75rem;
+	font-size: 1.75em;
+	margin-top: 1.75rem;
 }
 
 h4 {
-    font-size: 1.5em;
-    margin-top: 1.5rem;
+	font-size: 1.5em;
+	margin-top: 1.5rem;
 }
 
 h5 {
-    font-size: 1.25em;
-    margin-top: 1.25rem;
+	font-size: 1.25em;
+	margin-top: 1.25rem;
 }
 
 h6 {
-    font-size: 1em;
-    margin-top: 1rem;
+	font-size: 1em;
+	margin-top: 1rem;
 }
 
 ol,
 ul {
-    padding-left: 2rem;
+	padding-left: 2rem;
 }
 
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 a {
-    font-weight: 700;
-    @include mixins.transition(color);
-    text-decoration: underline;
-    color: var(--primary);
+	font-weight: 700;
+	@include mixins.transition(color);
+	text-decoration: underline;
+	color: var(--primary);
 
-    &:hover,
-    &:focus,
-    &.active {
-        color: var(--primary-contrast-alt);
-    }
+	&:hover,
+	&:focus,
+	&.active {
+		color: var(--primary-contrast-alt);
+	}
 
-    &:focus {
-        outline: 1px solid var(--primary-contrast-alt);
-    }
+	&:focus {
+		outline: 1px solid var(--primary-contrast-alt);
+	}
 
-    code,
-    kbd,
-    samp {
-        // Reset to match link styling, as that is more important semantically
-        padding: 0;
-        color: inherit;
-        background-color: inherit;
-    }
+	code,
+	kbd,
+	samp {
+		// Reset to match link styling, as that is more important semantically
+		padding: 0;
+		color: inherit;
+		background-color: inherit;
+	}
 }
 
 mark {
-    color: var(--black);
-    background-color: var(--yellow);
+	color: var(--black);
+	background-color: var(--yellow);
 }
 
 blockquote {
-    margin-top: 0;
-    margin-right: 2rem;
-    margin-left: 2rem;
+	margin-top: 0;
+	margin-right: 2rem;
+	margin-left: 2rem;
 }
 
 dd {
-    margin-left: 2rem;
+	margin-left: 2rem;
 }
 
 pre {
-    overflow: auto;
+	overflow: auto;
 
-    margin-top: 0;
-    padding: 0.5rem 0.75rem;
+	margin-top: 0;
+	padding: 0.5rem 0.75rem;
 }
 
 code,
 kbd,
 samp {
-    color: var(--text);
-    background-color: var(--background-contrast);
+	color: var(--text);
+	background-color: var(--background-contrast);
 }
 
 code,
 kbd,
 samp,
 pre {
-    font-family: variables.$font-family-monospace;
+	font-family: variables.$font-family-monospace;
 }
 
 code,
 kbd,
 samp,
 mark {
-    padding: 0 0.15em;
+	padding: 0 0.15em;
 }
 
 /* Table changes */
 
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 }
 
 td,
 th {
-    padding: 0.5rem;
-    border: 1px solid var(--text-muted-high);
+	padding: 0.5rem;
+	border: 1px solid var(--text-muted-high);
 }
 
 /* Misc element changes */
 
 figure {
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 fieldset {
-    margin: 0 0.5rem 0.5rem;
-    padding: 0.5rem 0.75rem;
+	margin: 0 0.5rem 0.5rem;
+	padding: 0.5rem 0.75rem;
 }
 
 hr {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
 }

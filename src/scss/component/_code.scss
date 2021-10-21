@@ -1,9 +1,9 @@
 pre {
-    border: 1px solid var(--text-muted-high);
+	border: 1px solid var(--text-muted-high);
 }
 
 pre > code {
-    background-color: transparent; // Ensure `pre` background color is used.
+	background-color: transparent; // Ensure `pre` background color is used.
 }
 
 /**
@@ -11,63 +11,63 @@ pre > code {
  */
 
 pre {
-    color: var(--highlight-foreground);
-    background: var(--highlight-background);
+	color: var(--highlight-foreground);
+	background: var(--highlight-background);
 }
 
 .hljs {
-    &-comment,
-    &-quote {
-        color: var(--highlight-comment);
-    }
+	&-comment,
+	&-quote {
+		color: var(--highlight-comment);
+	}
 
-    &-variable,
-    &-template-variable,
-    &-tag,
-    &-name,
-    &-selector-id,
-    &-selector-class,
-    &-regexp,
-    &-deletion {
-        color: var(--highlight-red);
-    }
+	&-variable,
+	&-template-variable,
+	&-tag,
+	&-name,
+	&-selector-id,
+	&-selector-class,
+	&-regexp,
+	&-deletion {
+		color: var(--highlight-red);
+	}
 
-    &-number,
-    &-built_in,
-    &-literal,
-    &-type,
-    &-params,
-    &-meta,
-    &-link {
-        color: var(--highlight-orange);
-    }
+	&-number,
+	&-built_in,
+	&-literal,
+	&-type,
+	&-params,
+	&-meta,
+	&-link {
+		color: var(--highlight-orange);
+	}
 
-    &-attribute {
-        color: var(--highlight-yellow);
-    }
+	&-attribute {
+		color: var(--highlight-yellow);
+	}
 
-    &-string,
-    &-symbol,
-    &-bullet,
-    &-addition {
-        color: var(--highlight-green);
-    }
+	&-string,
+	&-symbol,
+	&-bullet,
+	&-addition {
+		color: var(--highlight-green);
+	}
 
-    &-title,
-    &-section {
-        color: var(--highlight-blue);
-    }
+	&-title,
+	&-section {
+		color: var(--highlight-blue);
+	}
 
-    &-keyword,
-    &-selector-tag {
-        color: var(--highlight-purple);
-    }
+	&-keyword,
+	&-selector-tag {
+		color: var(--highlight-purple);
+	}
 
-    &-emphasis {
-        font-style: italic;
-    }
+	&-emphasis {
+		font-style: italic;
+	}
 
-    &-strong {
-        font-weight: bold;
-    }
+	&-strong {
+		font-weight: bold;
+	}
 }

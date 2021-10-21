@@ -2,11 +2,11 @@
 @use "../variables" as variables;
 
 body {
-    display: grid;
-    justify-content: center;
-    min-height: 100vh;
-    grid-template-areas: "nav" "main" "footer";
-    grid-template-rows: min-content 1fr min-content;
-    grid-auto-columns: minmax(auto, 1140px);
-    gap: 2rem;
+	display: grid;
+	justify-content: center;
+	min-height: 100vh;
+	grid-template-areas: "nav" "main" "footer";
+	grid-template-rows: min-content 1fr min-content;
+	grid-auto-columns: minmax(auto, 1140px);
+	gap: 2rem;
 }

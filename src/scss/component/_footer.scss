@@ -1,14 +1,14 @@
 @use "../variables" as variables;
 
 .footer {
-    font-family: variables.$font-family-sans;
-    font-size: variables.$font-size-sm;
-    text-align: center;
-    color: var(--text-muted);
+	font-family: variables.$font-family-sans;
+	font-size: variables.$font-size-sm;
+	text-align: center;
+	color: var(--text-muted);
 
-    &__tech {
-        @media print {
-            display: none;
-        }
-    }
+	&__tech {
+		@media print {
+			display: none;
+		}
+	}
 }
