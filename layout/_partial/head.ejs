@@ -14,12 +14,14 @@
     <link rel="alternate" href="<%- url_for("rss2.xml"); %>" type="application/rss+xml">
     <link rel="alternate" href="<%- url_for("atom.xml"); %>" type="application/atom+xml">
 
-    <!-- Generated through https://realfavicongenerator.net/ -->
-    <link rel="apple-touch-icon" sizes="180x180" href="<%- url_for("apple-touch-icon.png"); %>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%- url_for("favicon-32x32.png"); %>">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%- url_for("favicon-16x16.png"); %>">
-    <link rel="mask-icon" href="<%- url_for("safari-pinned-tab.svg"); %>" color="#c95497">
-    <link rel="shortcut icon" href="<%- url_for("favicon.ico"); %>">
+    <!--
+    Icons generated through https://realfavicongenerator.net/
+    Details from https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
+    -->
+    <link rel="icon" href="<%- url_for("favicon.ico"); %>" sizes="any">
+    <link rel="icon" href="<%- url_for("icon.svg"); %>" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="<%- url_for("apple-touch-icon.png"); %>">
+
     <meta name="theme-color" content="#222222">
 
     <meta name="color-scheme" content="dark light">
