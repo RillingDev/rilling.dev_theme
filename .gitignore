@@ -30,7 +30,7 @@ npm-debug.*
 tsconfig.tsbuildinfo
 tsconfig.*.tsbuildinfo
 
+# CUSTOM
 
-
-# Build Output files
+## Build Output files
 source/*
