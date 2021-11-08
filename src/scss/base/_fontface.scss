@@ -12,45 +12,38 @@ $-unicode-map: (
 @include notoSans.fontFace(
 	$weight: 400,
 	$style: normal,
-	$unicodeMap: $-unicode-map,
-	$display: optional
+	$unicodeMap: $-unicode-map
 );
 @include notoSans.fontFace(
 	$weight: 700,
 	$style: normal,
-	$unicodeMap: $-unicode-map,
-	$display: optional
+	$unicodeMap: $-unicode-map
 );
 
 // https://fonts.google.com/specimen/Noto+Serif
 @include notoSerif.fontFace(
 	$weight: 400,
 	$style: normal,
-	$unicodeMap: $-unicode-map,
-	$display: optional
+	$unicodeMap: $-unicode-map
 );
 @include notoSerif.fontFace(
 	$weight: 400,
 	$style: italic,
-	$unicodeMap: $-unicode-map,
-	$display: optional
+	$unicodeMap: $-unicode-map
 );
 @include notoSerif.fontFace(
 	$weight: 700,
 	$style: normal,
-	$unicodeMap: $-unicode-map,
-	$display: optional
+	$unicodeMap: $-unicode-map
 );
 @include notoSerif.fontFace(
 	$weight: 700,
 	$style: italic,
-	$unicodeMap: $-unicode-map,
-	$display: optional
+	$unicodeMap: $-unicode-map
 );
 
 // https://fonts.google.com/specimen/Fira+Code
 @include firaCode.fontFaceCustom(
 	$unicodeRange: true,
-	$unicodeRangeValues: $-latin,
-	$display: optional
+	$unicodeRangeValues: $-latin
 );
