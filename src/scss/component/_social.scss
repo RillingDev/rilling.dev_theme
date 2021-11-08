@@ -3,4 +3,5 @@
 	justify-content: center;
 	margin-top: 2rem;
 	gap: 1rem;
+	flex-wrap: wrap; // Multiple rows of buttons looks better than two squished in one
 }
