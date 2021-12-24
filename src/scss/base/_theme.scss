@@ -2,12 +2,8 @@
 
 :root {
 	@include variables.variables-base();
-}
 
-@media (prefers-color-scheme: light) {
-	:root {
-		@include variables.variables-light();
-	}
+	@include variables.variables-light();
 }
 
 @media (prefers-color-scheme: dark) {
