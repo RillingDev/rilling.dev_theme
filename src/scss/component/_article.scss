@@ -4,12 +4,12 @@
 .article {
 	&__header {
 		&__title {
-			font-size: 3em;
+			font-size: 3.5rem;
 			margin-top: 0;
 			margin-bottom: 0.75rem;
 
-			@media (min-width: variables.$breakpoint-sm) {
-				font-size: 5em;
+			@media (min-width: variables.$breakpoint-md) {
+				font-size: 5.5rem;
 			}
 		}
 
