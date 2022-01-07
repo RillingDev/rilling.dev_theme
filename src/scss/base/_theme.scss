@@ -1,6 +1,8 @@
 @use "../variables" as variables;
 
 :root {
+	color-scheme: light dark;
+
 	@include variables.variables-base();
 
 	@include variables.variables-light();
