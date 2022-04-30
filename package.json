@@ -1,9 +1,19 @@
 {
     "name": "rilling.dev_theme",
     "version": "5.0.0",
+	"description": "rilling.dev custom theme",
     "private": true,
+	"homepage": "https://rilling.dev",
     "license": "MIT",
-    "description": "rilling.dev custom theme",
+	"author": {
+		"name": "Felix Rilling",
+		"email": "contact@rilling.dev",
+		"url": "https://rilling.dev"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/FelixRilling/rilling.dev_theme.git"
+	},
     "scripts": {
         "start": "npm run lint && npm run build",
         "dist": "webpack --mode='production'",
@@ -11,16 +21,6 @@
         "watch": "webpack --mode='development' --watch",
         "lint": "eslint ./src/ts/ --ext .ts",
         "fix": "eslint ./src/ts/ --ext .ts --fix"
-    },
-    "author": {
-        "name": "Felix Rilling",
-        "email": "contact@rilling.dev",
-        "url": "https://rilling.dev"
-    },
-    "homepage": "https://rilling.dev",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/FelixRilling/rilling.dev_theme.git"
     },
     "dependencies": {
         "@fontsource/fira-code": "^4.5.1",

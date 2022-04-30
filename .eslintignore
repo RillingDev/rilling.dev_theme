@@ -5,6 +5,5 @@
 ./source/
 
 # don't lint build tooling configs
-.eslintrc.js
 webpack.config.js
 ./scripts/

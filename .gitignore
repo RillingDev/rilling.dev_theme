@@ -19,6 +19,7 @@
 *.esproj
 *.sublime-project
 *.sublime-workspace
+*.iml
 
 # Vendor Files
 node_modules/
@@ -29,8 +30,6 @@ npm-debug.*
 # Temp Files
 tsconfig.tsbuildinfo
 tsconfig.*.tsbuildinfo
-
-# CUSTOM
 
 ## Build Output files
 source/*
