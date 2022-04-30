@@ -1,8 +1,9 @@
 {
 	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
-		"sourceMap": true,
-		"allowSyntheticDefaultImports": true
+		"sourceMap": true
 	},
-	"include": ["./src/"]
+	"include": [
+		"./src/"
+	]
 }
