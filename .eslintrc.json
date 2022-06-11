@@ -143,7 +143,7 @@
 		"import/no-default-export": "warn",
 		"import/no-mutable-exports": "warn",
 		"import/no-useless-path-segments": "warn",
-		"import/no-webpack-loader-syntax": "warn",
-		"import/extensions": ["warn", "ignorePackages"]
+		"import/no-webpack-loader-syntax": "warn"
+		// "import/extensions": ["warn", "ignorePackages"] // Does not work with ts-loader/webpack
 	}
 }

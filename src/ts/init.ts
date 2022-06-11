@@ -1,4 +1,4 @@
-import { initNavbar } from "./ui/navbar.js";
+import { initNavbar } from "./ui/navbar";
 
 const init = (document: Document): void => {
 	initNavbar(

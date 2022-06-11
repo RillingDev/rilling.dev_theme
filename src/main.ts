@@ -3,4 +3,4 @@ import "@fortawesome/fontawesome-free/sprites/brands.svg";
 
 import "./scss/main.scss";
 
-import "./ts/main.js";
+import "./ts/main";

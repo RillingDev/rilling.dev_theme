@@ -1,10 +1,10 @@
 {
-    "name": "rilling.dev_theme",
-    "version": "5.0.0",
+	"name": "rilling.dev_theme",
+	"version": "5.0.0",
 	"description": "rilling.dev custom theme",
-    "private": true,
+	"private": true,
 	"homepage": "https://rilling.dev",
-    "license": "MIT",
+	"license": "MIT",
 	"author": {
 		"name": "Felix Rilling",
 		"email": "contact@rilling.dev",
@@ -15,43 +15,43 @@
 		"url": "git+https://github.com/FelixRilling/rilling.dev_theme.git"
 	},
 	"type": "module",
-    "scripts": {
-        "start": "npm run lint && npm run build",
-        "dist": "webpack --mode='production'",
-        "build": "webpack --mode='development'",
-        "watch": "webpack --mode='development' --watch",
-        "lint": "eslint ./src/ts/ --ext .ts",
-        "fix": "eslint ./src/ts/ --ext .ts --fix"
-    },
-    "dependencies": {
-        "@fontsource/fira-code": "^4.5.1",
-        "@fontsource/noto-sans": "^4.5.1",
-        "@fontsource/noto-serif": "^4.5.1",
-        "@fortawesome/fontawesome-free": "^6.0.0",
-        "modern-normalize": "^1.1.0"
-    },
-    "devDependencies": {
-        "@types/cheerio": "^0.22.30",
-        "@types/hexo": "^3.8.7",
-        "@typescript-eslint/eslint-plugin": "^5.0.0",
-        "@typescript-eslint/parser": "^5.0.0",
-        "cheerio": "^1.0.0-rc.10",
-        "clean-webpack-plugin": "^4.0.0",
-        "css-loader": "^6.4.0",
-        "eslint": "^8.0.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-import": "^2.25.2",
-        "eslint-plugin-prettier": "^4.0.0",
-        "mini-css-extract-plugin": "^2.4.2",
-        "prettier": "^2.3.2",
-        "sass": "^1.43.2",
-        "sass-loader": "^13.0.0",
-        "style-loader": "^3.3.0",
-        "terser": "^5.9.0",
-        "terser-webpack-plugin": "^5.2.4",
-        "ts-loader": "^9.2.6",
-        "typescript": "~4.7.3",
-        "webpack": "^5.58.2",
-        "webpack-cli": "^4.9.0"
-    }
+	"scripts": {
+		"start": "npm run lint && npm run build",
+		"dist": "webpack --mode='production'",
+		"build": "webpack --mode='development'",
+		"watch": "webpack --mode='development' --watch",
+		"lint": "eslint ./src/ts/ --ext .ts",
+		"fix": "eslint ./src/ts/ --ext .ts --fix"
+	},
+	"dependencies": {
+		"@fontsource/fira-code": "^4.5.1",
+		"@fontsource/noto-sans": "^4.5.1",
+		"@fontsource/noto-serif": "^4.5.1",
+		"@fortawesome/fontawesome-free": "^6.0.0",
+		"modern-normalize": "^1.1.0"
+	},
+	"devDependencies": {
+		"@types/cheerio": "^0.22.30",
+		"@types/hexo": "^3.8.7",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.0.0",
+		"cheerio": "^1.0.0-rc.10",
+		"clean-webpack-plugin": "^4.0.0",
+		"css-loader": "^6.4.0",
+		"eslint": "^8.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-prettier": "^4.0.0",
+		"mini-css-extract-plugin": "^2.4.2",
+		"prettier": "^2.3.2",
+		"sass": "^1.43.2",
+		"sass-loader": "^13.0.0",
+		"style-loader": "^3.3.0",
+		"terser": "^5.9.0",
+		"terser-webpack-plugin": "^5.2.4",
+		"ts-loader": "^9.2.6",
+		"typescript": "~4.7.3",
+		"webpack": "^5.58.2",
+		"webpack-cli": "^4.9.0"
+	}
 }
