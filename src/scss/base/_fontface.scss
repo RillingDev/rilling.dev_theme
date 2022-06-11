@@ -1,6 +1,5 @@
 @use "~@fontsource/noto-sans/scss/mixins" as notoSans;
 @use "~@fontsource/noto-serif/scss/mixins" as notoSerif;
-@use "~@fontsource/fira-code/scss/mixins" as firaCode;
 
 // Only use latin range as we do not really use anything else
 $-latin: map-get(notoSans.$unicodeMap, latin);
@@ -40,10 +39,4 @@ $-unicode-map: (
 	$weight: 700,
 	$style: italic,
 	$unicodeMap: $-unicode-map
-);
-
-// https://fonts.google.com/specimen/Fira+Code
-@include firaCode.fontFaceCustom(
-	$unicodeRange: true,
-	$unicodeRangeValues: $-latin
 );
