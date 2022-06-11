@@ -1,13 +1,13 @@
-const { resolve } = require("path");
-const TerserPlugin = require("terser-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import TerserPlugin from "terser-webpack-plugin";
+import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import { resolve } from "path";
 
-module.exports = {
+export default {
 	entry: "./src/main.ts",
 	output: {
 		filename: "main.js",
-		path: resolve(__dirname, "source"),
+		path: resolve("./source"),
 		publicPath: "./",
 	},
 	module: {
