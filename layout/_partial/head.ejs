@@ -1,17 +1,23 @@
 <head>
+    <!-- Priority 1 -->
     <meta charset="utf-8"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= page.title ?? "Blog" %> | <%= config.title %></title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="<%= page.layout === "error" ? "noindex" : "index"; _%>, follow"/>
+    <!-- Priority 2 -->
+    <%- css("main"); %>
 
+    <link rel="prefetch" href="<%- url_for("sprites/font-awesome-brands.svg"); %>">
+    <link rel="prefetch" href="<%- url_for("sprites/font-awesome-solid.svg"); %>">
+
+    <!-- Priority 3 -->
+    <meta name="robots" content="<%= page.layout === "error" ? "noindex" : "index"; _%>, follow"/>
     <meta name="author" content="<%= config.author %>"/>
     <%- open_graph({
         image: url_for("apple-touch-icon.png")
     }); %>
 
-    <link rel="alternate" href="<%- url_for("rss2.xml"); %>" type="application/rss+xml">
+    <meta name="theme-color" content="#222222">
 
     <!--
     Icons generated through https://realfavicongenerator.net/
@@ -21,11 +27,5 @@
     <link rel="icon" href="<%- url_for("icon.svg"); %>" type="image/svg+xml">
     <link rel="apple-touch-icon" href="<%- url_for("apple-touch-icon.png"); %>">
 
-    <meta name="theme-color" content="#222222">
-
-    <%- css("main"); %>
-
-    <!-- Prefetch-able data -->
-    <link rel="prefetch" href="<%- url_for("sprites/font-awesome-brands.svg"); %>">
-    <link rel="prefetch" href="<%- url_for("sprites/font-awesome-solid.svg"); %>">
+    <link rel="alternate" href="<%- url_for("rss2.xml"); %>" type="application/rss+xml">
 </head>
