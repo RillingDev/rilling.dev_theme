@@ -30,11 +30,10 @@
 		"modern-normalize": "^1.1.0"
 	},
 	"devDependencies": {
-		"@types/cheerio": "^0.22.30",
 		"@types/hexo": "^3.8.7",
 		"@typescript-eslint/eslint-plugin": "^5.0.0",
 		"@typescript-eslint/parser": "^5.0.0",
-		"cheerio": "^1.0.0-rc.10",
+		"cheerio": "^1.0.0-rc.12",
 		"clean-webpack-plugin": "^4.0.0",
 		"css-loader": "^6.4.0",
 		"eslint": "^8.0.0",
