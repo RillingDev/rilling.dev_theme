@@ -1,4 +1,7 @@
-const initNavbar = (toggleButton: Element, menu: Element): void => {
+const initNavbar = (
+	toggleButton: HTMLButtonElement,
+	menu: HTMLElement
+): void => {
 	let isNavOpen = false;
 
 	toggleButton.addEventListener("click", () => {
