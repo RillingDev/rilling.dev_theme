@@ -50,8 +50,11 @@ $breakpoint-xl: 1420px;
 //
 // Typography
 //
-$font-family-sans: "Noto Sans", sans-serif;
-$font-family-serif: "Noto Serif", serif;
+// https://github.com/system-fonts/modern-font-stacks#classical-humanist
+$font-family-sans: "Noto Sans", Optima, Candara, source-sans-pro, sans-serif;
+// https://github.com/system-fonts/modern-font-stacks#transitional
+$font-family-serif: "Noto Serif", Charter, "Bitstream Charter", "Sitka Text",
+	Cambria, serif;
 
 $font-size-base: 18px;
 $font-size-sm: 0.825em;
