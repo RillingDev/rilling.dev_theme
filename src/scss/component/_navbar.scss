@@ -1,4 +1,3 @@
-@use "../mixins" as mixins;
 @use "../variables" as variables;
 
 .navbar {
@@ -71,7 +70,9 @@
 			width: 100%;
 			height: 2px;
 			background-color: var(--primary);
-			@include mixins.transition(#{transform, height});
+
+			transition-property: transform, height;
+			transition-duration:  variables.$duration-short;
 		}
 
 		&:hover,

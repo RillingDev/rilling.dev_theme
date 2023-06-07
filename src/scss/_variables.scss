@@ -47,6 +47,10 @@ $breakpoint-md: 920px;
 $breakpoint-lg: 1140px;
 $breakpoint-xl: 1420px;
 
+$border-radius: 3px;
+
+$duration-short: 0.15s;
+
 //
 // Typography
 //
@@ -58,11 +62,6 @@ $font-family-serif: "Noto Serif", Charter, "Bitstream Charter", "Sitka Text",
 
 $font-size-base: 18px;
 $font-size-sm: 0.825em;
-
-//
-// Sizes
-//
-$border-radius: 3px;
 
 //
 // Exported Variables

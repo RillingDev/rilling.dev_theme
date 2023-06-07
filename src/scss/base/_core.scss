@@ -1,5 +1,4 @@
 @use "../variables" as variables;
-@use "../mixins" as mixins;
 
 body {
 	font-family: variables.$font-family-serif;
@@ -141,9 +140,9 @@ ul ol {
 
 a {
 	font-weight: 700;
-	@include mixins.transition(color);
 	text-decoration: underline;
 	color: var(--primary);
+	transition: color variables.$duration-short;
 
 	&:hover,
 	&:focus,

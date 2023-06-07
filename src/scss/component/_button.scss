@@ -1,5 +1,4 @@
 @use "sass:color";
-@use "../mixins" as mixins;
 @use "../variables" as variables;
 
 .btn {
@@ -19,7 +18,8 @@
 	border: none;
 	border-radius: variables.$border-radius;
 
-	@include mixins.transition(#{background-color, color});
+	transition-property: background-color, color;
+	transition-duration:  variables.$duration-short;
 
 	&:hover,
 	&.hover {
