@@ -36,13 +36,6 @@ export default {
 				],
 			},
 			{
-				test: /\.(woff2|woff)$/,
-				type: "asset/resource",
-				generator: {
-					filename: "fonts/[name][ext]",
-				},
-			},
-			{
 				test: /\.svg$/,
 				type: "asset/resource",
 				generator: {
