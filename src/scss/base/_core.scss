@@ -147,12 +147,18 @@ a {
 	samp {
 		// Reset to match link styling, as that is more important semantically
 		padding: 0;
-		color: inherit;
 		background-color: inherit;
 	}
 }
 
 // Code
+
+pre,
+code,
+kbd,
+samp {
+	font-family: variables.$font-family-monospace;
+}
 
 pre {
 	overflow: auto;

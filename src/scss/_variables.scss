@@ -59,7 +59,9 @@ $font-family-sans: "Noto Sans", Optima, Candara, source-sans-pro, sans-serif;
 // https://github.com/system-fonts/modern-font-stacks#transitional
 $font-family-serif: "Noto Serif", Charter, "Bitstream Charter", "Sitka Text",
 	Cambria, serif;
-// todo: monospace
+// https://github.com/system-fonts/modern-font-stacks#monospace-code
+$font-family-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+	Consolas, "DejaVu Sans Mono", monospace;
 
 $font-size-base: 18px;
 $font-size-sm: 0.825em;
