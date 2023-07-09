@@ -1,4 +1,4 @@
-const initNavbar = (
+export const initNavbar = (
 	toggleButton: HTMLButtonElement,
 	menu: HTMLElement
 ): void => {
@@ -8,11 +8,9 @@ const initNavbar = (
 		isNavOpen = !isNavOpen;
 
 		toggleButton.classList.toggle("collapsed");
-		menu.classList.toggle("show");
-
 		toggleButton.setAttribute("aria-expanded", String(isNavOpen));
+
+		menu.classList.toggle("show");
 		menu.setAttribute("aria-hidden", String(!isNavOpen));
 	});
 };
-
-export { initNavbar };
