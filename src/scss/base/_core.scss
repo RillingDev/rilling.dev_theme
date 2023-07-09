@@ -2,7 +2,6 @@
 
 /* Base styles, inspired by https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss */
 
-
 body {
 	font-family: variables.$font-family-serif;
 	font-size: variables.$font-size-base;
@@ -20,7 +19,6 @@ video,
 audio,
 picture,
 img,
-iframe,
 object {
 	display: block;
 	max-width: 100%;
@@ -34,36 +32,18 @@ video,
 audio,
 picture,
 img,
-iframe,
 object,
 blockquote,
 address,
 details,
 figure,
-form,
 pre {
 	margin-bottom: 1rem;
 }
 
 /* Border unification */
 
-hr,
-fieldset,
-iframe,
-select,
-textarea,
-input[type="date"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"] {
+hr {
 	border: 1px solid var(--text-muted-high);
 	border-radius: variables.$border-radius;
 }
@@ -216,11 +196,6 @@ figure {
 	margin-top: 0;
 	margin-right: 0;
 	margin-left: 0;
-}
-
-fieldset {
-	margin: 0 0.5rem 0.5rem;
-	padding: 0.5rem 0.75rem;
 }
 
 hr {
