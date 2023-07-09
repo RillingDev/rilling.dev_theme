@@ -24,18 +24,6 @@ img,
 object {
 	display: block;
 	max-width: 100%;
-}
-
-table,
-video,
-audio,
-picture,
-img,
-object,
-blockquote,
-address,
-details,
-figure {
 	margin-bottom: 1rem;
 }
 
@@ -188,11 +176,16 @@ pre kbd {
 	padding: initial;
 }
 
-
-/* Table changes */
+// Tables
 
 table {
 	border-collapse: collapse;
+	caption-side: bottom;
+	margin-bottom: 1rem;
+}
+
+caption {
+	padding-top: 0.25rem;
 }
 
 td,
@@ -201,15 +194,15 @@ th {
 	border: 1px solid var(--text-muted-high);
 }
 
-/* Misc element changes */
+// Figures
 
 figure {
-	margin-top: 0;
-	margin-right: 0;
-	margin-left: 0;
+	margin: 0 0 1rem;
 }
 
-// Based on https://github.com/twbs/bootstrap/blob/51535cd95ac8eb5746e19c057aeabdbcafef3a8b/scss/mixins/_visually-hidden.scss
+// Utilities
+
+// From https://github.com/twbs/bootstrap/blob/51535cd95ac8eb5746e19c057aeabdbcafef3a8b/scss/mixins/_visually-hidden.scss
 //
 // Hide content visually while keeping it accessible to assistive technologies
 //
