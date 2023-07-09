@@ -43,7 +43,8 @@ figure {
 
 hr {
 	border: 1px solid var(--text-muted-high);
-	border-radius: variables.$border-radius;
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
 }
 
 // Paragraphs
@@ -136,6 +137,7 @@ blockquote {
 mark {
 	color: var(--black);
 	background-color: var(--yellow);
+	padding: 0 0.15em;
 }
 
 // Links
@@ -169,21 +171,23 @@ pre {
 	margin-top: 0;
 	margin-bottom: 1rem;
 	padding: 0.5rem 0.75rem;
+	border: 1px solid var(--text-muted-high);
 }
 
 code,
 kbd,
 samp {
-	color: var(--text);
 	background-color: var(--background-contrast);
-}
-
-code,
-kbd,
-samp,
-mark {
 	padding: 0 0.15em;
 }
+
+pre code,
+pre samp,
+pre kbd {
+	background-color: transparent; // Ensure `pre` background color is used.
+	padding: initial;
+}
+
 
 /* Table changes */
 
@@ -203,11 +207,6 @@ figure {
 	margin-top: 0;
 	margin-right: 0;
 	margin-left: 0;
-}
-
-hr {
-	margin-top: 0.75rem;
-	margin-bottom: 0.75rem;
 }
 
 // Based on https://github.com/twbs/bootstrap/blob/51535cd95ac8eb5746e19c057aeabdbcafef3a8b/scss/mixins/_visually-hidden.scss
