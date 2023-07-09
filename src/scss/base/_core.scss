@@ -1,5 +1,8 @@
 @use "../variables" as variables;
 
+/* Base styles, inspired by https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss */
+
+
 body {
 	font-family: variables.$font-family-serif;
 	font-size: variables.$font-size-base;
@@ -89,11 +92,6 @@ h6 {
 	font-weight: 700;
 	line-height: 1.2;
 	margin-bottom: 0.5rem;
-
-	> a {
-		text-decoration-thickness: 0.1em;
-		text-underline-offset: 0.15em;
-	}
 }
 
 h1 {
