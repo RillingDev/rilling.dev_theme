@@ -1,6 +1,8 @@
 @use "../variables" as variables;
 
-/* Base styles, inspired by https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss */
+/* Base styles, based on https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss */
+
+// Body
 
 body {
 	font-family: variables.$font-family-serif;
@@ -13,7 +15,7 @@ body {
 	accent-color: var(--primary);
 }
 
-/* General display improvements */
+// General display improvements
 
 video,
 audio,
@@ -24,9 +26,6 @@ object {
 	max-width: 100%;
 }
 
-p,
-ul,
-ol,
 table,
 video,
 audio,
@@ -36,31 +35,25 @@ object,
 blockquote,
 address,
 details,
-figure,
-pre {
+figure {
 	margin-bottom: 1rem;
 }
 
-/* Border unification */
+// Content grouping
 
 hr {
 	border: 1px solid var(--text-muted-high);
 	border-radius: variables.$border-radius;
 }
 
-/* Text */
+// Paragraphs
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
+p {
 	margin-top: 0;
+	margin-bottom: 1rem;
 }
+
+// Headlines
 
 h1,
 h2,
@@ -71,6 +64,7 @@ h6 {
 	font-family: variables.$font-family-sans;
 	font-weight: 700;
 	line-height: 1.2;
+	margin-top: 0;
 	margin-bottom: 0.5rem;
 }
 
@@ -104,9 +98,18 @@ h6 {
 	margin-top: 0.75rem;
 }
 
+// Lists
+
 ol,
 ul {
 	padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+	margin-top: 0;
+	margin-bottom: 1rem;
 }
 
 ol ol,
@@ -115,6 +118,27 @@ ol ul,
 ul ol {
 	margin-bottom: 0;
 }
+
+dd {
+	margin-top: 0;
+	margin-left: 2.5rem;
+	margin-bottom: 0.5rem;
+}
+
+// Blockquote
+
+blockquote {
+	margin: 0 2.5rem 1rem;
+}
+
+// Mark
+
+mark {
+	color: var(--black);
+	background-color: var(--yellow);
+}
+
+// Links
 
 a {
 	font-weight: 700;
@@ -142,25 +166,12 @@ a {
 	}
 }
 
-mark {
-	color: var(--black);
-	background-color: var(--yellow);
-}
-
-blockquote {
-	margin-top: 0;
-	margin-right: 2rem;
-	margin-left: 2rem;
-}
-
-dd {
-	margin-left: 2rem;
-}
+// Code
 
 pre {
 	overflow: auto;
-
 	margin-top: 0;
+	margin-bottom: 1rem;
 	padding: 0.5rem 0.75rem;
 }
 
