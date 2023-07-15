@@ -3,19 +3,19 @@
 :root {
 	color-scheme: light dark;
 
-	@include variables.variables-base();
+	@include variables.custom-properties-base();
 
-	@include variables.variables-light();
+	@include variables.custom-properties-theme-light();
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		@include variables.variables-dark();
+		@include variables.custom-properties-theme-dark();
 	}
 }
 
 @media print {
 	:root {
-		@include variables.variables-print();
+		@include variables.custom-properties-theme-print();
 	}
 }

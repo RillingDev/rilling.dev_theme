@@ -41,6 +41,7 @@ $-pink-900: color.adjust($-pink, $lightness: -40%);
 //
 // Sizes
 //
+
 $breakpoint-xs: 340px;
 $breakpoint-sm: 660px;
 $breakpoint-md: 920px;
@@ -54,6 +55,7 @@ $duration-short: 0.15s;
 //
 // Typography
 //
+
 // https://github.com/system-fonts/modern-font-stacks#classical-humanist
 $font-family-sans: "Noto Sans", Optima, Candara, source-sans-pro, sans-serif;
 // https://github.com/system-fonts/modern-font-stacks#transitional
@@ -77,10 +79,10 @@ $font-size-step-6: 3.82rem;
 $font-size-step-7: 4.77rem;
 
 //
-// Exported Variables
+// Themes
 //
 
-@mixin variables-base {
+@mixin custom-properties-base {
 	--black: #{$-black};
 	--white: #{$-white};
 
@@ -111,7 +113,7 @@ $font-size-step-7: 4.77rem;
 	--green: #{$-green};
 }
 
-@mixin variables-light {
+@mixin custom-properties-theme-light {
 	--background: var(--white);
 	--background-contrast: var(--gray-100);
 
@@ -125,10 +127,10 @@ $font-size-step-7: 4.77rem;
 	--primary: var(--pink-600);
 	--primary-contrast: var(--pink-500);
 
-	@include highlight.variables-highlight-light;
+	@include highlight.custom-properties-highlight-theme-light;
 }
 
-@mixin variables-dark {
+@mixin custom-properties-theme-dark {
 	--background: var(--black);
 	--background-contrast: var(--gray-900);
 
@@ -142,10 +144,10 @@ $font-size-step-7: 4.77rem;
 	--primary: var(--pink-400);
 	--primary-contrast: var(--pink-500);
 
-	@include highlight.variables-highlight-dark;
+	@include highlight.custom-properties-highlight-theme-dark;
 }
 
-@mixin variables-print {
+@mixin custom-properties-theme-print {
 	--background: transparent;
 	--background-contrast: var(--gray-100);
 
@@ -159,5 +161,5 @@ $font-size-step-7: 4.77rem;
 	--primary: var(--gray-600);
 	--primary-contrast: var(--gray-700);
 
-	@include highlight.variables-highlight-light;
+	@include highlight.custom-properties-highlight-theme-light;
 }
