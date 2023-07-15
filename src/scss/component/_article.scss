@@ -3,13 +3,8 @@
 .article {
 	&__header {
 		&__title {
-			font-size: 3.5rem;
 			margin-bottom: 0.75rem;
 			margin-top: 0;
-
-			@media (min-width: variables.$breakpoint-md) {
-				font-size: 5.5rem;
-			}
 		}
 
 		&__meta {
@@ -31,10 +26,16 @@
 		}
 	}
 
-	&--excerpt {
+	&:not(.article--excerpt) {
 		.article__header {
 			&__title {
-				font-size: 2em;
+				font-size: variables.$font-size-step-5;
+				@media (min-width: variables.$breakpoint-sm) {
+					font-size: variables.$font-size-step-6;
+				}
+				@media (min-width: variables.$breakpoint-md) {
+					font-size: variables.$font-size-step-7;
+				}
 			}
 
 			&__meta {

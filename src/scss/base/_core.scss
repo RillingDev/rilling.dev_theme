@@ -58,33 +58,51 @@ h6 {
 }
 
 h1 {
-	font-size: variables.$font-size-step-5;
 	// margin-top: 2.5rem; // h1 tend to be in places we do not want margin to the top
+	font-size: variables.$font-size-step-4;
+	@media (min-width: variables.$breakpoint-md) {
+		font-size: variables.$font-size-step-5;
+	}
 }
 
 h2 {
-	font-size: variables.$font-size-step-4;
 	margin-top: 2rem;
+	font-size: variables.$font-size-step-3;
+	@media (min-width: variables.$breakpoint-md) {
+		font-size: variables.$font-size-step-4;
+	}
 }
 
 h3 {
-	font-size: variables.$font-size-step-3;
 	margin-top: 1.5rem;
+	font-size: variables.$font-size-step-2;
+	@media (min-width: variables.$breakpoint-md) {
+		font-size: variables.$font-size-step-3;
+	}
 }
 
 h4 {
-	font-size: variables.$font-size-step-2;
 	margin-top: 1.125rem;
+	font-size: variables.$font-size-step-1;
+	@media (min-width: variables.$breakpoint-md) {
+		font-size: variables.$font-size-step-2;
+	}
 }
 
 h5 {
-	font-size: variables.$font-size-step-1;
 	margin-top: 0.875rem;
+	font-size: variables.$font-size-step-0;
+	@media (min-width: variables.$breakpoint-md) {
+		font-size: variables.$font-size-step-1;
+	}
 }
 
 h6 {
-	font-size: variables.$font-size-step-0;
 	margin-top: 0.75rem;
+	font-size: variables.$font-size-step--1;
+	@media (min-width: variables.$breakpoint-md) {
+		font-size: variables.$font-size-step-0;
+	}
 }
 
 // Lists
