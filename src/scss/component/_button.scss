@@ -19,7 +19,7 @@
 	border-radius: variables.$border-radius;
 
 	transition-property: background-color, color;
-	transition-duration:  variables.$duration-short;
+	transition-duration: variables.$duration-short;
 
 	&:hover,
 	&.hover {

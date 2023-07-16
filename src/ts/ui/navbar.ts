@@ -1,6 +1,6 @@
 export const initNavbar = (
 	toggleButton: HTMLButtonElement,
-	menu: HTMLElement
+	menu: HTMLElement,
 ): void => {
 	let isNavOpen = false;
 
