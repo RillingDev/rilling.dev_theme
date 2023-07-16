@@ -6,6 +6,6 @@ body {
 	min-height: 100vh;
 	grid-template-areas: "nav" "main" "footer";
 	grid-template-rows: min-content 1fr min-content;
-	grid-auto-columns: minmax(auto, 1140px);
+	grid-auto-columns: minmax(auto, 90ch);
 	gap: 2rem;
 }
