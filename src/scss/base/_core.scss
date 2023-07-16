@@ -53,12 +53,12 @@ h6 {
 	font-family: variables.$font-family-sans;
 	font-weight: 700;
 	line-height: 1.2;
-	margin-top: 0;
+	margin-top: 1em;
 	margin-bottom: 0.5rem;
 }
 
 h1 {
-	// margin-top: 2.5rem; // h1 tend to be in places we do not want margin to the top
+	margin-top: 0; // h1 tend to be in places we do not want margin to the top
 	font-size: variables.$font-size-step-4;
 	@media (min-width: variables.$breakpoint-md) {
 		font-size: variables.$font-size-step-5;
@@ -66,7 +66,6 @@ h1 {
 }
 
 h2 {
-	margin-top: 2rem;
 	font-size: variables.$font-size-step-3;
 	@media (min-width: variables.$breakpoint-md) {
 		font-size: variables.$font-size-step-4;
@@ -74,7 +73,6 @@ h2 {
 }
 
 h3 {
-	margin-top: 1.5rem;
 	font-size: variables.$font-size-step-2;
 	@media (min-width: variables.$breakpoint-md) {
 		font-size: variables.$font-size-step-3;
@@ -82,7 +80,6 @@ h3 {
 }
 
 h4 {
-	margin-top: 1.125rem;
 	font-size: variables.$font-size-step-1;
 	@media (min-width: variables.$breakpoint-md) {
 		font-size: variables.$font-size-step-2;
@@ -90,7 +87,6 @@ h4 {
 }
 
 h5 {
-	margin-top: 0.875rem;
 	font-size: variables.$font-size-step-0;
 	@media (min-width: variables.$breakpoint-md) {
 		font-size: variables.$font-size-step-1;
@@ -98,7 +94,6 @@ h5 {
 }
 
 h6 {
-	margin-top: 0.75rem;
 	font-size: variables.$font-size-step--1;
 	@media (min-width: variables.$breakpoint-md) {
 		font-size: variables.$font-size-step-0;
