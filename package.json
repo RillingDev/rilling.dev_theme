@@ -4,7 +4,7 @@
 	"description": "rilling.dev custom theme",
 	"private": true,
 	"homepage": "https://rilling.dev",
-	"license": "MIT",
+	"license": "GPL-3.0-or-later",
 	"author": {
 		"name": "Felix Rilling",
 		"email": "contact@rilling.dev",
@@ -24,11 +24,11 @@
 		"fix": "eslint ./src/ts/ --ext .ts --fix"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^6.0.0",
+		"@fortawesome/fontawesome-free": "^6.4.0",
 		"modern-normalize": "^2.0.0"
 	},
 	"devDependencies": {
-		"@types/hexo": "^3.8.7",
+		"@types/hexo": "^3.8.8",
 		"@typescript-eslint/eslint-plugin": "^5.0.0",
 		"@typescript-eslint/parser": "^5.0.0",
 		"cheerio": "^1.0.0-rc.12",
