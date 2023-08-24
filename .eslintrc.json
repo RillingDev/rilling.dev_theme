@@ -8,14 +8,13 @@
 	},
 	"plugins": [
 		"@typescript-eslint",
-		"prettier",
 		"import"
 	],
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking",
-		"prettier"
+		"plugin:prettier/recommended"
 	],
 	"rules": {
 		/*
