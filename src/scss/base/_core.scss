@@ -158,14 +158,6 @@ a {
 	&.active {
 		color: var(--primary-contrast-alt);
 	}
-
-	code,
-	kbd,
-	samp {
-		// Reset to match link styling, as that is more important semantically
-		padding: 0;
-		background-color: inherit;
-	}
 }
 
 // Code
@@ -183,20 +175,6 @@ pre {
 	margin-bottom: 1rem;
 	padding: 0.5rem 0.75rem;
 	border: 1px solid var(--text-muted-high);
-}
-
-code,
-kbd,
-samp {
-	background-color: var(--background-contrast);
-	padding: 0 0.15em;
-}
-
-pre code,
-pre samp,
-pre kbd {
-	background-color: transparent; // Ensure `pre` background color is used.
-	padding: initial;
 }
 
 // Tables
