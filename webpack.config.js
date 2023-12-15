@@ -35,13 +35,6 @@ export default {
 					},
 				],
 			},
-			{
-				test: /\.svg$/,
-				type: "asset/resource",
-				generator: {
-					filename: "sprites/font-awesome-[name][ext]",
-				},
-			},
 		],
 	},
 	resolve: {
