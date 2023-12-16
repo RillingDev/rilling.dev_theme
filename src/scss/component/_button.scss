@@ -6,15 +6,16 @@
 	font-size: variables.$font-size-step--1;
 	font-weight: 700;
 	line-height: 1;
+	text-align: center;
+	text-decoration: none;
 
 	display: flex;
 	align-items: center;
-	width: max-content;
+	gap: 0.5rem;
 	padding: 0.625rem 1rem;
+
 	cursor: pointer;
 
-	text-align: center;
-	text-decoration: none;
 	border: none;
 	border-radius: variables.$border-radius;
 
@@ -28,15 +29,12 @@
 
 	&:disabled,
 	&.disabled {
-		cursor: not-allowed;
-		pointer-events: none;
 		opacity: 0.65;
 	}
 
 	.icon {
 		width: 1em;
 		height: 1em;
-		margin-right: 0.25rem;
 		fill: currentcolor;
 	}
 
