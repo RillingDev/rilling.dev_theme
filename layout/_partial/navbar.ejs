@@ -1,9 +1,6 @@
 <div class="container">
     <nav class="navbar">
-        <a class="navbar__title" href="<%- url_for("/"); %>"
-           title="Go to Home"
-           aria-label="Go to Home"
-        >
+        <a class="navbar__title" href="<%- url_for("/"); %>">
             <img class="navbar__title__logo" aria-hidden="true" alt=""
                  src="<%- url_for("icon.svg"); %>" width="22" height="22"/>
             <span class="navbar__title__text"><%= config.title %></span>
