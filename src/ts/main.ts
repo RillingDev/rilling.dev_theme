@@ -1,4 +1,4 @@
-import { initNavbar } from "./ui/navbar";
+import { initNavbar } from "./ui/navbar.ts";
 
 document.addEventListener("DOMContentLoaded", () =>
 	initNavbar(

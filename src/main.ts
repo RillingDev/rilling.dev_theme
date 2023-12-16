@@ -1,3 +1,3 @@
 import "./scss/main.scss";
 
-import "./ts/main";
+import "./ts/main.ts";
