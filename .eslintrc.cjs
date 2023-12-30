@@ -1,12 +1,11 @@
 module.exports = {
 	root: true,
 	env: { browser: true, es2020: true },
-	plugins: ["@typescript-eslint"],
+	plugins: ["@typescript-eslint", "prettier"],
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended-type-checked",
 		"plugin:@typescript-eslint/stylistic-type-checked",
-		"plugin:prettier/recommended",
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
@@ -16,5 +15,5 @@ module.exports = {
 	},
 	rules: {
 		"prettier/prettier": "warn",
-	}
+	},
 };
