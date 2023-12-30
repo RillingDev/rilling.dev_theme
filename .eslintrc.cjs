@@ -1,6 +1,6 @@
 module.exports = {
 	root: true,
-	env: { browser: true, es2020: true },
+	env: { browser: true, es2021: true },
 	plugins: ["@typescript-eslint", "prettier"],
 	extends: [
 		"eslint:recommended",
