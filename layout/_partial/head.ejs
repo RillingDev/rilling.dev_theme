@@ -5,7 +5,14 @@
     <title><%= page.title ?? "Blog" %> | <%= config.title %></title>
 
     <!-- Priority 2 -->
-    <%- css("main"); %>
+    <% if (process.env.NODE_ENV === 'development') { %>
+        <!-- https://vitejs.dev/guide/backend-integration.html -->
+        <script type="module" src="http://localhost:5173/@vite/client"></script>
+        <script type="module" src="http://localhost:5173/src/main.ts"></script>
+    <% } else { %>
+        <%- css("app.css"); %>
+        <%- js({src: "app.js", type: "module"}); %>
+    <% } %>
 
     <!-- Priority 3 -->
     <meta name="robots" content="<%= page.layout === "error" ? "noindex" : "index"; _%>, follow"/>
