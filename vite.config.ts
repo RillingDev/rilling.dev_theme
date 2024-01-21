@@ -16,6 +16,8 @@ export default defineConfig({
 		},
 	},
 	build: {
+		// Not needed for the amount of JavaScript this theme has
+		modulePreload: false,
 		rollupOptions: {
 			input: {
 				app: "./src/main.ts",
