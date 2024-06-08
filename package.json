@@ -6,13 +6,13 @@
 	"homepage": "https://rilling.dev",
 	"license": "GPL-3.0-or-later",
 	"author": {
-		"name": "Felix Rilling",
+		"name": "F. Rilling",
 		"email": "contact@rilling.dev",
 		"url": "https://rilling.dev"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/FelixRilling/rilling.dev_theme.git"
+		"url": "git+https://github.com/RillingDev/rilling.dev_theme.git"
 	},
 	"type": "module",
 	"scripts": {
