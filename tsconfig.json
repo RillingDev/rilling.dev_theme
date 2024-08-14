@@ -21,14 +21,10 @@
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true,
-
-		/* For config files */
-		"allowJs": true
+		"noFallthroughCasesInSwitch": true
 	},
 	"include": [
 		"src",
-		"vite.config.ts",
-		"eslint.config.js"
+		"vite.config.ts"
 	]
 }

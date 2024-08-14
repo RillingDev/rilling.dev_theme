@@ -4,7 +4,7 @@ import tseslint from "typescript-eslint";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 export default tseslint.config(
-	{ ignores: ["source/", "scripts/"] },
+	{ ignores: ["source", "scripts", "eslint.config.js"] },
 	{ languageOptions: { globals: globals.browser } },
 	pluginJs.configs.recommended,
 	...tseslint.configs.recommendedTypeChecked,
