@@ -149,7 +149,6 @@ mark {
 a {
 	font-weight: 700;
 	color: var(--primary);
-	transition: color variables.$duration-short;
 
 	&:hover,
 	&:focus,
