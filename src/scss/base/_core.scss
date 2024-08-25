@@ -1,6 +1,6 @@
 @use "../variables" as variables;
 
-/* Base styles, based on https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss */
+/* Base styles adapted from https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss */
 
 // Body
 
@@ -185,6 +185,7 @@ th {
 	padding: 0.5rem;
 	border: 1px solid var(--text-muted-high);
 }
+
 
 // Utilities
 

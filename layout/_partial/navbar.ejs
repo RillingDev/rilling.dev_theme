@@ -1,19 +1,19 @@
 <div class="container">
     <nav class="navbar">
         <a class="navbar__title" href="<%- url_for("/"); %>">
-            <img class="navbar__title__logo" aria-hidden="true" alt=""
+            <img class="navbar__logo" aria-hidden="true" alt=""
                  src="<%- url_for("icon.svg"); %>" width="22" height="22"/>
-            <span class="navbar__title__text"><%= config.title %></span>
+            <span><%= config.title %></span>
         </a>
 
-        <a class="navbar__toggle-button" href="#" id="navbarToggleButton"
+        <a class="navbar__toggle" href="#" id="navbarToggleButton"
            role="button"
            title="Toggle navigation"
            aria-label="Toggle navigation"
            aria-controls="navbarMenu" aria-expanded="false">
-            <span class="navbar__toggle-button__bar" aria-hidden="true"></span>
-            <span class="navbar__toggle-button__bar" aria-hidden="true"></span>
-            <span class="navbar__toggle-button__bar" aria-hidden="true"></span>
+            <span class="navbar__toggle__bar" aria-hidden="true"></span>
+            <span class="navbar__toggle__bar" aria-hidden="true"></span>
+            <span class="navbar__toggle__bar" aria-hidden="true"></span>
         </a>
 
         <div class="navbar__collapse" id="navbarMenu" role="navigation"
@@ -29,12 +29,12 @@
                     }
                 _%>
 
-                <li class="navbar__nav__item" role="menuitem">
+                <li role="menuitem">
                     <% if (isCurrent){ %>
-                        <a class="navbar__nav__item__link active" href="<%- url_for(path); %>"
+                        <a class="navbar__nav__link active" href="<%- url_for(path); %>"
                            aria-current="page"><%= name; %></a>
                     <% } else { %>
-                        <a class="navbar__nav__item__link"
+                        <a class="navbar__nav__link"
                            href="<%- url_for(path); %>"><%= name; %></a>
                     <% } %>
                 </li>
