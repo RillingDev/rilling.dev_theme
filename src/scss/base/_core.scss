@@ -15,30 +15,12 @@ body {
 	accent-color: var(--primary);
 }
 
-// General display improvements
-
-video,
-audio,
-picture,
-img,
-object {
-	display: block;
-	margin-bottom: 1rem;
-}
-
 // Content grouping
 
 hr {
-	border: 1px solid var(--text-muted-high);
-	margin-top: 0.75rem;
-	margin-bottom: 0.75rem;
-}
-
-// Paragraphs
-
-p {
-	margin-top: 0;
-	margin-bottom: 1rem;
+	border: 0;
+	border-top: 2px solid var(--text-muted-high);
+	margin: 0.75rem 0;
 }
 
 // Headlines
@@ -98,6 +80,13 @@ h6 {
 	}
 }
 
+// Paragraphs
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
 // Lists
 
 ol,
@@ -118,7 +107,6 @@ ol ul,
 ul ol {
 	margin-bottom: 0;
 }
-
 
 dt {
 	font-style: oblique;
@@ -174,6 +162,12 @@ pre {
 	border: 1px solid var(--text-muted-high);
 }
 
+// Figures
+
+figure {
+	margin: 0 0 1rem;
+}
+
 // Tables
 
 table {
@@ -190,12 +184,6 @@ td,
 th {
 	padding: 0.5rem;
 	border: 1px solid var(--text-muted-high);
-}
-
-// Figures
-
-figure {
-	margin: 0 0 1rem;
 }
 
 // Utilities
