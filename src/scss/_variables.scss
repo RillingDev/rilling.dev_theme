@@ -63,16 +63,16 @@ $font-family-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
 
 $font-size-base: 18px;
 
-// From https://utopia.fyi/type/calculator/?c=340,16,1.25,1140,16,1.25,7,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+// From https://utopia.fyi/type/calculator/?c=340,16,1.25,1140,16,1.25,7,1,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12
 $font-size-step--1: 0.9rem; // Should be 0.8 but that is too small
 $font-size-step-0: 1rem;
 $font-size-step-1: 1.25rem;
-$font-size-step-2: 1.56rem;
-$font-size-step-3: 1.95rem;
-$font-size-step-4: 2.44rem;
-$font-size-step-5: 3.05rem;
-$font-size-step-6: 3.82rem;
-$font-size-step-7: 4.77rem;
+$font-size-step-2: 1.5625rem;
+$font-size-step-3: 1.9531rem;
+$font-size-step-4: 2.4414rem;
+$font-size-step-5: 3.0518rem;
+$font-size-step-6: 3.8147rem;
+$font-size-step-7: 4.7684rem;
 
 //
 // Themes
