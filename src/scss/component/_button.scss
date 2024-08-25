@@ -19,8 +19,7 @@
 	border: none;
 	border-radius: variables.$border-radius;
 
-	&:hover,
-	&.hover {
+	&:hover {
 		text-decoration: none;
 	}
 
@@ -40,13 +39,7 @@
 		background-color: var(--primary);
 
 		&:hover,
-		&.hover {
-			color: var(--text-contrast-high);
-			background-color: var(--primary-contrast-alt);
-		}
-
-		&:focus,
-		&.focus {
+		&:focus {
 			color: var(--text-contrast-high);
 			background-color: var(--primary-contrast-alt);
 		}
