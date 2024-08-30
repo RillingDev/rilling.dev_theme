@@ -10,8 +10,8 @@
         <script type="module" src="http://localhost:5173/@vite/client"></script>
         <script type="module" src="http://localhost:5173/src/main.ts"></script>
     <% } else { %>
-        <%- css("app.css"); %>
-        <%- js({src: "app.js", type: "module"}); %>
+        <%- css("app.css?v=2"); %>
+        <%- js({src: "app.js?v=2", type: "module"}); %>
     <% } %>
 
     <!-- Priority 3 -->
