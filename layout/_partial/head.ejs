@@ -15,7 +15,6 @@
     <% } %>
 
     <!-- Priority 3 -->
-    <meta name="robots" content="<%= page.layout === "error" ? "noindex" : "index"; _%>, follow"/>
     <meta name="author" content="<%= config.author %>"/>
     <%- open_graph({
         image: url_for("apple-touch-icon.png")
