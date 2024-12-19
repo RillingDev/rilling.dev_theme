@@ -40,42 +40,45 @@ h6 {
 
 h1 {
 	font-size: variables.$font-size-step-4;
-	@media (min-width: variables.$breakpoint-md) {
-		font-size: variables.$font-size-step-5;
-	}
 }
 
 h2 {
 	font-size: variables.$font-size-step-3;
-	@media (min-width: variables.$breakpoint-md) {
-		font-size: variables.$font-size-step-4;
-	}
 }
 
 h3 {
 	font-size: variables.$font-size-step-2;
-	@media (min-width: variables.$breakpoint-md) {
-		font-size: variables.$font-size-step-3;
-	}
 }
 
 h4 {
 	font-size: variables.$font-size-step-1;
-	@media (min-width: variables.$breakpoint-md) {
-		font-size: variables.$font-size-step-2;
-	}
 }
 
 h5 {
 	font-size: variables.$font-size-step-0;
-	@media (min-width: variables.$breakpoint-md) {
-		font-size: variables.$font-size-step-1;
-	}
 }
 
 h6 {
 	font-size: variables.$font-size-step--1;
-	@media (min-width: variables.$breakpoint-md) {
+}
+
+@media (min-width: variables.$breakpoint-md) {
+	h1 {
+		font-size: variables.$font-size-step-5;
+	}
+	h2 {
+		font-size: variables.$font-size-step-4;
+	}
+	h3 {
+		font-size: variables.$font-size-step-3;
+	}
+	h4 {
+		font-size: variables.$font-size-step-2;
+	}
+	h5 {
+		font-size: variables.$font-size-step-1;
+	}
+	h6 {
 		font-size: variables.$font-size-step-0;
 	}
 }
