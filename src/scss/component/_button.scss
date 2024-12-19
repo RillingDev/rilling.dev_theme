@@ -16,63 +16,18 @@
 
 	cursor: pointer;
 
-	border: none;
+	color: var(--primary);
+	border: variables.$border-width solid var(--primary);
 	border-radius: variables.$border-radius;
 
-	&:hover {
-		text-decoration: none;
-	}
-
-	&:disabled,
-	&.disabled {
-		opacity: 0.65;
+	&:hover,
+	&:focus,
+	&.active {
+		border-color: var(--primary-contrast-alt);
 	}
 
 	.icon {
 		height: 1em;
 		fill: currentcolor;
-	}
-
-	&--primary {
-		color: var(--text-contrast-high);
-		background-color: var(--primary);
-
-		&:hover,
-		&:focus {
-			color: var(--text-contrast-high);
-			background-color: var(--primary-contrast-alt);
-		}
-	}
-
-	&--social--github {
-		$-brand-github: #171515;
-		$-brand-github-alt: color.adjust($-brand-github, $lightness: 12.5%);
-
-		color: var(--white);
-
-		border: 2px solid var(--gray-800);
-		background-color: $-brand-github;
-
-		&:hover,
-		&:focus {
-			color: var(--white);
-			background-color: $-brand-github-alt;
-		}
-	}
-
-	&--social--codepen {
-		$-brand-codepen: #1e1f26;
-		$-brand-codepen-alt: color.adjust($-brand-codepen, $lightness: 12.5%);
-
-		color: var(--white);
-
-		border: 2px solid var(--gray-800);
-		background-color: $-brand-codepen;
-
-		&:hover,
-		&:focus {
-			color: var(--white);
-			background-color: $-brand-codepen-alt;
-		}
 	}
 }

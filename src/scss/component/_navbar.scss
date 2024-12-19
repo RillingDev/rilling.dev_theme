@@ -6,7 +6,7 @@
 	align-items: center;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	border-bottom: 2px solid var(--primary);
+	border-bottom: variables.$border-width solid var(--primary);
 
 	@media print {
 		display: none;
@@ -86,7 +86,7 @@
 
 		&.show {
 			display: initial;
-			border-top: 2px solid var(--primary);
+			border-top: variables.$border-width solid var(--primary);
 		}
 	}
 
