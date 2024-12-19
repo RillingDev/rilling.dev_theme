@@ -1,5 +1,3 @@
-@use "../variables" as variables;
-
 .container {
 	overflow-x: auto; // A bit hacky, but seems justified as content should never stretch the container.
 	padding-right: 0.75rem;
