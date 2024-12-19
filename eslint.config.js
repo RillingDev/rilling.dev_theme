@@ -1,14 +1,17 @@
 import globals from "globals";
-import pluginJs from "@eslint/js";
+import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 export default tseslint.config(
 	{ ignores: ["source", "scripts", "eslint.config.js"] },
-	{ languageOptions: { globals: globals.browser } },
-	pluginJs.configs.recommended,
-	...tseslint.configs.recommendedTypeChecked,
-	...tseslint.configs.stylisticTypeChecked,
+	{
+		languageOptions: {
+			globals: globals.browser,
+		},
+	},
+	eslint.configs.recommended,
+	tseslint.configs.recommendedTypeChecked,
+	tseslint.configs.stylisticTypeChecked,
 	{
 		languageOptions: {
 			parserOptions: {
@@ -17,6 +20,4 @@ export default tseslint.config(
 			},
 		},
 	},
-	eslintPluginPrettierRecommended,
-	{ rules: { "prettier/prettier": "warn" } },
 );
