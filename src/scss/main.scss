@@ -8,15 +8,15 @@
 @use "./component/footer";
 
 // 'Regular' Components
+@use "./component/skip-link";
 @use "./component/code";
 @use "./component/button";
 @use "./component/table";
 @use "./component/pagination";
 @use "./component/social";
-@use "./component/skip-link";
 
 // Page Layouts
-@use "./component/index";
-@use "./component/article";
-@use "./component/contact";
-@use "./component/error";
+@use "./page/index";
+@use "./page/article";
+@use "./page/contact";
+@use "./page/error";
