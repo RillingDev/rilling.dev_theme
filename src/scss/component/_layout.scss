@@ -7,3 +7,9 @@ body {
 	grid-auto-columns: minmax(auto, 90ch);
 	gap: 2rem;
 }
+
+.container {
+	overflow-x: auto; // A bit hacky, but seems justified as content should never stretch the container.
+	padding-right: 0.75rem;
+	padding-left: 0.75rem;
+}

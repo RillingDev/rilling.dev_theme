@@ -2,8 +2,7 @@
 @use "./base/core";
 
 // Layout Components
-@use "./component/body";
-@use "./component/container";
+@use "./component/layout";
 @use "./component/navbar";
 @use "./component/main";
 @use "./component/footer";
