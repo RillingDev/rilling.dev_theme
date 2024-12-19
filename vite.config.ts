@@ -1,20 +1,8 @@
-import { fileURLToPath, URL } from "node:url";
-
 import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [],
-	resolve: {
-		alias: {
-			/*
-			 * SCSS rewrites
-			 */
-			"~modern-normalize": fileURLToPath(
-				new URL("./node_modules/modern-normalize", import.meta.url),
-			),
-		},
-	},
 	build: {
 		// Not needed for the amount of JavaScript this theme has
 		modulePreload: false,
