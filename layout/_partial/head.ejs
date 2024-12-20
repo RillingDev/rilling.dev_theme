@@ -1,6 +1,6 @@
 <head>
     <!-- Priority 1 -->
-    <meta charset="utf-8"/>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= page.title ?? "Blog" %> | <%= config.title %></title>
 
@@ -16,7 +16,7 @@
     <% } %>
 
     <!-- Priority 3 -->
-    <meta name="author" content="<%= config.author %>"/>
+    <meta name="author" content="<%= config.author %>">
     <%- open_graph({
         image: url_for("apple-touch-icon.png")
     }); %>
