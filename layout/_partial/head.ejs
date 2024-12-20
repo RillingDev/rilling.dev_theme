@@ -10,8 +10,9 @@
         <script type="module" src="http://localhost:5173/@vite/client"></script>
         <script type="module" src="http://localhost:5173/src/main.ts"></script>
     <% } else { %>
-        <%- css("app.css?v=3"); %>
-        <%- js({src: "app.js?v=3", type: "module"}); %>
+        <!-- Construct the entire tag instead of using the hexo helpers as they break with query parameters -->
+        <link rel="stylesheet" href="<%- url_for('app.css?v=3') %>">
+        <script type="module" src="<%- url_for('app.js?v=3') %>"></script>
     <% } %>
 
     <!-- Priority 3 -->
