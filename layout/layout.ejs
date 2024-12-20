@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>" dir="ltr" prefix="og: https://ogp.me/ns#">
-<%- partial("_partial/head"); %>
+<%- partial('_partial/head'); %>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
-<%- partial("_partial/navbar"); %>
+<%- partial('_partial/navbar'); %>
 <div class="container">
     <main id="main" class="main">
         <%- body; %>
     </main>
 </div>
-<%- partial("_partial/footer"); %>
+<%- partial('_partial/footer'); %>
 </body>
 </html>
