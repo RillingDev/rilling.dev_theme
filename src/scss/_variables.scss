@@ -22,11 +22,10 @@ $-gray-900: color.adjust($-black, $lightness: 10%);
 
 $-pink: #c95497; // Primary
 
-$-cyan: #45bac4; // Accent
-
-$-red: #e16036; // Semantic: Error
-$-yellow: #fcba04; // Semantic: Warn
-$-green: #53dd6c; // Semantic: Success
+$-cyan: #45bac4;
+$-red: #e16036;
+$-yellow: #fcba04;
+$-green: #53dd6c;
 
 $-pink-100: color.adjust($-pink, $lightness: 40%);
 $-pink-200: color.adjust($-pink, $lightness: 30%);
@@ -103,11 +102,7 @@ $font-size-step-7: 4.7684rem;
 	--pink-800: #{$-pink-800};
 	--pink-900: #{$-pink-900};
 
-	--cyan: #{$-cyan};
-
-	--red: #{$-red};
 	--yellow: #{$-yellow};
-	--green: #{$-green};
 }
 
 @mixin custom-properties-theme-light {
