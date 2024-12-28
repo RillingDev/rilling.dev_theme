@@ -8,10 +8,11 @@
 @use "./component/footer";
 
 // 'Regular' Components
+@use "./component/visually-hidden";
 @use "./component/skip-link";
+@use "./component/table";
 @use "./component/code";
 @use "./component/button";
-@use "./component/table";
 @use "./component/pagination";
 @use "./component/social";
 
