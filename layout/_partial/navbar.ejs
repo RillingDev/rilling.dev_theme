@@ -1,45 +1,31 @@
 <div class="container">
     <nav class="navbar">
         <a class="navbar__title" href="<%- url_for('/'); %>">
-            <img class="navbar__logo" aria-hidden="true" alt=""
-                 src="<%- url_for('icon.svg'); %>" width="22" height="22">
+            <img class="navbar__logo" src="<%- url_for('icon.svg'); %>" width="22" height="22" alt="">
             <span><%= config.title %></span>
         </a>
-
-        <a class="navbar__toggle" href="#" id="navbarToggleButton"
-           role="button"
-           title="Toggle navigation"
-           aria-label="Toggle navigation"
-           aria-controls="navbarMenu" aria-expanded="false">
-            <span class="navbar__toggle__bar" aria-hidden="true"></span>
-            <span class="navbar__toggle__bar" aria-hidden="true"></span>
-            <span class="navbar__toggle__bar" aria-hidden="true"></span>
-        </a>
-
-        <div class="navbar__collapse" id="navbarMenu" role="navigation"
-             aria-hidden="false">
-            <ul class="navbar__nav" role="menubar">
-                <% for (const [name, path] of Object.entries(theme.menu)){ %>
-                <%_
-                    let isCurrent = false;
-                    if (is_current(path)) {
-                        isCurrent = true;
-                    } else if (is_post() && name === 'Blog') {
-                        isCurrent = true;
-                    }
-                _%>
-
-                <li role="menuitem">
-                    <% if (isCurrent){ %>
-                        <a class="navbar__nav__link active" href="<%- url_for(path); %>"
-                           aria-current="page"><%= name; %></a>
-                    <% } else { %>
-                        <a class="navbar__nav__link"
-                           href="<%- url_for(path); %>"><%= name; %></a>
-                    <% } %>
-                </li>
+        <ul class="navbar__nav">
+            <% for (const [name, path] of Object.entries(theme.menu)){ %>
+            <%_
+                let isCurrent = false;
+                if (is_current(path)) {
+                    isCurrent = true;
+                } else if (is_post() && name === 'Blog') {
+                    isCurrent = true;
+                }
+            _%>
+            <li>
+                <% if (isCurrent){ %>
+                    <a class="navbar__nav__link active" href="<%- url_for(path); %>" aria-current="page">
+                        <%= name; %>
+                    </a>
+                <% } else { %>
+                    <a class="navbar__nav__link" href="<%- url_for(path); %>">
+                        <%= name; %>
+                    </a>
                 <% } %>
-            </ul>
-        </div>
+            </li>
+            <% } %>
+        </ul>
     </nav>
 </div>

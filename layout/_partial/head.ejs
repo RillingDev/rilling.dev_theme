@@ -11,8 +11,9 @@
         <script type="module" src="http://localhost:5173/src/main.ts"></script>
     <% } else { %>
         <!-- Construct the entire tag instead of using the hexo helpers as they break with query parameters -->
-        <link rel="stylesheet" href="<%- url_for('app.css?v=3') %>">
-        <script type="module" src="<%- url_for('app.js?v=3') %>"></script>
+        <link rel="stylesheet" href="<%- url_for('app.css?v=4') %>">
+        <!-- Currently unused -->
+        <!--<script type="module" src="<%- url_for('app.js?v=3') %>"></script>-->
     <% } %>
 
     <!-- Priority 3 -->
