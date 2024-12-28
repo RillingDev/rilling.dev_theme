@@ -2,7 +2,6 @@
 
 .navbar {
 	font-family: variables.$font-family-sans;
-	font-size: 0.9em;
 	display: flex;
 	align-items: center;
 	flex-flow: row wrap;
@@ -44,8 +43,6 @@
 	}
 
 	@media (min-width: variables.$breakpoint-sm) {
-		font-size: 1em;
-
 		&__nav {
 			gap: 2rem;
 		}

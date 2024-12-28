@@ -53,8 +53,8 @@ h6 {
 	font-family: variables.$font-family-sans;
 	line-height: 1.2;
 	font-weight: 700;
-	margin-top: 1em;
 	margin-bottom: 0.5rem;
+	// Use browser default as margin top
 }
 
 h1 {
@@ -135,7 +135,6 @@ dt {
 }
 
 dd {
-	margin-top: 0;
 	margin-bottom: 0.5rem;
 	margin-left: 2.5rem;
 }
