@@ -10,15 +10,15 @@
 $-black: #222222;
 $-white: #ffffff;
 
-$-gray-100: color.adjust($-black, $lightness: 90%);
-$-gray-200: color.adjust($-black, $lightness: 80%);
-$-gray-300: color.adjust($-black, $lightness: 70%);
-$-gray-400: color.adjust($-black, $lightness: 60%);
-$-gray-500: color.adjust($-black, $lightness: 50%);
-$-gray-600: color.adjust($-black, $lightness: 40%);
-$-gray-700: color.adjust($-black, $lightness: 30%);
-$-gray-800: color.adjust($-black, $lightness: 20%);
-$-gray-900: color.adjust($-black, $lightness: 10%);
+$-gray-100: color.adjust($-black, $lightness: 90%, $space: hsl);
+$-gray-200: color.adjust($-black, $lightness: 80%, $space: hsl);
+$-gray-300: color.adjust($-black, $lightness: 70%, $space: hsl);
+$-gray-400: color.adjust($-black, $lightness: 60%, $space: hsl);
+$-gray-500: color.adjust($-black, $lightness: 50%, $space: hsl);
+$-gray-600: color.adjust($-black, $lightness: 40%, $space: hsl);
+$-gray-700: color.adjust($-black, $lightness: 30%, $space: hsl);
+$-gray-800: color.adjust($-black, $lightness: 20%, $space: hsl);
+$-gray-900: color.adjust($-black, $lightness: 10%, $space: hsl);
 
 $-pink: #c95497; // Primary
 
@@ -27,15 +27,15 @@ $-red: #e16036;
 $-yellow: #fcba04;
 $-green: #53dd6c;
 
-$-pink-100: color.adjust($-pink, $lightness: 40%);
-$-pink-200: color.adjust($-pink, $lightness: 30%);
-$-pink-300: color.adjust($-pink, $lightness: 20%);
-$-pink-400: color.adjust($-pink, $lightness: 10%);
+$-pink-100: color.adjust($-pink, $lightness: 40%, $space: hsl);
+$-pink-200: color.adjust($-pink, $lightness: 30%, $space: hsl);
+$-pink-300: color.adjust($-pink, $lightness: 20%, $space: hsl);
+$-pink-400: color.adjust($-pink, $lightness: 10%, $space: hsl);
 $-pink-500: $-pink;
-$-pink-600: color.adjust($-pink, $lightness: -10%);
-$-pink-700: color.adjust($-pink, $lightness: -20%);
-$-pink-800: color.adjust($-pink, $lightness: -30%);
-$-pink-900: color.adjust($-pink, $lightness: -40%);
+$-pink-600: color.adjust($-pink, $lightness: -10%, $space: hsl);
+$-pink-700: color.adjust($-pink, $lightness: -20%, $space: hsl);
+$-pink-800: color.adjust($-pink, $lightness: -30%, $space: hsl);
+$-pink-900: color.adjust($-pink, $lightness: -40%, $space: hsl);
 
 //
 // Sizes
