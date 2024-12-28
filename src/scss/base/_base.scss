@@ -1,5 +1,25 @@
 @use "../variables" as variables;
 
+:root {
+	color-scheme: light dark;
+
+	@include variables.custom-properties-base();
+
+	@include variables.custom-properties-theme-light();
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include variables.custom-properties-theme-dark();
+	}
+}
+
+@media print {
+	:root {
+		@include variables.custom-properties-theme-print();
+	}
+}
+
 // Body
 
 html {
