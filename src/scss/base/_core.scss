@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	font-size: variables.$font-size-base;
+	font-size: variables.$font-size-base; // TODO: move this to html selector and fix sizes and em/rems
 	color: var(--text);
 	background-color: var(--background);
 	accent-color: var(--primary);

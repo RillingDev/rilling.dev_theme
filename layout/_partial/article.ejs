@@ -16,14 +16,10 @@
 
     <div class="article__content" data-processor-id="responsive-tables">
         <% if (post.excerpt && index){ %>
-            <div>
-                <%- post.excerpt %>
-            </div>
+            <%- post.excerpt %>
             <a href="<%- url_for(post.path) %>">Read '<%= post.title %>'</a>
         <% } else { %>
-            <div>
-                <%- post.content %>
-            </div>
+            <%- post.content %>
         <% } %>
     </div>
 
