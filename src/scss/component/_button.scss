@@ -1,11 +1,10 @@
 @use "sass:color";
 @use "../variables" as variables;
 
-// Note that this duplicates a few rules for anchor elements, but we want the same style for button elements as well.
-.btn {
+// Meant to be used on top of the regular anchor styling.
+a.btn {
 	font-family: variables.$font-family-sans;
 	font-size: variables.$font-size-step--1;
-	font-weight: 700;
 	line-height: 1;
 	text-align: center;
 	text-decoration: none;
@@ -15,17 +14,12 @@
 	gap: 0.5rem;
 	padding: 0.625rem 1rem;
 
-	cursor: pointer;
-
-	background: transparent;
-	color: var(--primary);
 	border: variables.$border-width solid var(--primary);
 	border-radius: variables.$border-radius;
 
 	&:hover,
 	&:focus,
 	&.active {
-		color: var(--primary-contrast-alt);
 		border-color: var(--primary-contrast-alt);
 	}
 
