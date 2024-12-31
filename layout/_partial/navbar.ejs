@@ -1,7 +1,7 @@
 <div class="container">
     <nav class="navbar">
         <a class="navbar__title" href="<%- url_for('/'); %>">
-            <img class="navbar__logo" src="<%- url_for('icon.svg'); %>" width="22" height="22" alt="">
+            <%- partial('_partial/component/icon', { style: 'solid', icon: 'code' }); _%>
             <span><%= config.title %></span>
         </a>
         <ul class="navbar__nav">
