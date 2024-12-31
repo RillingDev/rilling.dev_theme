@@ -34,12 +34,6 @@
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
-
-		.icon {
-			fill: currentColor;
-			height: 22px;
-			padding: 2px 0;
-		}
 	}
 
 	&__nav__link.active {
