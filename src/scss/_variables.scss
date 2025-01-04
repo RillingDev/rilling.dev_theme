@@ -150,8 +150,8 @@ $font-size-step-7: 4.7684rem;
 	--text-contrast-high: var(--white);
 
 	--primary-contrast-alt: var(--gray-500);
-	--primary: var(--gray-600);
-	--primary-contrast: var(--gray-700);
+	--primary: var(--gray-700);
+	--primary-contrast: var(--gray-800);
 
 	@include highlight.custom-properties-highlight-theme-light;
 }
