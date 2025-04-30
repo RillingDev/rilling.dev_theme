@@ -195,14 +195,27 @@ table {
 	border-collapse: collapse;
 	caption-side: bottom;
 	margin-bottom: 1rem;
-}
-
-caption {
-	padding-top: 0.25rem;
+	font-size: variables.$font-size-step--1;
 }
 
 td,
 th {
-	padding: 0.5rem;
 	border: variables.$border-width solid var(--text-muted-high);
+	padding: 0.375rem;
+}
+
+// Table is shrunken on small screens to avoid them overflowing their container as much
+@media (min-width: variables.$breakpoint-sm) {
+	table {
+		font-size: variables.$font-size-step-0;
+	}
+
+	td,
+	th {
+		padding: 0.5rem;
+	}
+}
+
+caption {
+	padding-top: 0.25rem;
 }

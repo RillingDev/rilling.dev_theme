@@ -24,21 +24,6 @@ function mergeIntoChildProcessor($, $el) {
 }
 
 /**
- * Tables need a wrapper element, but markdown renders it as-is, so we add it here.
- *
- * @param {CheerioAPI} $
- * @param {Cheerio} $el
- */
-function responsiveTableProcessor($, $el) {
-	$el.find("table").each((_i, table) => {
-		const $tableWrapper = $("<div></div>");
-		$tableWrapper.addClass("table__wrapper");
-
-		$(table).wrap($tableWrapper);
-	});
-}
-
-/**
  * @param {CheerioAPI} $
  * @param {string} id
  * @param {($: CheerioAPI, $el: Cheerio) => void} processor
@@ -54,6 +39,5 @@ function process($, id, processor) {
 hexo.extend.filter.register("after_render:html", (str) => {
 	const $ = load(str);
 	process($, "merge-into-child", mergeIntoChildProcessor);
-	process($, "responsive-tables", responsiveTableProcessor);
 	return $.html();
 });
