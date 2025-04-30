@@ -55,11 +55,12 @@ $border-width: 2px;
 // https://github.com/system-fonts/modern-font-stacks#classical-humanist
 $font-family-sans: "Noto Sans", Optima, Candara, source-sans-pro, sans-serif;
 // https://github.com/system-fonts/modern-font-stacks#transitional
-$font-family-serif: "Noto Serif", Charter, "Bitstream Charter", "Sitka Text",
-	Cambria, serif;
+$font-family-serif:
+	"Noto Serif", Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
 // https://github.com/system-fonts/modern-font-stacks#monospace-code
-$font-family-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
-	Consolas, "DejaVu Sans Mono", monospace;
+$font-family-monospace:
+	ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+	"DejaVu Sans Mono", monospace;
 
 $font-size-base: 18px;
 
