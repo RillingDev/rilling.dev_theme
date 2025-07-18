@@ -14,38 +14,38 @@
   <meta name="theme-color" content="#222222">
 
   <meta name="author" content="{{ config.author }}">
-  {% if page and page.description %}
+  {%- if page and page.description -%}
     <meta name="description" content="{{ page.description }}">
-  {% elif section and section.description %}
+  {%- elif section and section.description %}
     <meta name="description" content="{{ section.description }}">
-  {% else %}
+  {%- else %}
     <meta name="description" content="{{ config.description }}">
-  {% endif %}
+  {%- endif %}
 
   {% block open_graph %}
-    {% if page and page.description %}
+    {%- if page and page.description %}
       <meta property="og:title" content="{{ page.title }}">
-    {% elif section and section.description %}
+    {%- elif section and section.description %}
       <meta property="og:title" content="{{ section.title }}">
-    {% else %}
+    {%- else %}
       <meta property="og:title" content="{{ config.title }}">
-    {% endif %}
+    {%- endif %}
     <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
     <meta property="og:image" content="{{ get_url(path='apple-touch-icon.png') | safe }}">
     <meta property="og:url" content="{{ config.base_url | safe}}">
-    {% if page and page.description %}
+    {%- if page and page.description %}
       <meta property="og:description" content="{{ page.description }}">
-    {% elif section and section.description %}
+    {%- elif section and section.description %}
       <meta property="og:description" content="{{ section.description }}">
-    {% else %}
+    {%- else %}
       <meta property="og:description" content="{{ config.description }}">
-    {% endif %}
+    {%- endif %}
     <meta property="og:locale" content="en">
     <meta property="og:site_name" content="{{ config.title }}">
   {% endblock open_graph %}
 
-  {# Icons generated through https://realfavicongenerator.net/ #}
-  {# Details from https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs #}
+  {#- Icons generated through https://realfavicongenerator.net/
+  Details from https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs #}
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -69,7 +69,7 @@
   <a href="#main" class="skip-link">Skip to main content</a>
 
   {% block content %}
-    {% if config.extra.rilling_dev_menu %}
+    {%- if config.extra.rilling_dev_menu %}
       <header>
         <div class="container">
             <nav class="navbar">
@@ -78,9 +78,9 @@
                     <span>{{ config.title }}</span>
                 </a>
                 <ul class="navbar__nav">
-                {% for item in config.extra.rilling_dev_menu %}
+                {%- for item in config.extra.rilling_dev_menu %}
                     <li>
-                      {% set is_current = current_url and (item.url | replace(from='$BASE_URL', to=config.base_url) == current_url) %}
+                      {%- set is_current = current_url and (item.url | replace(from='$BASE_URL', to=config.base_url) == current_url) %}
                       <a
                         class="navbar__nav__link{% if is_current %} active{% endif %}"
                         {% if is_current %}aria-current="page"{% endif %}
@@ -89,30 +89,30 @@
                         {{ item.name }}
                       </a>
                     </li>
-                  {% endfor %}
+                  {%- endfor %}
                 </ul>
             </nav>
         </div>
       </header>
-    {% endif %}
+    {%- endif %}
 
     <div class="container">
       <main id="main" class="main">
         {% block main %}
           <div class="index">
             <h1 class="visually-hidden">Articles</h1>
-            {% for page in paginator.pages %}
+            {%- for page in paginator.pages %}
               {{ post_macros::page_in_list(page=page) }}
-            {% endfor %}
+            {%- endfor %}
 
             <nav aria-label="Page navigation" class="pagination">
-                {% if paginator.previous %}
+                {%- if paginator.previous %}
                 <a href="{{ paginator.previous | safe}}">&laquo; Previous</a> |
-                {% endif %}
+                {%- endif %}
                 <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
-                {% if paginator.next %}
+                {%- if paginator.next %}
                 | <a href="{{ paginator.next | safe }}">Next &raquo;</a>
-                {% endif %}
+                {%- endif %}
             </nav>
           </div>
         {% endblock main %}

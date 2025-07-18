@@ -1,12 +1,10 @@
 {% macro meta(page) %}
-    {% if page.date %}
-        {% set publish_date = page.date | date(format="%F") %}
-        <p>Published: <time datetime="{{ publish_date }}">{{ publish_date }}</time></p>
-    {% endif %}
-    {% if page.updated %}
-        {% set update_date = page.updated | date(format="%F") %}
-        <p>Last updated: <time datetime="{{ update_date }}">{{ update_date }}</time></p>
-    {% endif %}
+    {%- if page.date %}
+        <p>Published: <time datetime="{{ page.date | date(format='%F') }}">{{ page.date | date(format='%F') }}</time></p>
+    {%- endif %}
+    {%- if page.updated %}
+        <p>Last updated: <time datetime="{{ page.updated | date(format='%F') }}">{{ page.updated | date(format='%F') }}</time></p>
+    {%- endif %}
 {% endmacro meta %}
 
 {% macro page_in_list(page) %}
@@ -17,11 +15,11 @@
             </h2>
             <div class="article__meta">{{ self::meta(page=page) }}</div>
         </header>
-        {% if page.summary %}
+        {%- if page.summary %}
             <div class="article__content">
                 {{ page.summary | safe }}
                 <a href="{{ page.permalink | safe }}">Read '{{ page.title }}'</a>
             </div>
-        {% endif %}
+        {%- endif %}
     </article>
 {% endmacro page_in_list %}
