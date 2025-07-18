@@ -4,6 +4,13 @@
         <%- partial('_partial/article', { post: post, index: true }) %>
     <% }); %>
 
-    <%- partial('_partial/component/pagination'); %>
+    <% if(page.total > 1){ %>
+        <nav aria-label="Page navigation" class="pagination">
+            <%- paginator({
+                prev_text: '« Newer Articles',
+                next_text: 'Previous Articles »'
+            }) %>
+        </nav>
+    <% } %>
 </div>
 

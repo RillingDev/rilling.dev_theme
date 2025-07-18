@@ -1,4 +1,14 @@
 <div class="about">
     <%- page.content %>
-    <%- partial('_partial/component/social') %>
+
+    <div class="social">
+        <a href="<%- theme.social.github; %>" class="btn">
+            <%- partial('_partial/component/icon', { style: 'brands', icon: 'github' }); _%>
+            <span>Me on GitHub</span>
+        </a>
+        <a href="<%- theme.social.codepen; %>" class="btn">
+            <%- partial('_partial/component/icon', { style: 'brands', icon: 'codepen' }); _%>
+            <span>Me on CodePen</span>
+        </a>
+    </div>
 </div>

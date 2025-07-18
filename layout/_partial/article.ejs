@@ -9,8 +9,8 @@
             <h1 class="article__title"><%= post.title %></h1>
         <% } %>
         <div class="article__meta">
-            <p>Published: <%- partial('component/date', {datetime: post.date}) %></p>
-            <p>Last updated: <%- partial('component/date', {datetime: post.updated}) %></p>
+            <p>Published: <time datetime="<%= date_xml(post.date) %>"><%= date(post.date) %></time></p>
+            <p>Last updated: <time datetime="<%= date_xml(post.updated) %>"><%= date(post.updated) %></time></p>
         </div>
     </header>
 
