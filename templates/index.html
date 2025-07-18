@@ -14,38 +14,31 @@
   <meta name="theme-color" content="#222222">
 
   <meta name="author" content="{{ config.author }}">
-  {% if page %}
-    {% if page.description %}
-      <meta name="description" content="{{ page.description }}">
-    {% elif config.description %}
-      <meta name="description" content="{{ config.description }}">
-    {% endif %}
-  {% elif config.description %}
+  {% if page and page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% elif section and section.description %}
+    <meta name="description" content="{{ section.description }}">
+  {% else %}
     <meta name="description" content="{{ config.description }}">
   {% endif %}
 
   {% block open_graph %}
-      {% if page %}
-        {% if page.description %}
-          <meta name="og:title" content="{{ page.title }}">
-        {% elif config.description %}
-          <meta name="og:title" content="{{ config.title }}">
-        {% endif %}
-    {% elif config.description %}
-      <meta name="og:title" content="{{ config.title }}">
+    {% if page and page.description %}
+      <meta property="og:title" content="{{ page.title }}">
+    {% elif section and section.description %}
+      <meta property="og:title" content="{{ section.title }}">
+    {% else %}
+      <meta property="og:title" content="{{ config.title }}">
     {% endif %}
     <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
-    <meta property="og:image" content="/apple-touch-icon.png?v=2">
+    <meta property="og:image" content="{{ get_url(path='apple-touch-icon.png') | safe }}">
     <meta property="og:url" content="{{ config.base_url | safe}}">
-    <meta property="og:description" content="{{ config.description }}">
-    {% if page %}
-      {% if page.description %}
-        <meta name="og:description" content="{{ page.description }}">
-      {% elif config.description %}
-        <meta name="og:description" content="{{ config.description }}">
-      {% endif %}
-    {% elif config.description %}
-      <meta name="og:description" content="{{ config.description }}">
+    {% if page and page.description %}
+      <meta property="og:description" content="{{ page.description }}">
+    {% elif section and section.description %}
+      <meta property="og:description" content="{{ section.description }}">
+    {% else %}
+      <meta property="og:description" content="{{ config.description }}">
     {% endif %}
     <meta property="og:locale" content="en">
     <meta property="og:site_name" content="{{ config.title }}">
@@ -53,9 +46,9 @@
 
   {# Icons generated through https://realfavicongenerator.net/ #}
   {# Details from https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs #}
-  <link rel="icon" href="/favicon.ico?v=2" sizes="32x32">
-  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   {%- if config.generate_feeds %}
     {%- for feed in config.feed_filenames %}
