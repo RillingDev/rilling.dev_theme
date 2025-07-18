@@ -1,0 +1,151 @@
+{% import "post_macros.html" as post_macros %}
+
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+  {% block css %}
+    <link rel="stylesheet" href="{{ get_url(path='main.css', cachebust=true) | safe }}">
+  {% endblock css %}
+  <meta name="theme-color" content="#222222">
+
+  <meta name="author" content="{{ config.author }}">
+  {% if page %}
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}" />
+    {% elif config.description %}
+      <meta name="description" content="{{ config.description }}" />
+    {% endif %}
+  {% elif config.description %}
+    <meta name="description" content="{{ config.description }}" />
+  {% endif %}
+
+  {% block open_graph %}
+      {% if page %}
+        {% if page.description %}
+          <meta name="og:title" content="{{ page.title }}" />
+        {% elif config.description %}
+          <meta name="og:title" content="{{ config.title }}" />
+        {% endif %}
+    {% elif config.description %}
+      <meta name="og:title" content="{{ config.title }}" />
+    {% endif %}
+    <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
+    <meta property="og:image" content="/apple-touch-icon.png?v=2">
+    <meta property="og:url" content="{{ config.base_url | safe}}">
+    <meta property="og:description" content="{{ config.description }}">
+    {% if page %}
+      {% if page.description %}
+        <meta name="og:description" content="{{ page.description }}" />
+      {% elif config.description %}
+        <meta name="og:description" content="{{ config.description }}" />
+      {% endif %}
+    {% elif config.description %}
+      <meta name="og:description" content="{{ config.description }}" />
+    {% endif %}
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="{{ config.title }}">
+  {% endblock open_graph %}
+
+  {# Icons generated through https://realfavicongenerator.net/ #}
+  {# Details from https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs #}
+  <link rel="icon" href="/favicon.ico?v=2" sizes="32x32">
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+
+  {%- if config.generate_feeds %}
+    {%- for feed in config.feed_filenames %}
+      {%- if feed is containing('atom') %}
+        <link rel="alternate" type="application/atom+xml" href="{{ get_url(path=feed, trailing_slash=false) | safe }}" />
+      {%- endif %}
+      {%- if feed is containing('rss') %}
+        <link rel="alternate" type="application/rss+xml" href="{{ get_url(path=feed, trailing_slash=false) | safe }}" />
+      {%- endif %}
+    {%- endfor %}
+  {%- endif %}
+
+  {% block extra_head %}
+  {% endblock extra_head %}
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  {% block content %}
+    {% if config.extra.rilling_dev_menu %}
+      <header>
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar__title" href="{{ config.base_url | safe}}">
+                    {% include "icons/code.html" %}
+                    <span>{{ config.title }}</span>
+                </a>
+                <ul class="navbar__nav">
+                {% for item in config.extra.rilling_dev_menu %}
+                    <li>
+                      {% set is_current = current_url and (item.url | replace(from='$BASE_URL', to=config.base_url) == current_url) %}
+                      <a
+                        class="navbar__nav__link {% if is_current %}active{% endif %}"
+                        {% if is_current %}aria-current="page"{% endif %}
+                        href="{{ item.url | safe | replace(from='$BASE_URL', to=config.base_url) | safe }}"
+                      >
+                        {{ item.name }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+            </nav>
+        </div>
+      </header>
+    {% endif %}
+
+    <div class="container">
+      <main id="main" class="main">
+        {% block main %}
+          <div class="index">
+            <h1 class="visually-hidden">Articles</h1>
+            {% for page in paginator.pages %}
+              {{ post_macros::page_in_list(page=page) }}
+            {% endfor %}
+
+            <nav aria-label="Page navigation" class="pagination">
+                {% if paginator.previous %}
+                <a href="{{ paginator.previous | safe}}">&laquo; Previous</a> |
+                {% endif %}
+                <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+                {% if paginator.next %}
+                | <a href="{{ paginator.next | safe }}">Next &raquo;</a>
+                {% endif %}
+            </nav>
+          </div>
+        {% endblock main %}
+      </main>
+    </div>
+
+    <div class="container">
+      <footer class="footer">
+        <p class="footer__content">
+          <span class="footer__copy">
+            &copy; {{ now() | date(format="%Y") }} {{ config.author }}<br />
+          </span>
+          <span class="footer__tech">
+            Source code available at GitHub:
+            <a href="https://github.com/RillingDev/rilling.dev" target="_blank" rel="noopener">Contents</a>,
+            <a href="https://github.com/RillingDev/rilling.dev_theme" target="_blank" rel="noopener">Theme</a>.
+            <br />
+            This site uses open source components. A full list can be found
+            in the repositories linked above.
+          </span>
+        </p>
+      </footer>
+    </div>
+  {% endblock content %}
+
+  {% block scripts %}
+  {% endblock scripts %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block title %}
+    {{ section.title }} | {{ config.title }}
+{% endblock title %}
+
+{% block main %}
+<div class="about">
+    {{ section.content | safe }}
+
+    <div class="social">
+        <a href="{{ config.extra.rilling_dev_social_github | safe }}"  target="_blank" rel="noopener"class="btn">
+            {% include "icons/github.html" %}
+            <span>Me on GitHub</span>
+        </a>
+        <a href="{{ config.extra.rilling_dev_social_codepen | safe }}" target="_blank" rel="noopener" class="btn">
+            {% include "icons/codepen.html" %}
+            <span>Me on CodePen</span>
+        </a>
+    </div>
+</div>
+{% endblock main %}

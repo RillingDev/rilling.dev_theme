@@ -1,0 +1,27 @@
+{% macro meta(page) %}
+    {% if page.date %}
+        {% set publish_date = page.date | date(format="%F") %}
+        <p>Published: <time datetime="{{ publish_date }}">{{ publish_date }}</time></p>
+    {% endif %}
+    {% if page.updated %}
+        {% set update_date = page.updated | date(format="%F") %}
+        <p>Last updated: <time datetime="{{ update_date }}">{{ update_date }}</time></p>
+    {% endif %}
+{% endmacro meta %}
+
+{% macro page_in_list(page) %}
+    <article class="article">
+        <header>
+            <h2 class="article__title">
+                <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+            </h2>
+            <div class="article__meta">{{ self::meta(page=page) }}</div>
+        </header>
+        {% if page.summary %}
+            <div class="article__content">
+                {{ page.summary | safe }}
+                <a href="{{ page.permalink | safe }}">Read '{{ page.title }}'</a>
+            </div>
+        {% endif %}
+    </article>
+{% endmacro page_in_list %}

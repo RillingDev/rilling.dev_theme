@@ -1,0 +1,17 @@
+name = "rilling_dev"
+description = "rilling.dev custom theme"
+license = "GPL-3.0-or-later"
+min_version = "0.19.1"
+demo = "https://rilling.dev"
+
+[extra]
+rilling_dev_menu = [
+    {url = "$BASE_URL/", name = "Blog"},
+    {url = "$BASE_URL/about/", name = "About"}
+]
+rilling_dev_social_github= "https://example.com"
+rilling_dev_social_codepen= "https://example.com"
+
+[author]
+name = "F. Rilling"
+homepage = "https://rilling.dev"
