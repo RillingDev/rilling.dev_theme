@@ -1,13 +1,13 @@
 {% macro meta(page) %}
 {%- if page.date %}
-<p>
+<span>
     Published: <time datetime="{{ page.date | date(format='%F') }}">{{ page.date | date(format='%F') }}</time>
-</p>
+</span>
 {%- endif %}
 {%- if page.updated %}
-<p>
+<span>
     Last updated: <time datetime="{{ page.updated | date(format='%F') }}">{{ page.updated | date(format='%F') }}</time>
-</p>
+</span>
 {%- endif %}
 {% endmacro meta %}
 
