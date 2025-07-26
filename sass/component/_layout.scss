@@ -1,15 +1,11 @@
 body {
-	display: grid;
-	justify-content: center;
 	min-height: 100vh;
-	grid-template-areas: "nav" "main" "footer";
-	grid-template-rows: min-content 1fr min-content;
-	grid-auto-columns: minmax(auto, 90ch);
-	gap: 2rem;
-}
-
-.container {
-	overflow-x: auto; // A bit hacky, but seems justified as content should never stretch the container.
 	padding-right: 0.75rem;
 	padding-left: 0.75rem;
+	
+	display: grid;
+	justify-content: center;
+	grid-template-rows: min-content 1fr min-content;
+	grid-template-columns: minmax(auto, 90ch);
+	gap: 2rem;
 }

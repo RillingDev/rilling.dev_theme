@@ -71,71 +71,65 @@
   {% block content %}
   {%- if config.extra.rilling_dev_menu %}
   <header>
-    <div class="container">
-      <nav class="navbar">
-        <a class="navbar__title" href="{{ config.base_url | safe}}">
-          {% include "icons/code.html" %}
-          <span>{{ config.title }}</span>
-        </a>
-        <ul class="navbar__nav">
-          {%- for item in config.extra.rilling_dev_menu %}
-          <li>
-            {%- set is_current = current_url and (item.url | replace(from='$BASE_URL', to=config.base_url) == current_url) %}
-            <a
-              class="navbar__nav__link{% if is_current %} active{% endif %}"
-              {% if is_current %}aria-current="page"{% endif %}
-              href="{{ item.url | safe | replace(from='$BASE_URL', to=config.base_url) | safe }}"
-            >
-              {{ item.name }}
-            </a>
-          </li>
-          {%- endfor %}
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar">
+      <a class="navbar__title" href="{{ config.base_url | safe}}">
+        {% include "icons/code.html" %}
+        <span>{{ config.title }}</span>
+      </a>
+      <ul class="navbar__nav">
+        {%- for item in config.extra.rilling_dev_menu %}
+        <li>
+          {%- set is_current = current_url and (item.url | replace(from='$BASE_URL', to=config.base_url) == current_url) %}
+          <a
+            class="navbar__nav__link{% if is_current %} active{% endif %}"
+            {% if is_current %}aria-current="page"{% endif %}
+            href="{{ item.url | safe | replace(from='$BASE_URL', to=config.base_url) | safe }}"
+          >
+            {{ item.name }}
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </nav>
   </header>
   {%- endif %}
 
-  <div class="container">
-    <main id="main" class="main">
-      {% block main %}
-      <div class="index">
-        <h1 class="visually-hidden">Articles</h1>
-        {%- for page in paginator.pages %}
-        {{ post_macros::page_in_list(page=page) }}
-        {%- endfor %}
+  <main id="main" class="main">
+    {% block main %}
+    <div class="index">
+      <h1 class="visually-hidden">Articles</h1>
+      {%- for page in paginator.pages %}
+      {{ post_macros::page_in_list(page=page) }}
+      {%- endfor %}
 
-        <nav aria-label="Page navigation" class="pagination">
-          {%- if paginator.previous %}
-          <a href="{{ paginator.previous | safe}}">&laquo; Previous</a> |
-          {%- endif %}
-          <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
-          {%- if paginator.next %}
-          | <a href="{{ paginator.next | safe }}">Next &raquo;</a>
-          {%- endif %}
-        </nav>
-      </div>
-      {% endblock main %}
-    </main>
-  </div>
+      <nav aria-label="Page navigation" class="pagination">
+        {%- if paginator.previous %}
+        <a href="{{ paginator.previous | safe}}">&laquo; Previous</a> |
+        {%- endif %}
+        <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+        {%- if paginator.next %}
+        | <a href="{{ paginator.next | safe }}">Next &raquo;</a>
+        {%- endif %}
+      </nav>
+    </div>
+    {% endblock main %}
+  </main>
 
-  <div class="container">
-    <footer class="footer">
-      <p class="footer__content">
-        <span class="footer__copy">
-          &copy; {{ now() | date(format="%Y") }} {{ config.author }}<br>
-        </span>
-        <span class="footer__tech">
-          Source code available at GitHub:
-          <a href="https://github.com/RillingDev/rilling.dev" target="_blank" rel="noopener">Contents</a>,
-          <a href="https://github.com/RillingDev/rilling.dev_theme" target="_blank" rel="noopener">Theme</a>.
-          <br>
-          This site uses open source components. A full list can be found
-          in the repositories linked above.
-        </span>
-      </p>
-    </footer>
-  </div>
+  <footer class="footer">
+    <p class="footer__content">
+      <span class="footer__copy">
+        &copy; {{ now() | date(format="%Y") }} {{ config.author }}<br>
+      </span>
+      <span class="footer__tech">
+        Source code available at GitHub:
+        <a href="https://github.com/RillingDev/rilling.dev" target="_blank" rel="noopener">Contents</a>,
+        <a href="https://github.com/RillingDev/rilling.dev_theme" target="_blank" rel="noopener">Theme</a>.
+        <br>
+        This site uses open source components. A full list can be found
+        in the repositories linked above.
+      </span>
+    </p>
+  </footer>
   {% endblock content %}
 
   {% block scripts %}
