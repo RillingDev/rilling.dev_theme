@@ -1,4 +1,6 @@
-@use "../variables" as variables;
+@use "./variables" as variables;
+
+// Theme
 
 :root {
 	color-scheme: light dark;
@@ -22,12 +24,21 @@
 
 // Body
 
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
 html {
 	font-family: variables.$font-family-serif;
 	line-height: 1.6;
+	tab-size: 4;
 }
 
 body {
+	margin: 0;
+
 	font-size: variables.$font-size-base; // TODO: move this to html selector and fix sizes and em/rems
 	color: var(--text);
 	background-color: var(--background);
