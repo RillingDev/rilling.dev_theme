@@ -6,6 +6,6 @@ body {
 	display: grid;
 	justify-content: center;
 	grid-template-rows: min-content 1fr min-content;
-	grid-template-columns: minmax(auto, 90ch);
+	grid-template-columns: minmax(auto, 85ch);
 	gap: 2rem;
 }
