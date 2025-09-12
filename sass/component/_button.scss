@@ -6,13 +6,12 @@ a.btn {
 	font-family: variables.$font-family-sans;
 	font-size: variables.$font-size-step--1;
 	line-height: 1;
-	text-align: center;
 	text-decoration: none;
 
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	padding: 0.625rem 1rem;
+	padding: 0.5rem 1rem;
 
 	border: variables.$border-width solid var(--primary);
 	border-radius: variables.$border-radius;
