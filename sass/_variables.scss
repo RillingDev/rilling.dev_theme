@@ -4,11 +4,14 @@
 //
 // Color system
 //
-// See https://coolors.co/222222-c95497-45bac4-53dd6c-e16036-fcba04
+// See https://coolors.co/222222-c95497-fcba04-45bac4
 //
 
 $-black: #222222;
 $-white: #ffffff;
+$-pink: #c95497; // Primary
+$-yellow: #fcba04;
+$-cyan: #45bac4;
 
 $-gray-100: color.adjust($-black, $lightness: 90%);
 $-gray-200: color.adjust($-black, $lightness: 80%);
@@ -19,13 +22,6 @@ $-gray-600: color.adjust($-black, $lightness: 40%);
 $-gray-700: color.adjust($-black, $lightness: 30%);
 $-gray-800: color.adjust($-black, $lightness: 20%);
 $-gray-900: color.adjust($-black, $lightness: 10%);
-
-$-pink: #c95497; // Primary
-
-$-cyan: #45bac4;
-$-red: #e16036;
-$-yellow: #fcba04;
-$-green: #53dd6c;
 
 $-pink-100: color.adjust($-pink, $lightness: 40%);
 $-pink-200: color.adjust($-pink, $lightness: 30%);
