@@ -12,26 +12,6 @@ $-pink: #c95497; // Primary
 $-yellow: #fcba04;
 $-cyan: #45bac4;
 
-$-gray-100: color.adjust($-black, $lightness: 90%);
-$-gray-200: color.adjust($-black, $lightness: 80%);
-$-gray-300: color.adjust($-black, $lightness: 70%);
-$-gray-400: color.adjust($-black, $lightness: 60%);
-$-gray-500: color.adjust($-black, $lightness: 50%);
-$-gray-600: color.adjust($-black, $lightness: 40%);
-$-gray-700: color.adjust($-black, $lightness: 30%);
-$-gray-800: color.adjust($-black, $lightness: 20%);
-$-gray-900: color.adjust($-black, $lightness: 10%);
-
-$-pink-100: color.adjust($-pink, $lightness: 40%);
-$-pink-200: color.adjust($-pink, $lightness: 30%);
-$-pink-300: color.adjust($-pink, $lightness: 20%);
-$-pink-400: color.adjust($-pink, $lightness: 10%);
-$-pink-500: $-pink;
-$-pink-600: color.adjust($-pink, $lightness: -10%);
-$-pink-700: color.adjust($-pink, $lightness: -20%);
-$-pink-800: color.adjust($-pink, $lightness: -30%);
-$-pink-900: color.adjust($-pink, $lightness: -40%);
-
 //
 // Sizes
 //
@@ -77,27 +57,27 @@ $font-size-step-7: 4.7684rem;
 @mixin custom-properties-base {
 	--black: #{$-black};
 
-	--gray-100: #{$-gray-100};
-	--gray-200: #{$-gray-200};
-	--gray-300: #{$-gray-300};
-	--gray-400: #{$-gray-400};
-	--gray-500: #{$-gray-500};
-	--gray-600: #{$-gray-600};
-	--gray-700: #{$-gray-700};
-	--gray-800: #{$-gray-800};
-	--gray-900: #{$-gray-900};
+	--gray-900: #{color.adjust($-black, $lightness: 10%)};
+	--gray-800: #{color.adjust($-black, $lightness: 20%)};
+	--gray-700: #{color.adjust($-black, $lightness: 30%)};
+	--gray-600: #{color.adjust($-black, $lightness: 40%)};
+	--gray-500: #{color.adjust($-black, $lightness: 50%)};
+	--gray-400: #{color.adjust($-black, $lightness: 60%)};
+	--gray-300: #{color.adjust($-black, $lightness: 70%)};
+	--gray-200: #{color.adjust($-black, $lightness: 80%)};
+	--gray-100: #{color.adjust($-black, $lightness: 90%)};
 
-	--pink-100: #{$-pink-100};
-	--pink-200: #{$-pink-200};
-	--pink-300: #{$-pink-300};
-	--pink-400: #{$-pink-400};
-	--pink-500: #{$-pink-500};
-	--pink-600: #{$-pink-600};
-	--pink-700: #{$-pink-700};
-	--pink-800: #{$-pink-800};
-	--pink-900: #{$-pink-900};
+	--pink-900: #{color.adjust($-pink, $lightness: -40%)};
+	--pink-800: #{color.adjust($-pink, $lightness: -30%)};
+	--pink-700: #{color.adjust($-pink, $lightness: -20%)};
+	--pink-600: #{color.adjust($-pink, $lightness: -10%)};
+	--pink-500: #{$-pink};
+	--pink-400: #{color.adjust($-pink, $lightness: 10%)};
+	--pink-300: #{color.adjust($-pink, $lightness: 20%)};
+	--pink-200: #{color.adjust($-pink, $lightness: 30%)};
+	--pink-100: #{color.adjust($-pink, $lightness: 40%)};
 
-	--yellow: #{$-yellow};
+	--yellow-500: #{$-yellow};
 }
 
 @mixin custom-properties-theme-light {
