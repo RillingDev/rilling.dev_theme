@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "./variables-highlight" as highlight;
 
 //
 // Color system
@@ -92,6 +93,8 @@ $font-size-step-7: 4.7684rem;
 	--primary-contrast-alt: var(--pink-700);
 	--primary: var(--pink-600);
 	--primary-contrast: var(--pink-500);
+
+	@include highlight.custom-properties-highlight-theme-light;
 }
 
 @mixin custom-properties-theme-dark {
@@ -107,6 +110,8 @@ $font-size-step-7: 4.7684rem;
 	--primary-contrast-alt: var(--pink-300);
 	--primary: var(--pink-400);
 	--primary-contrast: var(--pink-500);
+
+	@include highlight.custom-properties-highlight-theme-dark;
 }
 
 @mixin custom-properties-theme-print {
@@ -122,4 +127,6 @@ $font-size-step-7: 4.7684rem;
 	--primary-contrast-alt: var(--gray-500);
 	--primary: var(--gray-700);
 	--primary-contrast: var(--gray-800);
+
+	@include highlight.custom-properties-highlight-theme-light;
 }
