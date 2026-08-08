@@ -1,5 +1,4 @@
 {% extends "index.html" %}
-{% import "post_macros.html" as post_macros %}
 
 {% block title %}
 {{ page.title }} | {{ config.title }}
@@ -17,7 +16,7 @@
 <article class="article article--full">
     <header>
         <h1 class="article__title">{{ page.title }}</h1>
-        <div class="article__meta">{{ self::meta(page=page) }}</div>
+        <div class="article__meta">{{ <page.meta page={page} /> }}</div>
     </header>
     <div class="article__content">
         {{ page.content | safe }}

@@ -1,4 +1,4 @@
-{% macro meta(page) %}
+{% component page.meta(page) %}
 {%- if page.date %}
 <span>
     Published: <time datetime="{{ page.date | date(format='%F') }}">{{ page.date | date(format='%F') }}</time>
@@ -9,15 +9,15 @@
     Last updated: <time datetime="{{ page.updated | date(format='%F') }}">{{ page.updated | date(format='%F') }}</time>
 </span>
 {%- endif %}
-{% endmacro meta %}
+{% endcomponent %}
 
-{% macro page_in_list(page) %}
+{% component page.list.item(page) %}
 <article class="article">
     <header>
         <h2 class="article__title">
             <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
         </h2>
-        <div class="article__meta">{{ self::meta(page=page) }}</div>
+        <div class="article__meta">{{ <page.meta page={page} /> }}</div>
     </header>
     {%- if page.summary %}
     <div class="article__content">
@@ -26,4 +26,4 @@
     </div>
     {%- endif %}
 </article>
-{% endmacro page_in_list %}
+{% endcomponent %}
